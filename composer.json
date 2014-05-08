@@ -1,0 +1,23 @@
+{
+    "name": "cpcstrategy/bing-ads-sdk-php",
+    "description": "Bing Ads API Version 9 Client Library for PHP.",
+    "keywords": ["bing", "bing-ads","api", "sdk"],
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Microsoft",
+            "homepage": "http://code.msdn.microsoft.com/PHP-Classes-for-Bing-Ads-c9762281"
+        },
+        {
+            "name": "Juan Manuel Torres",
+            "email": "technology@cpcstrategy.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "classmap": ["PHP/bingads"]
+    }
+}
