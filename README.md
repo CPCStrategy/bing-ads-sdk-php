@@ -7,8 +7,8 @@ This contains the PHP classes for version 9 of the Bing Ads web services. Classe
 ##Library Information
 
  - Bing Ads API Version 9
- - Library Update  3/12/2014
- - Library [Home Page](http://code.msdn.microsoft.com/PHP-Production-Classes-for-121d0015)
+ - Library Update 4/10/2014
+ - Library [Home Page](http://code.msdn.microsoft.com/PHP-Classes-for-Bing-Ads-c9762281)
 
 ##Installation
 ```shell
