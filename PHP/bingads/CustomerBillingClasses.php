@@ -1,5 +1,5 @@
 <?php
-// Generated on 4/10/2014 3:04:17 PM
+// Generated on 6/9/2014 10:59:39 AM
 
 namespace BingAds\CustomerBilling
 {
@@ -9,7 +9,7 @@ namespace BingAds\CustomerBilling
     {
         const ServiceNamespace = 'https://bingads.microsoft.com/Billing/v9';
         const ProductionEndpoint = 'https://clientcenter.api.bingads.microsoft.com/Api/Billing/v9/CustomerBillingService.svc';
-        const SandboxEndpoint = 'https://sharedservices.api.sandbox.bingads.microsoft.com/Api/Billing/v9/CustomerBillingService.svc';
+        const SandboxEndpoint = 'https://clientcenter.api.sandbox.bingads.microsoft.com/Api/Billing/v9/CustomerBillingService.svc';
     }
 
     /**
@@ -27,6 +27,81 @@ namespace BingAds\CustomerBilling
 
         /** Use XML format. */
         const Xml = 'Xml';
+    }
+
+    /**
+     * Defines the possible status values of an InsertionOrder.
+     * @link http://msdn.microsoft.com/en-us/library/dn743761(v=msads.90).aspx InsertionOrderStatus Value Set
+     * 
+     * @used-by InsertionOrder
+     */
+    final class InsertionOrderStatus
+    {
+        /** The insertion order is active, which means that the account and its campaigns will begin showing ads once the start date is reached. */
+        const Active = 'Active';
+
+        /** Either the super admin of the bill-to customer or the account manager canceled the insertion order. */
+        const Canceled = 'Canceled';
+
+        /** Either the super admin of the bill-to customer or the account manager declined the insertion order. */
+        const Declined = 'Declined';
+
+        /** The end date or spend limit of the insertion order is reached, which means that the insertion order is expired or inactive. */
+        const Expired = 'Expired';
+
+        /** A super admin of the bill-to customer added the insertion order, and the insertion order is pending account manager approval. */
+        const PendingSystemReview = 'PendingSystemReview';
+
+        /** An account manager added the insertion order, and the insertion order is pending approval from the super admin of the bill-to customer. */
+        const PendingUserReview = 'PendingUserReview';
+    }
+
+    /**
+     * Defines the condition of results for insertion orders returned using SearchInsertionOrders.
+     * @link http://msdn.microsoft.com/en-us/library/dn743753(v=msads.90).aspx PredicateOperator Value Set
+     * 
+     * @used-by Predicate
+     */
+    final class PredicateOperator
+    {
+        const Contains = 'Contains';
+        const Equals = 'Equals';
+        const GreaterThanEquals = 'GreaterThanEquals';
+        const In = 'In';
+        const LessThanEquals = 'LessThanEquals';
+        const NotContains = 'NotContains';
+        const NotEquals = 'NotEquals';
+        const StartsWith = 'StartsWith';
+    }
+
+    /**
+     * Defines the field order of insertion orders returned using SearchInsertionOrders.
+     * @link http://msdn.microsoft.com/en-us/library/dn743750(v=msads.90).aspx OrderByField Value Set
+     * 
+     * @used-by OrderBy
+     */
+    final class OrderByField
+    {
+        /** The order is determined by a predicate identifier. */
+        const Id = 'Id';
+
+        /** The order is determined by a predicate name. */
+        const Name = 'Name';
+
+        /** The order is determined by a predicate number. */
+        const Number = 'Number';
+    }
+
+    /**
+     * Defines the ascending or descending sort order of results for SearchInsertionOrders.
+     * @link http://msdn.microsoft.com/en-us/library/dn743751(v=msads.90).aspx SortOrder Value Set
+     * 
+     * @used-by OrderBy
+     */
+    final class SortOrder
+    {
+        const Ascending = 'Ascending';
+        const Descending = 'Descending';
     }
 
     /**
@@ -234,8 +309,10 @@ namespace BingAds\CustomerBilling
      * Defines an insertion order.
      * @link http://msdn.microsoft.com/en-us/library/ff728378(v=msads.90).aspx InsertionOrder Data Object
      * 
+     * @uses InsertionOrderStatus
      * @used-by AddInsertionOrderRequest
      * @used-by GetInsertionOrdersByAccountResponse
+     * @used-by SearchInsertionOrdersResponse
      * @used-by UpdateInsertionOrderRequest
      */
     final class InsertionOrder
@@ -311,6 +388,24 @@ namespace BingAds\CustomerBilling
          * @var \DateTime
          */
         public $StartDate;
+
+        /**
+         * The friendly name that can be used to reference this insertion order.
+         * @var string
+         */
+        public $Name;
+
+        /**
+         * The status of the insertion order.
+         * @var InsertionOrderStatus
+         */
+        public $Status;
+
+        /**
+         * A purchase order value that can be used to reference this insertion order in monthly invoices.
+         * @var string
+         */
+        public $PurchaseOrder;
     }
 
     /**
@@ -340,14 +435,112 @@ namespace BingAds\CustomerBilling
         public $Message;
     }
 
+    /**
+     * Defines an order for the list of insertion orders returned using SearchInsertionOrders.
+     * @link http://msdn.microsoft.com/en-us/library/dn743752(v=msads.90).aspx OrderBy Data Object
+     * 
+     * @uses OrderByField
+     * @uses SortOrder
+     * @used-by SearchInsertionOrdersRequest
+     */
+    final class OrderBy
+    {
+        /**
+         * Determines the field to order the results.
+         * @var OrderByField
+         */
+        public $Field;
+
+        /**
+         * Determines whether the results are ascending or descending.
+         * @var SortOrder
+         */
+        public $Order;
+    }
+
+    /**
+     * Defines a paging object for the list of insertion orders returned using SearchInsertionOrders.
+     * @link http://msdn.microsoft.com/en-us/library/dn743749(v=msads.90).aspx Paging Data Object
+     * 
+     * @used-by SearchInsertionOrdersRequest
+     */
+    final class Paging
+    {
+        /**
+         * The zero-based results page index.
+         * @var integer
+         */
+        public $Index;
+
+        /**
+         * The page size and the number of results to return in the specified page.
+         * @var integer
+         */
+        public $Size;
+    }
+
+    /**
+     * Defines a predicate for the list of insertion orders returned using SearchInsertionOrders.
+     * @link http://msdn.microsoft.com/en-us/library/dn743756(v=msads.90).aspx Predicate Data Object
+     * 
+     * @uses PredicateOperator
+     * @used-by SearchInsertionOrdersRequest
+     */
+    final class Predicate
+    {
+        /**
+         * The name of the element for the object you are searching.
+         * @var string
+         */
+        public $Field;
+
+        /**
+         * Defines the relationship between the field and the value.
+         * @var PredicateOperator
+         */
+        public $Operator;
+
+        /**
+         * The string to search in the specified field.
+         * @var string
+         */
+        public $Value;
+    }
+
+    /**
+     * Adds an insertion order to the specified account.
+     * @link http://msdn.microsoft.com/en-us/library/dn743758(v=msads.90).aspx AddInsertionOrder Request Object
+     * 
+     * @uses InsertionOrder
+     * @used-by BingAdsCustomerBillingService::AddInsertionOrder
+     */
     final class AddInsertionOrderRequest
     {
+        /**
+         * An insertion order to add to the account specified in the InsertionOrder object.
+         * @var InsertionOrder
+         */
         public $InsertionOrder;
     }
 
+    /**
+     * Adds an insertion order to the specified account.
+     * @link http://msdn.microsoft.com/en-us/library/dn743758(v=msads.90).aspx AddInsertionOrder Response Object
+     * 
+     * @used-by BingAdsCustomerBillingService::AddInsertionOrder
+     */
     final class AddInsertionOrderResponse
     {
+        /**
+         * A long value that represents the identifier for the insertion order that was added.
+         * @var integer
+         */
         public $InsertionOrderId;
+
+        /**
+         * Identifies the server time in UTC when the insertion order was added.
+         * @var \DateTime
+         */
         public $CreateTime;
     }
 
@@ -517,13 +710,80 @@ namespace BingAds\CustomerBilling
         public $BillingDocuments;
     }
 
+    /**
+     * Searches for insertion orders that match a specified criteria.
+     * @link http://msdn.microsoft.com/en-us/library/dn743759(v=msads.90).aspx SearchInsertionOrders Request Object
+     * 
+     * @uses Predicate
+     * @uses OrderBy
+     * @uses Paging
+     * @used-by BingAdsCustomerBillingService::SearchInsertionOrders
+     */
+    final class SearchInsertionOrdersRequest
+    {
+        /**
+         * Determines the request conditions.
+         * @var Predicate[]
+         */
+        public $Predicates;
+
+        /**
+         * Determines the order of results by the specified property of an account.
+         * @var OrderBy[]
+         */
+        public $Ordering;
+
+        /**
+         * Determines the index and size of results per page.
+         * @var Paging
+         */
+        public $PageInfo;
+    }
+
+    /**
+     * Searches for insertion orders that match a specified criteria.
+     * @link http://msdn.microsoft.com/en-us/library/dn743759(v=msads.90).aspx SearchInsertionOrders Response Object
+     * 
+     * @uses InsertionOrder
+     * @used-by BingAdsCustomerBillingService::SearchInsertionOrders
+     */
+    final class SearchInsertionOrdersResponse
+    {
+        /**
+         * A list of insertion orders that meet the specified criteria.
+         * @var InsertionOrder[]
+         */
+        public $InsertionOrders;
+    }
+
+    /**
+     * Updates an insertion order within the specified account.
+     * @link http://msdn.microsoft.com/en-us/library/dn743760(v=msads.90).aspx UpdateInsertionOrder Request Object
+     * 
+     * @uses InsertionOrder
+     * @used-by BingAdsCustomerBillingService::UpdateInsertionOrder
+     */
     final class UpdateInsertionOrderRequest
     {
+        /**
+         * An insertion order to update within the account specified in the InsertionOrder object.
+         * @var InsertionOrder
+         */
         public $InsertionOrder;
     }
 
+    /**
+     * Updates an insertion order within the specified account.
+     * @link http://msdn.microsoft.com/en-us/library/dn743760(v=msads.90).aspx UpdateInsertionOrder Response Object
+     * 
+     * @used-by BingAdsCustomerBillingService::UpdateInsertionOrder
+     */
     final class UpdateInsertionOrderResponse
     {
+        /**
+         * Identifies the server time in UTC when the insertion order was last modified.
+         * @var \DateTime
+         */
         public $LastModifiedTime;
     }
 }

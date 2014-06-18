@@ -3516,6 +3516,11 @@ ul.notifications li ol, ul.notifications li ul
     width:225px;
 }
 
+    #dashboardPage #userCard .profile-usercard
+    {
+        width:215px;
+    }
+
 #userCard .profile-usercard, #userCard .profile-inline, #userCard .profile-inline-header
 {
     border:0px;

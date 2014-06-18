@@ -1,5 +1,5 @@
 <?php
-// Generated on 4/10/2014 3:04:17 PM
+// Generated on 6/9/2014 10:59:39 AM
 
 namespace BingAds\Optimizer
 {
@@ -31,6 +31,42 @@ namespace BingAds\Optimizer
 
         /** The budget point includes the optimal suggested budget. */
         const Suggested = 'Suggested';
+    }
+
+    /**
+     * Defines the possible bid opportunity types you can request when calling GetBidOpportunities.
+     * @link http://msdn.microsoft.com/en-us/library/dn766183(v=msads.90).aspx BidOpportunityType Value Set
+     * 
+     * @used-by GetBidOpportunitiesRequest
+     */
+    final class BidOpportunityType
+    {
+        /** The bid opportunity may lead to ads shown in one of the first page positions of search results. */
+        const FirstPage = 'FirstPage';
+
+        /** The bid opportunity may lead to increased traffic. */
+        const IncreaseTraffic = 'IncreaseTraffic';
+
+        /** The bid opportunity may lead to ads shown in one of the mainline positions of search results. */
+        const MainLine = 'MainLine';
+
+        /** The bid opportunity may lead to ads shown in the first mainline position of search results. */
+        const MainLine1 = 'MainLine1';
+    }
+
+    /**
+     * Defines the possible keyword opportunity types you can request when calling GetKeywordOpportunities.
+     * @link http://msdn.microsoft.com/en-us/library/dn766184(v=msads.90).aspx KeywordOpportunityType Value Set
+     * 
+     * @used-by GetKeywordOpportunitiesRequest
+     */
+    final class KeywordOpportunityType
+    {
+        /** The keyword opportunity will be suggested based on the marketplace impact of adding keywords with the broad match type. */
+        const BroadMatch = 'BroadMatch';
+
+        /** The keyword opportunity will be suggested based on the full context of the campaign, including existing keywords, landing page, and ad copy. */
+        const CampaignContext = 'CampaignContext';
     }
 
     final class OpportunityAction
@@ -142,9 +178,9 @@ namespace BingAds\Optimizer
 
     class AppliedResult
     {
+        public $OpportunityKey;
         public $Code;
         public $Message;
-        public $OpportunityKey;
     }
 
     /**
@@ -262,9 +298,155 @@ namespace BingAds\Optimizer
         public $SuggestedBid;
     }
 
-    final class BroadMatchAppliedResult extends AppliedResult
+    /**
+     * Defines an object that contains the key used to identify the opportunity to be applied.
+     * @link http://msdn.microsoft.com/en-us/library/dn766182(v=msads.90).aspx OpportunityModifier Data Object
+     * 
+     * @used-by ApplyOpportunitiesRequest
+     * @used-by ApplyOpportunityModifiersRequest
+     */
+    class OpportunityModifier
     {
-        public $KeywordId;
+        /**
+         * An identifier that uniquely identifies the opportunity to modify.
+         * @var string
+         */
+        public $OpportunityKey;
+    }
+
+    /**
+     * Defines a bid opportunity modifier object.
+     * @link http://msdn.microsoft.com/en-us/library/dn766190(v=msads.90).aspx BidOpportunityModifier Data Object
+     */
+    final class BidOpportunityModifier extends OpportunityModifier
+    {
+        /**
+         * The new bid amount that you want to apply instead of the suggested opportunity.
+         * @var double
+         */
+        public $Bid;
+    }
+
+    /**
+     * Defines an object that contains a suggested keyword and bid value.
+     * @link http://msdn.microsoft.com/en-us/library/jj649133(v=msads.90).aspx KeywordOpportunity Data Object
+     * 
+     * @used-by GetKeywordOpportunitiesResponse
+     */
+    class KeywordOpportunity extends Opportunity
+    {
+        /**
+         * The identifier of the ad group to apply the suggested keyword to.
+         * @var integer
+         */
+        public $AdGroupId;
+
+        /**
+         * The identifier of the campaign that owns the ad group.
+         * @var integer
+         */
+        public $CampaignId;
+
+        /**
+         * An indicator of competitive bids for this keyword relative to all search keywords.
+         * @var double
+         */
+        public $Competition;
+
+        /**
+         * The match type that the suggested bid applies to.
+         * @var integer
+         */
+        public $MatchType;
+
+        /**
+         * The estimated monthly volume of user search queries that may match the suggested keyword for the corresponding MatchType element.
+         * @var integer
+         */
+        public $MonthlySearches;
+
+        /**
+         * The suggested bid that may result in your ads serving on the first page of the search query results.
+         * @var double
+         */
+        public $SuggestedBid;
+
+        /**
+         * The suggested keyword.
+         * @var string
+         */
+        public $SuggestedKeyword;
+    }
+
+    /**
+     * Defines an object that contains the marketplace impact statistics of including broad match type keyword bids.
+     * @link http://msdn.microsoft.com/en-us/library/dn766186(v=msads.90).aspx BroadMatchKeywordOpportunity Data Object
+     * 
+     * @uses BroadMatchSearchQueryKPI
+     */
+    final class BroadMatchKeywordOpportunity extends KeywordOpportunity
+    {
+        public $AverageCPC;
+
+        /**
+         * Broad match average CTR in the marketplace.
+         * @var double
+         */
+        public $AverageCTR;
+
+        /**
+         * Broad match click share in the marketplace.
+         * @var double
+         */
+        public $ClickShare;
+
+        /**
+         * Estimated increase in clicks if the opportunity is applied.
+         * @var double
+         */
+        public $EstimatedIncreaseInClicks;
+
+        /**
+         * Estimated increase in cost if the opportunity is applied.
+         * @var double
+         */
+        public $EstimatedIncreaseInCost;
+
+        /**
+         * Estimated increase in impressions if the opportunity is applied.
+         * @var integer
+         */
+        public $EstimatedIncreaseInImpressions;
+
+        /**
+         * Broad match impression share in the marketplace.
+         * @var double
+         */
+        public $ImpressionShare;
+
+        /**
+         * The bid of an existing reference keyword used by the service to offer the keyword opportunity.
+         * @var double
+         */
+        public $ReferenceKeywordBid;
+
+        /**
+         * The identifier of an existing reference keyword used by the service to offer the keyword opportunity.
+         * @var integer
+         */
+        public $ReferenceKeywordId;
+
+        /**
+         * The match type of an existing reference keyword used by the service to offer the keyword opportunity.
+         * @var integer
+         */
+        public $ReferenceKeywordMatchType;
+
+        /**
+         * A list of up to three broad match search query KPI objects.
+         * @var BroadMatchSearchQueryKPI[]
+         */
+        public $SearchQueryKPIs;
     }
 
     final class BroadMatchOpportunity extends Opportunity
@@ -291,13 +473,16 @@ namespace BingAds\Optimizer
         public $SuggestedBid;
     }
 
-    class OpportunityModifier
-    {
-        public $OpportunityKey;
-    }
-
+    /**
+     * Defines a broad match opportunity modifier object.
+     * @link http://msdn.microsoft.com/en-us/library/dn766192(v=msads.90).aspx BroadMatchOpportunityModifier Data Object
+     */
     final class BroadMatchOpportunityModifier extends OpportunityModifier
     {
+        /**
+         * The new bid amount that you want to apply instead of the suggested opportunity.
+         * @var double
+         */
         public $Bid;
     }
 
@@ -309,12 +494,43 @@ namespace BingAds\Optimizer
         public $SearchQueryKPIs;
     }
 
+    /**
+     * Defines an object that contains search query statistics of including broad match type keyword bids.
+     * @link http://msdn.microsoft.com/en-us/library/dn766187(v=msads.90).aspx BroadMatchSearchQueryKPI Data Object
+     * 
+     * @used-by BroadMatchKeywordOpportunity
+     * @used-by BroadMatchSearchQuery
+     */
     final class BroadMatchSearchQueryKPI
     {
+        /**
+         * The average CTR for the search query.
+         * @var double
+         */
         public $AverageCTR;
+
+        /**
+         * The clicks for the search query.
+         * @var double
+         */
         public $Clicks;
+
+        /**
+         * The impressions for the search query.
+         * @var integer
+         */
         public $Impressions;
+
+        /**
+         * The SRPV for the search query.
+         * @var integer
+         */
         public $SRPV;
+
+        /**
+         * The search query corresponding to the keyword.
+         * @var string
+         */
         public $SearchQuery;
     }
 
@@ -416,6 +632,19 @@ namespace BingAds\Optimizer
     }
 
     /**
+     * Defines a budget opportunity modifier object.
+     * @link http://msdn.microsoft.com/en-us/library/dn766189(v=msads.90).aspx BudgetOpportunityModifier Data Object
+     */
+    final class BudgetOpportunityModifier extends OpportunityModifier
+    {
+        /**
+         * The new budget amount that you want to apply instead of the suggested opportunity.
+         * @var double
+         */
+        public $Budget;
+    }
+
+    /**
      * Defines an object that contains a budget amount and an estimate of daily impressions, clicks, and cost for this budget amount averaged over the last 15 days.
      * @link http://msdn.microsoft.com/en-us/library/dn434659(v=msads.90).aspx BudgetPoint Data Object
      * 
@@ -490,55 +719,22 @@ namespace BingAds\Optimizer
         public $CampaignId;
     }
 
+    final class KeywordAppliedResult extends AppliedResult
+    {
+        public $KeywordId;
+    }
+
     /**
-     * Defines an object that contains a suggested keyword and bid value.
-     * @link http://msdn.microsoft.com/en-us/library/jj649133(v=msads.90).aspx KeywordOpportunity Data Object
-     * 
-     * @used-by GetKeywordOpportunitiesResponse
+     * Defines a keyword opportunity modifier object.
+     * @link http://msdn.microsoft.com/en-us/library/dn766191(v=msads.90).aspx KeywordOpportunityModifier Data Object
      */
-    final class KeywordOpportunity extends Opportunity
+    final class KeywordOpportunityModifier extends OpportunityModifier
     {
         /**
-         * The identifier of the ad group to apply the suggested keyword to.
+         * The identifier of the ad group that you want to apply the opportunity instead of the ad group suggested by the original opportunity.
          * @var integer
          */
         public $AdGroupId;
-
-        /**
-         * The identifier of the campaign that owns the ad group.
-         * @var integer
-         */
-        public $CampaignId;
-
-        /**
-         * An indicator of competitive bids for this keyword relative to all search keywords.
-         * @var double
-         */
-        public $Competition;
-
-        /**
-         * The match type that the bid applies to.
-         * @var integer
-         */
-        public $MatchType;
-
-        /**
-         * The estimated monthly volume of user search queries that may match the suggested keyword for the corresponding MatchType element.
-         * @var integer
-         */
-        public $MonthlySearches;
-
-        /**
-         * The suggested bid that may result in your ads serving on the first page of the search query results.
-         * @var double
-         */
-        public $SuggestedBid;
-
-        /**
-         * The suggested keyword.
-         * @var string
-         */
-        public $SuggestedKeyword;
     }
 
     /**
@@ -575,9 +771,10 @@ namespace BingAds\Optimizer
     }
 
     /**
-     * Applies the recommended opportunities that the get opportunities operations returned for example, the GetBidOpportunities operation.
+     * Applies the recommended opportunities that the get opportunities operations returned, for example the OpportunityKeys returned by the GetBidOpportunities operation.
      * @link http://msdn.microsoft.com/en-us/library/dn376334(v=msads.90).aspx ApplyOpportunities Request Object
      * 
+     * @uses OpportunityModifier
      * @used-by BingAdsOptimizerService::ApplyOpportunities
      */
     final class ApplyOpportunitiesRequest
@@ -589,14 +786,20 @@ namespace BingAds\Optimizer
         public $AccountId;
 
         /**
-         * An array of keys that identifies the opportunities to apply.
+         * The list of opportunity objects identifying the opportunities that you want to apply.
          * @var string[]
          */
         public $OpportunityKeys;
+
+        /**
+         * An array of modifiers that overrides the available opportunity keys.
+         * @var OpportunityModifier[]
+         */
+        public $OpportunityModifiers;
     }
 
     /**
-     * Applies the recommended opportunities that the get opportunities operations returned for example, the GetBidOpportunities operation.
+     * Applies the recommended opportunities that the get opportunities operations returned, for example the OpportunityKeys returned by the GetBidOpportunities operation.
      * @link http://msdn.microsoft.com/en-us/library/dn376334(v=msads.90).aspx ApplyOpportunities Response Object
      * 
      * @used-by BingAdsOptimizerService::ApplyOpportunities
@@ -621,6 +824,7 @@ namespace BingAds\Optimizer
      * Gets the keyword bid opportunities of the specified ad group.
      * @link http://msdn.microsoft.com/en-us/library/dn376337(v=msads.90).aspx GetBidOpportunities Request Object
      * 
+     * @uses BidOpportunityType
      * @used-by BingAdsOptimizerService::GetBidOpportunities
      */
     final class GetBidOpportunitiesRequest
@@ -642,6 +846,12 @@ namespace BingAds\Optimizer
          * @var integer
          */
         public $CampaignId;
+
+        /**
+         * Determines the type or types of bid opportunities corresponding to your ad position goals.
+         * @var BidOpportunityType
+         */
+        public $OpportunityType;
     }
 
     /**
@@ -756,6 +966,7 @@ namespace BingAds\Optimizer
      * Gets a list of keyword suggestions that are relevant to the specified ad group.
      * @link http://msdn.microsoft.com/en-us/library/dn376336(v=msads.90).aspx GetKeywordOpportunities Request Object
      * 
+     * @uses KeywordOpportunityType
      * @used-by BingAdsOptimizerService::GetKeywordOpportunities
      */
     final class GetKeywordOpportunitiesRequest
@@ -777,6 +988,12 @@ namespace BingAds\Optimizer
          * @var integer
          */
         public $CampaignId;
+
+        /**
+         * Determines the type or types of keyword opportunities that you want.
+         * @var KeywordOpportunityType
+         */
+        public $OpportunityType;
     }
 
     /**

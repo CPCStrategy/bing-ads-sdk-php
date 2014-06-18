@@ -1,5 +1,5 @@
 <?php
-// Generated on 4/10/2014 3:04:16 PM
+// Generated on 6/9/2014 10:59:37 AM
 
 namespace BingAds\AdIntelligence
 {
@@ -253,10 +253,69 @@ namespace BingAds\AdIntelligence
         const SideBar9 = 'SideBar9';
     }
 
+    /**
+     * Defines the possible values that indicate whether all or a subset of an ad group's existing keywords are used to determine the bid landscape.
+     * @link http://msdn.microsoft.com/en-us/library/dn743748(v=msads.90).aspx AdGroupBidLandscapeType Value Set
+     * 
+     * @used-by AdGroupBidLandscape
+     * @used-by AdGroupBidLandscapeInput
+     */
     final class AdGroupBidLandscapeType
     {
+        /** Only existing keywords that use the ad group's default bid are used to determine the bid landscape. */
         const DefaultBidOnly = 'DefaultBidOnly';
+
+        /** All of an ad group's existing keywords are used to determine the bid landscape. */
         const Uniform = 'Uniform';
+    }
+
+    final class SortOrder
+    {
+        const ASCENDING = 'ASCENDING';
+        const DESCENDING = 'DESCENDING';
+    }
+
+    final class Field
+    {
+        const AccountId = 'AccountId';
+        const AdGroupId = 'AdGroupId';
+        const AggregatedAuctionInsight = 'AggregatedAuctionInsight';
+        const AuctionInsightAvailableChildren = 'AuctionInsightAvailableChildren';
+        const BidLandscape = 'BidLandscape';
+        const BidSuggestion = 'BidSuggestion';
+        const CampaignId = 'CampaignId';
+        const EntityAuctionInsight = 'EntityAuctionInsight';
+        const KeywordId = 'KeywordId';
+        const TimeInterval = 'TimeInterval';
+        const TopMover = 'TopMover';
+        const UNKNOW = 'UNKNOW';
+    }
+
+    final class Operator
+    {
+        const CONTAINS = 'CONTAINS';
+        const CONTAINS_IGNORE_CASE = 'CONTAINS_IGNORE_CASE';
+        const DOES_NOT_CONTAIN = 'DOES_NOT_CONTAIN';
+        const DOES_NOT_CONTAIN_IGNORE_CASE = 'DOES_NOT_CONTAIN_IGNORE_CASE';
+        const EQUALS = 'EQUALS';
+        const GREATER_THAN = 'GREATER_THAN';
+        const GREATER_THAN_EQUALS = 'GREATER_THAN_EQUALS';
+        const IN = 'IN';
+        const LESS_THAN = 'LESS_THAN';
+        const LESS_THAN_EQUALS = 'LESS_THAN_EQUALS';
+        const NOT_EQUALS = 'NOT_EQUALS';
+        const NOT_IN = 'NOT_IN';
+        const STARTS_WITH = 'STARTS_WITH';
+        const STARTS_WITH_IGNORE_CASE = 'STARTS_WITH_IGNORE_CASE';
+        const UNKNOWN = 'UNKNOWN';
+    }
+
+    final class AuctionInsightTimeInterval
+    {
+        const Last14Days = 'Last14Days';
+        const Last30Days = 'Last30Days';
+        const Last7Days = 'Last7Days';
+        const LastDay = 'LastDay';
     }
 
     /**
@@ -320,18 +379,67 @@ namespace BingAds\AdIntelligence
         public $Errors;
     }
 
+    /**
+     * Defines an object that contains a list of estimated clicks, cost, and impressions from 1 to 7 days for the ad group identifier given the suggested bid.
+     * @link http://msdn.microsoft.com/en-us/library/dn743746(v=msads.90).aspx AdGroupBidLandscape Data Object
+     * 
+     * @uses AdGroupBidLandscapeType
+     * @uses DayMonthAndYear
+     * @uses BidLandscapePoint
+     * @used-by GetBidLandscapeByAdGroupIdsResponse
+     */
     final class AdGroupBidLandscape
     {
+        /**
+         * The ad group identifier.
+         * @var integer
+         */
         public $AdGroupId;
+
+        /**
+         * Indicates whether all or a subset of an ad group's existing keywords were used to determine the bid landscape.
+         * @var AdGroupBidLandscapeType
+         */
         public $AdGroupBidLandscapeType;
+
+        /**
+         * The first date used to calculate the bid landscape.
+         * @var DayMonthAndYear
+         */
         public $StartDate;
+
+        /**
+         * The most recent date used to calculate the bid landscape.
+         * @var DayMonthAndYear
+         */
         public $EndDate;
+
+        /**
+         * The list of the total estimated clicks, cost, and impressions from StartDate to EndDate given the suggested bid.
+         * @var BidLandscapePoint[]
+         */
         public $BidLandscapePoints;
     }
 
+    /**
+     * Defines an object that contains the requested bid landscape type for the corresponding ad group identifier.
+     * @link http://msdn.microsoft.com/en-us/library/dn743747(v=msads.90).aspx AdGroupBidLandscapeInput Data Object
+     * 
+     * @uses AdGroupBidLandscapeType
+     * @used-by GetBidLandscapeByAdGroupIdsRequest
+     */
     final class AdGroupBidLandscapeInput
     {
+        /**
+         * Determines whether all or a subset of an ad group's existing keywords should be used to determine the bid landscape.
+         * @var AdGroupBidLandscapeType
+         */
         public $AdGroupBidLandscapeType;
+
+        /**
+         * The ad group identifier.
+         * @var integer
+         */
         public $AdGroupId;
     }
 
@@ -427,6 +535,55 @@ namespace BingAds\AdIntelligence
         public $OperationErrors;
     }
 
+    final class AuctionInsight
+    {
+        public $EntityId;
+        public $Details;
+    }
+
+    final class AuctionInsightAvailableChildren
+    {
+        public $Details;
+        public $DataVersion;
+    }
+
+    final class AuctionInsightAvailableChildrenDetail
+    {
+        public $ParentEntityId;
+        public $TimeInterval;
+        public $Entries;
+    }
+
+    final class AuctionInsightAvailableEntry
+    {
+        public $EntityId;
+        public $EntityName;
+        public $IsValidAuctionInsightData;
+    }
+
+    final class AuctionInsightDetail
+    {
+        public $TimeInterval;
+        public $AuctionInsightKPIs;
+    }
+
+    final class AuctionInsightKPI
+    {
+        public $DisplayDomain;
+        public $ImpressionShare;
+        public $OverlapRate;
+        public $AveragePosition;
+        public $AboveRate;
+        public $TopOfPageRate;
+    }
+
+    final class AuctionInsightPage
+    {
+        public $TotalNumEntries;
+        public $Entries;
+        public $DataVersion;
+    }
+
     /**
      * Defines an error object that identifies the item within the batch of items in the request message that caused the operation to fail, and describes the reason for the failure.
      * @link http://msdn.microsoft.com/en-us/library/dn169090(v=msads.90).aspx BatchError Data Object
@@ -517,6 +674,12 @@ namespace BingAds\AdIntelligence
          * @var double
          */
         public $MarginalCPC;
+    }
+
+    final class DateRange
+    {
+        public $MaxDate;
+        public $MinDate;
     }
 
     /**
@@ -775,6 +938,7 @@ namespace BingAds\AdIntelligence
      * 
      * @uses DayMonthAndYear
      * @uses BidLandscapePoint
+     * @used-by KeywordIdBidEstimation
      * @used-by GetBidLandscapeByKeywordIdsResponse
      */
     final class KeywordBidLandscape
@@ -1012,11 +1176,31 @@ namespace BingAds\AdIntelligence
         public $KeywordKPIs;
     }
 
+    final class KeywordIdBidEstimation
+    {
+        public $BidLandscape;
+        public $BidSuggestion;
+    }
+
+    final class KeywordIdBidEstimationPage
+    {
+        public $TotalNumEntries;
+        public $Entries;
+    }
+
+    final class KeywordIdBidSuggestion
+    {
+        public $MainLine1;
+        public $MainLine;
+        public $FirstPage;
+    }
+
     /**
      * Defines an object that contains the identifier of the keyword and the suggested bid value for the keyword and match type.
      * @link http://msdn.microsoft.com/en-us/library/gg986827(v=msads.90).aspx KeywordIdEstimatedBid Data Object
      * 
      * @uses KeywordEstimatedBid
+     * @used-by KeywordIdBidSuggestion
      * @used-by GetEstimatedBidByKeywordIdsResponse
      */
     final class KeywordIdEstimatedBid
@@ -1255,18 +1439,98 @@ namespace BingAds\AdIntelligence
         public $Message;
     }
 
+    final class OrderBy
+    {
+        public $SortOrder;
+        public $SortingField;
+    }
+
+    final class Paging
+    {
+        public $Index;
+        public $Size;
+    }
+
+    final class Predicate
+    {
+        public $FilteringField;
+        public $Operator;
+        public $Values;
+    }
+
+    final class Selector
+    {
+        public $DateRange;
+        public $Ordering;
+        public $PageInfo;
+        public $Predicates;
+        public $SelectedFields;
+    }
+
+    final class GetAccountAuctionInsightRequest
+    {
+        public $Selector;
+    }
+
+    final class GetAccountAuctionInsightResponse
+    {
+        public $Result;
+    }
+
+    final class GetAdGroupAuctionInsightRequest
+    {
+        public $Selector;
+    }
+
+    final class GetAdGroupAuctionInsightResponse
+    {
+        public $Result;
+    }
+
+    final class GetAuctionInsightAvailableChildrenRequest
+    {
+        public $Selector;
+    }
+
+    final class GetAuctionInsightAvailableChildrenResponse
+    {
+        public $Result;
+    }
+
+    /**
+     * Given a list of existing ad groups, this operation returns for each a list of suggested bids and estimated performance statistics.
+     * @link http://msdn.microsoft.com/en-us/library/dn743755(v=msads.90).aspx GetBidLandscapeByAdGroupIds Request Object
+     * 
+     * @uses AdGroupBidLandscapeInput
+     * @used-by BingAdsAdIntelligenceService::GetBidLandscapeByAdGroupIds
+     */
     final class GetBidLandscapeByAdGroupIdsRequest
     {
+        /**
+         * An array of ad group identifiers with corresponding bid landscape type input.
+         * @var AdGroupBidLandscapeInput[]
+         */
         public $AdGroupBidLandscapeInputs;
     }
 
+    /**
+     * Given a list of existing ad groups, this operation returns for each a list of suggested bids and estimated performance statistics.
+     * @link http://msdn.microsoft.com/en-us/library/dn743755(v=msads.90).aspx GetBidLandscapeByAdGroupIds Response Object
+     * 
+     * @uses AdGroupBidLandscape
+     * @used-by BingAdsAdIntelligenceService::GetBidLandscapeByAdGroupIds
+     */
     final class GetBidLandscapeByAdGroupIdsResponse
     {
+        /**
+         * An array of AdGroupBidLandscape objects.
+         * @var AdGroupBidLandscape[]
+         */
         public $BidLandscape;
     }
 
     /**
-     * Given a list of existing keywords, this operation returns for each a list of suggested bids and estimated performance statistics from 1 to 7 days.
+     * Given a list of existing keywords, this operation returns for each a list of suggested bids and estimated performance statistics.
      * @link http://msdn.microsoft.com/en-us/library/dn631945(v=msads.90).aspx GetBidLandscapeByKeywordIds Request Object
      * 
      * @used-by BingAdsAdIntelligenceService::GetBidLandscapeByKeywordIds
@@ -1281,7 +1545,7 @@ namespace BingAds\AdIntelligence
     }
 
     /**
-     * Given a list of existing keywords, this operation returns for each a list of suggested bids and estimated performance statistics from 1 to 7 days.
+     * Given a list of existing keywords, this operation returns for each a list of suggested bids and estimated performance statistics.
      * @link http://msdn.microsoft.com/en-us/library/dn631945(v=msads.90).aspx GetBidLandscapeByKeywordIds Response Object
      * 
      * @uses KeywordBidLandscape
@@ -1294,6 +1558,16 @@ namespace BingAds\AdIntelligence
          * @var KeywordBidLandscape[]
          */
         public $BidLandscape;
+    }
+
+    final class GetCampaignAuctionInsightRequest
+    {
+        public $Selector;
+    }
+
+    final class GetCampaignAuctionInsightResponse
+    {
+        public $Result;
     }
 
     /**
@@ -1657,6 +1931,16 @@ namespace BingAds\AdIntelligence
         public $KeywordSearchCounts;
     }
 
+    final class GetKeywordAuctionInsightRequest
+    {
+        public $Selector;
+    }
+
+    final class GetKeywordAuctionInsightResponse
+    {
+        public $Result;
+    }
+
     /**
      * Gets the keyword categories to which the specified keywords belong.
      * @link http://msdn.microsoft.com/en-us/library/dn336992(v=msads.90).aspx GetKeywordCategories Request Object
@@ -1753,6 +2037,16 @@ namespace BingAds\AdIntelligence
          * @var KeywordDemographicResult[]
          */
         public $KeywordDemographicResult;
+    }
+
+    final class GetKeywordIdBidEstimationRequest
+    {
+        public $Selector;
+    }
+
+    final class GetKeywordIdBidEstimationResponse
+    {
+        public $Result;
     }
 
     /**
