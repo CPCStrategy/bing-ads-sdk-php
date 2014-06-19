@@ -1,5 +1,5 @@
 <?php
-// Generated on 4/10/2014 3:04:17 PM
+// Generated on 6/9/2014 10:59:41 AM
 
 namespace BingAds\CampaignManagement
 {
@@ -252,6 +252,7 @@ namespace BingAds\CampaignManagement
      * @link http://msdn.microsoft.com/en-us/library/bb671717(v=msads.90).aspx Day Value Set
      * 
      * @used-by DayTargetBid
+     * @used-by DayTimeTargetBid
      */
     final class Day
     {
@@ -304,6 +305,75 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743745(v=msads.90).aspx Minute Value Set
+     * 
+     * @used-by DayTimeTargetBid
+     */
+    final class Minute
+    {
+        /** The starting or ending minute of the hour range is fifteen. */
+        const Fifteen = 'Fifteen';
+
+        /** The starting or ending minute of the hour range is forty-five. */
+        const FortyFive = 'FortyFive';
+
+        /** The starting or ending minute of the hour range is thirty. */
+        const Thirty = 'Thirty';
+
+        /** The starting or ending minute of the hour range is zero. */
+        const Zero = 'Zero';
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743742(v=msads.90).aspx IntentOption Value Set
+     * 
+     * @used-by LocationTarget2
+     */
+    final class IntentOption
+    {
+        /** Show ads to people in your targeted location. */
+        const PeopleIn = 'PeopleIn';
+
+        /** Show ads to people in, searching for, or viewing pages about your targeted location. */
+        const PeopleInOrSearchingForOrViewingPages = 'PeopleInOrSearchingForOrViewingPages';
+
+        /** Show ads to people searching for or viewing pages about your targeted location. */
+        const PeopleSearchingForOrViewingPages = 'PeopleSearchingForOrViewingPages';
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743740(v=msads.90).aspx DistanceUnit Value Set
+     * 
+     * @used-by RadiusTargetBid2
+     */
+    final class DistanceUnit
+    {
+        /** The distance of the specified geographical location is specified in kilometers. */
+        const Kilometers = 'Kilometers';
+
+        /** The distance of the specified geographical location is specified in miles. */
+        const Miles = 'Miles';
+    }
+
+    /**
+     * Reserved for future use.
+     * @link http://msdn.microsoft.com/en-us/library/dn743765(v=msads.90).aspx NetworkType Value Set
+     * 
+     * @used-by NetworkTargetBid
+     */
+    final class NetworkType
+    {
+        /** Display ads on owned and operated networks. */
+        const OwnedAndOperated = 'OwnedAndOperated';
+
+        /** Display ads on syndicated search networks. */
+        const SyndicatedSearch = 'SyndicatedSearch';
+    }
+
+    /**
      * Defines the editorial review status values of a keyword.
      * @link http://msdn.microsoft.com/en-us/library/cc565085(v=msads.90).aspx KeywordEditorialStatus Value Set
      * 
@@ -330,6 +400,7 @@ namespace BingAds\CampaignManagement
      * @link http://msdn.microsoft.com/en-us/library/dn249974(v=msads.90).aspx MatchType Value Set
      * 
      * @used-by Keyword
+     * @used-by NegativeKeyword
      */
     final class MatchType
     {
@@ -484,6 +555,9 @@ namespace BingAds\CampaignManagement
         /** An ad extension that contains a phone number to include in the ad and whether it's the only clickable item in an ad. */
         const CallAdExtension = 'CallAdExtension';
 
+        /** An ad extension that contains an image with alternative text to include in the ad. */
+        const ImageAdExtension = 'ImageAdExtension';
+
         /** An ad extension that contains the address and phone number of the business to include an ad. */
         const LocationAdExtension = 'LocationAdExtension';
 
@@ -533,6 +607,18 @@ namespace BingAds\CampaignManagement
 
         /** One or more elements of the ad extension is undergoing editorial review. */
         const Inactive = 'Inactive';
+    }
+
+    /**
+     * Defines the possible values representing entities that are enabled for media such as images.
+     * @link http://msdn.microsoft.com/en-us/library/dn766195(v=msads.90).aspx MediaEnabledEntityFilter Value Set
+     * 
+     * @used-by GetMediaMetaDataByAccountIdRequest
+     */
+    final class MediaEnabledEntityFilter
+    {
+        /** The media enabled entity is an ImageAdExtension. */
+        const ImageAdExtension = 'ImageAdExtension';
     }
 
     /**
@@ -1185,6 +1271,7 @@ namespace BingAds\CampaignManagement
      * 
      * @uses AgeTargetBid
      * @used-by Target
+     * @used-by Target2
      */
     final class AgeTarget
     {
@@ -1248,12 +1335,23 @@ namespace BingAds\CampaignManagement
      * @used-by EditorialApiFaultDetail
      * @used-by AddAdsResponse
      * @used-by AddKeywordsResponse
+     * @used-by AddListItemsToSharedListResponse
+     * @used-by AddSharedEntityResponse
      * @used-by DeleteAdsResponse
      * @used-by DeleteKeywordsResponse
+     * @used-by DeleteListItemsFromSharedListResponse
+     * @used-by DeleteSharedEntitiesResponse
+     * @used-by DeleteSharedEntityAssociationsResponse
      * @used-by GetAdsByIdsResponse
      * @used-by GetKeywordsByIdsResponse
+     * @used-by GetMediaMetaDataByIdsResponse
+     * @used-by GetNegativeKeywordsByEntityIdsResponse
+     * @used-by GetSharedEntityAssociationsByEntityIdsResponse
+     * @used-by GetSharedEntityAssociationsBySharedEntityIdsResponse
+     * @used-by SetSharedEntityAssociationsResponse
      * @used-by UpdateAdsResponse
      * @used-by UpdateKeywordsResponse
+     * @used-by UpdateSharedEntitiesResponse
      */
     class BatchError
     {
@@ -1294,13 +1392,50 @@ namespace BingAds\CampaignManagement
         public $Type;
     }
 
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743731(v=msads.90).aspx BatchErrorCollection Data Object
+     * 
+     * @uses BatchError
+     * @used-by AddNegativeKeywordsToEntitiesResponse
+     * @used-by DeleteNegativeKeywordsFromEntitiesResponse
+     */
     final class BatchErrorCollection
     {
+        /**
+         * A list of batch errors corresponding to the nested list index.
+         * @var BatchError[]
+         */
         public $BatchErrors;
+
+        /**
+         * A numeric error code that identifies the error for the top level list index.
+         * @var integer
+         */
         public $Code;
+
+        /**
+         * A message that provides additional details about the batch error for the top level list index.
+         * @var string
+         */
         public $Details;
+
+        /**
+         * A symbolic string constant that identifies the error for the top level list index.
+         * @var string
+         */
         public $ErrorCode;
+
+        /**
+         * The zero-based top level list index in the request message that failed.
+         * @var integer
+         */
         public $Index;
+
+        /**
+         * A message that describes the error for the top level list index.
+         * @var string
+         */
         public $Message;
     }
 
@@ -1408,7 +1543,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Available for members of the Call Ad Extension v2 pilot program.
+     * Call ad extensions are only available in the United States and United Kingdom.
      * @link http://msdn.microsoft.com/en-us/library/jj721598(v=msads.90).aspx CallAdExtension Data Object
      */
     final class CallAdExtension extends AdExtension
@@ -1495,7 +1630,7 @@ namespace BingAds\CampaignManagement
         public $Description;
 
         /**
-         * The list of key and value strings for forward compatibility.
+         * The following list of key and value strings are available for forward compatibility.
          * @var KeyValuePairOfstringstring[]
          */
         public $ForwardCompatibilityMap;
@@ -1575,12 +1710,19 @@ namespace BingAds\CampaignManagement
         public $NegativeSites;
     }
 
+    final class CampaignSize
+    {
+        public $CampaignId;
+        public $Size;
+    }
+
     /**
      * Defines a list of cities to target with bid adjustments.
      * @link http://msdn.microsoft.com/en-us/library/dd796959(v=msads.90).aspx CityTarget Data Object
      * 
      * @uses CityTargetBid
      * @used-by LocationTarget
+     * @used-by LocationTarget2
      */
     final class CityTarget
     {
@@ -1624,6 +1766,7 @@ namespace BingAds\CampaignManagement
      * 
      * @uses CountryTargetBid
      * @used-by LocationTarget
+     * @used-by LocationTarget2
      */
     final class CountryTarget
     {
@@ -1763,11 +1906,75 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743766(v=msads.90).aspx DayTimeTarget Data Object
+     * 
+     * @uses DayTimeTargetBid
+     * @used-by Target2
+     */
+    final class DayTimeTarget
+    {
+        /**
+         * An array of DayTimeTargetBid objects that each specify the day of the week and time to target with bid adjustment to apply to the base bid.
+         * @var DayTimeTargetBid[]
+         */
+        public $Bids;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743741(v=msads.90).aspx DayTimeTargetBid Data Object
+     * 
+     * @uses Day
+     * @uses Minute
+     * @used-by DayTimeTarget
+     */
+    final class DayTimeTargetBid
+    {
+        /**
+         * The percent amount by which to adjust the base bid for the specified day and time range.
+         * @var integer
+         */
+        public $BidAdjustment;
+
+        /**
+         * The day of the week to target.
+         * @var Day
+         */
+        public $Day;
+
+        /**
+         * The starting hour range to target.
+         * @var integer
+         */
+        public $FromHour;
+
+        /**
+         * The starting minute of the hour to target.
+         * @var Minute
+         */
+        public $FromMinute;
+
+        /**
+         * The ending hour range to target.
+         * @var integer
+         */
+        public $ToHour;
+
+        /**
+         * The ending minute of the hour to target.
+         * @var Minute
+         */
+        public $ToMinute;
+    }
+
+    /**
      * Defines a list of devices to target with bid adjustments.
      * @link http://msdn.microsoft.com/en-us/library/hh527704(v=msads.90).aspx DeviceOSTarget Data Object
      * 
      * @uses DeviceOSTargetBid
      * @used-by Target
+     * @used-by Target2
      */
     final class DeviceOSTarget
     {
@@ -1957,6 +2164,36 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743733(v=msads.90).aspx EntityNegativeKeyword Data Object
+     * 
+     * @uses NegativeKeyword
+     * @used-by AddNegativeKeywordsToEntitiesRequest
+     * @used-by DeleteNegativeKeywordsFromEntitiesRequest
+     * @used-by GetNegativeKeywordsByEntityIdsResponse
+     */
+    final class EntityNegativeKeyword
+    {
+        /**
+         * The system-generated identifier of a campaign or ad group that is associated with the negative keywords.
+         * @var integer
+         */
+        public $EntityId;
+
+        /**
+         * The type of entity such as a campaign that is associated with the negative keywords.
+         * @var string
+         */
+        public $EntityType;
+
+        /**
+         * An array of negative keywords that are associated with the corresponding campaign or ad group.
+         * @var NegativeKeyword[]
+         */
+        public $NegativeKeywords;
+    }
+
+    /**
      * Defines the monetary bid to use in the auction.
      * @link http://msdn.microsoft.com/en-us/library/jj689541(v=msads.90).aspx FixedBid Data Object
      * 
@@ -1977,6 +2214,7 @@ namespace BingAds\CampaignManagement
      * 
      * @uses GenderTargetBid
      * @used-by Target
+     * @used-by Target2
      */
     final class GenderTarget
     {
@@ -2074,8 +2312,18 @@ namespace BingAds\CampaignManagement
         public $Hour;
     }
 
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743736(v=msads.90).aspx IdCollection Data Object
+     * 
+     * @used-by AddNegativeKeywordsToEntitiesResponse
+     */
     final class IdCollection
     {
+        /**
+         * A list of identifiers, for example negative keyword identifiers.
+         * @var integer[]
+         */
         public $Ids;
     }
 
@@ -2095,7 +2343,7 @@ namespace BingAds\CampaignManagement
         public $Id;
 
         /**
-         * This read-only element is the name of the subclass.
+         * This read-only element is the name of the media subclass.
          * @var string
          */
         public $MediaType;
@@ -2118,6 +2366,77 @@ namespace BingAds\CampaignManagement
          * @var string
          */
         public $Data;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn766199(v=msads.90).aspx ImageAdExtension Data Object
+     */
+    final class ImageAdExtension extends AdExtension
+    {
+        /**
+         * Description of the image media for usability.
+         * @var string
+         */
+        public $AlternativeText;
+
+        /**
+         * The URL of the webpage to take the user to when they click the image.
+         * @var string
+         */
+        public $DestinationUrl;
+
+        /**
+         * The identifier of the image to include in the ad.
+         * @var integer
+         */
+        public $ImageMediaId;
+    }
+
+    /**
+     * Defines a media representation base class that includes a media download Url.
+     * @link http://msdn.microsoft.com/en-us/library/dn766194(v=msads.90).aspx MediaRepresentation Data Object
+     * 
+     * @used-by MediaMetaData
+     */
+    class MediaRepresentation
+    {
+        /**
+         * The name of the media representation.
+         * @var string
+         */
+        public $Name;
+
+        /**
+         * The type of the media representation, for example ImageMediaRepresentation.
+         * @var string
+         */
+        public $Type;
+
+        /**
+         * The media download URL.
+         * @var string
+         */
+        public $Url;
+    }
+
+    /**
+     * Defines an image media representation with height and width.
+     * @link http://msdn.microsoft.com/en-us/library/dn766197(v=msads.90).aspx ImageMediaRepresentation Data Object
+     */
+    final class ImageMediaRepresentation extends MediaRepresentation
+    {
+        /**
+         * The height of the image in pixels.
+         * @var integer
+         */
+        public $Height;
+
+        /**
+         * The width of the image in pixels.
+         * @var integer
+         */
+        public $Width;
     }
 
     /**
@@ -2335,6 +2654,99 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743770(v=msads.90).aspx LocationTarget2 Data Object
+     * 
+     * @uses CityTarget
+     * @uses CountryTarget
+     * @uses IntentOption
+     * @uses MetroAreaTarget
+     * @uses PostalCodeTarget
+     * @uses RadiusTarget2
+     * @uses StateTarget
+     * @used-by Target2
+     */
+    final class LocationTarget2
+    {
+        /**
+         * The cities to target.
+         * @var CityTarget
+         */
+        public $CityTarget;
+
+        /**
+         * The countries/regions to target.
+         * @var CountryTarget
+         */
+        public $CountryTarget;
+
+        /**
+         * Determines whether the audience must be physically located in the targeted location in order for the ad to display.
+         * @var IntentOption
+         */
+        public $IntentOption;
+
+        /**
+         * The metropolitan areas to target.
+         * @var MetroAreaTarget
+         */
+        public $MetroAreaTarget;
+
+        /**
+         * The postal codes to target.
+         * @var PostalCodeTarget
+         */
+        public $PostalCodeTarget;
+
+        /**
+         * The geographical locations to target.
+         * @var RadiusTarget2
+         */
+        public $RadiusTarget;
+
+        /**
+         * The states, provinces, or territories to target.
+         * @var StateTarget
+         */
+        public $StateTarget;
+    }
+
+    /**
+     * Defines a media meta data object.
+     * @link http://msdn.microsoft.com/en-us/library/dn766198(v=msads.90).aspx MediaMetaData Data Object
+     * 
+     * @uses MediaRepresentation
+     * @used-by GetMediaMetaDataByAccountIdResponse
+     * @used-by GetMediaMetaDataByIdsResponse
+     */
+    final class MediaMetaData
+    {
+        /**
+         * The system identifier of the media meta data.
+         * @var integer
+         */
+        public $Id;
+
+        /**
+         * The name of the media subclass.
+         * @var string
+         */
+        public $MediaType;
+
+        /**
+         * An array of MediaRepresentation-derived objects, for example ImageMediaRepresentation, that each include download Urls for one or more media representations.
+         * @var MediaRepresentation[]
+         */
+        public $Representations;
+
+        /**
+         * The type of media in the library.
+         * @var string
+         */
+        public $Type;
+    }
+
+    /**
      * Defines media type information for a website.
      * @link http://msdn.microsoft.com/en-us/library/dd797128(v=msads.90).aspx MediaType Data Object
      * 
@@ -2362,6 +2774,7 @@ namespace BingAds\CampaignManagement
      * 
      * @uses MetroAreaTargetBid
      * @used-by LocationTarget
+     * @used-by LocationTarget2
      */
     final class MetroAreaTarget
     {
@@ -2443,6 +2856,164 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743738(v=msads.90).aspx SharedListItem Data Object
+     * 
+     * @uses KeyValuePairOfstringstring
+     * @used-by AddListItemsToSharedListRequest
+     * @used-by AddSharedEntityRequest
+     * @used-by GetListItemsBySharedListResponse
+     */
+    class SharedListItem
+    {
+        /**
+         * The list of key and value strings for forward compatibility.
+         * @var KeyValuePairOfstringstring[]
+         */
+        public $ForwardCompatibilityMap;
+
+        /**
+         * The type of the shared list item.
+         * @var string
+         */
+        public $Type;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743739(v=msads.90).aspx NegativeKeyword Data Object
+     * 
+     * @uses MatchType
+     * @used-by EntityNegativeKeyword
+     */
+    final class NegativeKeyword extends SharedListItem
+    {
+        /**
+         * The system-generated identifier of the negative keyword.
+         * @var integer
+         */
+        public $Id;
+
+        /**
+         * The type of match to compare the negative keyword and the user's search term.
+         * @var MatchType
+         */
+        public $MatchType;
+
+        /**
+         * The negative keyword text.
+         * @var string
+         */
+        public $Text;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743735(v=msads.90).aspx SharedEntity Data Object
+     * 
+     * @uses KeyValuePairOfstringstring
+     * @used-by AddSharedEntityRequest
+     * @used-by DeleteSharedEntitiesRequest
+     * @used-by GetSharedEntitiesByAccountIdResponse
+     * @used-by UpdateSharedEntitiesRequest
+     */
+    class SharedEntity
+    {
+        /**
+         * The number of active associations between this object and an entity such as a campaign.
+         * @var integer
+         */
+        public $AssociationCount;
+
+        /**
+         * The list of key and value strings for forward compatibility.
+         * @var KeyValuePairOfstringstring[]
+         */
+        public $ForwardCompatibilityMap;
+
+        /**
+         * The system-generated identifier of the shared entity.
+         * @var integer
+         */
+        public $Id;
+
+        /**
+         * The name of the shared entity.
+         * @var string
+         */
+        public $Name;
+
+        /**
+         * The type of the shared entity.
+         * @var string
+         */
+        public $Type;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743734(v=msads.90).aspx SharedList Data Object
+     * 
+     * @used-by AddListItemsToSharedListRequest
+     * @used-by DeleteListItemsFromSharedListRequest
+     * @used-by GetListItemsBySharedListRequest
+     */
+    class SharedList extends SharedEntity
+    {
+        /**
+         * The number of SharedListItem objects that are added to this shared list.
+         * @var integer
+         */
+        public $ItemCount;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743737(v=msads.90).aspx NegativeKeywordList Data Object
+     */
+    final class NegativeKeywordList extends SharedList
+    {
+    }
+
+    /**
+     * Reserved for future use.
+     * @link http://msdn.microsoft.com/en-us/library/dn743763(v=msads.90).aspx NetworkTarget Data Object
+     * 
+     * @uses NetworkTargetBid
+     * @used-by Target2
+     */
+    final class NetworkTarget
+    {
+        /**
+         * An array of NetworkTargetBid objects that each specify the network to target with bid adjustment to apply to the base bid.
+         * @var NetworkTargetBid[]
+         */
+        public $Bids;
+    }
+
+    /**
+     * Reserved for future use.
+     * @link http://msdn.microsoft.com/en-us/library/dn743764(v=msads.90).aspx NetworkTargetBid Data Object
+     * 
+     * @uses NetworkType
+     * @used-by NetworkTarget
+     */
+    final class NetworkTargetBid
+    {
+        /**
+         * The percent amount by which to adjust the base bid for the specified network.
+         * @var integer
+         */
+        public $BidAdjustment;
+
+        /**
+         * The network to target.
+         * @var NetworkType
+         */
+        public $Network;
+    }
+
+    /**
      * Defines an error object that contains the details that explain why the service operation failed.
      * @link http://msdn.microsoft.com/en-us/library/bb671973(v=msads.90).aspx OperationError Data Object
      * 
@@ -2509,6 +3080,49 @@ namespace BingAds\CampaignManagement
          * @var MediaType[]
          */
         public $SupportedMediaTypes;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743743(v=msads.90).aspx PostalCodeTarget Data Object
+     * 
+     * @uses PostalCodeTargetBid
+     * @used-by LocationTarget2
+     */
+    final class PostalCodeTarget
+    {
+        /**
+         * An array of PostalCodeTargetBid objects that specifies the times of the postal code to target and the bid adjustment to apply to the base bid.
+         * @var PostalCodeTargetBid[]
+         */
+        public $Bids;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743767(v=msads.90).aspx PostalCodeTargetBid Data Object
+     * 
+     * @used-by PostalCodeTarget
+     */
+    final class PostalCodeTargetBid
+    {
+        /**
+         * The percent amount by which to adjust the base bid if the user is in the targeted postal code area.
+         * @var integer
+         */
+        public $BidAdjustment;
+
+        /**
+         * Set this element to true if you want to exclude the location from targeting.
+         * @var boolean
+         */
+        public $IsExcluded;
+
+        /**
+         * The postal code to target.
+         * @var string
+         */
+        public $PostalCode;
     }
 
     /**
@@ -2627,6 +3241,22 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743744(v=msads.90).aspx RadiusTarget2 Data Object
+     * 
+     * @uses RadiusTargetBid2
+     * @used-by LocationTarget2
+     */
+    final class RadiusTarget2
+    {
+        /**
+         * An array of RadiusTargetBid2 objects that specifies an area surrounding a geographical location to target and the bid adjustment to apply to the base bid.
+         * @var RadiusTargetBid2[]
+         */
+        public $Bids;
+    }
+
+    /**
      * Defines a specific geographical radius target with bid adjustment.
      * @link http://msdn.microsoft.com/en-us/library/dd796863(v=msads.90).aspx RadiusTargetBid Data Object
      * 
@@ -2675,6 +3305,100 @@ namespace BingAds\CampaignManagement
          * @var integer
          */
         public $Radius;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743768(v=msads.90).aspx RadiusTargetBid2 Data Object
+     * 
+     * @uses DistanceUnit
+     * @used-by RadiusTarget2
+     */
+    final class RadiusTargetBid2
+    {
+        /**
+         * The percent amount by which to adjust the base bid if the user is in the targeted geographical location radius.
+         * @var integer
+         */
+        public $BidAdjustment;
+
+        /**
+         * Reserved for future use.
+         * @var integer
+         */
+        public $Id;
+
+        /**
+         * Reserved for future use.
+         * @var boolean
+         */
+        public $IsExcluded;
+
+        /**
+         * The latitude, in degrees, of the target location.
+         * @var double
+         */
+        public $LatitudeDegrees;
+
+        /**
+         * The longitude, in degrees, of the target location.
+         * @var double
+         */
+        public $LongitudeDegrees;
+
+        /**
+         * The name of the geographical location being targeted.
+         * @var string
+         */
+        public $Name;
+
+        /**
+         * The radius that specifies the area surrounding the geographical location to target.
+         * @var double
+         */
+        public $Radius;
+
+        /**
+         * The unit of measurement for the specified radius, for example kilometers or miles.
+         * @var DistanceUnit
+         */
+        public $RadiusUnit;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743769(v=msads.90).aspx SharedEntityAssociation Data Object
+     * 
+     * @used-by DeleteSharedEntityAssociationsRequest
+     * @used-by GetSharedEntityAssociationsByEntityIdsResponse
+     * @used-by GetSharedEntityAssociationsBySharedEntityIdsResponse
+     * @used-by SetSharedEntityAssociationsRequest
+     */
+    final class SharedEntityAssociation
+    {
+        /**
+         * The system-generated identifier of the campaign that is associated with the shared entity.
+         * @var integer
+         */
+        public $EntityId;
+
+        /**
+         * The type of entity.
+         * @var string
+         */
+        public $EntityType;
+
+        /**
+         * The system-generated identifier of the shared entity.
+         * @var integer
+         */
+        public $SharedEntityId;
+
+        /**
+         * The type of the shared entity.
+         * @var string
+         */
+        public $SharedEntityType;
     }
 
     /**
@@ -2781,6 +3505,7 @@ namespace BingAds\CampaignManagement
      * 
      * @uses StateTargetBid
      * @used-by LocationTarget
+     * @used-by LocationTarget2
      */
     final class StateTarget
     {
@@ -2896,6 +3621,86 @@ namespace BingAds\CampaignManagement
          * @var string
          */
         public $Name;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743781(v=msads.90).aspx Target2 Data Object
+     * 
+     * @uses AgeTarget
+     * @uses DayTimeTarget
+     * @uses DeviceOSTarget
+     * @uses KeyValuePairOfstringstring
+     * @uses GenderTarget
+     * @uses LocationTarget2
+     * @uses NetworkTarget
+     * @used-by AddTargetsToLibrary2Request
+     * @used-by GetTargetsByAdGroupIds2Response
+     * @used-by GetTargetsByCampaignIds2Response
+     * @used-by GetTargetsByIds2Response
+     * @used-by UpdateTargetsInLibrary2Request
+     */
+    final class Target2
+    {
+        /**
+         * Targets ads to users within one or more age ranges.
+         * @var AgeTarget
+         */
+        public $Age;
+
+        /**
+         * Targets ads to run on specific days and hours of the week.
+         * @var DayTimeTarget
+         */
+        public $DayTime;
+
+        /**
+         * Targets ads to serve on specific devices.
+         * @var DeviceOSTarget
+         */
+        public $DeviceOS;
+
+        /**
+         * The list of key and value strings for forward compatibility.
+         * @var KeyValuePairOfstringstring[]
+         */
+        public $ForwardCompatibilityMap;
+
+        /**
+         * Targets ads to men only or women only.
+         * @var GenderTarget
+         */
+        public $Gender;
+
+        /**
+         * A system-generated identifier that identifies this target object.
+         * @var integer
+         */
+        public $Id;
+
+        /**
+         * Determines whether the target library contains this target object.
+         * @var boolean
+         */
+        public $IsLibraryTarget;
+
+        /**
+         * Targets ads to users within a specific location; for example, users within a certain radius of your business or within a specific state.
+         * @var LocationTarget2
+         */
+        public $Location;
+
+        /**
+         * The name of the target.
+         * @var string
+         */
+        public $Name;
+
+        /**
+         * Targets ads to users within a specific search network.
+         * @var NetworkTarget
+         */
+        public $Network;
     }
 
     /**
@@ -3188,6 +3993,51 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743721(v=msads.90).aspx AddListItemsToSharedList Request Object
+     * 
+     * @uses SharedListItem
+     * @uses SharedList
+     * @used-by BingAdsCampaignManagementService::AddListItemsToSharedList
+     */
+    final class AddListItemsToSharedListRequest
+    {
+        /**
+         * An array of list items to add to the shared list, for example a list of negative keywords.
+         * @var SharedListItem[]
+         */
+        public $ListItems;
+
+        /**
+         * The list to add to the account's shared library.
+         * @var SharedList
+         */
+        public $SharedList;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743721(v=msads.90).aspx AddListItemsToSharedList Response Object
+     * 
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::AddListItemsToSharedList
+     */
+    final class AddListItemsToSharedListResponse
+    {
+        /**
+         * A list of long values that represents the identifiers for the list items that were added.
+         * @var integer[]
+         */
+        public $ListItemIds;
+
+        /**
+         * An array of BatchError objects that contain details for any list items that were not successfully added.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
      * Adds the specified media to an account's media library.
      * @link http://msdn.microsoft.com/en-us/library/dn277518(v=msads.90).aspx AddMedia Request Object
      * 
@@ -3222,6 +4072,96 @@ namespace BingAds\CampaignManagement
          * @var integer[]
          */
         public $MediaIds;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743724(v=msads.90).aspx AddNegativeKeywordsToEntities Request Object
+     * 
+     * @uses EntityNegativeKeyword
+     * @used-by BingAdsCampaignManagementService::AddNegativeKeywordsToEntities
+     */
+    final class AddNegativeKeywordsToEntitiesRequest
+    {
+        /**
+         * An array of negative keyword with associated entity such as a campaign or ad group.
+         * @var EntityNegativeKeyword[]
+         */
+        public $EntityNegativeKeywords;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743724(v=msads.90).aspx AddNegativeKeywordsToEntities Response Object
+     * 
+     * @uses IdCollection
+     * @uses BatchErrorCollection
+     * @used-by BingAdsCampaignManagementService::AddNegativeKeywordsToEntities
+     */
+    final class AddNegativeKeywordsToEntitiesResponse
+    {
+        /**
+         * An array of IdCollection objects identifying the negative keywords that were successfully added.
+         * @var IdCollection[]
+         */
+        public $NegativeKeywordIds;
+
+        /**
+         * An array of BatchErrorCollection objects that contain details for any negative keywords that were not successfully added to the corresponding entity.
+         * @var BatchErrorCollection[]
+         */
+        public $NestedPartialErrors;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743722(v=msads.90).aspx AddSharedEntity Request Object
+     * 
+     * @uses SharedEntity
+     * @uses SharedListItem
+     * @used-by BingAdsCampaignManagementService::AddSharedEntity
+     */
+    final class AddSharedEntityRequest
+    {
+        /**
+         * The shared entity to add to the account's shared library, for example a negative keyword list.
+         * @var SharedEntity
+         */
+        public $SharedEntity;
+
+        /**
+         * An array of list items to add to the shared list, for example a list of negative keywords.
+         * @var SharedListItem[]
+         */
+        public $ListItems;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743722(v=msads.90).aspx AddSharedEntity Response Object
+     * 
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::AddSharedEntity
+     */
+    final class AddSharedEntityResponse
+    {
+        /**
+         * A list of long values that represents the identifiers for the list items that were added.
+         * @var integer[]
+         */
+        public $ListItemIds;
+
+        /**
+         * An array of BatchError objects that contain details for any list items that were not successfully added.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+
+        /**
+         * The identifier for the shared entity that was added.
+         * @var integer
+         */
+        public $SharedEntityId;
     }
 
     /**
@@ -3284,6 +4224,37 @@ namespace BingAds\CampaignManagement
      * @used-by BingAdsCampaignManagementService::AddTargetsToLibrary
      */
     final class AddTargetsToLibraryResponse
+    {
+        /**
+         * An array of long values that contains the identifiers of the targets that were added to your target library.
+         * @var integer[]
+         */
+        public $TargetIds;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743775(v=msads.90).aspx AddTargetsToLibrary2 Request Object
+     * 
+     * @uses Target2
+     * @used-by BingAdsCampaignManagementService::AddTargetsToLibrary2
+     */
+    final class AddTargetsToLibrary2Request
+    {
+        /**
+         * An array of Target2 objects to add to the target library.
+         * @var Target2[]
+         */
+        public $Targets;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743775(v=msads.90).aspx AddTargetsToLibrary2 Response Object
+     * 
+     * @used-by BingAdsCampaignManagementService::AddTargetsToLibrary2
+     */
+    final class AddTargetsToLibrary2Response
     {
         /**
          * An array of long values that contains the identifiers of the targets that were added to your target library.
@@ -3568,6 +4539,171 @@ namespace BingAds\CampaignManagement
     {
         /**
          * An array of BatchError objects that contain details for any keywords that were not successfully deleted.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743723(v=msads.90).aspx DeleteListItemsFromSharedList Request Object
+     * 
+     * @uses SharedList
+     * @used-by BingAdsCampaignManagementService::DeleteListItemsFromSharedList
+     */
+    final class DeleteListItemsFromSharedListRequest
+    {
+        /**
+         * An array of identifiers of the list items to delete from the shared list, for example a list of negative keyword identifiers.
+         * @var integer[]
+         */
+        public $ListItemIds;
+
+        /**
+         * The list within the account's shared library, from which to delete the specified list items.
+         * @var SharedList
+         */
+        public $SharedList;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743723(v=msads.90).aspx DeleteListItemsFromSharedList Response Object
+     * 
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::DeleteListItemsFromSharedList
+     */
+    final class DeleteListItemsFromSharedListResponse
+    {
+        /**
+         * An array of BatchError objects that contain details for any list items that were not successfully deleted.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
+     * Deletes the specified media from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn766193(v=msads.90).aspx DeleteMedia Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::DeleteMedia
+     */
+    final class DeleteMediaRequest
+    {
+        /**
+         * The identifier of the account that owns the media library.
+         * @var integer
+         */
+        public $AccountId;
+
+        /**
+         * A maximum of 100 media identifiers to delete from the account's media library.
+         * @var integer[]
+         */
+        public $MediaIds;
+    }
+
+    /**
+     * Deletes the specified media from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn766193(v=msads.90).aspx DeleteMedia Response Object
+     * 
+     * @used-by BingAdsCampaignManagementService::DeleteMedia
+     */
+    final class DeleteMediaResponse
+    {
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743725(v=msads.90).aspx DeleteNegativeKeywordsFromEntities Request Object
+     * 
+     * @uses EntityNegativeKeyword
+     * @used-by BingAdsCampaignManagementService::DeleteNegativeKeywordsFromEntities
+     */
+    final class DeleteNegativeKeywordsFromEntitiesRequest
+    {
+        /**
+         * An array of negative keyword with associated entity such as a campaign or ad group.
+         * @var EntityNegativeKeyword[]
+         */
+        public $EntityNegativeKeywords;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743725(v=msads.90).aspx DeleteNegativeKeywordsFromEntities Response Object
+     * 
+     * @uses BatchErrorCollection
+     * @used-by BingAdsCampaignManagementService::DeleteNegativeKeywordsFromEntities
+     */
+    final class DeleteNegativeKeywordsFromEntitiesResponse
+    {
+        /**
+         * An array of BatchErrorCollection objects that contain details for any negative keywords that were not successfully deleted from the corresponding entity.
+         * @var BatchErrorCollection[]
+         */
+        public $NestedPartialErrors;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743726(v=msads.90).aspx DeleteSharedEntities Request Object
+     * 
+     * @uses SharedEntity
+     * @used-by BingAdsCampaignManagementService::DeleteSharedEntities
+     */
+    final class DeleteSharedEntitiesRequest
+    {
+        /**
+         * The shared entities to delete from the account's shared library, for example negative keyword lists.
+         * @var SharedEntity[]
+         */
+        public $SharedEntities;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743726(v=msads.90).aspx DeleteSharedEntities Response Object
+     * 
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::DeleteSharedEntities
+     */
+    final class DeleteSharedEntitiesResponse
+    {
+        /**
+         * An array of BatchError objects that contain details for any shared entities that were not successfully deleted.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743727(v=msads.90).aspx DeleteSharedEntityAssociations Request Object
+     * 
+     * @uses SharedEntityAssociation
+     * @used-by BingAdsCampaignManagementService::DeleteSharedEntityAssociations
+     */
+    final class DeleteSharedEntityAssociationsRequest
+    {
+        /**
+         * An array of objects that associate a shared entity such as a negative keyword list and an entity such as a campaign.
+         * @var SharedEntityAssociation[]
+         */
+        public $Associations;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743727(v=msads.90).aspx DeleteSharedEntityAssociations Response Object
+     * 
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::DeleteSharedEntityAssociations
+     */
+    final class DeleteSharedEntityAssociationsResponse
+    {
+        /**
+         * An array of BatchError objects that contain details for any associations that were not successfully deleted.
          * @var BatchError[]
          */
         public $PartialErrors;
@@ -4219,6 +5355,17 @@ namespace BingAds\CampaignManagement
         public $Campaigns;
     }
 
+    final class GetCampaignSizesByAccountIdRequest
+    {
+        public $AccountId;
+        public $CampaignIds;
+    }
+
+    final class GetCampaignSizesByAccountIdResponse
+    {
+        public $CampaignSizes;
+    }
+
     /**
      * Gets the reasons why the specified entities failed editorial review and whether the rejection is appealable.
      * @link http://msdn.microsoft.com/en-us/library/dn236306(v=msads.90).aspx GetEditorialReasonsByIds Request Object
@@ -4377,6 +5524,38 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743729(v=msads.90).aspx GetListItemsBySharedList Request Object
+     * 
+     * @uses SharedList
+     * @used-by BingAdsCampaignManagementService::GetListItemsBySharedList
+     */
+    final class GetListItemsBySharedListRequest
+    {
+        /**
+         * The list within the account's shared library, from which to get the shared list items.
+         * @var SharedList
+         */
+        public $SharedList;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743729(v=msads.90).aspx GetListItemsBySharedList Response Object
+     * 
+     * @uses SharedListItem
+     * @used-by BingAdsCampaignManagementService::GetListItemsBySharedList
+     */
+    final class GetListItemsBySharedListResponse
+    {
+        /**
+         * An array of list items returned from the shared list, for example a list of negative keywords.
+         * @var SharedListItem[]
+         */
+        public $ListItems;
+    }
+
+    /**
      * Gets the specified media from an account's media library.
      * @link http://msdn.microsoft.com/en-us/library/dn277511(v=msads.90).aspx GetMediaByIds Request Object
      * 
@@ -4414,7 +5593,77 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Retrieves the negative keywords of the specified ad groups.
+     * Gets the media meta data of the specified entity type from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn766196(v=msads.90).aspx GetMediaMetaDataByAccountId Request Object
+     * 
+     * @uses MediaEnabledEntityFilter
+     * @used-by BingAdsCampaignManagementService::GetMediaMetaDataByAccountId
+     */
+    final class GetMediaMetaDataByAccountIdRequest
+    {
+        /**
+         * Determines the type of media to get.
+         * @var MediaEnabledEntityFilter
+         */
+        public $MediaEnabledEntities;
+    }
+
+    /**
+     * Gets the media meta data of the specified entity type from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn766196(v=msads.90).aspx GetMediaMetaDataByAccountId Response Object
+     * 
+     * @uses MediaMetaData
+     * @used-by BingAdsCampaignManagementService::GetMediaMetaDataByAccountId
+     */
+    final class GetMediaMetaDataByAccountIdResponse
+    {
+        /**
+         * The specified media meta data from the library.
+         * @var MediaMetaData[]
+         */
+        public $MediaMetaData;
+    }
+
+    /**
+     * Gets the specified media meta data from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn766200(v=msads.90).aspx GetMediaMetaDataByIds Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetMediaMetaDataByIds
+     */
+    final class GetMediaMetaDataByIdsRequest
+    {
+        /**
+         * The identifiers of the media to get.
+         * @var integer[]
+         */
+        public $MediaIds;
+    }
+
+    /**
+     * Gets the specified media meta data from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn766200(v=msads.90).aspx GetMediaMetaDataByIds Response Object
+     * 
+     * @uses MediaMetaData
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::GetMediaMetaDataByIds
+     */
+    final class GetMediaMetaDataByIdsResponse
+    {
+        /**
+         * The specified media meta data from the library.
+         * @var MediaMetaData[]
+         */
+        public $MediaMetaData;
+
+        /**
+         * An array of BatchError objects that contain details for any media meta data that were not successfully retrieved.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
+     * Retrieves the negative keywords that are only associated to the specified ad group.
      * @link http://msdn.microsoft.com/en-us/library/dn277514(v=msads.90).aspx GetNegativeKeywordsByAdGroupIds Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetNegativeKeywordsByAdGroupIds
@@ -4435,7 +5684,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Retrieves the negative keywords of the specified ad groups.
+     * Retrieves the negative keywords that are only associated to the specified ad group.
      * @link http://msdn.microsoft.com/en-us/library/dn277514(v=msads.90).aspx GetNegativeKeywordsByAdGroupIds Response Object
      * 
      * @uses AdGroupNegativeKeywords
@@ -4451,7 +5700,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Retrieves the negative keywords of the specified campaigns.
+     * Retrieves the negative keywords that are only associated to the specified campaign.
      * @link http://msdn.microsoft.com/en-us/library/dn277519(v=msads.90).aspx GetNegativeKeywordsByCampaignIds Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetNegativeKeywordsByCampaignIds
@@ -4472,7 +5721,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Retrieves the negative keywords of the specified campaigns.
+     * Retrieves the negative keywords that are only associated to the specified campaign.
      * @link http://msdn.microsoft.com/en-us/library/dn277519(v=msads.90).aspx GetNegativeKeywordsByCampaignIds Response Object
      * 
      * @uses CampaignNegativeKeywords
@@ -4485,6 +5734,56 @@ namespace BingAds\CampaignManagement
          * @var CampaignNegativeKeywords[]
          */
         public $CampaignNegativeKeywords;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743730(v=msads.90).aspx GetNegativeKeywordsByEntityIds Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetNegativeKeywordsByEntityIds
+     */
+    final class GetNegativeKeywordsByEntityIdsRequest
+    {
+        /**
+         * An array of entity identifiers to return the associated negative keywords.
+         * @var integer[]
+         */
+        public $EntityIds;
+
+        /**
+         * The type of entity corresponding to the specified EntityIds element.
+         * @var string
+         */
+        public $EntityType;
+
+        /**
+         * The identifier of the parent entity corresponding to the specified EntityIds element.
+         * @var integer
+         */
+        public $ParentEntityId;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743730(v=msads.90).aspx GetNegativeKeywordsByEntityIds Response Object
+     * 
+     * @uses EntityNegativeKeyword
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::GetNegativeKeywordsByEntityIds
+     */
+    final class GetNegativeKeywordsByEntityIdsResponse
+    {
+        /**
+         * An array of negative keyword with associated entity such as a campaign or ad group.
+         * @var EntityNegativeKeyword[]
+         */
+        public $EntityNegativeKeywords;
+
+        /**
+         * An array of BatchError objects that contain details for any negative keywords that were not successfully returned from the corresponding entity.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
     }
 
     /**
@@ -4593,6 +5892,137 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743728(v=msads.90).aspx GetSharedEntitiesByAccountId Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetSharedEntitiesByAccountId
+     */
+    final class GetSharedEntitiesByAccountIdRequest
+    {
+        /**
+         * The type of shared entity to get from the account's library.
+         * @var string
+         */
+        public $SharedEntityType;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743728(v=msads.90).aspx GetSharedEntitiesByAccountId Response Object
+     * 
+     * @uses SharedEntity
+     * @used-by BingAdsCampaignManagementService::GetSharedEntitiesByAccountId
+     */
+    final class GetSharedEntitiesByAccountIdResponse
+    {
+        /**
+         * The shared entities from the account's shared library, for example negative keyword lists.
+         * @var SharedEntity[]
+         */
+        public $SharedEntities;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743771(v=msads.90).aspx GetSharedEntityAssociationsByEntityIds Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetSharedEntityAssociationsByEntityIds
+     */
+    final class GetSharedEntityAssociationsByEntityIdsRequest
+    {
+        /**
+         * An array of entity identifiers to return associations between a campaign and a shared entity such as a negative keyword list.
+         * @var integer[]
+         */
+        public $EntityIds;
+
+        /**
+         * The type of entity corresponding to the specified EntityIds element.
+         * @var string
+         */
+        public $EntityType;
+
+        /**
+         * The type of shared entity to get associations from the account's library.
+         * @var string
+         */
+        public $SharedEntityType;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743771(v=msads.90).aspx GetSharedEntityAssociationsByEntityIds Response Object
+     * 
+     * @uses SharedEntityAssociation
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::GetSharedEntityAssociationsByEntityIds
+     */
+    final class GetSharedEntityAssociationsByEntityIdsResponse
+    {
+        /**
+         * An array of objects that associate a campaign with a shared entity such as a negative keyword list.
+         * @var SharedEntityAssociation[]
+         */
+        public $Associations;
+
+        /**
+         * An array of BatchError objects that contain details for any associations that were not successfully returned.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743773(v=msads.90).aspx GetSharedEntityAssociationsBySharedEntityIds Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetSharedEntityAssociationsBySharedEntityIds
+     */
+    final class GetSharedEntityAssociationsBySharedEntityIdsRequest
+    {
+        /**
+         * The type of entity corresponding to the specified EntityIds element.
+         * @var string
+         */
+        public $EntityType;
+
+        /**
+         * An array of shared entity identifiers to return associations between a campaign and a shared entity such as a negative keyword list.
+         * @var integer[]
+         */
+        public $SharedEntityIds;
+
+        /**
+         * The type of shared entity to get associations from the account's library.
+         * @var string
+         */
+        public $SharedEntityType;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743773(v=msads.90).aspx GetSharedEntityAssociationsBySharedEntityIds Response Object
+     * 
+     * @uses SharedEntityAssociation
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::GetSharedEntityAssociationsBySharedEntityIds
+     */
+    final class GetSharedEntityAssociationsBySharedEntityIdsResponse
+    {
+        /**
+         * An array of objects that associate a campaign with a shared entity such as a negative keyword list.
+         * @var SharedEntityAssociation[]
+         */
+        public $Associations;
+
+        /**
+         * An array of BatchError objects that contain details for any associations that were not successfully returned.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
      * Retrieves all the website-placement bids from the specified ad group.
      * @link http://msdn.microsoft.com/en-us/library/dn277535(v=msads.90).aspx GetSitePlacementsByAdGroupId Request Object
      * 
@@ -4698,6 +6128,43 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743776(v=msads.90).aspx GetTargetsByAdGroupIds2 Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetTargetsByAdGroupIds2
+     */
+    final class GetTargetsByAdGroupIds2Request
+    {
+        /**
+         * A list of identifiers of the ad groups that contain the targets that you want to get.
+         * @var integer[]
+         */
+        public $AdGroupIds;
+
+        /**
+         * The version of the location codes to return if the target contains location targets.
+         * @var string
+         */
+        public $LocationTargetVersion;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743776(v=msads.90).aspx GetTargetsByAdGroupIds2 Response Object
+     * 
+     * @uses Target2
+     * @used-by BingAdsCampaignManagementService::GetTargetsByAdGroupIds2
+     */
+    final class GetTargetsByAdGroupIds2Response
+    {
+        /**
+         * An array of Target2 objects that corresponds directly to the list of ad group identifiers in the request.
+         * @var Target2[]
+         */
+        public $Targets;
+    }
+
+    /**
      * Retrieves detailed information about the targets that are associated with the specified campaigns.
      * @link http://msdn.microsoft.com/en-us/library/dn236300(v=msads.90).aspx GetTargetsByCampaignIds Request Object
      * 
@@ -4735,6 +6202,43 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743778(v=msads.90).aspx GetTargetsByCampaignIds2 Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetTargetsByCampaignIds2
+     */
+    final class GetTargetsByCampaignIds2Request
+    {
+        /**
+         * A list of identifiers of the campaigns that contain the targets that you want to get.
+         * @var integer[]
+         */
+        public $CampaignIds;
+
+        /**
+         * The version of the location codes to return if the target contains location targets.
+         * @var string
+         */
+        public $LocationTargetVersion;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743778(v=msads.90).aspx GetTargetsByCampaignIds2 Response Object
+     * 
+     * @uses Target2
+     * @used-by BingAdsCampaignManagementService::GetTargetsByCampaignIds2
+     */
+    final class GetTargetsByCampaignIds2Response
+    {
+        /**
+         * An array of Target2 objects that corresponds directly to the list of campaign identifiers in the request.
+         * @var Target2[]
+         */
+        public $Targets;
+    }
+
+    /**
      * Retrieves detailed information about the specified targets.
      * @link http://msdn.microsoft.com/en-us/library/dn236304(v=msads.90).aspx GetTargetsByIds Request Object
      * 
@@ -4767,6 +6271,43 @@ namespace BingAds\CampaignManagement
         /**
          * An array of Target objects that contains information about the specified targets.
          * @var Target[]
+         */
+        public $Targets;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743779(v=msads.90).aspx GetTargetsByIds2 Request Object
+     * 
+     * @used-by BingAdsCampaignManagementService::GetTargetsByIds2
+     */
+    final class GetTargetsByIds2Request
+    {
+        /**
+         * A list of identifiers of the targets to get.
+         * @var integer[]
+         */
+        public $TargetIds;
+
+        /**
+         * The version of the location codes to return if the target contains location targets.
+         * @var string
+         */
+        public $LocationTargetVersion;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743779(v=msads.90).aspx GetTargetsByIds2 Response Object
+     * 
+     * @uses Target2
+     * @used-by BingAdsCampaignManagementService::GetTargetsByIds2
+     */
+    final class GetTargetsByIds2Response
+    {
+        /**
+         * An array of Target2 objects that contains information about the specified targets.
+         * @var Target2[]
          */
         public $Targets;
     }
@@ -4965,6 +6506,38 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743780(v=msads.90).aspx SetSharedEntityAssociations Request Object
+     * 
+     * @uses SharedEntityAssociation
+     * @used-by BingAdsCampaignManagementService::SetSharedEntityAssociations
+     */
+    final class SetSharedEntityAssociationsRequest
+    {
+        /**
+         * An array of objects that associate a campaign with a shared entity such as a negative keyword list.
+         * @var SharedEntityAssociation[]
+         */
+        public $Associations;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743780(v=msads.90).aspx SetSharedEntityAssociations Response Object
+     * 
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::SetSharedEntityAssociations
+     */
+    final class SetSharedEntityAssociationsResponse
+    {
+        /**
+         * An array of BatchError objects that contain details for any associations that were not successfully added.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
      * Associates the specified target with the specified ad group.
      * @link http://msdn.microsoft.com/en-us/library/dn277508(v=msads.90).aspx SetTargetToAdGroup Request Object
      * 
@@ -4983,6 +6556,12 @@ namespace BingAds\CampaignManagement
          * @var integer
          */
         public $TargetId;
+
+        /**
+         * If the specified AdGroupId is already associated with a target, this element determines whether to replace the existing association between the ad group and target with the specified TargetId.
+         * @var boolean
+         */
+        public $ReplaceAssociation;
     }
 
     /**
@@ -5014,6 +6593,12 @@ namespace BingAds\CampaignManagement
          * @var integer
          */
         public $TargetId;
+
+        /**
+         * If the specified CampaignId is already associated with a target, this element determines whether to replace the existing association between the campaign and target with the specified TargetId.
+         * @var boolean
+         */
+        public $ReplaceAssociation;
     }
 
     /**
@@ -5256,6 +6841,38 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743732(v=msads.90).aspx UpdateSharedEntities Request Object
+     * 
+     * @uses SharedEntity
+     * @used-by BingAdsCampaignManagementService::UpdateSharedEntities
+     */
+    final class UpdateSharedEntitiesRequest
+    {
+        /**
+         * The shared entities to update within the account's shared library, for example negative keyword lists.
+         * @var SharedEntity[]
+         */
+        public $SharedEntities;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743732(v=msads.90).aspx UpdateSharedEntities Response Object
+     * 
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::UpdateSharedEntities
+     */
+    final class UpdateSharedEntitiesResponse
+    {
+        /**
+         * An array of BatchError objects that contain details for any shared entities that were not successfully updated.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
+    }
+
+    /**
      * Updates one or more website-placement bids in an ad group.
      * @link http://msdn.microsoft.com/en-us/library/dn236298(v=msads.90).aspx UpdateSitePlacements Request Object
      * 
@@ -5310,6 +6927,32 @@ namespace BingAds\CampaignManagement
      * @used-by BingAdsCampaignManagementService::UpdateTargetsInLibrary
      */
     final class UpdateTargetsInLibraryResponse
+    {
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743774(v=msads.90).aspx UpdateTargetsInLibrary2 Request Object
+     * 
+     * @uses Target2
+     * @used-by BingAdsCampaignManagementService::UpdateTargetsInLibrary2
+     */
+    final class UpdateTargetsInLibrary2Request
+    {
+        /**
+         * An array of Target2 objects that contains the updated target information.
+         * @var Target2[]
+         */
+        public $Targets;
+    }
+
+    /**
+     * Currently this feature is only available for pilot participants.
+     * @link http://msdn.microsoft.com/en-us/library/dn743774(v=msads.90).aspx UpdateTargetsInLibrary2 Response Object
+     * 
+     * @used-by BingAdsCampaignManagementService::UpdateTargetsInLibrary2
+     */
+    final class UpdateTargetsInLibrary2Response
     {
     }
 }

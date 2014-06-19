@@ -1,5 +1,5 @@
 <?php
-// Generated on 4/10/2014 3:04:16 PM
+// Generated on 6/9/2014 10:59:34 AM
 
 namespace BingAds\CustomerManagement
 {
@@ -9,7 +9,7 @@ namespace BingAds\CustomerManagement
     {
         const ServiceNamespace = 'https://bingads.microsoft.com/Customer/v9';
         const ProductionEndpoint = 'https://clientcenter.api.bingads.microsoft.com/Api/CustomerManagement/v9/CustomerManagementService.svc';
-        const SandboxEndpoint = 'https://sharedservices.api.sandbox.bingads.microsoft.com/Api/CustomerManagement/v9/CustomerManagementService.svc';
+        const SandboxEndpoint = 'https://clientcenter.api.sandbox.bingads.microsoft.com/Api/CustomerManagement/v9/CustomerManagementService.svc';
     }
 
     /**
@@ -49,7 +49,6 @@ namespace BingAds\CustomerManagement
      * @used-by FindAccountsRequest
      * @used-by FindAccountsOrCustomersInfoRequest
      * @used-by GetCustomersInfoRequest
-     * @used-by SearchAccountsRequest
      * @used-by SearchCustomersRequest
      * @used-by SignupCustomerRequest
      */
@@ -694,7 +693,7 @@ namespace BingAds\CustomerManagement
     }
 
     /**
-     * Defines the condition of results for one of the search operations, for example SearchClientLinks or SearchCustomers.
+     * Defines the condition of results for one of the search operations, for example SearchAccounts, SearchClientLinks, or SearchCustomers.
      * @link http://msdn.microsoft.com/en-us/library/dn518214(v=msads.90).aspx PredicateOperator Value Set
      * 
      * @used-by Predicate
@@ -703,12 +702,16 @@ namespace BingAds\CustomerManagement
     {
         const Contains = 'Contains';
         const Equals = 'Equals';
+        const GreaterThanEquals = 'GreaterThanEquals';
         const In = 'In';
+        const LessThanEquals = 'LessThanEquals';
+        const NotContains = 'NotContains';
         const NotEquals = 'NotEquals';
+        const StartsWith = 'StartsWith';
     }
 
     /**
-     * Defines the field order of entities returned using one of the search operations, for example SearchClientLinks or SearchCustomers.
+     * Defines the field order of entities returned using one of the search operations, for example SearchAccounts, SearchClientLinks, or SearchCustomers.
      * @link http://msdn.microsoft.com/en-us/library/dn452058(v=msads.90).aspx OrderByField Value Set
      * 
      * @used-by OrderBy
@@ -726,7 +729,7 @@ namespace BingAds\CustomerManagement
     }
 
     /**
-     * Defines the ascending or descending sort order of results for the SearchCustomers operation.
+     * Defines the ascending or descending sort order of results for one of the search operations, for example SearchAccounts, SearchClientLinks, or SearchCustomers.
      * @link http://msdn.microsoft.com/en-us/library/dn452061(v=msads.90).aspx SortOrder Value Set
      * 
      * @used-by OrderBy
@@ -853,7 +856,7 @@ namespace BingAds\CustomerManagement
         public $Language;
 
         /**
-         * The list of key and value strings for forward compatibility.
+         * The following list of key and value strings are available for forward compatibility.
          * @var KeyValuePairOfstringstring[]
          */
         public $ForwardCompatibilityMap;
@@ -1581,7 +1584,7 @@ namespace BingAds\CustomerManagement
     }
 
     /**
-     * Defines an order for the list of entities returned using one of the search operations, for example SearchClientLinks or SearchCustomers.
+     * Defines an order for the list of entities returned using one of the search operations, for example SearchAccounts, SearchClientLinks, or SearchCustomers.
      * @link http://msdn.microsoft.com/en-us/library/dn452057(v=msads.90).aspx OrderBy Data Object
      * 
      * @uses OrderByField
@@ -1606,7 +1609,7 @@ namespace BingAds\CustomerManagement
     }
 
     /**
-     * Defines a paging object.
+     * Defines a paging object for the list of entities returned using one of the search operations, for example SearchAccounts, SearchClientLinks, or SearchCustomers.
      * @link http://msdn.microsoft.com/en-us/library/dn452059(v=msads.90).aspx Paging Data Object
      * 
      * @used-by SearchAccountsRequest
@@ -1616,7 +1619,7 @@ namespace BingAds\CustomerManagement
     final class Paging
     {
         /**
-         * The results page index.
+         * The zero-based results page index.
          * @var integer
          */
         public $Index;
@@ -1662,7 +1665,7 @@ namespace BingAds\CustomerManagement
     }
 
     /**
-     * Defines a predicate for the list of entities requested using one of the search operations, for example SearchClientLinks or SearchCustomers.
+     * Defines a predicate for the list of entities requested using one of the search operations, for example SearchAccounts, SearchClientLinks, or SearchCustomers.
      * @link http://msdn.microsoft.com/en-us/library/dn452060(v=msads.90).aspx Predicate Data Object
      * 
      * @uses PredicateOperator
@@ -2383,16 +2386,49 @@ namespace BingAds\CustomerManagement
     {
     }
 
+    /**
+     * Searches for accounts that match a specified criteria.
+     * @link http://msdn.microsoft.com/en-us/library/dn743757(v=msads.90).aspx SearchAccounts Request Object
+     * 
+     * @uses Predicate
+     * @uses OrderBy
+     * @uses Paging
+     * @used-by BingAdsCustomerManagementService::SearchAccounts
+     */
     final class SearchAccountsRequest
     {
-        public $ApplicationScope;
+        /**
+         * Determines the request conditions.
+         * @var Predicate[]
+         */
         public $Predicates;
+
+        /**
+         * Determines the order of results by the specified property of an account.
+         * @var OrderBy[]
+         */
         public $Ordering;
+
+        /**
+         * Determines the index and size of results per page.
+         * @var Paging
+         */
         public $PageInfo;
     }
 
+    /**
+     * Searches for accounts that match a specified criteria.
+     * @link http://msdn.microsoft.com/en-us/library/dn743757(v=msads.90).aspx SearchAccounts Response Object
+     * 
+     * @uses Account
+     * @used-by BingAdsCustomerManagementService::SearchAccounts
+     */
     final class SearchAccountsResponse
     {
+        /**
+         * A list of accounts that meet the specified criteria.
+         * @var Account[]
+         */
         public $Accounts;
     }
 

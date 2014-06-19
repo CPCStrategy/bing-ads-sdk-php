@@ -1,5 +1,5 @@
 <?php
-// Generated on 4/10/2014 3:04:17 PM
+// Generated on 6/9/2014 10:59:40 AM
 
 namespace BingAds\Bulk
 {
@@ -59,6 +59,8 @@ namespace BingAds\Bulk
      */
     final class BulkDownloadEntity
     {
+        const AdGroupImageAdExtensions = 'AdGroupImageAdExtensions';
+
         /** Include an ad group's negative keywords in the download data. */
         const AdGroupNegativeKeywords = 'AdGroupNegativeKeywords';
 
@@ -85,12 +87,13 @@ namespace BingAds\Bulk
 
         /** Include a record in the download that represents the association relationship between a campaign and a call ad extension. */
         const CampaignCallAdExtensions = 'CampaignCallAdExtensions';
+        const CampaignImageAdExtensions = 'CampaignImageAdExtensions';
 
         /** Include a record in the download that represents the association relationship between a campaign and a location ad extension. */
         const CampaignLocationAdExtensions = 'CampaignLocationAdExtensions';
 
         /** Reserved for future use. */
-        const CampaignNegativeKeywordList = 'CampaignNegativeKeywordList';
+        const CampaignNegativeKeywordListAssociations = 'CampaignNegativeKeywordListAssociations';
 
         /** Include a campaign's negative keywords in the download data. */
         const CampaignNegativeKeywords = 'CampaignNegativeKeywords';
@@ -109,21 +112,20 @@ namespace BingAds\Bulk
 
         /** Include a campaign's targets in the download data. */
         const CampaignTargets = 'CampaignTargets';
+        const ImageAdExtensions = 'ImageAdExtensions';
 
         /** Include keywords in the download data. */
         const Keywords = 'Keywords';
 
         /** Include location ad extension library items in the download data. */
         const LocationAdExtensions = 'LocationAdExtensions';
-
-        /** Reserved for future use. */
-        const NegativeKeyword = 'NegativeKeyword';
-
-        /** Reserved for future use. */
-        const NegativeKeywordsList = 'NegativeKeywordsList';
+        const NegativeKeywordLists = 'NegativeKeywordLists';
 
         /** Include product ad extension library items in the download data. */
         const ProductAdExtensions = 'ProductAdExtensions';
+
+        /** Reserved for future use. */
+        const SharedNegativeKeywords = 'SharedNegativeKeywords';
 
         /** Include site links ad extension library items in the download data. */
         const SiteLinksAdExtensions = 'SiteLinksAdExtensions';
