@@ -1,5 +1,5 @@
 <?php
-// Generated on 6/9/2014 10:59:16 AM
+// Generated on 7/15/2014 5:43:01 AM
 
 namespace BingAds\Reporting
 {
@@ -1315,6 +1315,7 @@ namespace BingAds\Reporting
      */
     final class DestinationUrlPerformanceReportColumn
     {
+        /** The Id element of an Account. */
         const AccountId = 'AccountId';
 
         /** The Name element of an Account. */

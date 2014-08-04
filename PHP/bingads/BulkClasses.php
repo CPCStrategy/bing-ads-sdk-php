@@ -1,5 +1,5 @@
 <?php
-// Generated on 6/9/2014 10:59:40 AM
+// Generated on 7/15/2014 5:43:22 AM
 
 namespace BingAds\Bulk
 {

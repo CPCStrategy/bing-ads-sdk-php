@@ -1,5 +1,5 @@
 <?php
-// Generated on 6/9/2014 10:59:34 AM
+// Generated on 7/15/2014 5:43:19 AM
 
 namespace BingAds\CustomerManagement
 {
@@ -502,6 +502,7 @@ namespace BingAds\CustomerManagement
      * @link http://msdn.microsoft.com/en-us/library/bb671785(v=msads.90).aspx LCID Value Set
      * 
      * @used-by User
+     * @used-by UserInvitation
      */
     final class LCID
     {
@@ -789,6 +790,26 @@ namespace BingAds\CustomerManagement
 
         /** The agency should use this value to request an unlink. */
         const UnlinkRequested = 'UnlinkRequested';
+    }
+
+    /**
+     * Defines the possible roles of a user.
+     * @link http://msdn.microsoft.com/en-us/library/ee704157(v=msads.90).aspx UserRole Value Set
+     * 
+     * @used-by UserInvitation
+     */
+    final class UserRole
+    {
+        const AdvertiserCampaignManager = 'AdvertiserCampaignManager';
+        const ClientAdmin = 'ClientAdmin';
+        const ClientManager = 'ClientManager';
+        const ClientViewer = 'ClientViewer';
+        const PublisherAccountManager = 'PublisherAccountManager';
+        const PublisherAdmin = 'PublisherAdmin';
+        const PublisherAdViewer = 'PublisherAdViewer';
+        const PublisherListManager = 'PublisherListManager';
+        const PublisherReportUser = 'PublisherReportUser';
+        const SuperAdmin = 'SuperAdmin';
     }
 
     /**
@@ -1672,6 +1693,7 @@ namespace BingAds\CustomerManagement
      * @used-by SearchAccountsRequest
      * @used-by SearchClientLinksRequest
      * @used-by SearchCustomersRequest
+     * @used-by SearchUserInvitationsRequest
      */
     final class Predicate
     {
@@ -1826,6 +1848,72 @@ namespace BingAds\CustomerManagement
          * @var string
          */
         public $UserName;
+    }
+
+    /**
+     * Defines a user invitation.
+     * @link http://msdn.microsoft.com/en-us/library/dn771360(v=msads.90).aspx UserInvitation Data Object
+     * 
+     * @uses UserRole
+     * @uses LCID
+     * @used-by SearchUserInvitationsResponse
+     * @used-by SendUserInvitationRequest
+     */
+    final class UserInvitation
+    {
+        /**
+         * A system generated unique identifier for the user invitation.
+         * @var integer
+         */
+        public $Id;
+
+        /**
+         * The first name of the user.
+         * @var string
+         */
+        public $FirstName;
+
+        /**
+         * The last name of the user.
+         * @var string
+         */
+        public $LastName;
+
+        /**
+         * The email address corresponding to the user's Microsoft account.
+         * @var string
+         */
+        public $Email;
+
+        /**
+         * The identifier of the customer this user is invited to manage.
+         * @var integer
+         */
+        public $CustomerId;
+
+        /**
+         * The user role, which determines the level of access that the user has to the accounts specified in the AccountIds element.
+         * @var UserRole
+         */
+        public $Role;
+
+        /**
+         * An array of identifiers of the accounts that the user can manage.
+         * @var integer[]
+         */
+        public $AccountIds;
+
+        /**
+         * The date and time that the user invitation will expire.
+         * @var \DateTime
+         */
+        public $ExpirationDate;
+
+        /**
+         * The locale to use when sending correspondence to the user by email or postal mail.
+         * @var LCID
+         */
+        public $Lcid;
     }
 
     final class AddAccountRequest
@@ -2536,6 +2624,69 @@ namespace BingAds\CustomerManagement
          * @var Customer[]
          */
         public $Customers;
+    }
+
+    /**
+     * Searches for user invitations that match a specified criteria.
+     * @link http://msdn.microsoft.com/en-us/library/dn771300(v=msads.90).aspx SearchUserInvitations Request Object
+     * 
+     * @uses Predicate
+     * @used-by BingAdsCustomerManagementService::SearchUserInvitations
+     */
+    final class SearchUserInvitationsRequest
+    {
+        /**
+         * Determines the request conditions.
+         * @var Predicate[]
+         */
+        public $Predicates;
+    }
+
+    /**
+     * Searches for user invitations that match a specified criteria.
+     * @link http://msdn.microsoft.com/en-us/library/dn771300(v=msads.90).aspx SearchUserInvitations Response Object
+     * 
+     * @uses UserInvitation
+     * @used-by BingAdsCustomerManagementService::SearchUserInvitations
+     */
+    final class SearchUserInvitationsResponse
+    {
+        /**
+         * A list of user invitations that meet the specified criteria.
+         * @var UserInvitation[]
+         */
+        public $UserInvitations;
+    }
+
+    /**
+     * Sends an invitation for a Microsoft account user to manage one or more Bing Ads customer accounts.
+     * @link http://msdn.microsoft.com/en-us/library/dn789440(v=msads.90).aspx SendUserInvitation Request Object
+     * 
+     * @uses UserInvitation
+     * @used-by BingAdsCustomerManagementService::SendUserInvitation
+     */
+    final class SendUserInvitationRequest
+    {
+        /**
+         * The user invitation to send.
+         * @var UserInvitation
+         */
+        public $UserInvitation;
+    }
+
+    /**
+     * Sends an invitation for a Microsoft account user to manage one or more Bing Ads customer accounts.
+     * @link http://msdn.microsoft.com/en-us/library/dn789440(v=msads.90).aspx SendUserInvitation Response Object
+     * 
+     * @used-by BingAdsCustomerManagementService::SendUserInvitation
+     */
+    final class SendUserInvitationResponse
+    {
+        /**
+         * A system-generated identifier for the user invitation that was sent.
+         * @var integer
+         */
+        public $UserInvitationId;
     }
 
     /**
