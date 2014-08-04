@@ -12,180 +12,180 @@ use \SoapClient;
 
 Class ClientProxy
 {
-	private $authenticationToken;
-	private $username;
-        private $password;
-	private $developerToken;
-	private $wsdlUrl;
-	private $accountId;
-	private $customerId;
-	private $service;
-	private $namespace;
-	
-	// Converts long types found in SOAP responses to string types in PHP.
-	
-	private function from_long_xml($xmlFragmentString)
-	{
-		return (string)strip_tags($xmlFragmentString);
-	}
-	
-	// Converts PHP string types to long types in SOAP requests.
-	
-	private function to_long_xml($longVal)
-	{
-		return '<long>' . $longVal . '</long>';
-	}
+    private $authenticationToken;
+    private $username;
+    private $password;
+    private $developerToken;
+    private $wsdlUrl;
+    private $accountId;
+    private $customerId;
+    private $service;
+    private $namespace;
 
-	public function __construct($wsdl)
-	{
-		$this->wsdlUrl = $wsdl;
-	}
+    // Converts long types found in SOAP responses to string types in PHP.
 
-        public static function ConstructWithCredentials($wsdl, $username, $password, $token, $authenticationToken)
-	{
-		$thisClient = new ClientProxy($wsdl);
-		
-                $thisClient->authenticationToken = $authenticationToken;
-		$thisClient->username = $username;
-		$thisClient->password = $password;
-		$thisClient->developerToken = $token;
-		$thisClient->service = $thisClient->GetProxy($wsdl);
-		
-		return $thisClient;
-	}
-	
-	public static function ConstructWithAccountId($wsdl, $username, $password, $token, $accountId, $authenticationToken)
-	{
-		$thisClient = new ClientProxy($wsdl);
-		
-                $thisClient->authenticationToken = $authenticationToken;
-		$thisClient->username = $username;
-		$thisClient->password = $password;
-		$thisClient->developerToken = $token;
-		$thisClient->accountId = $accountId;
-		$thisClient->service = $thisClient->GetProxy($wsdl);
-		
-		return $thisClient;
-	}
-	
-	public static function ConstructWithAccountAndCustomerId($wsdl, $username, $password, $token, $accountId, $customerId, $authenticationToken)
-	{
-		$thisClient = new ClientProxy($wsdl);
-		
-		$thisClient->authenticationToken = $authenticationToken;
-		$thisClient->username = $username;
-		$thisClient->password = $password;
-		$thisClient->developerToken = $token;
-		$thisClient->accountId = $accountId;
-		$thisClient->customerId = $customerId;
-		$thisClient->service = $thisClient->GetProxy($wsdl);
-		
-		return $thisClient;
-	}
+    private function from_long_xml($xmlFragmentString)
+    {
+        return (string)strip_tags($xmlFragmentString);
+    }
 
-	public function GetAccountId() { return $this->accountId; }
-	public function GetCustomerId() { return $this->customerId; }
-	public function GetService() { return $this->service; }
-	public function GetNamespace() { return $this->namespace; }
-	public function GetWsdl() { return $this->wsdlUrl; }
+    // Converts PHP string types to long types in SOAP requests.
 
-	// This function gets the namespace from the WSDL, so you do
-	// not have to hardcode it in the client.
+    private function to_long_xml($longVal)
+    {
+        return '<long>' . $longVal . '</long>';
+    }
 
-	private function GetServiceNamespace($url)
-	{
-		$doc = new DOMDocument;
-		$doc->Load($url);
+    public function __construct($wsdl)
+    {
+        $this->wsdlUrl = $wsdl;
+    }
 
-		$xpath = new DOMXPath($doc);
-		$query = "/*/@targetNamespace";
+    public function ConstructWithCredentials($wsdl, $username, $password, $token, $authenticationToken)
+    {
+        $thisClient = new ClientProxy($wsdl);
 
-		$attrs = $xpath->query($query);
+        $thisClient->authenticationToken = $authenticationToken;
+        $thisClient->username = $username;
+        $thisClient->password = $password;
+        $thisClient->developerToken = $token;
+        $thisClient->service = $thisClient->GetProxy($wsdl);
 
-		// The query will return only one node in the node list.
+        return $thisClient;
+    }
 
-		foreach($attrs as $attr)
-		{
-			$namespace = $attr->value;
-		}
+    public function ConstructWithAccountId($wsdl, $username, $password, $token, $accountId, $authenticationToken)
+    {
+        $thisClient = new ClientProxy($wsdl);
 
-		return $namespace;
-	}
+        $thisClient->authenticationToken = $authenticationToken;
+        $thisClient->username = $username;
+        $thisClient->password = $password;
+        $thisClient->developerToken = $token;
+        $thisClient->accountId = $accountId;
+        $thisClient->service = $thisClient->GetProxy($wsdl);
 
-	private function GetProxy($wsdl)
-	{
-		$this->namespace = $this->GetServiceNamespace($wsdl);
+        return $thisClient;
+    }
 
-		// Define the SOAP headers. Customer ID is required
-		// to get editorial reasons.
+    public function ConstructWithAccountAndCustomerId($wsdl, $username, $password, $token, $accountId, $customerId, $authenticationToken)
+    {
+        $thisClient = new ClientProxy($wsdl);
 
-		$headers = array();
+        $thisClient->authenticationToken = $authenticationToken;
+        $thisClient->username = $username;
+        $thisClient->password = $password;
+        $thisClient->developerToken = $token;
+        $thisClient->accountId = $accountId;
+        $thisClient->customerId = $customerId;
+        $thisClient->service = $thisClient->GetProxy($wsdl);
 
-		$headers[] = new SoapHeader(
-				$this->namespace,
-				'CustomerAccountId',
-				$this->accountId
-		);
+        return $thisClient;
+    }
 
-		$headers[] = new SoapHeader(
-				$this->namespace,
-				'CustomerId',
-				$this->customerId
-		);
+    public function GetAccountId() { return $this->accountId; }
+    public function GetCustomerId() { return $this->customerId; }
+    public function GetService() { return $this->service; }
+    public function GetNamespace() { return $this->namespace; }
+    public function GetWsdl() { return $this->wsdlUrl; }
 
-		$headers[] = new SoapHeader(
-				$this->namespace,
-				'DeveloperToken',
-				$this->developerToken
-		);
+    // This function gets the namespace from the WSDL, so you do
+    // not have to hardcode it in the client.
 
-		$headers[] = new SoapHeader(
-				$this->namespace,
-				'UserName',
-				$this->username
-		);
+    private function GetServiceNamespace($url)
+    {
+        $doc = new DOMDocument;
+        $doc->Load($url);
 
-		$headers[] = new SoapHeader(
-				$this->namespace,
-				'Password',
-				$this->password
-		);
+        $xpath = new DOMXPath($doc);
+        $query = "/*/@targetNamespace";
 
-                $headers[] = new SoapHeader(
-				$this->namespace,
-				'AuthenticationToken',
-				$this->authenticationToken
-		);
+        $attrs = $xpath->query($query);
+
+        // The query will return only one node in the node list.
+
+        foreach($attrs as $attr)
+        {
+            $namespace = $attr->value;
+        }
+
+        return $namespace;
+    }
+
+    private function GetProxy($wsdl)
+    {
+        $this->namespace = $this->GetServiceNamespace($wsdl);
+
+        // Define the SOAP headers. Customer ID is required
+        // to get editorial reasons.
+
+        $headers = array();
+
+        $headers[] = new SoapHeader(
+            $this->namespace,
+            'CustomerAccountId',
+            $this->accountId
+        );
+
+        $headers[] = new SoapHeader(
+            $this->namespace,
+            'CustomerId',
+            $this->customerId
+        );
+
+        $headers[] = new SoapHeader(
+            $this->namespace,
+            'DeveloperToken',
+            $this->developerToken
+        );
+
+        $headers[] = new SoapHeader(
+            $this->namespace,
+            'UserName',
+            $this->username
+        );
+
+        $headers[] = new SoapHeader(
+            $this->namespace,
+            'Password',
+            $this->password
+        );
+
+        $headers[] = new SoapHeader(
+            $this->namespace,
+            'AuthenticationToken',
+            $this->authenticationToken
+        );
 
 
-		// By default, PHP does not return single item arrays as an array type.
-		// To force PHP to always return an array for an array type in the
-		// response, specify the SOAP_SINGLE_ELEMENT_ARRAYS feature.
+        // By default, PHP does not return single item arrays as an array type.
+        // To force PHP to always return an array for an array type in the
+        // response, specify the SOAP_SINGLE_ELEMENT_ARRAYS feature.
 
-		$options = array(
-				'trace' => TRUE,
-				'exceptions' => TRUE,
-				'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
+        $options = array(
+            'trace' => TRUE,
+            'exceptions' => TRUE,
+            'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
 
-				// Map long type to string type. For details, see
-				// from_long_xml and to_long_xml callbacks.
+            // Map long type to string type. For details, see
+            // from_long_xml and to_long_xml callbacks.
 
-				'typemap' => array(
-						array(
-								'type_ns' => 'http://www.w3.org/2001/XMLSchema',
-								'type_name' => 'xs:long',
-								'to_xml' => 'to_long_xml',
-								'from_xml' => 'from_long_xml'
-						),
-				)
-		);
+            'typemap' => array(
+                array(
+                    'type_ns' => 'http://www.w3.org/2001/XMLSchema',
+                    'type_name' => 'xs:long',
+                    'to_xml' => 'to_long_xml',
+                    'from_xml' => 'from_long_xml'
+                ),
+            )
+        );
 
-		$proxy = @new SOAPClient($this->wsdlUrl, $options);
+        $proxy = @new SOAPClient($this->wsdlUrl, $options);
 
-		$proxy->__setSoapHeaders($headers);
+        $proxy->__setSoapHeaders($headers);
 
-		return $proxy;
-	}
+        return $proxy;
+    }
 }
 
 ?>

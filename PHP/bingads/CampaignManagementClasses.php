@@ -1,5 +1,5 @@
 <?php
-// Generated on 6/9/2014 10:59:41 AM
+// Generated on 7/15/2014 5:43:22 AM
 
 namespace BingAds\CampaignManagement
 {
@@ -305,7 +305,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743745(v=msads.90).aspx Minute Value Set
      * 
      * @used-by DayTimeTargetBid
@@ -326,7 +326,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743742(v=msads.90).aspx IntentOption Value Set
      * 
      * @used-by LocationTarget2
@@ -344,7 +344,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743740(v=msads.90).aspx DistanceUnit Value Set
      * 
      * @used-by RadiusTargetBid2
@@ -1340,6 +1340,7 @@ namespace BingAds\CampaignManagement
      * @used-by DeleteAdsResponse
      * @used-by DeleteKeywordsResponse
      * @used-by DeleteListItemsFromSharedListResponse
+     * @used-by DeleteMediaResponse
      * @used-by DeleteSharedEntitiesResponse
      * @used-by DeleteSharedEntityAssociationsResponse
      * @used-by GetAdsByIdsResponse
@@ -1393,7 +1394,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743731(v=msads.90).aspx BatchErrorCollection Data Object
      * 
      * @uses BatchError
@@ -1543,7 +1544,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Call ad extensions are only available in the United States and United Kingdom.
+     * Defines an object that specifies a click-to-call phone number to include in a text ad.
      * @link http://msdn.microsoft.com/en-us/library/jj721598(v=msads.90).aspx CallAdExtension Data Object
      */
     final class CallAdExtension extends AdExtension
@@ -1906,7 +1907,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743766(v=msads.90).aspx DayTimeTarget Data Object
      * 
      * @uses DayTimeTargetBid
@@ -1922,7 +1923,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743741(v=msads.90).aspx DayTimeTargetBid Data Object
      * 
      * @uses Day
@@ -2164,7 +2165,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743733(v=msads.90).aspx EntityNegativeKeyword Data Object
      * 
      * @uses NegativeKeyword
@@ -2313,7 +2314,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743736(v=msads.90).aspx IdCollection Data Object
      * 
      * @used-by AddNegativeKeywordsToEntitiesResponse
@@ -2654,7 +2655,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743770(v=msads.90).aspx LocationTarget2 Data Object
      * 
      * @uses CityTarget
@@ -2856,7 +2857,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743738(v=msads.90).aspx SharedListItem Data Object
      * 
      * @uses KeyValuePairOfstringstring
@@ -2880,7 +2881,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743739(v=msads.90).aspx NegativeKeyword Data Object
      * 
      * @uses MatchType
@@ -2908,7 +2909,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743735(v=msads.90).aspx SharedEntity Data Object
      * 
      * @uses KeyValuePairOfstringstring
@@ -2951,7 +2952,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743734(v=msads.90).aspx SharedList Data Object
      * 
      * @used-by AddListItemsToSharedListRequest
@@ -2968,7 +2969,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743737(v=msads.90).aspx NegativeKeywordList Data Object
      */
     final class NegativeKeywordList extends SharedList
@@ -3083,7 +3084,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743743(v=msads.90).aspx PostalCodeTarget Data Object
      * 
      * @uses PostalCodeTargetBid
@@ -3099,7 +3100,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743767(v=msads.90).aspx PostalCodeTargetBid Data Object
      * 
      * @used-by PostalCodeTarget
@@ -3241,7 +3242,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743744(v=msads.90).aspx RadiusTarget2 Data Object
      * 
      * @uses RadiusTargetBid2
@@ -3308,7 +3309,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743768(v=msads.90).aspx RadiusTargetBid2 Data Object
      * 
      * @uses DistanceUnit
@@ -3366,7 +3367,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743769(v=msads.90).aspx SharedEntityAssociation Data Object
      * 
      * @used-by DeleteSharedEntityAssociationsRequest
@@ -3624,7 +3625,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743781(v=msads.90).aspx Target2 Data Object
      * 
      * @uses AgeTarget
@@ -3993,7 +3994,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743721(v=msads.90).aspx AddListItemsToSharedList Request Object
      * 
      * @uses SharedListItem
@@ -4016,7 +4017,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743721(v=msads.90).aspx AddListItemsToSharedList Response Object
      * 
      * @uses BatchError
@@ -4075,7 +4076,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743724(v=msads.90).aspx AddNegativeKeywordsToEntities Request Object
      * 
      * @uses EntityNegativeKeyword
@@ -4091,7 +4092,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743724(v=msads.90).aspx AddNegativeKeywordsToEntities Response Object
      * 
      * @uses IdCollection
@@ -4114,7 +4115,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743722(v=msads.90).aspx AddSharedEntity Request Object
      * 
      * @uses SharedEntity
@@ -4137,7 +4138,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743722(v=msads.90).aspx AddSharedEntity Response Object
      * 
      * @uses BatchError
@@ -4233,7 +4234,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743775(v=msads.90).aspx AddTargetsToLibrary2 Request Object
      * 
      * @uses Target2
@@ -4249,7 +4250,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743775(v=msads.90).aspx AddTargetsToLibrary2 Response Object
      * 
      * @used-by BingAdsCampaignManagementService::AddTargetsToLibrary2
@@ -4545,7 +4546,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743723(v=msads.90).aspx DeleteListItemsFromSharedList Request Object
      * 
      * @uses SharedList
@@ -4567,7 +4568,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743723(v=msads.90).aspx DeleteListItemsFromSharedList Response Object
      * 
      * @uses BatchError
@@ -4607,14 +4608,16 @@ namespace BingAds\CampaignManagement
      * Deletes the specified media from an account's media library.
      * @link http://msdn.microsoft.com/en-us/library/dn766193(v=msads.90).aspx DeleteMedia Response Object
      * 
+     * @uses BatchError
      * @used-by BingAdsCampaignManagementService::DeleteMedia
      */
     final class DeleteMediaResponse
     {
+        public $PartialErrors;
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743725(v=msads.90).aspx DeleteNegativeKeywordsFromEntities Request Object
      * 
      * @uses EntityNegativeKeyword
@@ -4630,7 +4633,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743725(v=msads.90).aspx DeleteNegativeKeywordsFromEntities Response Object
      * 
      * @uses BatchErrorCollection
@@ -4646,7 +4649,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743726(v=msads.90).aspx DeleteSharedEntities Request Object
      * 
      * @uses SharedEntity
@@ -4662,7 +4665,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743726(v=msads.90).aspx DeleteSharedEntities Response Object
      * 
      * @uses BatchError
@@ -4678,7 +4681,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743727(v=msads.90).aspx DeleteSharedEntityAssociations Request Object
      * 
      * @uses SharedEntityAssociation
@@ -4694,7 +4697,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743727(v=msads.90).aspx DeleteSharedEntityAssociations Response Object
      * 
      * @uses BatchError
@@ -5524,7 +5527,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743729(v=msads.90).aspx GetListItemsBySharedList Request Object
      * 
      * @uses SharedList
@@ -5540,7 +5543,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743729(v=msads.90).aspx GetListItemsBySharedList Response Object
      * 
      * @uses SharedListItem
@@ -5737,7 +5740,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743730(v=msads.90).aspx GetNegativeKeywordsByEntityIds Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetNegativeKeywordsByEntityIds
@@ -5764,7 +5767,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743730(v=msads.90).aspx GetNegativeKeywordsByEntityIds Response Object
      * 
      * @uses EntityNegativeKeyword
@@ -5892,7 +5895,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743728(v=msads.90).aspx GetSharedEntitiesByAccountId Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetSharedEntitiesByAccountId
@@ -5907,7 +5910,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743728(v=msads.90).aspx GetSharedEntitiesByAccountId Response Object
      * 
      * @uses SharedEntity
@@ -5923,7 +5926,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743771(v=msads.90).aspx GetSharedEntityAssociationsByEntityIds Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetSharedEntityAssociationsByEntityIds
@@ -5950,7 +5953,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743771(v=msads.90).aspx GetSharedEntityAssociationsByEntityIds Response Object
      * 
      * @uses SharedEntityAssociation
@@ -5973,7 +5976,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743773(v=msads.90).aspx GetSharedEntityAssociationsBySharedEntityIds Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetSharedEntityAssociationsBySharedEntityIds
@@ -6000,7 +6003,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743773(v=msads.90).aspx GetSharedEntityAssociationsBySharedEntityIds Response Object
      * 
      * @uses SharedEntityAssociation
@@ -6128,7 +6131,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743776(v=msads.90).aspx GetTargetsByAdGroupIds2 Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetTargetsByAdGroupIds2
@@ -6149,7 +6152,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743776(v=msads.90).aspx GetTargetsByAdGroupIds2 Response Object
      * 
      * @uses Target2
@@ -6202,7 +6205,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743778(v=msads.90).aspx GetTargetsByCampaignIds2 Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetTargetsByCampaignIds2
@@ -6223,7 +6226,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743778(v=msads.90).aspx GetTargetsByCampaignIds2 Response Object
      * 
      * @uses Target2
@@ -6276,7 +6279,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743779(v=msads.90).aspx GetTargetsByIds2 Request Object
      * 
      * @used-by BingAdsCampaignManagementService::GetTargetsByIds2
@@ -6297,7 +6300,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743779(v=msads.90).aspx GetTargetsByIds2 Response Object
      * 
      * @uses Target2
@@ -6506,7 +6509,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743780(v=msads.90).aspx SetSharedEntityAssociations Request Object
      * 
      * @uses SharedEntityAssociation
@@ -6522,7 +6525,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743780(v=msads.90).aspx SetSharedEntityAssociations Response Object
      * 
      * @uses BatchError
@@ -6841,7 +6844,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743732(v=msads.90).aspx UpdateSharedEntities Request Object
      * 
      * @uses SharedEntity
@@ -6857,7 +6860,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743732(v=msads.90).aspx UpdateSharedEntities Response Object
      * 
      * @uses BatchError
@@ -6931,7 +6934,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743774(v=msads.90).aspx UpdateTargetsInLibrary2 Request Object
      * 
      * @uses Target2
@@ -6947,7 +6950,7 @@ namespace BingAds\CampaignManagement
     }
 
     /**
-     * Currently this feature is only available for pilot participants.
+     * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
      * @link http://msdn.microsoft.com/en-us/library/dn743774(v=msads.90).aspx UpdateTargetsInLibrary2 Response Object
      * 
      * @used-by BingAdsCampaignManagementService::UpdateTargetsInLibrary2
