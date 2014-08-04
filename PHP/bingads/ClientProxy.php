@@ -41,7 +41,7 @@ Class ClientProxy
         $this->wsdlUrl = $wsdl;
     }
 
-    public function ConstructWithCredentials($wsdl, $username, $password, $token, $authenticationToken)
+    public static function ConstructWithCredentials($wsdl, $username, $password, $token, $authenticationToken)
     {
         $thisClient = new ClientProxy($wsdl);
 
@@ -54,7 +54,7 @@ Class ClientProxy
         return $thisClient;
     }
 
-    public function ConstructWithAccountId($wsdl, $username, $password, $token, $accountId, $authenticationToken)
+    public static function ConstructWithAccountId($wsdl, $username, $password, $token, $accountId, $authenticationToken)
     {
         $thisClient = new ClientProxy($wsdl);
 
@@ -68,7 +68,7 @@ Class ClientProxy
         return $thisClient;
     }
 
-    public function ConstructWithAccountAndCustomerId($wsdl, $username, $password, $token, $accountId, $customerId, $authenticationToken)
+    public static function ConstructWithAccountAndCustomerId($wsdl, $username, $password, $token, $accountId, $customerId, $authenticationToken)
     {
         $thisClient = new ClientProxy($wsdl);
 
@@ -187,5 +187,3 @@ Class ClientProxy
         return $proxy;
     }
 }
-
-?>
