@@ -1,5 +1,5 @@
 <?php
-// Generated on 7/15/2014 5:43:01 AM
+// Generated on 8/15/2014 5:44:18 AM
 
 namespace BingAds\Reporting
 {
@@ -46,6 +46,316 @@ namespace BingAds\Reporting
     }
 
     /**
+     * Defines the aggregation values that you can use for a report.
+     * @link http://msdn.microsoft.com/en-us/library/bb672067(v=msads.90).aspx ReportAggregation Value Set
+     * 
+     * @used-by AccountPerformanceReportRequest
+     * @used-by AdExtensionByAdReportRequest
+     * @used-by AdExtensionByKeywordReportRequest
+     * @used-by AdExtensionDetailReportRequest
+     * @used-by AdGroupPerformanceReportRequest
+     * @used-by CallDetailReportRequest
+     * @used-by CampaignPerformanceReportRequest
+     * @used-by KeywordPerformanceReportRequest
+     * @used-by ProductOfferPerformanceReportRequest
+     * @used-by ProductTargetPerformanceReportRequest
+     * @used-by SitePerformanceReportRequest
+     */
+    final class ReportAggregation
+    {
+        /** The report data will be aggregated for each day. */
+        const Daily = 'Daily';
+
+        /** The report data will be aggregated by each of the seven days in a week. */
+        const DayOfWeek = 'DayOfWeek';
+
+        /** The report data will be aggregated for each hour. */
+        const Hourly = 'Hourly';
+
+        /** The report data will be aggregated by each of the 24 hours in a day. */
+        const HourOfDay = 'HourOfDay';
+
+        /** The report data will be aggregated for each month. */
+        const Monthly = 'Monthly';
+
+        /** The report data will be aggregated for the entire specified report time. */
+        const Summary = 'Summary';
+
+        /** The report data will be aggregated for each week. */
+        const Weekly = 'Weekly';
+
+        /** The report data will be aggregated for each year. */
+        const Yearly = 'Yearly';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the SitePerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/dd797115(v=msads.90).aspx SitePerformanceReportColumn Value Set
+     * 
+     * @used-by SitePerformanceReportRequest
+     */
+    final class SitePerformanceReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The AdDistribution element of an AdGroup. */
+        const AdDistribution = 'AdDistribution';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdId = 'AdId';
+
+        /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdType = 'AdType';
+
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
+
+        /** The average of the cost-per-thousand impressions of the ads. */
+        const AverageCpm = 'AverageCpm';
+
+        /** The average position of the ad on a webpage. */
+        const AveragePosition = 'AveragePosition';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The CurrencyType element of an Account. */
+        const CurrencyCode = 'CurrencyCode';
+
+        /** The maximum cost per click. */
+        const CurrentMaxCpc = 'CurrentMaxCpc';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+        const DestinationUrl = 'DestinationUrl';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The Language element of an AdGroup. */
+        const Language = 'Language';
+
+        /** The PricingModel element of an AdGroup. */
+        const PricingModel = 'PricingModel';
+
+        /** The URL of the website that displayed the ad. */
+        const Site = 'Site';
+
+        /** The Id element of a SitePlacement. */
+        const SiteId = 'SiteId';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+    }
+
+    /**
+     * Defines the ad distribution medium values that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/bb671722(v=msads.90).aspx AdDistributionReportFilter Value Set
+     * 
+     * @used-by AccountPerformanceReportFilter
+     * @used-by AdDynamicTextPerformanceReportFilter
+     * @used-by AdGroupPerformanceReportFilter
+     * @used-by AdPerformanceReportFilter
+     * @used-by AgeGenderDemographicReportFilter
+     * @used-by CampaignPerformanceReportFilter
+     * @used-by DestinationUrlPerformanceReportFilter
+     * @used-by GeographicalLocationReportFilter
+     * @used-by GeoLocationPerformanceReportFilter
+     * @used-by KeywordPerformanceReportFilter
+     * @used-by PublisherUsagePerformanceReportFilter
+     * @used-by ShareOfVoiceReportFilter
+     * @used-by SitePerformanceReportFilter
+     */
+    final class AdDistributionReportFilter
+    {
+        /** The report will contain content ads. */
+        const Content = 'Content';
+
+        /** The report will contain search ads. */
+        const Search = 'Search';
+    }
+
+    /**
+     * Defines the ad type values that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/cc580687(v=msads.90).aspx AdTypeReportFilter Value Set
+     * 
+     * @used-by AdDynamicTextPerformanceReportFilter
+     * @used-by AdPerformanceReportFilter
+     * @used-by KeywordPerformanceReportFilter
+     * @used-by SearchQueryPerformanceReportFilter
+     * @used-by SitePerformanceReportFilter
+     */
+    final class AdTypeReportFilter
+    {
+        /** Not supported. */
+        const Image = 'Image';
+
+        /** Not supported. */
+        const Local = 'Local';
+
+        /** The report will include mobile ads. */
+        const Mobile = 'Mobile';
+
+        /** The report will include product ads. */
+        const Product = 'Product';
+
+        /** The report will include rich ads. */
+        const RichAd = 'RichAd';
+
+        /** Not supported. */
+        const RichMedia = 'RichMedia';
+
+        /** The report will include text ads. */
+        const Text = 'Text';
+
+        /** The report will contain creative ads that are served by third parties. */
+        const ThirdPartyCreative = 'ThirdPartyCreative';
+    }
+
+    /**
+     * Defines the delivered match type values that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/bb671749(v=msads.90).aspx DeliveredMatchTypeReportFilter Value Set
+     * 
+     * @used-by KeywordPerformanceReportFilter
+     * @used-by SearchQueryPerformanceReportFilter
+     * @used-by ShareOfVoiceReportFilter
+     * @used-by SitePerformanceReportFilter
+     */
+    final class DeliveredMatchTypeReportFilter
+    {
+        /** The report will contain ads that were delivered using a broad match comparison. */
+        const Broad = 'Broad';
+
+        /** The report will contain ads that were delivered by using a content match comparison. */
+        const Content = 'Content';
+
+        /** The report will contain ads that were delivered by using an exact match comparison. */
+        const Exact = 'Exact';
+
+        /** The report will contain ads that were delivered by using a phrase match comparison. */
+        const Phrase = 'Phrase';
+    }
+
+    /**
+     * Defines the device type values that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/gg262850(v=msads.90).aspx DeviceTypeReportFilter Value Set
+     * 
+     * @used-by AccountPerformanceReportFilter
+     * @used-by AdDynamicTextPerformanceReportFilter
+     * @used-by AdExtensionByAdReportFilter
+     * @used-by AdExtensionByKeywordReportFilter
+     * @used-by AdExtensionDetailReportFilter
+     * @used-by AdExtensionDimensionReportFilter
+     * @used-by AdGroupPerformanceReportFilter
+     * @used-by AdPerformanceReportFilter
+     * @used-by CampaignPerformanceReportFilter
+     * @used-by ConversionPerformanceReportFilter
+     * @used-by DestinationUrlPerformanceReportFilter
+     * @used-by KeywordPerformanceReportFilter
+     * @used-by ProductOfferPerformanceReportFilter
+     * @used-by ProductTargetPerformanceReportFilter
+     * @used-by SitePerformanceReportFilter
+     */
+    final class DeviceTypeReportFilter
+    {
+        /** The report will include text ads displayed on computers. */
+        const Computer = 'Computer';
+
+        /** The report will include mobile ads displayed on a mobile device. */
+        const NonSmartPhone = 'NonSmartPhone';
+
+        /** The report will include text ads displayed on smartphones (any high fidelity device capable of rendering full HTML). */
+        const SmartPhone = 'SmartPhone';
+
+        /** The report will include text ads displayed on a tablet device. */
+        const Tablet = 'Tablet';
+    }
+
+    /**
+     * Defines the predefined time and date range values for a report request.
+     * @link http://msdn.microsoft.com/en-us/library/bb671772(v=msads.90).aspx ReportTimePeriod Value Set
+     * 
+     * @used-by ReportTime
+     */
+    final class ReportTimePeriod
+    {
+        /** A cumulative report for the four calendar weeks prior to today. */
+        const LastFourWeeks = 'LastFourWeeks';
+
+        /** A cumulative report for the previous calendar month. */
+        const LastMonth = 'LastMonth';
+
+        /** A report for the previous seven days, one row for each day. */
+        const LastSevenDays = 'LastSevenDays';
+
+        /** A cumulative report for the previous six calendar months. */
+        const LastSixMonths = 'LastSixMonths';
+
+        /** A cumulative report for the previous three calendar months. */
+        const LastThreeMonths = 'LastThreeMonths';
+
+        /** A cumulative report for the previous calendar week. */
+        const LastWeek = 'LastWeek';
+
+        /** A cumulative report for the previous calendar year. */
+        const LastYear = 'LastYear';
+
+        /** A cumulative report for the current calendar month. */
+        const ThisMonth = 'ThisMonth';
+
+        /** A cumulative report for the current calendar week. */
+        const ThisWeek = 'ThisWeek';
+
+        /** A cumulative report for the current calendar year. */
+        const ThisYear = 'ThisYear';
+
+        /** A cumulative report for the current day. */
+        const Today = 'Today';
+
+        /** A cumulative report for the previous day. */
+        const Yesterday = 'Yesterday';
+    }
+
+    /**
      * Defines the aggregation values for reports that cannot specify hourly aggregation.
      * @link http://msdn.microsoft.com/en-us/library/bb672057(v=msads.90).aspx NonHourlyReportAggregation Value Set
      * 
@@ -79,6 +389,984 @@ namespace BingAds\Reporting
 
         /** The report data is aggregated for each year. */
         const Yearly = 'Yearly';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the ConversionPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/gg262852(v=msads.90).aspx ConversionPerformanceReportColumn Value Set
+     * 
+     * @used-by ConversionPerformanceReportRequest
+     */
+    final class ConversionPerformanceReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The Text element of a Keyword. */
+        const Keyword = 'Keyword';
+
+        /** The Id element of a Keyword. */
+        const KeywordId = 'KeywordId';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the AdExtensionDimensionReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/jj713609(v=msads.90).aspx AdExtensionDimensionReportColumn Value Set
+     * 
+     * @used-by AdExtensionDimensionReportRequest
+     */
+    final class AdExtensionDimensionReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+        const AdExtensionId = 'AdExtensionId';
+
+        /** Positive integer system identifiers ranging from 1 through 20, which map to properties of the CallAdExtension, LocationAdExtension, and SiteLink objects. */
+        const AdExtensionPropertyId = 'AdExtensionPropertyId';
+
+        /** The human readable ad extension property value. */
+        const AdExtensionPropertyValue = 'AdExtensionPropertyValue';
+
+        /** The type name that corresponds to the AdExtensionTypeId column. */
+        const AdExtensionType = 'AdExtensionType';
+
+        /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+        const AdExtensionVersion = 'AdExtensionVersion';
+
+        /** The current delivery status. */
+        const Status = 'Status';
+    }
+
+    /**
+     * Defines the device operating system values that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/dn411633(v=msads.90).aspx DeviceOSReportFilter Value Set
+     * 
+     * @used-by AccountPerformanceReportFilter
+     * @used-by AdExtensionByAdReportFilter
+     * @used-by AdExtensionByKeywordReportFilter
+     * @used-by AdExtensionDetailReportFilter
+     * @used-by AdExtensionDimensionReportFilter
+     * @used-by AdGroupPerformanceReportFilter
+     * @used-by CampaignPerformanceReportFilter
+     */
+    final class DeviceOSReportFilter
+    {
+        /** The report will include ads displayed on Android device operating systems. */
+        const Android = 'Android';
+
+        /** The report will include ads displayed on BlackBerry device operating systems. */
+        const BlackBerry = 'BlackBerry';
+
+        /** The report will include ads displayed on iOS device operating systems. */
+        const iOS = 'iOS';
+
+        /** The report will include ads displayed on a device operating system other than Android, BlackBerry, iOS, and Windows. */
+        const Other = 'Other';
+
+        /** The report will include ads displayed on Windows device operating systems. */
+        const Windows = 'Windows';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the AdExtensionDetailReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/dn610365(v=msads.90).aspx AdExtensionDetailReportColumn Value Set
+     * 
+     * @used-by AdExtensionDetailReportRequest
+     */
+    final class AdExtensionDetailReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+        const AdExtensionId = 'AdExtensionId';
+
+        /** The human readable ad extension property value. */
+        const AdExtensionPropertyValue = 'AdExtensionPropertyValue';
+
+        /** The type name that corresponds to the AdExtensionTypeId column. */
+        const AdExtensionType = 'AdExtensionType';
+
+        /** The system identifier that corresponds to the AdExtensionType column. */
+        const AdExtensionTypeId = 'AdExtensionTypeId';
+
+        /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+        const AdExtensionVersion = 'AdExtensionVersion';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdId = 'AdId';
+
+        /** The Title element of a MobileAd or TextAd. */
+        const AdTitle = 'AdTitle';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
+
+        /** The MatchType element of a Keyword. */
+        const BidMatchType = 'BidMatchType';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+        const DeviceOS = 'DeviceOS';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The Network element of an AdGroup. */
+        const Network = 'Network';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+
+        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
+        const TopVsOther = 'TopVsOther';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the AdExtensionByAdReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/jj713608(v=msads.90).aspx AdExtensionByAdReportColumn Value Set
+     * 
+     * @used-by AdExtensionByAdReportRequest
+     */
+    final class AdExtensionByAdReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+        const AdExtensionId = 'AdExtensionId';
+
+        /** The type name that corresponds to the AdExtensionTypeId column. */
+        const AdExtensionType = 'AdExtensionType';
+
+        /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+        const AdExtensionVersion = 'AdExtensionVersion';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdId = 'AdId';
+
+        /** The Title element of a MobileAd or TextAd. */
+        const AdTitle = 'AdTitle';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
+
+        /** The MatchType element of a Keyword. */
+        const BidMatchType = 'BidMatchType';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The ad extension item that the user clicked. */
+        const ClickType = 'ClickType';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+        const DeviceOS = 'DeviceOS';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The Network element of an AdGroup. */
+        const Network = 'Network';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+
+        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
+        const TopVsOther = 'TopVsOther';
+
+        /** The number of billable and non-billable times that the ad extension was clicked. */
+        const TotalClicks = 'TotalClicks';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the AccountPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/bb671947(v=msads.90).aspx AccountPerformanceReportColumn Value Set
+     * 
+     * @used-by AccountPerformanceReportRequest
+     */
+    final class AccountPerformanceReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The AdDistribution element of an AdGroup. */
+        const AdDistribution = 'AdDistribution';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
+
+        /** The average of the cost-per-thousand impressions of the ads. */
+        const AverageCpm = 'AverageCpm';
+
+        /** The average cost per phone call (CPP). */
+        const AverageCpp = 'AverageCpp';
+
+        /** The average position of the ad on a webpage. */
+        const AveragePosition = 'AveragePosition';
+
+        /** The MatchType element of a Keyword. */
+        const BidMatchType = 'BidMatchType';
+
+        /** The number of phone calls initiated by clicks. */
+        const ClickCalls = 'ClickCalls';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The CurrencyType element of an Account. */
+        const CurrencyCode = 'CurrencyCode';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+        const DeviceOS = 'DeviceOS';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
+        const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
+        const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
+        const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not due to one or both of the following reasons. */
+        const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
+        const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
+        const ImpressionSharePercent = 'ImpressionSharePercent';
+
+        /** The number of low-quality clicks. */
+        const LowQualityClicks = 'LowQualityClicks';
+
+        /** The low-quality clicks as a percentage. */
+        const LowQualityClicksPercent = 'LowQualityClicksPercent';
+
+        /** The low-quality conversion rate as a percentage. */
+        const LowQualityConversionRate = 'LowQualityConversionRate';
+
+        /** The number of conversions that originate from low-quality clicks. */
+        const LowQualityConversions = 'LowQualityConversions';
+
+        /** The number of impressions that result from low-quality keyword searches. */
+        const LowQualityImpressions = 'LowQualityImpressions';
+
+        /** The low-quality impressions as a percentage. */
+        const LowQualityImpressionsPercent = 'LowQualityImpressionsPercent';
+
+        /** The number of calls dialed manually from any device to the tracked phone number. */
+        const ManualCalls = 'ManualCalls';
+
+        /** The Network element of an AdGroup. */
+        const Network = 'Network';
+
+        /** The number of total calls to the tracked phone number that showed with your ad. */
+        const PhoneCalls = 'PhoneCalls';
+
+        /** The number of times your tracked number was shown on all devices. */
+        const PhoneImpressions = 'PhoneImpressions';
+
+        /** The total cost for completed calls to your tracked number. */
+        const PhoneSpend = 'PhoneSpend';
+
+        /** The phone-through rate (Ptr). */
+        const Ptr = 'Ptr';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+
+        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
+        const TopVsOther = 'TopVsOther';
+
+        /** The total cost for cost for click spend and phone call spend combined. */
+        const TotalCostPhoneAndClicks = 'TotalCostPhoneAndClicks';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the TacticChannelReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/gg262851(v=msads.90).aspx TacticChannelReportColumn Value Set
+     * 
+     * @used-by TacticChannelReportRequest
+     */
+    final class TacticChannelReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The name of the channel provider that displayed the ads. */
+        const Channel = 'Channel';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The funnel conversion rate is the percent of conversions completed by users who at minimum visited the webpage corresponding to step 1 of your goal. */
+        const FunnelConversionRate = 'FunnelConversionRate';
+
+        /** The name of the campaign analytics goal for tracking potential land, browse, prospect, and conversion steps. */
+        const Goal = 'Goal';
+
+        /** The Text element of a Keyword. */
+        const Keyword = 'Keyword';
+
+        /** The Id element of a Keyword. */
+        const KeywordId = 'KeywordId';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The number of times that a user entered step 1 of the funnel. */
+        const Step1Count = 'Step1Count';
+
+        /** The number of times that a user entered step 2 of the funnel. */
+        const Step2Count = 'Step2Count';
+
+        /** The number of times that a user entered step 3 of the funnel. */
+        const Step3Count = 'Step3Count';
+
+        /** The number of times that a user entered step 1 of the funnel. */
+        const Step4Count = 'Step4Count';
+
+        /** The number of times that a user entered step 1 of the funnel. */
+        const Step5Count = 'Step5Count';
+
+        /** The name of the advertising tactic. */
+        const Tactic = 'Tactic';
+
+        /** The name of the ad group that you defined on a paid search provider other than Bing Ads. */
+        const ThirdPartyAdGroup = 'ThirdPartyAdGroup';
+
+        /** The name of the campaign that you defined on a paid search provider other than Bing Ads. */
+        const ThirdPartyCampaign = 'ThirdPartyCampaign';
+
+        /** The keyword to track that you defined on a paid search provider other than Bing Ads. */
+        const ThirdPartyTerm = 'ThirdPartyTerm';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the GeoLocationPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/dn743762(v=msads.90).aspx GeoLocationPerformanceReportColumn Value Set
+     * 
+     * @used-by GeoLocationPerformanceReportRequest
+     */
+    final class GeoLocationPerformanceReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The AdDistribution element of an AdGroup. */
+        const AdDistribution = 'AdDistribution';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
+
+        /** The average of the cost-per-thousand impressions of the ads. */
+        const AverageCpm = 'AverageCpm';
+
+        /** The average position of the ad on a webpage. */
+        const AveragePosition = 'AveragePosition';
+
+        /** The MatchType element of a Keyword. */
+        const BidMatchType = 'BidMatchType';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The city used to deliver the ad. */
+        const City = 'City';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The country used to deliver the ad. */
+        const Country = 'Country';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The CurrencyType element of an Account. */
+        const CurrencyCode = 'CurrencyCode';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+        const DeviceOS = 'DeviceOS';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The Language element of an AdGroup. */
+        const Language = 'Language';
+
+        /** The location type used to deliver ads. */
+        const LocationType = 'LocationType';
+
+        /** The metro area used to deliver the ad. */
+        const MetroArea = 'MetroArea';
+
+        /** The most specific location used to deliver ads. */
+        const MostSpecificLocation = 'MostSpecificLocation';
+
+        /** The Network element of an AdGroup. */
+        const Network = 'Network';
+
+        /** The Name element of a RadiusTargetBid. */
+        const ProximityTargetLocation = 'ProximityTargetLocation';
+
+        /** The Radius element of a RadiusTargetBid. */
+        const Radius = 'Radius';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The state used to deliver the ad. */
+        const State = 'State';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+
+        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
+        const TopVsOther = 'TopVsOther';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the AdGroupPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/bb671495(v=msads.90).aspx AdGroupPerformanceReportColumn Value Set
+     * 
+     * @used-by AdGroupPerformanceReportRequest
+     */
+    final class AdGroupPerformanceReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The AdDistribution element of an AdGroup. */
+        const AdDistribution = 'AdDistribution';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
+
+        /** The average of the cost-per-thousand impressions of the ads. */
+        const AverageCpm = 'AverageCpm';
+
+        /** The average cost per phone call (CPP). */
+        const AverageCpp = 'AverageCpp';
+
+        /** The average position of the ad on a webpage. */
+        const AveragePosition = 'AveragePosition';
+
+        /** The MatchType element of a Keyword. */
+        const BidMatchType = 'BidMatchType';
+
+        /** Reserved for internal use. */
+        const BusinessCategoryId = 'BusinessCategoryId';
+
+        /** Reserved for internal use. */
+        const BusinessCategoryName = 'BusinessCategoryName';
+
+        /** Reserved for internal use. */
+        const BusinessListingId = 'BusinessListingId';
+
+        /** Reserved for internal use. */
+        const BusinessListingName = 'BusinessListingName';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The number of phone calls initiated by clicks. */
+        const ClickCalls = 'ClickCalls';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The CurrencyType element of an Account. */
+        const CurrencyCode = 'CurrencyCode';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+        const DeviceOS = 'DeviceOS';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The numeric score that indicates the historic relevance of your keyword to the search term. */
+        const HistoricKeywordRelevance = 'HistoricKeywordRelevance';
+
+        /** The numeric score that indicates the historic relevance of your ad and landing page to the search term. */
+        const HistoricLandingPageRelevance = 'HistoricLandingPageRelevance';
+
+        /** The numeric score that is the aggregate assessment of the historic quality of all landing pages on your site. */
+        const HistoricLandingPageUserExperience = 'HistoricLandingPageUserExperience';
+
+        /** The historic quality score of the keyword. */
+        const HistoricQualityScore = 'HistoricQualityScore';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
+        const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
+        const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
+        const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not due to one or both of the following reasons. */
+        const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
+        const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
+        const ImpressionSharePercent = 'ImpressionSharePercent';
+
+        /** The numeric score that indicates the relevance of your keyword to the search term. */
+        const KeywordRelevance = 'KeywordRelevance';
+
+        /** The numeric score that indicates the relevance of your ad and landing page to the search query. */
+        const LandingPageRelevance = 'LandingPageRelevance';
+
+        /** The numeric score that is an aggregate assessment of the quality of all landing pages on your site. */
+        const LandingPageUserExperience = 'LandingPageUserExperience';
+
+        /** The Language element of an AdGroup. */
+        const Language = 'Language';
+
+        /** The number of calls dialed manually from any device to the tracked phone number. */
+        const ManualCalls = 'ManualCalls';
+
+        /** The Network element of an AdGroup. */
+        const Network = 'Network';
+
+        /** The number of total calls to the tracked phone number that showed with your ad. */
+        const PhoneCalls = 'PhoneCalls';
+
+        /** The number of times your tracked number was shown on all devices. */
+        const PhoneImpressions = 'PhoneImpressions';
+
+        /** The total cost for completed calls to your tracked number. */
+        const PhoneSpend = 'PhoneSpend';
+
+        /** The PricingModel element of an AdGroup. */
+        const PricingModel = 'PricingModel';
+
+        /** The phone-through rate (Ptr). */
+        const Ptr = 'Ptr';
+
+        /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
+        const QualityScore = 'QualityScore';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The current delivery status. */
+        const Status = 'Status';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+
+        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
+        const TopVsOther = 'TopVsOther';
+
+        /** The total cost for cost for click spend and phone call spend combined. */
+        const TotalCostPhoneAndClicks = 'TotalCostPhoneAndClicks';
+    }
+
+    /**
+     * Defines the ad group status values that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/bb671991(v=msads.90).aspx AdGroupStatusReportFilter Value Set
+     * 
+     * @used-by AdGroupPerformanceReportFilter
+     */
+    final class AdGroupStatusReportFilter
+    {
+        /** The report will contain ad groups that are active. */
+        const Active = 'Active';
+
+        /** The report will contain ad groups that have been deleted. */
+        const Deleted = 'Deleted';
+
+        /** The report will contain ad groups that are in a draft state. */
+        const Draft = 'Draft';
+
+        /** The report will contain ad groups that have expired. */
+        const Expired = 'Expired';
+
+        /** The report will contain ad groups that are paused. */
+        const Paused = 'Paused';
+
+        /** The same meaning as Active. */
+        const Submitted = 'Submitted';
     }
 
     /**
@@ -229,147 +1517,468 @@ namespace BingAds\Reporting
     }
 
     /**
-     * Defines the ad distribution medium values that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/bb671722(v=msads.90).aspx AdDistributionReportFilter Value Set
+     * Defines the attributes and performance statistics columns that you can include in the RichAdComponentPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/hh180149(v=msads.90).aspx RichAdComponentPerformanceReportColumn Value Set
      * 
-     * @used-by AccountPerformanceReportFilter
-     * @used-by AdDynamicTextPerformanceReportFilter
-     * @used-by AdGroupPerformanceReportFilter
-     * @used-by AdPerformanceReportFilter
-     * @used-by AgeGenderDemographicReportFilter
-     * @used-by CampaignPerformanceReportFilter
-     * @used-by DestinationUrlPerformanceReportFilter
-     * @used-by GeographicalLocationReportFilter
-     * @used-by GeoLocationPerformanceReportFilter
-     * @used-by KeywordPerformanceReportFilter
-     * @used-by PublisherUsagePerformanceReportFilter
-     * @used-by ShareOfVoiceReportFilter
-     * @used-by SitePerformanceReportFilter
+     * @used-by RichAdComponentPerformanceReportRequest
      */
-    final class AdDistributionReportFilter
+    final class RichAdComponentPerformanceReportColumn
     {
-        /** The report will contain content ads. */
-        const Content = 'Content';
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
 
-        /** The report will contain search ads. */
-        const Search = 'Search';
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdId = 'AdId';
+
+        /** The Title element of a MobileAd or TextAd. */
+        const AdTitle = 'AdTitle';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The number of billable clicks of a rich ad. */
+        const ComponentClicks = 'ComponentClicks';
+
+        /** The click-through rate of all components of the ad that were clicked. */
+        const ComponentCTR = 'ComponentCTR';
+
+        /** The destination URL of the rich ad component. */
+        const ComponentDestinationURL = 'ComponentDestinationURL';
+
+        /** The number of clicks that occur on different components of the ad after the first click but within the short, system-defined interval. */
+        const ComponentNonBillableClicks = 'ComponentNonBillableClicks';
+
+        /** The title of the rich ad component. */
+        const ComponentTitle = 'ComponentTitle';
+
+        /** The number of times that all components of the ad were clicked. */
+        const ComponentTotalClicks = 'ComponentTotalClicks';
+
+        /** The component type of the rich ad that was clicked. */
+        const ComponentType = 'ComponentType';
+
+        /** The rich ad component type. */
+        const RichAdSubType = 'RichAdSubType';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
     }
 
     /**
-     * Defines the ad type values that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/cc580687(v=msads.90).aspx AdTypeReportFilter Value Set
+     * Defines the possible components of a rich ad that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/hh180146(v=msads.90).aspx ComponentTypeFilter Value Set
      * 
-     * @used-by AdDynamicTextPerformanceReportFilter
-     * @used-by AdPerformanceReportFilter
-     * @used-by KeywordPerformanceReportFilter
-     * @used-by SearchQueryPerformanceReportFilter
-     * @used-by SitePerformanceReportFilter
+     * @used-by RichAdComponentPerformanceReportFilter
      */
-    final class AdTypeReportFilter
+    final class ComponentTypeFilter
     {
-        /** Not supported. */
+        /** The title of the ad that contains a hyperlink to a destination URL. */
+        const Basic = 'Basic';
+
+        /** A hyperlink to a webpage inside the destination website. */
+        const Deeplink = 'Deeplink';
+
+        /** The icon that displays next to the display URL. */
+        const FavoriteIcon = 'FavoriteIcon';
+
+        /** An entry form on the ad that gathers data from the user. */
+        const Form = 'Form';
+
+        /** An image in the ad that contains a hyperlink to a destination URL. */
         const Image = 'Image';
 
-        /** Not supported. */
-        const Local = 'Local';
+        /** A link in a pharmaceutical ad that links to additional drug information. */
+        const TitledLink = 'TitledLink';
+        const Unknown = 'Unknown';
 
-        /** The report will include mobile ads. */
-        const Mobile = 'Mobile';
-
-        /** The report will include product ads. */
-        const Product = 'Product';
-
-        /** The report will include rich ads. */
-        const RichAd = 'RichAd';
-
-        /** Not supported. */
-        const RichMedia = 'RichMedia';
-
-        /** The report will include text ads. */
-        const Text = 'Text';
-
-        /** The report will contain creative ads that are served by third parties. */
-        const ThirdPartyCreative = 'ThirdPartyCreative';
+        /** A video embedded in the ad that the user can click to play. */
+        const Video = 'Video';
     }
 
     /**
-     * Defines the device type values that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/gg262850(v=msads.90).aspx DeviceTypeReportFilter Value Set
+     * Defines the rich ad types that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/hh180148(v=msads.90).aspx RichAdSubTypeFilter Value Set
      * 
-     * @used-by AccountPerformanceReportFilter
-     * @used-by AdDynamicTextPerformanceReportFilter
-     * @used-by AdExtensionByAdReportFilter
-     * @used-by AdExtensionByKeywordReportFilter
-     * @used-by AdExtensionDetailReportFilter
-     * @used-by AdExtensionDimensionReportFilter
-     * @used-by AdGroupPerformanceReportFilter
-     * @used-by AdPerformanceReportFilter
-     * @used-by CampaignPerformanceReportFilter
-     * @used-by ConversionPerformanceReportFilter
-     * @used-by DestinationUrlPerformanceReportFilter
+     * @used-by RichAdComponentPerformanceReportFilter
+     */
+    final class RichAdSubTypeFilter
+    {
+        /** An ad that can contain one video, a maximum of two deep links, and an input form. */
+        const Rais1Video2Links1Form = 'Rais1Video2Links1Form';
+
+        /** An ad that can contain one video and a maximum of four deep links. */
+        const Rais1Video4Links = 'Rais1Video4Links';
+
+        /** An ad that can contain a maximum of two images, two deep links, and an input form. */
+        const Rais2Images2Links1Form = 'Rais2Images2Links1Form';
+
+        /** An ad that can contain a maximum of two images and four deep links. */
+        const Rais2Images4Links = 'Rais2Images4Links';
+
+        /** An ad that can contain a maximum of four deep links. */
+        const Rais4Links = 'Rais4Links';
+
+        /** A Bing Shopping ad. */
+        const RaisBingShopping = 'RaisBingShopping';
+
+        /** A pharmaceutical ad. */
+        const RaisPharma = 'RaisPharma';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the KeywordPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/bb672087(v=msads.90).aspx KeywordPerformanceReportColumn Value Set
+     * 
+     * @used-by KeywordPerformanceReportRequest
+     * @used-by KeywordPerformanceReportSort
+     */
+    final class KeywordPerformanceReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The AccountLifeCycleStatus element of an Account. */
+        const AccountStatus = 'AccountStatus';
+
+        /** The AdDistribution element of an AdGroup. */
+        const AdDistribution = 'AdDistribution';
+
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
+
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
+
+        /** The Status element of an AdGroup. */
+        const AdGroupStatus = 'AdGroupStatus';
+
+        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdId = 'AdId';
+
+        /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdType = 'AdType';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
+
+        /** The average of the cost-per-thousand impressions of the ads. */
+        const AverageCpm = 'AverageCpm';
+
+        /** The average position of the ad on a webpage. */
+        const AveragePosition = 'AveragePosition';
+
+        /** The MatchType element of a Keyword. */
+        const BidMatchType = 'BidMatchType';
+
+        /** Reserved for internal use. */
+        const BusinessCategoryId = 'BusinessCategoryId';
+
+        /** Reserved for internal use. */
+        const BusinessCategoryName = 'BusinessCategoryName';
+
+        /** Reserved for internal use. */
+        const BusinessListingId = 'BusinessListingId';
+
+        /** Reserved for internal use. */
+        const BusinessListingName = 'BusinessListingName';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The Status element of a Campaign. */
+        const CampaignStatus = 'CampaignStatus';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The CurrencyType element of an Account. */
+        const CurrencyCode = 'CurrencyCode';
+
+        /** The maximum cost per click. */
+        const CurrentMaxCpc = 'CurrentMaxCpc';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+        const DestinationUrl = 'DestinationUrl';
+
+        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+        const DeviceOS = 'DeviceOS';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The numeric score that indicates the historic relevance of your keyword to the search term. */
+        const HistoricKeywordRelevance = 'HistoricKeywordRelevance';
+
+        /** The numeric score that indicates the historic relevance of your ad and landing page to the search term. */
+        const HistoricLandingPageRelevance = 'HistoricLandingPageRelevance';
+
+        /** The numeric score that is the aggregate assessment of the historic quality of all landing pages on your site. */
+        const HistoricLandingPageUserExperience = 'HistoricLandingPageUserExperience';
+
+        /** The historic quality score of the keyword. */
+        const HistoricQualityScore = 'HistoricQualityScore';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The Text element of a Keyword. */
+        const Keyword = 'Keyword';
+
+        /** The Id element of a Keyword. */
+        const KeywordId = 'KeywordId';
+
+        /** An identifier that uniquely identifies the keyword and match-type combination. */
+        const KeywordMatchTypeId = 'KeywordMatchTypeId';
+
+        /** The numeric score that indicates the relevance of your keyword to the search term. */
+        const KeywordRelevance = 'KeywordRelevance';
+
+        /** The Status element of a Keyword. */
+        const KeywordStatus = 'KeywordStatus';
+
+        /** The numeric score that indicates the relevance of your ad and landing page to the search query. */
+        const LandingPageRelevance = 'LandingPageRelevance';
+
+        /** The numeric score that is an aggregate assessment of the quality of all landing pages on your site. */
+        const LandingPageUserExperience = 'LandingPageUserExperience';
+
+        /** The Language element of an AdGroup. */
+        const Language = 'Language';
+
+        /** The Network element of an AdGroup. */
+        const Network = 'Network';
+
+        /** The PricingModel element of an AdGroup. */
+        const PricingModel = 'PricingModel';
+
+        /** The numeric score that indicates the possible increase in the number of impressions that the keyword could receive if the corresponding QualityScore column would rise above underperforming. */
+        const QualityImpact = 'QualityImpact';
+
+        /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
+        const QualityScore = 'QualityScore';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+
+        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
+        const TopVsOther = 'TopVsOther';
+    }
+
+    /**
+     * Defines the bid match type values that you can use to filter the report data.
+     * @link http://msdn.microsoft.com/en-us/library/ff728812(v=msads.90).aspx BidMatchTypeReportFilter Value Set
+     * 
      * @used-by KeywordPerformanceReportFilter
-     * @used-by ProductOfferPerformanceReportFilter
-     * @used-by ProductTargetPerformanceReportFilter
-     * @used-by SitePerformanceReportFilter
+     * @used-by ShareOfVoiceReportFilter
      */
-    final class DeviceTypeReportFilter
+    final class BidMatchTypeReportFilter
     {
-        /** The report will include text ads displayed on computers. */
-        const Computer = 'Computer';
+        /** The report will contain keywords that set a bid value for the broad match type. */
+        const Broad = 'Broad';
 
-        /** The report will include mobile ads displayed on a mobile device. */
-        const NonSmartPhone = 'NonSmartPhone';
+        /** The report will contain keywords that set a bid value for the content match type. */
+        const Content = 'Content';
 
-        /** The report will include text ads displayed on smartphones (any high fidelity device capable of rendering full HTML). */
-        const SmartPhone = 'SmartPhone';
+        /** The report will contain keywords that set a bid value for the exact match type. */
+        const Exact = 'Exact';
 
-        /** The report will include text ads displayed on a tablet device. */
-        const Tablet = 'Tablet';
+        /** The report will contain keywords that set a bid value for the phrase match type. */
+        const Phrase = 'Phrase';
     }
 
     /**
-     * Defines the predefined time and date range values for a report request.
-     * @link http://msdn.microsoft.com/en-us/library/bb671772(v=msads.90).aspx ReportTimePeriod Value Set
+     * Defines the ascending or descending sort order of values within the specified report column.
+     * @link http://msdn.microsoft.com/en-us/library/dn342800(v=msads.90).aspx SortOrder Value Set
      * 
-     * @used-by ReportTime
+     * @used-by KeywordPerformanceReportSort
      */
-    final class ReportTimePeriod
+    final class SortOrder
     {
-        /** A cumulative report for the four calendar weeks prior to today. */
-        const LastFourWeeks = 'LastFourWeeks';
+        const Ascending = 'Ascending';
+        const Descending = 'Descending';
+    }
 
-        /** A cumulative report for the previous calendar month. */
-        const LastMonth = 'LastMonth';
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the DestinationUrlPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/bb671820(v=msads.90).aspx DestinationUrlPerformanceReportColumn Value Set
+     * 
+     * @used-by DestinationUrlPerformanceReportRequest
+     */
+    final class DestinationUrlPerformanceReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
 
-        /** A report for the previous seven days, one row for each day. */
-        const LastSevenDays = 'LastSevenDays';
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
 
-        /** A cumulative report for the previous six calendar months. */
-        const LastSixMonths = 'LastSixMonths';
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
 
-        /** A cumulative report for the previous three calendar months. */
-        const LastThreeMonths = 'LastThreeMonths';
+        /** The AdDistribution element of an AdGroup. */
+        const AdDistribution = 'AdDistribution';
 
-        /** A cumulative report for the previous calendar week. */
-        const LastWeek = 'LastWeek';
+        /** The Id element of an AdGroup. */
+        const AdGroupId = 'AdGroupId';
 
-        /** A cumulative report for the previous calendar year. */
-        const LastYear = 'LastYear';
+        /** The Name element of an AdGroup. */
+        const AdGroupName = 'AdGroupName';
 
-        /** A cumulative report for the current calendar month. */
-        const ThisMonth = 'ThisMonth';
+        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdId = 'AdId';
 
-        /** A cumulative report for the current calendar week. */
-        const ThisWeek = 'ThisWeek';
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
 
-        /** A cumulative report for the current calendar year. */
-        const ThisYear = 'ThisYear';
+        /** The average cost per click (CPC). */
+        const AverageCpc = 'AverageCpc';
 
-        /** A cumulative report for the current day. */
-        const Today = 'Today';
+        /** The average of the cost-per-thousand impressions of the ads. */
+        const AverageCpm = 'AverageCpm';
 
-        /** A cumulative report for the previous day. */
-        const Yesterday = 'Yesterday';
+        /** The average position of the ad on a webpage. */
+        const AveragePosition = 'AveragePosition';
+
+        /** The MatchType element of a Keyword. */
+        const BidMatchType = 'BidMatchType';
+
+        /** The Id element of a Campaign. */
+        const CampaignId = 'CampaignId';
+
+        /** The Name element of a Campaign. */
+        const CampaignName = 'CampaignName';
+
+        /** The number of times that the ads in the account were clicked. */
+        const Clicks = 'Clicks';
+
+        /** The conversion rate as a percentage. */
+        const ConversionRate = 'ConversionRate';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The cost per assist. */
+        const CostPerAssist = 'CostPerAssist';
+
+        /** The cost per conversion. */
+        const CostPerConversion = 'CostPerConversion';
+
+        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
+        const Ctr = 'Ctr';
+
+        /** The CurrencyType element of an Account. */
+        const CurrencyCode = 'CurrencyCode';
+
+        /** The match type used to deliver an ad. */
+        const DeliveredMatchType = 'DeliveredMatchType';
+
+        /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+        const DestinationUrl = 'DestinationUrl';
+
+        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+        const DeviceOS = 'DeviceOS';
+
+        /** The DeviceName element of a DeviceOSTargetBid. */
+        const DeviceType = 'DeviceType';
+
+        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
+        const ExtendedCost = 'ExtendedCost';
+
+        /** The number of times an ad has been displayed on search results pages. */
+        const Impressions = 'Impressions';
+
+        /** The Language element of an AdGroup. */
+        const Language = 'Language';
+
+        /** The Network element of an AdGroup. */
+        const Network = 'Network';
+
+        /** The PricingModel element of an AdGroup. */
+        const PricingModel = 'PricingModel';
+
+        /** The return on ad spend (ROAS). */
+        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per assist. */
+        const RevenuePerAssist = 'RevenuePerAssist';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The cost per click (CPC) summed for each click. */
+        const Spend = 'Spend';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+
+        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
+        const TopVsOther = 'TopVsOther';
     }
 
     /**
@@ -763,172 +2372,6 @@ namespace BingAds\Reporting
     }
 
     /**
-     * Defines the aggregation values that you can use for a report.
-     * @link http://msdn.microsoft.com/en-us/library/bb672067(v=msads.90).aspx ReportAggregation Value Set
-     * 
-     * @used-by AccountPerformanceReportRequest
-     * @used-by AdExtensionByAdReportRequest
-     * @used-by AdExtensionByKeywordReportRequest
-     * @used-by AdExtensionDetailReportRequest
-     * @used-by AdGroupPerformanceReportRequest
-     * @used-by CallDetailReportRequest
-     * @used-by CampaignPerformanceReportRequest
-     * @used-by KeywordPerformanceReportRequest
-     * @used-by ProductOfferPerformanceReportRequest
-     * @used-by ProductTargetPerformanceReportRequest
-     * @used-by SitePerformanceReportRequest
-     */
-    final class ReportAggregation
-    {
-        /** The report data will be aggregated for each day. */
-        const Daily = 'Daily';
-
-        /** The report data will be aggregated by each of the seven days in a week. */
-        const DayOfWeek = 'DayOfWeek';
-
-        /** The report data will be aggregated for each hour. */
-        const Hourly = 'Hourly';
-
-        /** The report data will be aggregated by each of the 24 hours in a day. */
-        const HourOfDay = 'HourOfDay';
-
-        /** The report data will be aggregated for each month. */
-        const Monthly = 'Monthly';
-
-        /** The report data will be aggregated for the entire specified report time. */
-        const Summary = 'Summary';
-
-        /** The report data will be aggregated for each week. */
-        const Weekly = 'Weekly';
-
-        /** The report data will be aggregated for each year. */
-        const Yearly = 'Yearly';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the SitePerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/dd797115(v=msads.90).aspx SitePerformanceReportColumn Value Set
-     * 
-     * @used-by SitePerformanceReportRequest
-     */
-    final class SitePerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The AdDistribution element of an AdGroup. */
-        const AdDistribution = 'AdDistribution';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdId = 'AdId';
-
-        /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdType = 'AdType';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The average of the cost-per-thousand impressions of the ads. */
-        const AverageCpm = 'AverageCpm';
-
-        /** The average position of the ad on a webpage. */
-        const AveragePosition = 'AveragePosition';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The CurrencyType element of an Account. */
-        const CurrencyCode = 'CurrencyCode';
-
-        /** The maximum cost per click. */
-        const CurrentMaxCpc = 'CurrentMaxCpc';
-
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
-        /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
-        const DestinationUrl = 'DestinationUrl';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The Language element of an AdGroup. */
-        const Language = 'Language';
-
-        /** The PricingModel element of an AdGroup. */
-        const PricingModel = 'PricingModel';
-
-        /** The URL of the website that displayed the ad. */
-        const Site = 'Site';
-
-        /** The Id element of a SitePlacement. */
-        const SiteId = 'SiteId';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-    }
-
-    /**
-     * Defines the delivered match type values that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/bb671749(v=msads.90).aspx DeliveredMatchTypeReportFilter Value Set
-     * 
-     * @used-by KeywordPerformanceReportFilter
-     * @used-by SearchQueryPerformanceReportFilter
-     * @used-by ShareOfVoiceReportFilter
-     * @used-by SitePerformanceReportFilter
-     */
-    final class DeliveredMatchTypeReportFilter
-    {
-        /** The report will contain ads that were delivered using a broad match comparison. */
-        const Broad = 'Broad';
-
-        /** The report will contain ads that were delivered by using a content match comparison. */
-        const Content = 'Content';
-
-        /** The report will contain ads that were delivered by using an exact match comparison. */
-        const Exact = 'Exact';
-
-        /** The report will contain ads that were delivered by using a phrase match comparison. */
-        const Phrase = 'Phrase';
-    }
-
-    /**
      * Defines the aggregation values that you can use in a search query performance report.
      * @link http://msdn.microsoft.com/en-us/library/ee703960(v=msads.90).aspx SearchQueryReportAggregation Value Set
      * 
@@ -1146,90 +2589,6 @@ namespace BingAds\Reporting
     }
 
     /**
-     * Defines the attributes and performance statistics columns that you can include in the ConversionPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/gg262852(v=msads.90).aspx ConversionPerformanceReportColumn Value Set
-     * 
-     * @used-by ConversionPerformanceReportRequest
-     */
-    final class ConversionPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The Text element of a Keyword. */
-        const Keyword = 'Keyword';
-
-        /** The Id element of a Keyword. */
-        const KeywordId = 'KeywordId';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-    }
-
-    /**
      * Defines the attributes and performance statistics columns that you can include in the GoalsAndFunnelsReportRequest.
      * @link http://msdn.microsoft.com/en-us/library/gg262845(v=msads.90).aspx GoalsAndFunnelsReportColumn Value Set
      * 
@@ -1308,12 +2667,69 @@ namespace BingAds\Reporting
     }
 
     /**
-     * Defines the attributes and performance statistics columns that you can include in the DestinationUrlPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/bb671820(v=msads.90).aspx DestinationUrlPerformanceReportColumn Value Set
+     * Defines the attributes and performance statistics columns that you can include in the TrafficSourcesReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/gg262847(v=msads.90).aspx TrafficSourcesReportColumn Value Set
      * 
-     * @used-by DestinationUrlPerformanceReportRequest
+     * @used-by TrafficSourcesReportRequest
      */
-    final class DestinationUrlPerformanceReportColumn
+    final class TrafficSourcesReportColumn
+    {
+        /** The Id element of an Account. */
+        const AccountId = 'AccountId';
+
+        /** The Name element of an Account. */
+        const AccountName = 'AccountName';
+
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
+
+        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
+        const Assists = 'Assists';
+
+        /** The number of conversions. */
+        const Conversions = 'Conversions';
+
+        /** The funnel conversion rate is the percent of conversions completed by users who at minimum visited the webpage corresponding to step 1 of your goal. */
+        const FunnelConversionRate = 'FunnelConversionRate';
+
+        /** The name of the campaign analytics goal for tracking potential land, browse, prospect, and conversion steps. */
+        const Goal = 'Goal';
+
+        /** The revenue optionally reported by the advertiser as a result of conversions. */
+        const Revenue = 'Revenue';
+
+        /** The revenue per conversion. */
+        const RevenuePerConversion = 'RevenuePerConversion';
+
+        /** The origin of the advertising traffic, which is one of the following: */
+        const Source = 'Source';
+
+        /** The number of times that a user entered step 1 of the funnel. */
+        const Step1Count = 'Step1Count';
+
+        /** The number of times that a user entered step 2 of the funnel. */
+        const Step2Count = 'Step2Count';
+
+        /** The number of times that a user entered step 3 of the funnel. */
+        const Step3Count = 'Step3Count';
+
+        /** The number of times that a user entered step 1 of the funnel. */
+        const Step4Count = 'Step4Count';
+
+        /** The number of times that a user entered step 1 of the funnel. */
+        const Step5Count = 'Step5Count';
+
+        /** The time period of each report row. */
+        const TimePeriod = 'TimePeriod';
+    }
+
+    /**
+     * Defines the attributes and performance statistics columns that you can include in the AdDynamicTextPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/bb671878(v=msads.90).aspx AdDynamicTextPerformanceReportColumn Value Set
+     * 
+     * @used-by AdDynamicTextPerformanceReportRequest
+     */
+    final class AdDynamicTextPerformanceReportColumn
     {
         /** The Id element of an Account. */
         const AccountId = 'AccountId';
@@ -1332,12 +2748,13 @@ namespace BingAds\Reporting
 
         /** The Name element of an AdGroup. */
         const AdGroupName = 'AdGroupName';
-
-        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
         const AdId = 'AdId';
 
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
+        /** The Title element of a MobileAd or TextAd. */
+        const AdTitle = 'AdTitle';
+
+        /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+        const AdType = 'AdType';
 
         /** The average cost per click (CPC). */
         const AverageCpc = 'AverageCpc';
@@ -1348,15 +2765,6 @@ namespace BingAds\Reporting
         /** The average position of the ad on a webpage. */
         const AveragePosition = 'AveragePosition';
 
-        /** The MatchType element of a Keyword. */
-        const BidMatchType = 'BidMatchType';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
         /** The number of times that the ads in the account were clicked. */
         const Clicks = 'Clicks';
 
@@ -1365,9 +2773,6 @@ namespace BingAds\Reporting
 
         /** The number of conversions. */
         const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
 
         /** The cost per conversion. */
         const CostPerConversion = 'CostPerConversion';
@@ -1378,140 +2783,35 @@ namespace BingAds\Reporting
         /** The CurrencyType element of an Account. */
         const CurrencyCode = 'CurrencyCode';
 
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
         /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
         const DestinationUrl = 'DestinationUrl';
-
-        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-        const DeviceOS = 'DeviceOS';
 
         /** The DeviceName element of a DeviceOSTargetBid. */
         const DeviceType = 'DeviceType';
 
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
         /** The number of times an ad has been displayed on search results pages. */
         const Impressions = 'Impressions';
-
-        /** The Language element of an AdGroup. */
-        const Language = 'Language';
-
-        /** The Network element of an AdGroup. */
-        const Network = 'Network';
-
-        /** The PricingModel element of an AdGroup. */
-        const PricingModel = 'PricingModel';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-
-        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-        const TopVsOther = 'TopVsOther';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the TacticChannelReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/gg262851(v=msads.90).aspx TacticChannelReportColumn Value Set
-     * 
-     * @used-by TacticChannelReportRequest
-     */
-    final class TacticChannelReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The name of the channel provider that displayed the ads. */
-        const Channel = 'Channel';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The funnel conversion rate is the percent of conversions completed by users who at minimum visited the webpage corresponding to step 1 of your goal. */
-        const FunnelConversionRate = 'FunnelConversionRate';
-
-        /** The name of the campaign analytics goal for tracking potential land, browse, prospect, and conversion steps. */
-        const Goal = 'Goal';
 
         /** The Text element of a Keyword. */
         const Keyword = 'Keyword';
 
-        /** The Id element of a Keyword. */
-        const KeywordId = 'KeywordId';
+        /** The Language element of an AdGroup. */
+        const Language = 'Language';
 
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
+        /** The Param1 element of a Keyword or BiddableAdGroupCriterion. */
+        const Param1 = 'Param1';
 
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
+        /** The Param2 element of a Keyword or BiddableAdGroupCriterion. */
+        const Param2 = 'Param2';
+
+        /** The Param3 element of a Keyword or BiddableAdGroupCriterion. */
+        const Param3 = 'Param3';
+
+        /** The PricingModel element of an AdGroup. */
+        const PricingModel = 'PricingModel';
 
         /** The cost per click (CPC) summed for each click. */
         const Spend = 'Spend';
-
-        /** The number of times that a user entered step 1 of the funnel. */
-        const Step1Count = 'Step1Count';
-
-        /** The number of times that a user entered step 2 of the funnel. */
-        const Step2Count = 'Step2Count';
-
-        /** The number of times that a user entered step 3 of the funnel. */
-        const Step3Count = 'Step3Count';
-
-        /** The number of times that a user entered step 1 of the funnel. */
-        const Step4Count = 'Step4Count';
-
-        /** The number of times that a user entered step 1 of the funnel. */
-        const Step5Count = 'Step5Count';
-
-        /** The name of the advertising tactic. */
-        const Tactic = 'Tactic';
-
-        /** The name of the ad group that you defined on a paid search provider other than Bing Ads. */
-        const ThirdPartyAdGroup = 'ThirdPartyAdGroup';
-
-        /** The name of the campaign that you defined on a paid search provider other than Bing Ads. */
-        const ThirdPartyCampaign = 'ThirdPartyCampaign';
-
-        /** The keyword to track that you defined on a paid search provider other than Bing Ads. */
-        const ThirdPartyTerm = 'ThirdPartyTerm';
 
         /** The time period of each report row. */
         const TimePeriod = 'TimePeriod';
@@ -1665,227 +2965,6 @@ namespace BingAds\Reporting
     }
 
     /**
-     * Defines the attributes and performance statistics columns that you can include in the KeywordPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/bb672087(v=msads.90).aspx KeywordPerformanceReportColumn Value Set
-     * 
-     * @used-by KeywordPerformanceReportRequest
-     * @used-by KeywordPerformanceReportSort
-     */
-    final class KeywordPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The AccountLifeCycleStatus element of an Account. */
-        const AccountStatus = 'AccountStatus';
-
-        /** The AdDistribution element of an AdGroup. */
-        const AdDistribution = 'AdDistribution';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The Status element of an AdGroup. */
-        const AdGroupStatus = 'AdGroupStatus';
-
-        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdId = 'AdId';
-
-        /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdType = 'AdType';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The average of the cost-per-thousand impressions of the ads. */
-        const AverageCpm = 'AverageCpm';
-
-        /** The average position of the ad on a webpage. */
-        const AveragePosition = 'AveragePosition';
-
-        /** The MatchType element of a Keyword. */
-        const BidMatchType = 'BidMatchType';
-
-        /** Reserved for internal use. */
-        const BusinessCategoryId = 'BusinessCategoryId';
-
-        /** Reserved for internal use. */
-        const BusinessCategoryName = 'BusinessCategoryName';
-
-        /** Reserved for internal use. */
-        const BusinessListingId = 'BusinessListingId';
-
-        /** Reserved for internal use. */
-        const BusinessListingName = 'BusinessListingName';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The Status element of a Campaign. */
-        const CampaignStatus = 'CampaignStatus';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The CurrencyType element of an Account. */
-        const CurrencyCode = 'CurrencyCode';
-
-        /** The maximum cost per click. */
-        const CurrentMaxCpc = 'CurrentMaxCpc';
-
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
-        /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
-        const DestinationUrl = 'DestinationUrl';
-
-        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-        const DeviceOS = 'DeviceOS';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
-        /** The numeric score that indicates the historic relevance of your keyword to the search term. */
-        const HistoricKeywordRelevance = 'HistoricKeywordRelevance';
-
-        /** The numeric score that indicates the historic relevance of your ad and landing page to the search term. */
-        const HistoricLandingPageRelevance = 'HistoricLandingPageRelevance';
-
-        /** The numeric score that is the aggregate assessment of the historic quality of all landing pages on your site. */
-        const HistoricLandingPageUserExperience = 'HistoricLandingPageUserExperience';
-
-        /** The historic quality score of the keyword. */
-        const HistoricQualityScore = 'HistoricQualityScore';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The Text element of a Keyword. */
-        const Keyword = 'Keyword';
-
-        /** The Id element of a Keyword. */
-        const KeywordId = 'KeywordId';
-
-        /** An identifier that uniquely identifies the keyword and match-type combination. */
-        const KeywordMatchTypeId = 'KeywordMatchTypeId';
-
-        /** The numeric score that indicates the relevance of your keyword to the search term. */
-        const KeywordRelevance = 'KeywordRelevance';
-
-        /** The Status element of a Keyword. */
-        const KeywordStatus = 'KeywordStatus';
-
-        /** The numeric score that indicates the relevance of your ad and landing page to the search query. */
-        const LandingPageRelevance = 'LandingPageRelevance';
-
-        /** The numeric score that is an aggregate assessment of the quality of all landing pages on your site. */
-        const LandingPageUserExperience = 'LandingPageUserExperience';
-
-        /** The Language element of an AdGroup. */
-        const Language = 'Language';
-
-        /** The Network element of an AdGroup. */
-        const Network = 'Network';
-
-        /** The PricingModel element of an AdGroup. */
-        const PricingModel = 'PricingModel';
-
-        /** The numeric score that indicates the possible increase in the number of impressions that the keyword could receive if the corresponding QualityScore column would rise above underperforming. */
-        const QualityImpact = 'QualityImpact';
-
-        /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
-        const QualityScore = 'QualityScore';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-
-        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-        const TopVsOther = 'TopVsOther';
-    }
-
-    /**
-     * Defines the bid match type values that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/ff728812(v=msads.90).aspx BidMatchTypeReportFilter Value Set
-     * 
-     * @used-by KeywordPerformanceReportFilter
-     * @used-by ShareOfVoiceReportFilter
-     */
-    final class BidMatchTypeReportFilter
-    {
-        /** The report will contain keywords that set a bid value for the broad match type. */
-        const Broad = 'Broad';
-
-        /** The report will contain keywords that set a bid value for the content match type. */
-        const Content = 'Content';
-
-        /** The report will contain keywords that set a bid value for the exact match type. */
-        const Exact = 'Exact';
-
-        /** The report will contain keywords that set a bid value for the phrase match type. */
-        const Phrase = 'Phrase';
-    }
-
-    /**
-     * Defines the ascending or descending sort order of values within the specified report column.
-     * @link http://msdn.microsoft.com/en-us/library/dn342800(v=msads.90).aspx SortOrder Value Set
-     * 
-     * @used-by KeywordPerformanceReportSort
-     */
-    final class SortOrder
-    {
-        const Ascending = 'Ascending';
-        const Descending = 'Descending';
-    }
-
-    /**
      * Defines the attributes and performance statistics columns that you can include in the AdExtensionByKeywordReportRequest.
      * @link http://msdn.microsoft.com/en-us/library/jj713610(v=msads.90).aspx AdExtensionByKeywordReportColumn Value Set
      * 
@@ -2003,72 +3082,12 @@ namespace BingAds\Reporting
     }
 
     /**
-     * Defines the device operating system values that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/dn411633(v=msads.90).aspx DeviceOSReportFilter Value Set
+     * Defines the attributes and performance statistics columns that you can include in the CampaignPerformanceReportRequest.
+     * @link http://msdn.microsoft.com/en-us/library/bb671614(v=msads.90).aspx CampaignPerformanceReportColumn Value Set
      * 
-     * @used-by AccountPerformanceReportFilter
-     * @used-by AdExtensionByAdReportFilter
-     * @used-by AdExtensionByKeywordReportFilter
-     * @used-by AdExtensionDetailReportFilter
-     * @used-by AdExtensionDimensionReportFilter
-     * @used-by AdGroupPerformanceReportFilter
-     * @used-by CampaignPerformanceReportFilter
+     * @used-by CampaignPerformanceReportRequest
      */
-    final class DeviceOSReportFilter
-    {
-        /** The report will include ads displayed on Android device operating systems. */
-        const Android = 'Android';
-
-        /** The report will include ads displayed on BlackBerry device operating systems. */
-        const BlackBerry = 'BlackBerry';
-
-        /** The report will include ads displayed on iOS device operating systems. */
-        const iOS = 'iOS';
-
-        /** The report will include ads displayed on a device operating system other than Android, BlackBerry, iOS, and Windows. */
-        const Other = 'Other';
-
-        /** The report will include ads displayed on Windows device operating systems. */
-        const Windows = 'Windows';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the AdExtensionDimensionReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/jj713609(v=msads.90).aspx AdExtensionDimensionReportColumn Value Set
-     * 
-     * @used-by AdExtensionDimensionReportRequest
-     */
-    final class AdExtensionDimensionReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-        const AdExtensionId = 'AdExtensionId';
-
-        /** Positive integer system identifiers ranging from 1 through 20, which map to properties of the CallAdExtension, LocationAdExtension, and SiteLink objects. */
-        const AdExtensionPropertyId = 'AdExtensionPropertyId';
-
-        /** The human readable ad extension property value. */
-        const AdExtensionPropertyValue = 'AdExtensionPropertyValue';
-
-        /** The type name that corresponds to the AdExtensionTypeId column. */
-        const AdExtensionType = 'AdExtensionType';
-
-        /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-        const AdExtensionVersion = 'AdExtensionVersion';
-
-        /** The current delivery status. */
-        const Status = 'Status';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the AdExtensionDetailReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/dn610365(v=msads.90).aspx AdExtensionDetailReportColumn Value Set
-     * 
-     * @used-by AdExtensionDetailReportRequest
-     */
-    final class AdExtensionDetailReportColumn
+    final class CampaignPerformanceReportColumn
     {
         /** The Id element of an Account. */
         const AccountId = 'AccountId';
@@ -2076,38 +3095,26 @@ namespace BingAds\Reporting
         /** The Name element of an Account. */
         const AccountName = 'AccountName';
 
-        /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-        const AdExtensionId = 'AdExtensionId';
+        /** The Number element of an Account. */
+        const AccountNumber = 'AccountNumber';
 
-        /** The human readable ad extension property value. */
-        const AdExtensionPropertyValue = 'AdExtensionPropertyValue';
-
-        /** The type name that corresponds to the AdExtensionTypeId column. */
-        const AdExtensionType = 'AdExtensionType';
-
-        /** The system identifier that corresponds to the AdExtensionType column. */
-        const AdExtensionTypeId = 'AdExtensionTypeId';
-
-        /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-        const AdExtensionVersion = 'AdExtensionVersion';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdId = 'AdId';
-
-        /** The Title element of a MobileAd or TextAd. */
-        const AdTitle = 'AdTitle';
+        /** The AdDistribution element of an AdGroup. */
+        const AdDistribution = 'AdDistribution';
 
         /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
         const Assists = 'Assists';
 
         /** The average cost per click (CPC). */
         const AverageCpc = 'AverageCpc';
+
+        /** The average of the cost-per-thousand impressions of the ads. */
+        const AverageCpm = 'AverageCpm';
+
+        /** The average cost per phone call (CPP). */
+        const AverageCpp = 'AverageCpp';
+
+        /** The average position of the ad on a webpage. */
+        const AveragePosition = 'AveragePosition';
 
         /** The MatchType element of a Keyword. */
         const BidMatchType = 'BidMatchType';
@@ -2117,6 +3124,9 @@ namespace BingAds\Reporting
 
         /** The Name element of a Campaign. */
         const CampaignName = 'CampaignName';
+
+        /** The number of phone calls initiated by clicks. */
+        const ClickCalls = 'ClickCalls';
 
         /** The number of times that the ads in the account were clicked. */
         const Clicks = 'Clicks';
@@ -2136,6 +3146,9 @@ namespace BingAds\Reporting
         /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
         const Ctr = 'Ctr';
 
+        /** The CurrencyType element of an Account. */
+        const CurrencyCode = 'CurrencyCode';
+
         /** The match type used to deliver an ad. */
         const DeliveredMatchType = 'DeliveredMatchType';
 
@@ -2148,11 +3161,86 @@ namespace BingAds\Reporting
         /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
         const ExtendedCost = 'ExtendedCost';
 
+        /** The numeric score that indicates the historic relevance of your keyword to the search term. */
+        const HistoricKeywordRelevance = 'HistoricKeywordRelevance';
+
+        /** The numeric score that indicates the historic relevance of your ad and landing page to the search term. */
+        const HistoricLandingPageRelevance = 'HistoricLandingPageRelevance';
+
+        /** The numeric score that is the aggregate assessment of the historic quality of all landing pages on your site. */
+        const HistoricLandingPageUserExperience = 'HistoricLandingPageUserExperience';
+
+        /** The historic quality score of the keyword. */
+        const HistoricQualityScore = 'HistoricQualityScore';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
+        const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
+        const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
+        const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not due to one or both of the following reasons. */
+        const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
+
+        /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
+        const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
+
         /** The number of times an ad has been displayed on search results pages. */
         const Impressions = 'Impressions';
 
+        /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
+        const ImpressionSharePercent = 'ImpressionSharePercent';
+
+        /** The numeric score that indicates the relevance of your keyword to the search term. */
+        const KeywordRelevance = 'KeywordRelevance';
+
+        /** The numeric score that indicates the relevance of your ad and landing page to the search query. */
+        const LandingPageRelevance = 'LandingPageRelevance';
+
+        /** The numeric score that is an aggregate assessment of the quality of all landing pages on your site. */
+        const LandingPageUserExperience = 'LandingPageUserExperience';
+
+        /** The number of low-quality clicks. */
+        const LowQualityClicks = 'LowQualityClicks';
+
+        /** The low-quality clicks as a percentage. */
+        const LowQualityClicksPercent = 'LowQualityClicksPercent';
+
+        /** The low-quality conversion rate as a percentage. */
+        const LowQualityConversionRate = 'LowQualityConversionRate';
+
+        /** The number of conversions that originate from low-quality clicks. */
+        const LowQualityConversions = 'LowQualityConversions';
+
+        /** The number of impressions that result from low-quality keyword searches. */
+        const LowQualityImpressions = 'LowQualityImpressions';
+
+        /** The low-quality impressions as a percentage. */
+        const LowQualityImpressionsPercent = 'LowQualityImpressionsPercent';
+
+        /** The number of calls dialed manually from any device to the tracked phone number. */
+        const ManualCalls = 'ManualCalls';
+
         /** The Network element of an AdGroup. */
         const Network = 'Network';
+
+        /** The number of total calls to the tracked phone number that showed with your ad. */
+        const PhoneCalls = 'PhoneCalls';
+
+        /** The number of times your tracked number was shown on all devices. */
+        const PhoneImpressions = 'PhoneImpressions';
+
+        /** The total cost for completed calls to your tracked number. */
+        const PhoneSpend = 'PhoneSpend';
+
+        /** The phone-through rate (Ptr). */
+        const Ptr = 'Ptr';
+
+        /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
+        const QualityScore = 'QualityScore';
 
         /** The return on ad spend (ROAS). */
         const ReturnOnAdSpend = 'ReturnOnAdSpend';
@@ -2169,11 +3257,17 @@ namespace BingAds\Reporting
         /** The cost per click (CPC) summed for each click. */
         const Spend = 'Spend';
 
+        /** The current delivery status. */
+        const Status = 'Status';
+
         /** The time period of each report row. */
         const TimePeriod = 'TimePeriod';
 
         /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
         const TopVsOther = 'TopVsOther';
+
+        /** The total cost for cost for click spend and phone call spend combined. */
+        const TotalCostPhoneAndClicks = 'TotalCostPhoneAndClicks';
     }
 
     /**
@@ -2536,1100 +3630,6 @@ namespace BingAds\Reporting
 
         /** The time period of each report row. */
         const TimePeriod = 'TimePeriod';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the GeoLocationPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/dn743762(v=msads.90).aspx GeoLocationPerformanceReportColumn Value Set
-     * 
-     * @used-by GeoLocationPerformanceReportRequest
-     */
-    final class GeoLocationPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The AdDistribution element of an AdGroup. */
-        const AdDistribution = 'AdDistribution';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The average of the cost-per-thousand impressions of the ads. */
-        const AverageCpm = 'AverageCpm';
-
-        /** The average position of the ad on a webpage. */
-        const AveragePosition = 'AveragePosition';
-
-        /** The MatchType element of a Keyword. */
-        const BidMatchType = 'BidMatchType';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The city used to deliver the ad. */
-        const City = 'City';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The country used to deliver the ad. */
-        const Country = 'Country';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The CurrencyType element of an Account. */
-        const CurrencyCode = 'CurrencyCode';
-
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
-        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-        const DeviceOS = 'DeviceOS';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The Language element of an AdGroup. */
-        const Language = 'Language';
-
-        /** The location type used to deliver ads. */
-        const LocationType = 'LocationType';
-
-        /** The metro area used to deliver the ad. */
-        const MetroArea = 'MetroArea';
-
-        /** The most specific location used to deliver ads. */
-        const MostSpecificLocation = 'MostSpecificLocation';
-
-        /** The Network element of an AdGroup. */
-        const Network = 'Network';
-
-        /** The Name element of a RadiusTargetBid. */
-        const ProximityTargetLocation = 'ProximityTargetLocation';
-
-        /** The Radius element of a RadiusTargetBid. */
-        const Radius = 'Radius';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The state used to deliver the ad. */
-        const State = 'State';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-
-        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-        const TopVsOther = 'TopVsOther';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the TrafficSourcesReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/gg262847(v=msads.90).aspx TrafficSourcesReportColumn Value Set
-     * 
-     * @used-by TrafficSourcesReportRequest
-     */
-    final class TrafficSourcesReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The funnel conversion rate is the percent of conversions completed by users who at minimum visited the webpage corresponding to step 1 of your goal. */
-        const FunnelConversionRate = 'FunnelConversionRate';
-
-        /** The name of the campaign analytics goal for tracking potential land, browse, prospect, and conversion steps. */
-        const Goal = 'Goal';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The origin of the advertising traffic, which is one of the following: */
-        const Source = 'Source';
-
-        /** The number of times that a user entered step 1 of the funnel. */
-        const Step1Count = 'Step1Count';
-
-        /** The number of times that a user entered step 2 of the funnel. */
-        const Step2Count = 'Step2Count';
-
-        /** The number of times that a user entered step 3 of the funnel. */
-        const Step3Count = 'Step3Count';
-
-        /** The number of times that a user entered step 1 of the funnel. */
-        const Step4Count = 'Step4Count';
-
-        /** The number of times that a user entered step 1 of the funnel. */
-        const Step5Count = 'Step5Count';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the AdExtensionByAdReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/jj713608(v=msads.90).aspx AdExtensionByAdReportColumn Value Set
-     * 
-     * @used-by AdExtensionByAdReportRequest
-     */
-    final class AdExtensionByAdReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-        const AdExtensionId = 'AdExtensionId';
-
-        /** The type name that corresponds to the AdExtensionTypeId column. */
-        const AdExtensionType = 'AdExtensionType';
-
-        /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-        const AdExtensionVersion = 'AdExtensionVersion';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdId = 'AdId';
-
-        /** The Title element of a MobileAd or TextAd. */
-        const AdTitle = 'AdTitle';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The MatchType element of a Keyword. */
-        const BidMatchType = 'BidMatchType';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The ad extension item that the user clicked. */
-        const ClickType = 'ClickType';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
-        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-        const DeviceOS = 'DeviceOS';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The Network element of an AdGroup. */
-        const Network = 'Network';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-
-        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-        const TopVsOther = 'TopVsOther';
-
-        /** The number of billable and non-billable times that the ad extension was clicked. */
-        const TotalClicks = 'TotalClicks';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the AccountPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/bb671947(v=msads.90).aspx AccountPerformanceReportColumn Value Set
-     * 
-     * @used-by AccountPerformanceReportRequest
-     */
-    final class AccountPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The AdDistribution element of an AdGroup. */
-        const AdDistribution = 'AdDistribution';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The average of the cost-per-thousand impressions of the ads. */
-        const AverageCpm = 'AverageCpm';
-
-        /** The average cost per phone call (CPP). */
-        const AverageCpp = 'AverageCpp';
-
-        /** The average position of the ad on a webpage. */
-        const AveragePosition = 'AveragePosition';
-
-        /** The MatchType element of a Keyword. */
-        const BidMatchType = 'BidMatchType';
-
-        /** The number of phone calls initiated by clicks. */
-        const ClickCalls = 'ClickCalls';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The CurrencyType element of an Account. */
-        const CurrencyCode = 'CurrencyCode';
-
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
-        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-        const DeviceOS = 'DeviceOS';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
-        const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
-        const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
-        const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not due to one or both of the following reasons. */
-        const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
-        const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
-        const ImpressionSharePercent = 'ImpressionSharePercent';
-
-        /** The number of low-quality clicks. */
-        const LowQualityClicks = 'LowQualityClicks';
-
-        /** The low-quality clicks as a percentage. */
-        const LowQualityClicksPercent = 'LowQualityClicksPercent';
-
-        /** The low-quality conversion rate as a percentage. */
-        const LowQualityConversionRate = 'LowQualityConversionRate';
-
-        /** The number of conversions that originate from low-quality clicks. */
-        const LowQualityConversions = 'LowQualityConversions';
-
-        /** The number of impressions that result from low-quality keyword searches. */
-        const LowQualityImpressions = 'LowQualityImpressions';
-
-        /** The low-quality impressions as a percentage. */
-        const LowQualityImpressionsPercent = 'LowQualityImpressionsPercent';
-
-        /** The number of calls dialed manually from any device to the tracked phone number. */
-        const ManualCalls = 'ManualCalls';
-
-        /** The Network element of an AdGroup. */
-        const Network = 'Network';
-
-        /** The number of total calls to the tracked phone number that showed with your ad. */
-        const PhoneCalls = 'PhoneCalls';
-
-        /** The number of times your tracked number was shown on all devices. */
-        const PhoneImpressions = 'PhoneImpressions';
-
-        /** The total cost for completed calls to your tracked number. */
-        const PhoneSpend = 'PhoneSpend';
-
-        /** The phone-through rate (Ptr). */
-        const Ptr = 'Ptr';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-
-        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-        const TopVsOther = 'TopVsOther';
-
-        /** The total cost for cost for click spend and phone call spend combined. */
-        const TotalCostPhoneAndClicks = 'TotalCostPhoneAndClicks';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the CampaignPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/bb671614(v=msads.90).aspx CampaignPerformanceReportColumn Value Set
-     * 
-     * @used-by CampaignPerformanceReportRequest
-     */
-    final class CampaignPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The AdDistribution element of an AdGroup. */
-        const AdDistribution = 'AdDistribution';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The average of the cost-per-thousand impressions of the ads. */
-        const AverageCpm = 'AverageCpm';
-
-        /** The average cost per phone call (CPP). */
-        const AverageCpp = 'AverageCpp';
-
-        /** The average position of the ad on a webpage. */
-        const AveragePosition = 'AveragePosition';
-
-        /** The MatchType element of a Keyword. */
-        const BidMatchType = 'BidMatchType';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The number of phone calls initiated by clicks. */
-        const ClickCalls = 'ClickCalls';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The CurrencyType element of an Account. */
-        const CurrencyCode = 'CurrencyCode';
-
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
-        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-        const DeviceOS = 'DeviceOS';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
-        /** The numeric score that indicates the historic relevance of your keyword to the search term. */
-        const HistoricKeywordRelevance = 'HistoricKeywordRelevance';
-
-        /** The numeric score that indicates the historic relevance of your ad and landing page to the search term. */
-        const HistoricLandingPageRelevance = 'HistoricLandingPageRelevance';
-
-        /** The numeric score that is the aggregate assessment of the historic quality of all landing pages on your site. */
-        const HistoricLandingPageUserExperience = 'HistoricLandingPageUserExperience';
-
-        /** The historic quality score of the keyword. */
-        const HistoricQualityScore = 'HistoricQualityScore';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
-        const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
-        const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
-        const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not due to one or both of the following reasons. */
-        const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
-        const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
-        const ImpressionSharePercent = 'ImpressionSharePercent';
-
-        /** The numeric score that indicates the relevance of your keyword to the search term. */
-        const KeywordRelevance = 'KeywordRelevance';
-
-        /** The numeric score that indicates the relevance of your ad and landing page to the search query. */
-        const LandingPageRelevance = 'LandingPageRelevance';
-
-        /** The numeric score that is an aggregate assessment of the quality of all landing pages on your site. */
-        const LandingPageUserExperience = 'LandingPageUserExperience';
-
-        /** The number of low-quality clicks. */
-        const LowQualityClicks = 'LowQualityClicks';
-
-        /** The low-quality clicks as a percentage. */
-        const LowQualityClicksPercent = 'LowQualityClicksPercent';
-
-        /** The low-quality conversion rate as a percentage. */
-        const LowQualityConversionRate = 'LowQualityConversionRate';
-
-        /** The number of conversions that originate from low-quality clicks. */
-        const LowQualityConversions = 'LowQualityConversions';
-
-        /** The number of impressions that result from low-quality keyword searches. */
-        const LowQualityImpressions = 'LowQualityImpressions';
-
-        /** The low-quality impressions as a percentage. */
-        const LowQualityImpressionsPercent = 'LowQualityImpressionsPercent';
-
-        /** The number of calls dialed manually from any device to the tracked phone number. */
-        const ManualCalls = 'ManualCalls';
-
-        /** The Network element of an AdGroup. */
-        const Network = 'Network';
-
-        /** The number of total calls to the tracked phone number that showed with your ad. */
-        const PhoneCalls = 'PhoneCalls';
-
-        /** The number of times your tracked number was shown on all devices. */
-        const PhoneImpressions = 'PhoneImpressions';
-
-        /** The total cost for completed calls to your tracked number. */
-        const PhoneSpend = 'PhoneSpend';
-
-        /** The phone-through rate (Ptr). */
-        const Ptr = 'Ptr';
-
-        /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
-        const QualityScore = 'QualityScore';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The current delivery status. */
-        const Status = 'Status';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-
-        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-        const TopVsOther = 'TopVsOther';
-
-        /** The total cost for cost for click spend and phone call spend combined. */
-        const TotalCostPhoneAndClicks = 'TotalCostPhoneAndClicks';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the AdDynamicTextPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/bb671878(v=msads.90).aspx AdDynamicTextPerformanceReportColumn Value Set
-     * 
-     * @used-by AdDynamicTextPerformanceReportRequest
-     */
-    final class AdDynamicTextPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The AdDistribution element of an AdGroup. */
-        const AdDistribution = 'AdDistribution';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-        const AdId = 'AdId';
-
-        /** The Title element of a MobileAd or TextAd. */
-        const AdTitle = 'AdTitle';
-
-        /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdType = 'AdType';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The average of the cost-per-thousand impressions of the ads. */
-        const AverageCpm = 'AverageCpm';
-
-        /** The average position of the ad on a webpage. */
-        const AveragePosition = 'AveragePosition';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The CurrencyType element of an Account. */
-        const CurrencyCode = 'CurrencyCode';
-
-        /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
-        const DestinationUrl = 'DestinationUrl';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The Text element of a Keyword. */
-        const Keyword = 'Keyword';
-
-        /** The Language element of an AdGroup. */
-        const Language = 'Language';
-
-        /** The Param1 element of a Keyword or BiddableAdGroupCriterion. */
-        const Param1 = 'Param1';
-
-        /** The Param2 element of a Keyword or BiddableAdGroupCriterion. */
-        const Param2 = 'Param2';
-
-        /** The Param3 element of a Keyword or BiddableAdGroupCriterion. */
-        const Param3 = 'Param3';
-
-        /** The PricingModel element of an AdGroup. */
-        const PricingModel = 'PricingModel';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the AdGroupPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/bb671495(v=msads.90).aspx AdGroupPerformanceReportColumn Value Set
-     * 
-     * @used-by AdGroupPerformanceReportRequest
-     */
-    final class AdGroupPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The AdDistribution element of an AdGroup. */
-        const AdDistribution = 'AdDistribution';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-        const Assists = 'Assists';
-
-        /** The average cost per click (CPC). */
-        const AverageCpc = 'AverageCpc';
-
-        /** The average of the cost-per-thousand impressions of the ads. */
-        const AverageCpm = 'AverageCpm';
-
-        /** The average cost per phone call (CPP). */
-        const AverageCpp = 'AverageCpp';
-
-        /** The average position of the ad on a webpage. */
-        const AveragePosition = 'AveragePosition';
-
-        /** The MatchType element of a Keyword. */
-        const BidMatchType = 'BidMatchType';
-
-        /** Reserved for internal use. */
-        const BusinessCategoryId = 'BusinessCategoryId';
-
-        /** Reserved for internal use. */
-        const BusinessCategoryName = 'BusinessCategoryName';
-
-        /** Reserved for internal use. */
-        const BusinessListingId = 'BusinessListingId';
-
-        /** Reserved for internal use. */
-        const BusinessListingName = 'BusinessListingName';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The number of phone calls initiated by clicks. */
-        const ClickCalls = 'ClickCalls';
-
-        /** The number of times that the ads in the account were clicked. */
-        const Clicks = 'Clicks';
-
-        /** The conversion rate as a percentage. */
-        const ConversionRate = 'ConversionRate';
-
-        /** The number of conversions. */
-        const Conversions = 'Conversions';
-
-        /** The cost per assist. */
-        const CostPerAssist = 'CostPerAssist';
-
-        /** The cost per conversion. */
-        const CostPerConversion = 'CostPerConversion';
-
-        /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-        const Ctr = 'Ctr';
-
-        /** The CurrencyType element of an Account. */
-        const CurrencyCode = 'CurrencyCode';
-
-        /** The match type used to deliver an ad. */
-        const DeliveredMatchType = 'DeliveredMatchType';
-
-        /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-        const DeviceOS = 'DeviceOS';
-
-        /** The DeviceName element of a DeviceOSTargetBid. */
-        const DeviceType = 'DeviceType';
-
-        /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-        const ExtendedCost = 'ExtendedCost';
-
-        /** The numeric score that indicates the historic relevance of your keyword to the search term. */
-        const HistoricKeywordRelevance = 'HistoricKeywordRelevance';
-
-        /** The numeric score that indicates the historic relevance of your ad and landing page to the search term. */
-        const HistoricLandingPageRelevance = 'HistoricLandingPageRelevance';
-
-        /** The numeric score that is the aggregate assessment of the historic quality of all landing pages on your site. */
-        const HistoricLandingPageUserExperience = 'HistoricLandingPageUserExperience';
-
-        /** The historic quality score of the keyword. */
-        const HistoricQualityScore = 'HistoricQualityScore';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
-        const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
-        const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
-        const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not due to one or both of the following reasons. */
-        const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
-
-        /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
-        const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
-
-        /** The number of times an ad has been displayed on search results pages. */
-        const Impressions = 'Impressions';
-
-        /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
-        const ImpressionSharePercent = 'ImpressionSharePercent';
-
-        /** The numeric score that indicates the relevance of your keyword to the search term. */
-        const KeywordRelevance = 'KeywordRelevance';
-
-        /** The numeric score that indicates the relevance of your ad and landing page to the search query. */
-        const LandingPageRelevance = 'LandingPageRelevance';
-
-        /** The numeric score that is an aggregate assessment of the quality of all landing pages on your site. */
-        const LandingPageUserExperience = 'LandingPageUserExperience';
-
-        /** The Language element of an AdGroup. */
-        const Language = 'Language';
-
-        /** The number of calls dialed manually from any device to the tracked phone number. */
-        const ManualCalls = 'ManualCalls';
-
-        /** The Network element of an AdGroup. */
-        const Network = 'Network';
-
-        /** The number of total calls to the tracked phone number that showed with your ad. */
-        const PhoneCalls = 'PhoneCalls';
-
-        /** The number of times your tracked number was shown on all devices. */
-        const PhoneImpressions = 'PhoneImpressions';
-
-        /** The total cost for completed calls to your tracked number. */
-        const PhoneSpend = 'PhoneSpend';
-
-        /** The PricingModel element of an AdGroup. */
-        const PricingModel = 'PricingModel';
-
-        /** The phone-through rate (Ptr). */
-        const Ptr = 'Ptr';
-
-        /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
-        const QualityScore = 'QualityScore';
-
-        /** The return on ad spend (ROAS). */
-        const ReturnOnAdSpend = 'ReturnOnAdSpend';
-
-        /** The revenue optionally reported by the advertiser as a result of conversions. */
-        const Revenue = 'Revenue';
-
-        /** The revenue per assist. */
-        const RevenuePerAssist = 'RevenuePerAssist';
-
-        /** The revenue per conversion. */
-        const RevenuePerConversion = 'RevenuePerConversion';
-
-        /** The cost per click (CPC) summed for each click. */
-        const Spend = 'Spend';
-
-        /** The current delivery status. */
-        const Status = 'Status';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-
-        /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-        const TopVsOther = 'TopVsOther';
-
-        /** The total cost for cost for click spend and phone call spend combined. */
-        const TotalCostPhoneAndClicks = 'TotalCostPhoneAndClicks';
-    }
-
-    /**
-     * Defines the ad group status values that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/bb671991(v=msads.90).aspx AdGroupStatusReportFilter Value Set
-     * 
-     * @used-by AdGroupPerformanceReportFilter
-     */
-    final class AdGroupStatusReportFilter
-    {
-        /** The report will contain ad groups that are active. */
-        const Active = 'Active';
-
-        /** The report will contain ad groups that have been deleted. */
-        const Deleted = 'Deleted';
-
-        /** The report will contain ad groups that are in a draft state. */
-        const Draft = 'Draft';
-
-        /** The report will contain ad groups that have expired. */
-        const Expired = 'Expired';
-
-        /** The report will contain ad groups that are paused. */
-        const Paused = 'Paused';
-
-        /** The same meaning as Active. */
-        const Submitted = 'Submitted';
-    }
-
-    /**
-     * Defines the attributes and performance statistics columns that you can include in the RichAdComponentPerformanceReportRequest.
-     * @link http://msdn.microsoft.com/en-us/library/hh180149(v=msads.90).aspx RichAdComponentPerformanceReportColumn Value Set
-     * 
-     * @used-by RichAdComponentPerformanceReportRequest
-     */
-    final class RichAdComponentPerformanceReportColumn
-    {
-        /** The Id element of an Account. */
-        const AccountId = 'AccountId';
-
-        /** The Name element of an Account. */
-        const AccountName = 'AccountName';
-
-        /** The Number element of an Account. */
-        const AccountNumber = 'AccountNumber';
-
-        /** The Id element of an AdGroup. */
-        const AdGroupId = 'AdGroupId';
-
-        /** The Name element of an AdGroup. */
-        const AdGroupName = 'AdGroupName';
-
-        /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-        const AdId = 'AdId';
-
-        /** The Title element of a MobileAd or TextAd. */
-        const AdTitle = 'AdTitle';
-
-        /** The Id element of a Campaign. */
-        const CampaignId = 'CampaignId';
-
-        /** The Name element of a Campaign. */
-        const CampaignName = 'CampaignName';
-
-        /** The number of billable clicks of a rich ad. */
-        const ComponentClicks = 'ComponentClicks';
-
-        /** The click-through rate of all components of the ad that were clicked. */
-        const ComponentCTR = 'ComponentCTR';
-
-        /** The destination URL of the rich ad component. */
-        const ComponentDestinationURL = 'ComponentDestinationURL';
-
-        /** The number of clicks that occur on different components of the ad after the first click but within the short, system-defined interval. */
-        const ComponentNonBillableClicks = 'ComponentNonBillableClicks';
-
-        /** The title of the rich ad component. */
-        const ComponentTitle = 'ComponentTitle';
-
-        /** The number of times that all components of the ad were clicked. */
-        const ComponentTotalClicks = 'ComponentTotalClicks';
-
-        /** The component type of the rich ad that was clicked. */
-        const ComponentType = 'ComponentType';
-
-        /** The rich ad component type. */
-        const RichAdSubType = 'RichAdSubType';
-
-        /** The time period of each report row. */
-        const TimePeriod = 'TimePeriod';
-    }
-
-    /**
-     * Defines the possible components of a rich ad that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/hh180146(v=msads.90).aspx ComponentTypeFilter Value Set
-     * 
-     * @used-by RichAdComponentPerformanceReportFilter
-     */
-    final class ComponentTypeFilter
-    {
-        /** The title of the ad that contains a hyperlink to a destination URL. */
-        const Basic = 'Basic';
-
-        /** A hyperlink to a webpage inside the destination website. */
-        const Deeplink = 'Deeplink';
-
-        /** The icon that displays next to the display URL. */
-        const FavoriteIcon = 'FavoriteIcon';
-
-        /** An entry form on the ad that gathers data from the user. */
-        const Form = 'Form';
-
-        /** An image in the ad that contains a hyperlink to a destination URL. */
-        const Image = 'Image';
-
-        /** A link in a pharmaceutical ad that links to additional drug information. */
-        const TitledLink = 'TitledLink';
-        const Unknown = 'Unknown';
-
-        /** A video embedded in the ad that the user can click to play. */
-        const Video = 'Video';
-    }
-
-    /**
-     * Defines the rich ad types that you can use to filter the report data.
-     * @link http://msdn.microsoft.com/en-us/library/hh180148(v=msads.90).aspx RichAdSubTypeFilter Value Set
-     * 
-     * @used-by RichAdComponentPerformanceReportFilter
-     */
-    final class RichAdSubTypeFilter
-    {
-        /** An ad that can contain one video, a maximum of two deep links, and an input form. */
-        const Rais1Video2Links1Form = 'Rais1Video2Links1Form';
-
-        /** An ad that can contain one video and a maximum of four deep links. */
-        const Rais1Video4Links = 'Rais1Video4Links';
-
-        /** An ad that can contain a maximum of two images, two deep links, and an input form. */
-        const Rais2Images2Links1Form = 'Rais2Images2Links1Form';
-
-        /** An ad that can contain a maximum of two images and four deep links. */
-        const Rais2Images4Links = 'Rais2Images4Links';
-
-        /** An ad that can contain a maximum of four deep links. */
-        const Rais4Links = 'Rais4Links';
-
-        /** A Bing Shopping ad. */
-        const RaisBingShopping = 'RaisBingShopping';
-
-        /** A pharmaceutical ad. */
-        const RaisPharma = 'RaisPharma';
     }
 
     /**
@@ -5771,6 +5771,12 @@ namespace BingAds\Reporting
          * @var DeliveredMatchTypeReportFilter
          */
         public $DeliveredMatchType;
+
+        /**
+         * If the value of this element is set to true, the report will exclude data for search terms that had one or more ad impressions but resulted in zero clicks.
+         * @var boolean
+         */
+        public $ExcludeZeroClicks;
 
         /**
          * The report will include data for only websites that used the specified languages.

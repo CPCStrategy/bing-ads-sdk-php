@@ -1,5 +1,5 @@
 <?php
-// Generated on 7/15/2014 5:43:22 AM
+// Generated on 8/15/2014 5:44:38 AM
 
 namespace BingAds\Bulk
 {
@@ -92,7 +92,7 @@ namespace BingAds\Bulk
         /** Include a record in the download that represents the association relationship between a campaign and a location ad extension. */
         const CampaignLocationAdExtensions = 'CampaignLocationAdExtensions';
 
-        /** Reserved for future use. */
+        /** Include a record in the download that represents the association relationship between a campaign and a negative keyword list. */
         const CampaignNegativeKeywordListAssociations = 'CampaignNegativeKeywordListAssociations';
 
         /** Include a campaign's negative keywords in the download data. */
@@ -119,12 +119,14 @@ namespace BingAds\Bulk
 
         /** Include location ad extension library items in the download data. */
         const LocationAdExtensions = 'LocationAdExtensions';
+
+        /** Include negative keyword list library items in the download data. */
         const NegativeKeywordLists = 'NegativeKeywordLists';
 
         /** Include product ad extension library items in the download data. */
         const ProductAdExtensions = 'ProductAdExtensions';
 
-        /** Reserved for future use. */
+        /** Include the negative keywords of a negative keyword list in the download data. */
         const SharedNegativeKeywords = 'SharedNegativeKeywords';
 
         /** Include site links ad extension library items in the download data. */

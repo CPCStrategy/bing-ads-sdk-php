@@ -2042,11 +2042,6 @@ div.ipWarning
     text-decoration:none;
 }
 
-.tabContents
-{
-    clear: both;
-}
-
 #MainContent .tabHeaders div.current a
 {
     color:#000;
@@ -2923,7 +2918,6 @@ ul.notifications li ol, ul.notifications li ul
 #projectBody
 {
     width: 100%;
-    overflow:hidden;
 }
 
     #projectDetails > div:first-child

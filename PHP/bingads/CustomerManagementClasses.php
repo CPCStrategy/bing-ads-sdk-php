@@ -1,5 +1,5 @@
 <?php
-// Generated on 7/15/2014 5:43:19 AM
+// Generated on 8/15/2014 5:44:35 AM
 
 namespace BingAds\CustomerManagement
 {
@@ -721,6 +721,9 @@ namespace BingAds\CustomerManagement
     {
         /** The order is determined by a predicate identifier. */
         const Id = 'Id';
+
+        /** The order is determined by a predicate life cycle status. */
+        const LifeCycleStatus = 'LifeCycleStatus';
 
         /** The order is determined by a predicate name. */
         const Name = 'Name';
