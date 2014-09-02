@@ -1,5 +1,5 @@
 <?php
-// Generated on 7/15/2014 5:43:22 AM
+// Generated on 8/15/2014 5:44:38 AM
 
 namespace BingAds\CampaignManagement
 {
@@ -506,6 +506,14 @@ namespace BingAds\CampaignManagement
         const NotAppealable = 'NotAppealable';
     }
 
+    final class MigrationStatus
+    {
+        const Completed = 'Completed';
+        const InProgress = 'InProgress';
+        const NotInPilot = 'NotInPilot';
+        const NotStarted = 'NotStarted';
+    }
+
     /**
      * Defines the possible status values of an ad extension.
      * @link http://msdn.microsoft.com/en-us/library/jj134386(v=msads.90).aspx AdExtensionStatus Value Set
@@ -613,6 +621,8 @@ namespace BingAds\CampaignManagement
      * Defines the possible values representing entities that are enabled for media such as images.
      * @link http://msdn.microsoft.com/en-us/library/dn766195(v=msads.90).aspx MediaEnabledEntityFilter Value Set
      * 
+     * @used-by MediaAssociation
+     * @used-by GetMediaAssociationsRequest
      * @used-by GetMediaMetaDataByAccountIdRequest
      */
     final class MediaEnabledEntityFilter
@@ -670,6 +680,12 @@ namespace BingAds\CampaignManagement
     {
         /** The criterion identifies a Bing Merchant Center product filter. */
         const Product = 'Product';
+    }
+
+    final class AccountMigrationStatusesInfo
+    {
+        public $AccountId;
+        public $MigrationStatusInfo;
     }
 
     /**
@@ -1345,6 +1361,7 @@ namespace BingAds\CampaignManagement
      * @used-by DeleteSharedEntityAssociationsResponse
      * @used-by GetAdsByIdsResponse
      * @used-by GetKeywordsByIdsResponse
+     * @used-by GetMediaAssociationsResponse
      * @used-by GetMediaMetaDataByIdsResponse
      * @used-by GetNegativeKeywordsByEntityIdsResponse
      * @used-by GetSharedEntityAssociationsByEntityIdsResponse
@@ -2380,6 +2397,7 @@ namespace BingAds\CampaignManagement
          * @var string
          */
         public $AlternativeText;
+        public $Description;
 
         /**
          * The URL of the webpage to take the user to when they click the image.
@@ -2713,6 +2731,34 @@ namespace BingAds\CampaignManagement
     }
 
     /**
+     * Defines an object that represents the identified media and an associated entity, for example media associated with an ad group.
+     * @link http://msdn.microsoft.com/en-us/library/dn798358(v=msads.90).aspx MediaAssociation Data Object
+     * 
+     * @uses MediaEnabledEntityFilter
+     * @used-by GetMediaAssociationsResponse
+     */
+    final class MediaAssociation
+    {
+        /**
+         * The system identifier of the media meta data.
+         * @var integer
+         */
+        public $EntityId;
+
+        /**
+         * Determines the type of media to get.
+         * @var MediaEnabledEntityFilter
+         */
+        public $MediaEnabledEntity;
+
+        /**
+         * The system identifier of the media.
+         * @var integer
+         */
+        public $MediaId;
+    }
+
+    /**
      * Defines a media meta data object.
      * @link http://msdn.microsoft.com/en-us/library/dn766198(v=msads.90).aspx MediaMetaData Data Object
      * 
@@ -2811,6 +2857,13 @@ namespace BingAds\CampaignManagement
          * @var string
          */
         public $MetroArea;
+    }
+
+    final class MigrationStatusInfo
+    {
+        public $MigrationType;
+        public $StartTimeInUtc;
+        public $Status;
     }
 
     /**
@@ -4818,6 +4871,17 @@ namespace BingAds\CampaignManagement
     {
     }
 
+    final class GetAccountMigrationStatusesRequest
+    {
+        public $AccountIds;
+        public $MigrationType;
+    }
+
+    final class GetAccountMigrationStatusesResponse
+    {
+        public $MigrationStatuses;
+    }
+
     /**
      * Gets the ad extensions from the account's ad extension library.
      * @link http://msdn.microsoft.com/en-us/library/dn277509(v=msads.90).aspx GetAdExtensionIdsByAccountId Request Object
@@ -5556,6 +5620,51 @@ namespace BingAds\CampaignManagement
          * @var SharedListItem[]
          */
         public $ListItems;
+    }
+
+    /**
+     * Gets the media associations of the specified entity type from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn798359(v=msads.90).aspx GetMediaAssociations Request Object
+     * 
+     * @uses MediaEnabledEntityFilter
+     * @used-by BingAdsCampaignManagementService::GetMediaAssociations
+     */
+    final class GetMediaAssociationsRequest
+    {
+        /**
+         * Filters the results to only return media associations with the specified type of media enabled entity.
+         * @var MediaEnabledEntityFilter
+         */
+        public $MediaEnabledEntities;
+
+        /**
+         * The identifiers of the media to get corresponding entity associations.
+         * @var integer[]
+         */
+        public $MediaIds;
+    }
+
+    /**
+     * Gets the media associations of the specified entity type from an account's media library.
+     * @link http://msdn.microsoft.com/en-us/library/dn798359(v=msads.90).aspx GetMediaAssociations Response Object
+     * 
+     * @uses MediaAssociation
+     * @uses BatchError
+     * @used-by BingAdsCampaignManagementService::GetMediaAssociations
+     */
+    final class GetMediaAssociationsResponse
+    {
+        /**
+         * The specified media meta data from the library.
+         * @var MediaAssociation[][]
+         */
+        public $MediaAssociations;
+
+        /**
+         * An array of BatchError objects that contain details for any media associations that were not successfully retrieved.
+         * @var BatchError[]
+         */
+        public $PartialErrors;
     }
 
     /**

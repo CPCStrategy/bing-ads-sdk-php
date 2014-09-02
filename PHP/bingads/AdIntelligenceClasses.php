@@ -1,5 +1,5 @@
 <?php
-// Generated on 7/15/2014 5:43:21 AM
+// Generated on 8/15/2014 5:44:37 AM
 
 namespace BingAds\AdIntelligence
 {

@@ -1,5 +1,5 @@
 <?php
-// Updated on 3/9/2014 10:05:00 AM
+// Updated on 8/6/2014 1:29:00 PM
 
 namespace BingAds\Proxy;
 
@@ -187,3 +187,5 @@ Class ClientProxy
         return $proxy;
     }
 }
+
+?>
