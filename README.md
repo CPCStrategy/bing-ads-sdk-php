@@ -19,6 +19,18 @@ php composer.phar require cpcstrategy/bing-ads-sdk-php:~1.1
 
 See the [PHP Examples for Bing Ads](http://msdn.microsoft.com/en-US/library/jj966370.aspx) 
 
+###Getting Started With the Bing Ads API
+http://msdn.microsoft.com/en-us/library/bing-ads-getting-started.aspx
+
+###Server Side OAuth Authentication in PHP
+http://msdn.microsoft.com/en-US/library/dn632721.aspx
+
+###Bing Client Id and Client Secret
+These credentials are available after an application is created for the account: https://account.live.com/developers/applications
+
+###Bing Developer Key
+It can be obtain at this URL https://developers.bingads.microsoft.com/Account
+
 ##Release Notes
 Information about updates to the Bing Ads API see the [release notes](http://msdn.microsoft.com/en-US/library/bing-ads-overview-release-notes%28v=msads.90%29.aspx). 
 
