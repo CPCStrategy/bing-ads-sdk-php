@@ -232,6 +232,7 @@ table.srchbox
 {
     color: #AAA;
     font-style: normal !important;
+    font-family: inherit
 }
 
 /*-------- End SearchBox --------*/
@@ -273,6 +274,7 @@ table.srchbox
         #searchPage .browseFilterBar .browseSort select, #dashboardPage .browseFilterBar .browseSort select
         {
             height:20px;
+            font-family: inherit;
         }        
         
         #searchPage .browseFilterBar .browseSort img, #dashboardPage .browseFilterBar .browseSort img
@@ -382,7 +384,7 @@ table.srchbox
 /*-------- End Requests Page --------*/
 
 /*--------  Begin Request List Item --------*/
-.requestlistitem td
+.requestlistitem > td
 {
     padding: .9em 0 .9em .5em;
 }
@@ -463,6 +465,11 @@ table.srchbox
     .requestlistitem .requestSummary div
     {
         margin-bottom:0.25em;
+    }
+
+    .requestlistitem .requestSummary .unified-baseball-card-compact-hover div
+    {
+        margin-bottom: 0;
     }
     
     .requestlistitem .requestSummary 
@@ -2927,7 +2934,7 @@ ul.notifications li ol, ul.notifications li ul
  
     #projectBody > div:first-child
     {
-        margin: 20px 0 0 260px;
+        margin: 50px 0 0 260px;
     }
 
     .IE7 #projectContent .tabHeaders
@@ -3115,7 +3122,6 @@ ul.notifications li ol, ul.notifications li ul
 .sourceList {
     height: 600px;
     padding: 5px;
-    border-top: 1px solid #CCC;
     margin-top: -1px;
 }
 
@@ -3537,7 +3543,10 @@ ul.notifications li ol, ul.notifications li ul
     margin-left:0px;
 }
 
-
+#userCard .unified-baseball-card
+{
+    border: solid 1px #959595; 
+}
     
 /*-------- End User Card --------*/
 /*-------- Begin Description Progress Meter --------*/
