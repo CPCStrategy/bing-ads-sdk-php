@@ -18,11 +18,11 @@
         "php": ">=5.3.3"
     },
     "autoload": {
-        "classmap": ["PHP/bingads"]
+      "psr-4": { "BingAds\\": "src" }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.1.x-dev"
+            "dev-develop-psr4": "2.0.x-dev"
         }
     }
 }
