@@ -17,13 +17,13 @@ namespace BingAds\AdIntelligence;
 final class MatchType
 {
     /** An exact match results when all of the words in the keyword exactly match the user's search query. */
-    const EXACT = 'Exact';
+    const Exact = 'Exact';
     /** A phrase match results when all of the words in the keyword are present in the user's search query and are in the same order. */
-    const PHRASE = 'Phrase';
+    const Phrase = 'Phrase';
     /** A broad match results when words in the keyword are present in the user's search query; however, the word order can vary. */
-    const BROAD = 'Broad';
+    const Broad = 'Broad';
     /** A content match results when the keywords extracted from the content webpage match the keywords in the user's search query by using an exact match comparison. */
-    const CONTENT = 'Content';
+    const Content = 'Content';
     /** Aggregates the data across all match types. */
-    const AGGREGATE = 'Aggregate';
+    const Aggregate = 'Aggregate';
 }

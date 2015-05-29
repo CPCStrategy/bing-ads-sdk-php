@@ -12,7 +12,7 @@ namespace BingAds\Optimizer;
 final class KeywordOpportunityType
 {
     /** The keyword opportunity will be suggested based on the marketplace impact of adding keywords with the broad match type. */
-    const BROAD_MATCH = 'BroadMatch';
+    const BroadMatch = 'BroadMatch';
     /** The keyword opportunity will be suggested based on the full context of the campaign, including existing keywords, landing page, and ad copy. */
-    const CAMPAIGN_CONTEXT = 'CampaignContext';
+    const CampaignContext = 'CampaignContext';
 }

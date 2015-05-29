@@ -13,7 +13,7 @@ namespace BingAds\Bulk;
 final class DownloadFileType
 {
     /** The file format is comma separated values (CSV). */
-    const CSV = 'Csv';
+    const Csv = 'Csv';
     /** The file format is tab separated values (TSV). */
-    const TSV = 'Tsv';
+    const Tsv = 'Tsv';
 }

@@ -13,35 +13,35 @@ namespace BingAds\AdIntelligence;
 final class AdPosition
 {
     /** Indicates all search result positions. */
-    const ALL = 'All';
+    const All = 'All';
     /** The first ad to appear at the top of the search results page. */
-    const MAIN_LINE1 = 'MainLine1';
+    const MainLine1 = 'MainLine1';
     /** The second ad to appear at the top of the search results page. */
-    const MAIN_LINE2 = 'MainLine2';
+    const MainLine2 = 'MainLine2';
     /** The third ad to appear at the top of the search results page. */
-    const MAIN_LINE3 = 'MainLine3';
+    const MainLine3 = 'MainLine3';
     /** The fourth ad to appear at the top of the search results page. */
-    const MAIN_LINE4 = 'MainLine4';
+    const MainLine4 = 'MainLine4';
     /** The first ad to appear on the right side of the first search results page. */
-    const SIDE_BAR1 = 'SideBar1';
+    const SideBar1 = 'SideBar1';
     /** The second ad to appear on the right side of the first search results page. */
-    const SIDE_BAR2 = 'SideBar2';
+    const SideBar2 = 'SideBar2';
     /** The third ad to appear on the right side of the first search results page. */
-    const SIDE_BAR3 = 'SideBar3';
+    const SideBar3 = 'SideBar3';
     /** The fourth ad to appear on the right side of the first search results page. */
-    const SIDE_BAR4 = 'SideBar4';
+    const SideBar4 = 'SideBar4';
     /** The fifth ad to appear on the right side of the first search results page. */
-    const SIDE_BAR5 = 'SideBar5';
+    const SideBar5 = 'SideBar5';
     /** The sixth ad to appear on the right side of the first search results page. */
-    const SIDE_BAR6 = 'SideBar6';
+    const SideBar6 = 'SideBar6';
     /** The seventh ad to appear on the right side of the first search results page. */
-    const SIDE_BAR7 = 'SideBar7';
+    const SideBar7 = 'SideBar7';
     /** The eighth ad to appear on the right side of the first search results page. */
-    const SIDE_BAR8 = 'SideBar8';
+    const SideBar8 = 'SideBar8';
     /** The ninth ad to appear on the right side of the first search results page. */
-    const SIDE_BAR9 = 'SideBar9';
+    const SideBar9 = 'SideBar9';
     /** The tenth ad to appear on the right side of the first search results page. */
-    const SIDE_BAR10 = 'SideBar10';
+    const SideBar10 = 'SideBar10';
     /** Aggregates the data for all supported positions. */
-    const AGGREGATE = 'Aggregate';
+    const Aggregate = 'Aggregate';
 }

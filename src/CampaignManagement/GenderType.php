@@ -11,6 +11,6 @@ namespace BingAds\CampaignManagement;
  */
 final class GenderType
 {
-    const MALE = 'Male';
-    const FEMALE = 'Female';
+    const Male = 'Male';
+    const Female = 'Female';
 }

@@ -13,61 +13,61 @@ namespace BingAds\Bulk;
 final class BulkDownloadEntity
 {
     /** Include campaigns in the download data. */
-    const CAMPAIGNS = 'Campaigns';
+    const Campaigns = 'Campaigns';
     /** Include ad groups in the download data. */
-    const AD_GROUPS = 'AdGroups';
+    const AdGroups = 'AdGroups';
     /** Include ads in the download data. */
-    const ADS = 'Ads';
+    const Ads = 'Ads';
     /** Include keywords in the download data. */
-    const KEYWORDS = 'Keywords';
+    const Keywords = 'Keywords';
     /** Include a campaign's negative keywords in the download data. */
-    const CAMPAIGN_NEGATIVE_KEYWORDS = 'CampaignNegativeKeywords';
+    const CampaignNegativeKeywords = 'CampaignNegativeKeywords';
     /** Include an ad group's negative keywords in the download data. */
-    const AD_GROUP_NEGATIVE_KEYWORDS = 'AdGroupNegativeKeywords';
+    const AdGroupNegativeKeywords = 'AdGroupNegativeKeywords';
     /** Include a campaign's targets in the download data. */
-    const CAMPAIGN_TARGETS = 'CampaignTargets';
+    const CampaignTargets = 'CampaignTargets';
     /** Include an ad group's targets in the download data. */
-    const AD_GROUP_TARGETS = 'AdGroupTargets';
+    const AdGroupTargets = 'AdGroupTargets';
     /** Include a campaign's negative site URLs in the download data. */
-    const CAMPAIGN_NEGATIVE_SITES = 'CampaignNegativeSites';
+    const CampaignNegativeSites = 'CampaignNegativeSites';
     /** Include an ad group's negative site URLs in the download data. */
-    const AD_GROUP_NEGATIVE_SITES = 'AdGroupNegativeSites';
+    const AdGroupNegativeSites = 'AdGroupNegativeSites';
     /** Include a record in the download that represents the association relationship between a campaign and a sitelink ad extension. */
-    const CAMPAIGN_SITE_LINKS_AD_EXTENSIONS = 'CampaignSiteLinksAdExtensions';
+    const CampaignSiteLinksAdExtensions = 'CampaignSiteLinksAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and a product ad extension. */
-    const CAMPAIGN_PRODUCT_AD_EXTENSIONS = 'CampaignProductAdExtensions';
+    const CampaignProductAdExtensions = 'CampaignProductAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and a location ad extension. */
-    const CAMPAIGN_LOCATION_AD_EXTENSIONS = 'CampaignLocationAdExtensions';
+    const CampaignLocationAdExtensions = 'CampaignLocationAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and a call ad extension. */
-    const CAMPAIGN_CALL_AD_EXTENSIONS = 'CampaignCallAdExtensions';
+    const CampaignCallAdExtensions = 'CampaignCallAdExtensions';
     /** Include an ad group's product targets in the download data. */
-    const AD_GROUP_PRODUCT_TARGETS = 'AdGroupProductTargets';
+    const AdGroupProductTargets = 'AdGroupProductTargets';
     /** Include a record in the download that represents the association relationship between an ad group and a sitelink ad extension. */
-    const AD_GROUP_SITE_LINKS_AD_EXTENSIONS = 'AdGroupSiteLinksAdExtensions';
+    const AdGroupSiteLinksAdExtensions = 'AdGroupSiteLinksAdExtensions';
     /** Include location ad extension library items in the download data. */
-    const LOCATION_AD_EXTENSIONS = 'LocationAdExtensions';
+    const LocationAdExtensions = 'LocationAdExtensions';
     /** Include call ad extension library items in the download data. */
-    const CALL_AD_EXTENSIONS = 'CallAdExtensions';
+    const CallAdExtensions = 'CallAdExtensions';
     /** Include site links ad extension library items in the download data. */
-    const SITE_LINKS_AD_EXTENSIONS = 'SiteLinksAdExtensions';
+    const SiteLinksAdExtensions = 'SiteLinksAdExtensions';
     /** Include product ad extension library items in the download data. */
-    const PRODUCT_AD_EXTENSIONS = 'ProductAdExtensions';
+    const ProductAdExtensions = 'ProductAdExtensions';
     /** Include negative keyword list library items in the download data. */
-    const NEGATIVE_KEYWORD_LISTS = 'NegativeKeywordLists';
+    const NegativeKeywordLists = 'NegativeKeywordLists';
     /** Include the negative keywords of a negative keyword list in the download data. */
-    const SHARED_NEGATIVE_KEYWORDS = 'SharedNegativeKeywords';
+    const SharedNegativeKeywords = 'SharedNegativeKeywords';
     /** Include a record in the download that represents the association relationship between a campaign and a negative keyword list. */
-    const CAMPAIGN_NEGATIVE_KEYWORD_LIST_ASSOCIATIONS = 'CampaignNegativeKeywordListAssociations';
+    const CampaignNegativeKeywordListAssociations = 'CampaignNegativeKeywordListAssociations';
     /** Include image ad extension library items in the download data. */
-    const IMAGE_AD_EXTENSIONS = 'ImageAdExtensions';
+    const ImageAdExtensions = 'ImageAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and an image ad extension. */
-    const CAMPAIGN_IMAGE_AD_EXTENSIONS = 'CampaignImageAdExtensions';
+    const CampaignImageAdExtensions = 'CampaignImageAdExtensions';
     /** Include a record in the download that represents the association relationship between an ad group and an image ad extension. */
-    const AD_GROUP_IMAGE_AD_EXTENSIONS = 'AdGroupImageAdExtensions';
+    const AdGroupImageAdExtensions = 'AdGroupImageAdExtensions';
     /** Include app ad extension library items in the download data. */
-    const APP_AD_EXTENSIONS = 'AppAdExtensions';
+    const AppAdExtensions = 'AppAdExtensions';
     /** Include a record in the download that represents the association relationship between an ad group and an app ad extension. */
-    const AD_GROUP_APP_AD_EXTENSIONS = 'AdGroupAppAdExtensions';
+    const AdGroupAppAdExtensions = 'AdGroupAppAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and an app ad extension. */
-    const CAMPAIGN_APP_AD_EXTENSIONS = 'CampaignAppAdExtensions';
+    const CampaignAppAdExtensions = 'CampaignAppAdExtensions';
 }

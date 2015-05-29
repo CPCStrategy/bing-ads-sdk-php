@@ -14,15 +14,15 @@ namespace BingAds\CampaignManagement;
 final class AdExtensionsTypeFilter
 {
     /** An ad extension that contains one or more site links to include in an ad. */
-    const SITE_LINKS_AD_EXTENSION = 'SiteLinksAdExtension';
+    const SiteLinksAdExtension = 'SiteLinksAdExtension';
     /** An ad extension that contains the address and phone number of the business to include an ad. */
-    const LOCATION_AD_EXTENSION = 'LocationAdExtension';
+    const LocationAdExtension = 'LocationAdExtension';
     /** An ad extension that contains a phone number to include in the ad and whether it's the only clickable item in an ad. */
-    const CALL_AD_EXTENSION = 'CallAdExtension';
+    const CallAdExtension = 'CallAdExtension';
     /** An ad extension that identifies a Bing Merchant Center store that contains the products that you want to advertise. */
-    const PRODUCTS_AD_EXTENSION = 'ProductsAdExtension';
+    const ProductsAdExtension = 'ProductsAdExtension';
     /** An ad extension that contains an image with alternative text to include in the ad. */
-    const IMAGE_AD_EXTENSION = 'ImageAdExtension';
+    const ImageAdExtension = 'ImageAdExtension';
     /** An ad extension that contains a link to install an application from a supported app store. */
-    const APP_AD_EXTENSION = 'AppAdExtension';
+    const AppAdExtension = 'AppAdExtension';
 }

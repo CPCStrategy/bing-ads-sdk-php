@@ -14,7 +14,7 @@ namespace BingAds\CampaignManagement;
 final class CampaignType
 {
     /** The campaign is a search and content campaign. */
-    const SEARCH_AND_CONTENT = 'SearchAndContent';
+    const SearchAndContent = 'SearchAndContent';
     /** The campaign is a Bing Shopping campaign. */
-    const SHOPPING = 'Shopping';
+    const Shopping = 'Shopping';
 }

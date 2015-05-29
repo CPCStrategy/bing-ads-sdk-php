@@ -11,6 +11,6 @@ namespace BingAds\CustomerManagement;
  */
 final class EmailFormat
 {
-    const HTML = 'Html';
-    const TEXT = 'Text';
+    const Html = 'Html';
+    const Text = 'Text';
 }

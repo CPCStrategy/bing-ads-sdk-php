@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class ProductPartitionType
 {
     /** The ProductPartition is a product group subdivision. */
-    const SUBDIVISION = 'Subdivision';
+    const Subdivision = 'Subdivision';
     /** The ProductPartition is a product group unit. */
-    const UNIT = 'Unit';
+    const Unit = 'Unit';
 }

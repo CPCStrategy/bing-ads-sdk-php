@@ -12,17 +12,17 @@ namespace BingAds\Reporting;
 final class AdExtensionDimensionReportColumn
 {
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The type name that corresponds to the AdExtensionTypeId column. */
-    const AD_EXTENSION_TYPE = 'AdExtensionType';
+    const AdExtensionType = 'AdExtensionType';
     /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-    const AD_EXTENSION_ID = 'AdExtensionId';
+    const AdExtensionId = 'AdExtensionId';
     /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
-    const AD_EXTENSION_VERSION = 'AdExtensionVersion';
+    const AdExtensionVersion = 'AdExtensionVersion';
     /** The current delivery status. */
-    const STATUS = 'Status';
+    const Status = 'Status';
     /** Positive integer system identifiers ranging from 1 through 20, which map to properties of the CallAdExtension, LocationAdExtension, and SiteLink objects. */
-    const AD_EXTENSION_PROPERTY_ID = 'AdExtensionPropertyId';
+    const AdExtensionPropertyId = 'AdExtensionPropertyId';
     /** The human readable ad extension property value. */
-    const AD_EXTENSION_PROPERTY_VALUE = 'AdExtensionPropertyValue';
+    const AdExtensionPropertyValue = 'AdExtensionPropertyValue';
 }

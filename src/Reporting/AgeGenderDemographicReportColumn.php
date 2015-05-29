@@ -12,33 +12,33 @@ namespace BingAds\Reporting;
 final class AgeGenderDemographicReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The time period of each report row. */
-    const TIME_PERIOD = 'TimePeriod';
+    const TimePeriod = 'TimePeriod';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The AdDistribution element of an AdGroup. */
-    const AD_DISTRIBUTION = 'AdDistribution';
+    const AdDistribution = 'AdDistribution';
     /** The age group of the audience who might have viewed the ad, if known. */
-    const AGE_GROUP = 'AgeGroup';
+    const AgeGroup = 'AgeGroup';
     /** The gender of the audience who might have viewed the ad, if known. */
-    const GENDER = 'Gender';
+    const Gender = 'Gender';
     /** The estimated number of times that an ad could be served to a particular age group or gender, divided by the total number of estimated impressions for all demographics. */
-    const ESTIMATED_IMPRESSION_PERCENT = 'EstimatedImpressionPercent';
+    const EstimatedImpressionPercent = 'EstimatedImpressionPercent';
     /** The estimated number of times that an ad will be clicked by a particular age group or gender, divided by the total number of estimated clicks for all demographics. */
-    const ESTIMATED_CLICK_PERCENT = 'EstimatedClickPercent';
+    const EstimatedClickPercent = 'EstimatedClickPercent';
     /** The estimated click-through rate (Ctr) as a percentage. */
-    const ESTIMATED_CTR = 'EstimatedCtr';
+    const EstimatedCtr = 'EstimatedCtr';
     /** The Language element of an AdGroup. */
-    const LANGUAGE = 'Language';
+    const Language = 'Language';
 }

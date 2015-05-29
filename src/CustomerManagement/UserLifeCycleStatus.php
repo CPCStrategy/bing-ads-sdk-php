@@ -13,11 +13,11 @@ namespace BingAds\CustomerManagement;
 final class UserLifeCycleStatus
 {
     /** The user is a new user who has not been activated. */
-    const PENDING = 'Pending';
+    const Pending = 'Pending';
     /** The user is active. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The user was disabled by the system. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
     /** The user was deleted by using the DeleteUser operation. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
 }

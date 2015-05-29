@@ -14,5 +14,5 @@ namespace BingAds\CampaignManagement;
 final class MediaEnabledEntityFilter
 {
     /** The media enabled entity is an ImageAdExtension. */
-    const IMAGE_AD_EXTENSION = 'ImageAdExtension';
+    const ImageAdExtension = 'ImageAdExtension';
 }

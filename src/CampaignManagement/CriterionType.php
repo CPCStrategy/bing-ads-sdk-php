@@ -16,7 +16,7 @@ namespace BingAds\CampaignManagement;
 final class CriterionType
 {
     /** The ad group criterion represents a Bing Merchant Center product. */
-    const PRODUCT = 'Product';
+    const Product = 'Product';
     /** The ad group criterion represents a Bing Shopping product partition. */
-    const PRODUCT_PARTITION = 'ProductPartition';
+    const ProductPartition = 'ProductPartition';
 }

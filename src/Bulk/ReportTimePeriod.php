@@ -12,27 +12,27 @@ namespace BingAds\Bulk;
 final class ReportTimePeriod
 {
     /** Performance data for the current day. */
-    const TODAY = 'Today';
+    const Today = 'Today';
     /** Performance data for the previous day. */
-    const YESTERDAY = 'Yesterday';
+    const Yesterday = 'Yesterday';
     /** Performance data for the previous seven days, one row for each day. */
-    const LAST_SEVEN_DAYS = 'LastSevenDays';
+    const LastSevenDays = 'LastSevenDays';
     /** Performance data for the current calendar week. */
-    const THIS_WEEK = 'ThisWeek';
+    const ThisWeek = 'ThisWeek';
     /** Performance data for the previous calendar week. */
-    const LAST_WEEK = 'LastWeek';
+    const LastWeek = 'LastWeek';
     /** Performance data for the four calendar weeks prior to today. */
-    const LAST_FOUR_WEEKS = 'LastFourWeeks';
+    const LastFourWeeks = 'LastFourWeeks';
     /** Performance data for the current calendar month. */
-    const THIS_MONTH = 'ThisMonth';
+    const ThisMonth = 'ThisMonth';
     /** Performance data for the previous calendar month. */
-    const LAST_MONTH = 'LastMonth';
+    const LastMonth = 'LastMonth';
     /** Performance data for the previous three calendar months. */
-    const LAST_THREE_MONTHS = 'LastThreeMonths';
+    const LastThreeMonths = 'LastThreeMonths';
     /** Performance data for the previous six calendar months. */
-    const LAST_SIX_MONTHS = 'LastSixMonths';
+    const LastSixMonths = 'LastSixMonths';
     /** Performance data for the current calendar year. */
-    const THIS_YEAR = 'ThisYear';
+    const ThisYear = 'ThisYear';
     /** Performance data for the previous calendar year. */
-    const LAST_YEAR = 'LastYear';
+    const LastYear = 'LastYear';
 }

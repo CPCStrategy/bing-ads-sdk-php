@@ -12,11 +12,11 @@ namespace BingAds\CampaignManagement;
 final class AdStatus
 {
     /** The ad is undergoing editorial review or has failed editorial review. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
     /** The ad can be served. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The ad will not serve until the owner resumes it. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** This status is for internal use only. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
 }

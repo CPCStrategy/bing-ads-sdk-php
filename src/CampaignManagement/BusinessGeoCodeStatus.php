@@ -12,11 +12,11 @@ namespace BingAds\CampaignManagement;
 final class BusinessGeoCodeStatus
 {
     /** In the process of determining the latitude and longitude of the business. */
-    const PENDING = 'Pending';
+    const Pending = 'Pending';
     /** Successfully determined the latitude and longitude of the business. */
-    const COMPLETE = 'Complete';
+    const Complete = 'Complete';
     /** Unable to determine the latitude and longitude of the business, possibly because the address did not resolve. */
-    const INVALID = 'Invalid';
+    const Invalid = 'Invalid';
     /** Unable to determine the latitude and longitude of the business. */
-    const FAILED = 'Failed';
+    const Failed = 'Failed';
 }

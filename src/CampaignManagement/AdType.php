@@ -12,13 +12,13 @@ namespace BingAds\CampaignManagement;
 final class AdType
 {
     /** The ad is a text ad. */
-    const TEXT = 'Text';
+    const Text = 'Text';
     /** Not used. */
-    const IMAGE = 'Image';
+    const Image = 'Image';
     /** The ad is a mobile ad. */
-    const MOBILE = 'Mobile';
+    const Mobile = 'Mobile';
     /** Not used. */
-    const RICH_SEARCH = 'RichSearch';
+    const RichSearch = 'RichSearch';
     /** The ad is a product ad. */
-    const PRODUCT = 'Product';
+    const Product = 'Product';
 }

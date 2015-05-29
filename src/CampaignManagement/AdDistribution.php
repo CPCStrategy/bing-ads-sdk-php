@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class AdDistribution
 {
     /** The ad group contains search ads. */
-    const SEARCH = 'Search';
+    const Search = 'Search';
     /** The ads are displayed on Microsoft-owned websites, as well as on participating partner websites. */
-    const CONTENT = 'Content';
+    const Content = 'Content';
 }

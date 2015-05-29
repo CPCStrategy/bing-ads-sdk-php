@@ -14,42 +14,42 @@ final class Industry
     /** Not applicable. */
     const NA = 'NA';
     /** The advertising agency sales house industry. */
-    const AGENCY_SALES_HOUSE = 'AgencySalesHouse';
+    const AgencySalesHouse = 'AgencySalesHouse';
     /** The automotive industry. */
-    const AUTOMOTIVE = 'Automotive';
+    const Automotive = 'Automotive';
     /** The consumer packaged goods industry. */
-    const CONSUMER_PACKAGED_GOODS = 'ConsumerPackagedGoods';
+    const ConsumerPackagedGoods = 'ConsumerPackagedGoods';
     /** The education industry. */
-    const EDUCATION = 'Education';
+    const Education = 'Education';
     /** The entertainment industry. */
-    const ENTERTAINMENT = 'Entertainment';
+    const Entertainment = 'Entertainment';
     /** The financial services industry. */
-    const FINANCIAL_SERVICES = 'FinancialServices';
+    const FinancialServices = 'FinancialServices';
     /** The food services industry. */
-    const FOOD_SERVICES = 'FoodServices';
+    const FoodServices = 'FoodServices';
     /** The gaming industry. */
-    const GAMING = 'Gaming';
+    const Gaming = 'Gaming';
     /** The government, non-profit, or political industry. */
-    const GOVERNMENT_NONPROFIT_POLITICAL = 'GovernmentNonprofitPolitical';
+    const GovernmentNonprofitPolitical = 'GovernmentNonprofitPolitical';
     /** The healthcare industry. */
-    const HEALTHCARE = 'Healthcare';
+    const Healthcare = 'Healthcare';
     /** This value is reserved for internal use. */
-    const INTERNAL = 'Internal';
+    const Internal = 'Internal';
     /** The publishing and web media industry. */
-    const PUBLISHING_AND_WEB_MEDIA = 'PublishingAndWebMedia';
+    const PublishingAndWebMedia = 'PublishingAndWebMedia';
     /** The real estate industry. */
-    const REAL_ESTATE = 'RealEstate';
+    const RealEstate = 'RealEstate';
     /** The retail industry. */
-    const RETAIL = 'Retail';
+    const Retail = 'Retail';
     /** The services industry. */
-    const SERVICES = 'Services';
+    const Services = 'Services';
     /** The technology industry. */
-    const TECHNOLOGY = 'Technology';
+    const Technology = 'Technology';
     /** The telecommunications industry. */
-    const TELECOMMUNICATIONS = 'Telecommunications';
+    const Telecommunications = 'Telecommunications';
     /** The travel and hospitality industry. */
-    const TRAVEL_HOSPITALITY = 'TravelHospitality';
+    const TravelHospitality = 'TravelHospitality';
     /** An industry that is not listed. */
-    const OTHER = 'Other';
-    const PHARMACEUTICALS = 'Pharmaceuticals';
+    const Other = 'Other';
+    const Pharmaceuticals = 'Pharmaceuticals';
 }

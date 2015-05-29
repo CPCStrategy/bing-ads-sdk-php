@@ -12,21 +12,21 @@ namespace BingAds\CustomerManagement;
 final class AccountFinancialStatus
 {
     /** For an advertiser account, this status indicates that the customer can add campaigns to the account; however, the service will not deliver the account's ads. */
-    const PROPOSED = 'Proposed';
+    const Proposed = 'Proposed';
     /** Not used. */
-    const PENDING_CREDIT_CHECK = 'PendingCreditCheck';
+    const PendingCreditCheck = 'PendingCreditCheck';
     /** The account is in good standing. */
-    const CLEAR_FINANCIAL_STATUS = 'ClearFinancialStatus';
+    const ClearFinancialStatus = 'ClearFinancialStatus';
     /** Not used. */
-    const SOLD_TO_ONLY = 'SoldToOnly';
+    const SoldToOnly = 'SoldToOnly';
     /** Not used. */
-    const CREDIT_WARNING = 'CreditWarning';
+    const CreditWarning = 'CreditWarning';
     /** For an advertiser account, this status indicates that the account is past due. */
-    const HOLD = 'Hold';
+    const Hold = 'Hold';
     /** The account is past due; however, collection is no longer being pursued. */
-    const WRITE_OFF = 'WriteOff';
+    const WriteOff = 'WriteOff';
     /** For a publisher account, this status indicates that the publisher has yet to provide a valid tax instrument. */
-    const TAX_ON_HOLD = 'TaxOnHold';
+    const TaxOnHold = 'TaxOnHold';
     /** For a publisher account, this status indicates that the payout to the publisher was placed on hold by publisher. */
-    const USER_HOLD = 'UserHold';
+    const UserHold = 'UserHold';
 }

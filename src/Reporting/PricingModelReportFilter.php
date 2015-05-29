@@ -12,7 +12,7 @@ namespace BingAds\Reporting;
 final class PricingModelReportFilter
 {
     /** The report will include ad groups with a cost per click (CPC) pricing model. */
-    const CPC = 'Cpc';
+    const Cpc = 'Cpc';
     /** The report will include ad groups with a cost per thousand impressions (CPM) pricing model. */
-    const CPM = 'Cpm';
+    const Cpm = 'Cpm';
 }

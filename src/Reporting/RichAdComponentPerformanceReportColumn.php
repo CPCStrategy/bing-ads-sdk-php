@@ -12,39 +12,39 @@ namespace BingAds\Reporting;
 final class RichAdComponentPerformanceReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The time period of each report row. */
-    const TIME_PERIOD = 'TimePeriod';
+    const TimePeriod = 'TimePeriod';
     /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-    const AD_ID = 'AdId';
+    const AdId = 'AdId';
     /** The Title element of a MobileAd or TextAd. */
-    const AD_TITLE = 'AdTitle';
+    const AdTitle = 'AdTitle';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The rich ad component type. */
-    const RICH_AD_SUB_TYPE = 'RichAdSubType';
+    const RichAdSubType = 'RichAdSubType';
     /** The component type of the rich ad that was clicked. */
-    const COMPONENT_TYPE = 'ComponentType';
+    const ComponentType = 'ComponentType';
     /** The title of the rich ad component. */
-    const COMPONENT_TITLE = 'ComponentTitle';
+    const ComponentTitle = 'ComponentTitle';
     /** The destination URL of the rich ad component. */
-    const COMPONENT_DESTINATION_URL = 'ComponentDestinationURL';
+    const ComponentDestinationURL = 'ComponentDestinationURL';
     /** The number of billable clicks of a rich ad. */
-    const COMPONENT_CLICKS = 'ComponentClicks';
+    const ComponentClicks = 'ComponentClicks';
     /** The number of clicks that occur on different components of the ad after the first click but within the short, system-defined interval. */
-    const COMPONENT_NON_BILLABLE_CLICKS = 'ComponentNonBillableClicks';
+    const ComponentNonBillableClicks = 'ComponentNonBillableClicks';
     /** The number of times that all components of the ad were clicked. */
-    const COMPONENT_TOTAL_CLICKS = 'ComponentTotalClicks';
+    const ComponentTotalClicks = 'ComponentTotalClicks';
     /** The click-through rate of all components of the ad that were clicked. */
-    const COMPONENT_CTR = 'ComponentCTR';
+    const ComponentCTR = 'ComponentCTR';
 }

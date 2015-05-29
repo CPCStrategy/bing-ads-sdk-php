@@ -16,5 +16,5 @@ namespace BingAds\CampaignManagement;
 final class CampaignCriterionType
 {
     /** The criterion identifies a Bing Merchant Center product filter. */
-    const PRODUCT_SCOPE = 'ProductScope';
+    const ProductScope = 'ProductScope';
 }

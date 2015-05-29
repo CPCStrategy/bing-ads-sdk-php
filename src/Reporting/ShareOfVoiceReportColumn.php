@@ -12,73 +12,73 @@ namespace BingAds\Reporting;
 final class ShareOfVoiceReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The time period of each report row. */
-    const TIME_PERIOD = 'TimePeriod';
+    const TimePeriod = 'TimePeriod';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Text element of a Keyword. */
-    const KEYWORD = 'Keyword';
+    const Keyword = 'Keyword';
     /** The match type used to deliver an ad. */
-    const DELIVERED_MATCH_TYPE = 'DeliveredMatchType';
+    const DeliveredMatchType = 'DeliveredMatchType';
     /** The MatchType element of a Keyword. */
-    const BID_MATCH_TYPE = 'BidMatchType';
+    const BidMatchType = 'BidMatchType';
     /** The Language element of an AdGroup. */
-    const LANGUAGE = 'Language';
+    const Language = 'Language';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The Id element of a Keyword. */
-    const KEYWORD_ID = 'KeywordId';
+    const KeywordId = 'KeywordId';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The number of times an ad has been displayed on search results pages. */
-    const IMPRESSIONS = 'Impressions';
+    const Impressions = 'Impressions';
     /** The number of times that the ads in the account were clicked. */
-    const CLICKS = 'Clicks';
+    const Clicks = 'Clicks';
     /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-    const CTR = 'Ctr';
+    const Ctr = 'Ctr';
     /** The average cost per click (CPC). */
-    const AVERAGE_CPC = 'AverageCpc';
+    const AverageCpc = 'AverageCpc';
     /** The cost per click (CPC) summed for each click. */
-    const SPEND = 'Spend';
+    const Spend = 'Spend';
     /** The average position of the ad on a webpage. */
-    const AVERAGE_POSITION = 'AveragePosition';
+    const AveragePosition = 'AveragePosition';
     /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
-    const IMPRESSION_SHARE_PERCENT = 'ImpressionSharePercent';
+    const ImpressionSharePercent = 'ImpressionSharePercent';
     /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
-    const IMPRESSION_LOST_TO_BUDGET_PERCENT = 'ImpressionLostToBudgetPercent';
+    const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
     /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
-    const IMPRESSION_LOST_TO_RANK_PERCENT = 'ImpressionLostToRankPercent';
+    const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
     /** The percentage of time your ads would have been displayed to users, but were not due to one or more of the following reasons. */
-    const IMPRESSION_LOST_TO_LANDING_PAGE_RELEVANCE_PERCENT = 'ImpressionLostToLandingPageRelevancePercent';
+    const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
     /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
-    const IMPRESSION_LOST_TO_KEYWORD_RELEVANCE_PERCENT = 'ImpressionLostToKeywordRelevancePercent';
-    const IMPRESSION_LOST_TO_RELEVANCE_PERCENT = 'ImpressionLostToRelevancePercent';
+    const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
+    const ImpressionLostToRelevancePercent = 'ImpressionLostToRelevancePercent';
     /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
-    const IMPRESSION_LOST_TO_BID_PERCENT = 'ImpressionLostToBidPercent';
+    const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
     /** The maximum cost per click. */
-    const CURRENT_MAX_CPC = 'CurrentMaxCpc';
+    const CurrentMaxCpc = 'CurrentMaxCpc';
     /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
-    const QUALITY_SCORE = 'QualityScore';
+    const QualityScore = 'QualityScore';
     /** A numeric score that indicates how likely your ads will be clicked and how well your keyword competes against other keywords targeting the same traffic. */
-    const KEYWORD_RELEVANCE = 'KeywordRelevance';
+    const KeywordRelevance = 'KeywordRelevance';
     /** A numeric score that indicates how relevant your ad and landing page are to the customer's search query or other input. */
-    const LANDING_PAGE_RELEVANCE = 'LandingPageRelevance';
+    const LandingPageRelevance = 'LandingPageRelevance';
     /** A numeric score that indicates whether your landing page is likely to provide a good experience to customers who click your ad and land on your website. */
-    const LANDING_PAGE_USER_EXPERIENCE = 'LandingPageUserExperience';
+    const LandingPageUserExperience = 'LandingPageUserExperience';
     /** The number of conversions. */
-    const CONVERSIONS = 'Conversions';
+    const Conversions = 'Conversions';
     /** The conversion rate as a percentage. */
-    const CONVERSION_RATE = 'ConversionRate';
+    const ConversionRate = 'ConversionRate';
     /** The cost per conversion. */
-    const COST_PER_CONVERSION = 'CostPerConversion';
+    const CostPerConversion = 'CostPerConversion';
     /** The AdDistribution element of an AdGroup. */
-    const AD_DISTRIBUTION = 'AdDistribution';
-    const CLICK_SHARE_PERCENT = 'ClickSharePercent';
+    const AdDistribution = 'AdDistribution';
+    const ClickSharePercent = 'ClickSharePercent';
 }

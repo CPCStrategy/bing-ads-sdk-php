@@ -18,13 +18,13 @@ namespace BingAds\Reporting;
 final class DeviceOSReportFilter
 {
     /** The report will include ads displayed on a device operating system other than Android, BlackBerry, iOS, and Windows. */
-    const OTHER = 'Other';
+    const Other = 'Other';
     /** The report will include ads displayed on Windows device operating systems. */
-    const WINDOWS = 'Windows';
+    const Windows = 'Windows';
     /** The report will include ads displayed on iOS device operating systems. */
-    const I_OS = 'iOS';
+    const iOS = 'iOS';
     /** The report will include ads displayed on Android device operating systems. */
-    const ANDROID = 'Android';
+    const Android = 'Android';
     /** The report will include ads displayed on BlackBerry device operating systems. */
-    const BLACK_BERRY = 'BlackBerry';
+    const BlackBerry = 'BlackBerry';
 }

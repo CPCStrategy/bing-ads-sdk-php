@@ -12,7 +12,7 @@ namespace BingAds\CustomerManagement;
 final class CustomerLifeCycleStatus
 {
     /** The customer is active. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The customer is inactive, which means that the customer was deleted. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
 }

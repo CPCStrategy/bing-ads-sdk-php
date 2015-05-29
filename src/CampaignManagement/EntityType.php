@@ -13,16 +13,16 @@ namespace BingAds\CampaignManagement;
 final class EntityType
 {
     /** The entity is a Campaign object. */
-    const CAMPAIGN = 'Campaign';
+    const Campaign = 'Campaign';
     /** The entity is an AdGroup object. */
-    const AD_GROUP = 'AdGroup';
+    const AdGroup = 'AdGroup';
     /** The entity is a Target object. */
-    const TARGET = 'Target';
+    const Target = 'Target';
     /** The entity is an Ad object or an object that derives from it, such as the TextAd object. */
-    const AD = 'Ad';
+    const Ad = 'Ad';
     /** The entity is a Keyword object. */
-    const KEYWORD = 'Keyword';
+    const Keyword = 'Keyword';
     /** For future use. */
-    const AD_EXTENSION = 'AdExtension';
-    const AD_GROUP_CRITERION = 'AdGroupCriterion';
+    const AdExtension = 'AdExtension';
+    const AdGroupCriterion = 'AdGroupCriterion';
 }

@@ -14,39 +14,39 @@ use DateTime;
 final class SearchCampaignChangeHistoryReportColumn
 {
     /** The date and time of the change. */
-    const DATE_TIME = 'DateTime';
+    const DateTime = 'DateTime';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The username of the user that made the change to settings within the account. */
-    const CHANGED_BY = 'ChangedBy';
+    const ChangedBy = 'ChangedBy';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The Title element of a MobileAd or TextAd. */
-    const AD_TITLE = 'AdTitle';
+    const AdTitle = 'AdTitle';
     /** The Text element of a MobileAd or TextAd. */
-    const AD_DESCRIPTION = 'AdDescription';
+    const AdDescription = 'AdDescription';
     /** The DisplayUrl element of a MobileAd or TextAd. */
-    const DISPLAY_URL = 'DisplayUrl';
+    const DisplayUrl = 'DisplayUrl';
     /** The Text element of a Keyword. */
-    const KEYWORD = 'Keyword';
+    const Keyword = 'Keyword';
     /** The value that identifies the entity that changed. */
-    const ITEM_CHANGED = 'ItemChanged';
+    const ItemChanged = 'ItemChanged';
     /** Identifies the attribute or property of the entity from the ItemChanged column that changed. */
-    const ATTRIBUTE_CHANGED = 'AttributeChanged';
+    const AttributeChanged = 'AttributeChanged';
     /** The value that indicates whether the element was added, updated, or deleted. */
-    const HOW_CHANGED = 'HowChanged';
+    const HowChanged = 'HowChanged';
     /** The value before the change. */
-    const OLD_VALUE = 'OldValue';
+    const OldValue = 'OldValue';
     /** The value after the change. */
-    const NEW_VALUE = 'NewValue';
+    const NewValue = 'NewValue';
 }

@@ -12,11 +12,11 @@ namespace BingAds\CampaignManagement;
 final class KeywordStatus
 {
     /** The keyword can be used to match user search queries. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The keyword cannot be used to match user search queries until the owner resumes it. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** This status is for internal use only. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
     /** The keyword is undergoing editorial review or has failed editorial review. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
 }

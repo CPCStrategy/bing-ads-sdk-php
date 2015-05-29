@@ -13,11 +13,11 @@ namespace BingAds\CampaignManagement;
 final class MatchType
 {
     /** The keyword match type is Exact. */
-    const EXACT = 'Exact';
+    const Exact = 'Exact';
     /** The keyword match type is Phrase. */
-    const PHRASE = 'Phrase';
+    const Phrase = 'Phrase';
     /** The keyword match type is Broad. */
-    const BROAD = 'Broad';
+    const Broad = 'Broad';
     /** The keyword match type is Content. */
-    const CONTENT = 'Content';
+    const Content = 'Content';
 }

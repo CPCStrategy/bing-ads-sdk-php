@@ -12,41 +12,41 @@ namespace BingAds\Reporting;
 final class ProductOfferPerformanceReportColumn
 {
     /** The time period of each report row. */
-    const TIME_PERIOD = 'TimePeriod';
+    const TimePeriod = 'TimePeriod';
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-    const AD_ID = 'AdId';
+    const AdId = 'AdId';
     /** The Status element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-    const AD_STATUS = 'AdStatus';
+    const AdStatus = 'AdStatus';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The CurrencyType element of an Account. */
-    const CURRENCY_CODE = 'CurrencyCode';
+    const CurrencyCode = 'CurrencyCode';
     /** The DeviceName element of a DeviceOSTargetBid. */
-    const DEVICE_TYPE = 'DeviceType';
+    const DeviceType = 'DeviceType';
     /** The Language element of an AdGroup. */
-    const LANGUAGE = 'Language';
+    const Language = 'Language';
     /** The report will include a column that contains the unique identifier provided by a merchant for each product offer. */
-    const MERCHANT_PRODUCT_ID = 'MerchantProductId';
+    const MerchantProductId = 'MerchantProductId';
     /** The report will include a column that contains the merchant or store name that offers the product. */
-    const SELLER_NAME = 'SellerName';
+    const SellerName = 'SellerName';
     /** The number of times an ad has been displayed on search results pages. */
-    const IMPRESSIONS = 'Impressions';
+    const Impressions = 'Impressions';
     /** The number of times that the ads in the account were clicked. */
-    const CLICKS = 'Clicks';
+    const Clicks = 'Clicks';
     /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-    const CTR = 'Ctr';
+    const Ctr = 'Ctr';
     /** The average cost per click (CPC). */
-    const AVERAGE_CPC = 'AverageCpc';
+    const AverageCpc = 'AverageCpc';
     /** The cost per click (CPC) summed for each click. */
-    const SPEND = 'Spend';
+    const Spend = 'Spend';
     /** The average of the cost-per-thousand impressions of the ads. */
-    const AVERAGE_CPM = 'AverageCpm';
+    const AverageCpm = 'AverageCpm';
 }

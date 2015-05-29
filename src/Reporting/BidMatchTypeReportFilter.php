@@ -13,11 +13,11 @@ namespace BingAds\Reporting;
 final class BidMatchTypeReportFilter
 {
     /** The report will contain keywords that set a bid value for the exact match type. */
-    const EXACT = 'Exact';
+    const Exact = 'Exact';
     /** The report will contain keywords that set a bid value for the phrase match type. */
-    const PHRASE = 'Phrase';
+    const Phrase = 'Phrase';
     /** The report will contain keywords that set a bid value for the broad match type. */
-    const BROAD = 'Broad';
+    const Broad = 'Broad';
     /** The report will contain keywords that set a bid value for the content match type. */
-    const CONTENT = 'Content';
+    const Content = 'Content';
 }

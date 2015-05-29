@@ -12,7 +12,7 @@ namespace BingAds\Bulk;
 final class ResponseMode
 {
     /** Return errors only in the bulk upload response file. */
-    const ERRORS_ONLY = 'ErrorsOnly';
+    const ErrorsOnly = 'ErrorsOnly';
     /** Return errors and results in the bulk upload response file. */
-    const ERRORS_AND_RESULTS = 'ErrorsAndResults';
+    const ErrorsAndResults = 'ErrorsAndResults';
 }

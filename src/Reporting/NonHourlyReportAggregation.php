@@ -24,13 +24,13 @@ namespace BingAds\Reporting;
 final class NonHourlyReportAggregation
 {
     /** The report data will be aggregated for the entire specified report time. */
-    const SUMMARY = 'Summary';
+    const Summary = 'Summary';
     /** The report data will be aggregated for each day. */
-    const DAILY = 'Daily';
+    const Daily = 'Daily';
     /** The report data is aggregated for each week. */
-    const WEEKLY = 'Weekly';
+    const Weekly = 'Weekly';
     /** The report data will be aggregated for each month. */
-    const MONTHLY = 'Monthly';
+    const Monthly = 'Monthly';
     /** The report data is aggregated for each year. */
-    const YEARLY = 'Yearly';
+    const Yearly = 'Yearly';
 }

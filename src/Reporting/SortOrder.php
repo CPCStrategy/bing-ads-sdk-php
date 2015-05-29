@@ -11,6 +11,6 @@ namespace BingAds\Reporting;
  */
 final class SortOrder
 {
-    const ASCENDING = 'Ascending';
-    const DESCENDING = 'Descending';
+    const Ascending = 'Ascending';
+    const Descending = 'Descending';
 }

@@ -12,7 +12,7 @@ namespace BingAds\Reporting;
 final class ReportLanguage
 {
     /** The report columns will be in English. */
-    const ENGLISH = 'English';
+    const English = 'English';
     /** The report columns will be in French. */
-    const FRENCH = 'French';
+    const French = 'French';
 }

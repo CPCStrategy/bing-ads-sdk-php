@@ -12,13 +12,13 @@ namespace BingAds\Reporting;
 final class BudgetSummaryReportTimePeriod
 {
     /** A cumulative report for the current day. */
-    const TODAY = 'Today';
+    const Today = 'Today';
     /** A cumulative report for the previous day. */
-    const YESTERDAY = 'Yesterday';
+    const Yesterday = 'Yesterday';
     /** A cumulative report for the previous seven days, having one row for each day. */
-    const LAST_SEVEN_DAYS = 'LastSevenDays';
+    const LastSevenDays = 'LastSevenDays';
     /** A cumulative report for the current calendar month. */
-    const THIS_MONTH = 'ThisMonth';
+    const ThisMonth = 'ThisMonth';
     /** A cumulative report for the previous calendar month. */
-    const LAST_MONTH = 'LastMonth';
+    const LastMonth = 'LastMonth';
 }

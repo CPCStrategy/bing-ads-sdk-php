@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class AdExtensionStatus
 {
     /** The ad extension is active. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The ad extension is deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
 }

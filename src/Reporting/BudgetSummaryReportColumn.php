@@ -12,23 +12,23 @@ namespace BingAds\Reporting;
 final class BudgetSummaryReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The date for the downloaded report records. */
-    const DATE = 'Date';
+    const Date = 'Date';
     /** The CurrencyType element of an Account. */
-    const CURRENCY_CODE = 'CurrencyCode';
+    const CurrencyCode = 'CurrencyCode';
     /** The budgeted amount of money to spend per month. */
-    const MONTHLY_BUDGET = 'MonthlyBudget';
+    const MonthlyBudget = 'MonthlyBudget';
     /** Your budgeted amount of money to spend per day. */
-    const DAILY_SPEND = 'DailySpend';
+    const DailySpend = 'DailySpend';
     /** The amount of money spent to date for the month. */
-    const MONTH_TO_DATE_SPEND = 'MonthToDateSpend';
+    const MonthToDateSpend = 'MonthToDateSpend';
 }

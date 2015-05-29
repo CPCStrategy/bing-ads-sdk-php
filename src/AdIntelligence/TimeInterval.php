@@ -13,9 +13,9 @@ namespace BingAds\AdIntelligence;
 final class TimeInterval
 {
     /** Use data from the previous calendar month. */
-    const LAST30_DAYS = 'Last30Days';
+    const Last30Days = 'Last30Days';
     /** Use data from last week, Sunday through Saturday. */
-    const LAST7_DAYS = 'Last7Days';
+    const Last7Days = 'Last7Days';
     /** Use data from yesterday. */
-    const LAST_DAY = 'LastDay';
+    const LastDay = 'LastDay';
 }

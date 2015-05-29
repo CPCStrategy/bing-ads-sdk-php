@@ -12,22 +12,22 @@ namespace BingAds\CustomerManagement;
  */
 final class LanguageType
 {
-    const DANISH = 'Danish';
-    const DUTCH = 'Dutch';
-    const ENGLISH = 'English';
-    const FINNISH = 'Finnish';
-    const FRENCH = 'French';
-    const GERMAN = 'German';
-    const ITALIAN = 'Italian';
-    const JAPANESE = 'Japanese';
-    const NORWEGIAN = 'Norwegian';
-    const PORTUGUESE = 'Portuguese';
-    const SWEDISH = 'Swedish';
-    const SPANISH = 'Spanish';
-    const ARABIC = 'Arabic';
-    const HEBREW = 'Hebrew';
-    const KOREAN = 'Korean';
-    const RUSSIAN = 'Russian';
-    const TRADITIONAL_CHINESE = 'TraditionalChinese';
-    const SIMPLIFIED_CHINESE = 'SimplifiedChinese';
+    const Danish = 'Danish';
+    const Dutch = 'Dutch';
+    const English = 'English';
+    const Finnish = 'Finnish';
+    const French = 'French';
+    const German = 'German';
+    const Italian = 'Italian';
+    const Japanese = 'Japanese';
+    const Norwegian = 'Norwegian';
+    const Portuguese = 'Portuguese';
+    const Swedish = 'Swedish';
+    const Spanish = 'Spanish';
+    const Arabic = 'Arabic';
+    const Hebrew = 'Hebrew';
+    const Korean = 'Korean';
+    const Russian = 'Russian';
+    const TraditionalChinese = 'TraditionalChinese';
+    const SimplifiedChinese = 'SimplifiedChinese';
 }

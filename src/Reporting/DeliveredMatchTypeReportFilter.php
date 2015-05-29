@@ -16,11 +16,11 @@ namespace BingAds\Reporting;
 final class DeliveredMatchTypeReportFilter
 {
     /** The report will contain ads that were delivered by using an exact match comparison. */
-    const EXACT = 'Exact';
+    const Exact = 'Exact';
     /** The report will contain ads that were delivered by using a phrase match comparison. */
-    const PHRASE = 'Phrase';
+    const Phrase = 'Phrase';
     /** The report will contain ads that were delivered using a broad match comparison. */
-    const BROAD = 'Broad';
+    const Broad = 'Broad';
     /** The report will contain ads that were delivered by using a content match comparison. */
-    const CONTENT = 'Content';
+    const Content = 'Content';
 }

@@ -12,15 +12,15 @@ namespace BingAds\CampaignManagement;
 final class HourRange
 {
     /** Hours from 3:00 A. */
-    const THREE_AMTO_SEVEN_AM = 'ThreeAMToSevenAM';
+    const ThreeAMToSevenAM = 'ThreeAMToSevenAM';
     /** Hours from 7:00 A. */
-    const SEVEN_AMTO_ELEVEN_AM = 'SevenAMToElevenAM';
+    const SevenAMToElevenAM = 'SevenAMToElevenAM';
     /** Hours from 11:00 A. */
-    const ELEVEN_AMTO_TWO_PM = 'ElevenAMToTwoPM';
+    const ElevenAMToTwoPM = 'ElevenAMToTwoPM';
     /** Hours from 2:00 P. */
-    const TWO_PMTO_SIX_PM = 'TwoPMToSixPM';
+    const TwoPMToSixPM = 'TwoPMToSixPM';
     /** Hours from 6:00 P. */
-    const SIX_PMTO_ELEVEN_PM = 'SixPMToElevenPM';
+    const SixPMToElevenPM = 'SixPMToElevenPM';
     /** Hours from 11:00 P. */
-    const ELEVEN_PMTO_THREE_AM = 'ElevenPMToThreeAM';
+    const ElevenPMToThreeAM = 'ElevenPMToThreeAM';
 }

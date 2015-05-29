@@ -12,15 +12,15 @@ namespace BingAds\CampaignManagement;
 final class CampaignStatus
 {
     /** The campaign is active, which indicates that the campaign's ads can be served. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The campaign is paused, which indicates that the campaign's ads will not serve. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** The campaign is paused, which indicates that the campaign's ads will not serve. */
-    const BUDGET_PAUSED = 'BudgetPaused';
+    const BudgetPaused = 'BudgetPaused';
     /** The campaign is paused, which indicates that the campaign's ads will not serve. */
-    const BUDGET_AND_MANUAL_PAUSED = 'BudgetAndManualPaused';
+    const BudgetAndManualPaused = 'BudgetAndManualPaused';
     /** The campaign is deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
     /** Your campaign has been suspended and no ads are eligible for delivery because of potentially fraudulent activity. */
-    const SUSPENDED = 'Suspended';
+    const Suspended = 'Suspended';
 }

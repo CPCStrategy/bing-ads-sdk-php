@@ -12,11 +12,11 @@ namespace BingAds\Optimizer;
 final class BudgetPointType
 {
     /** The budget point includes the current budget. */
-    const CURRENT = 'Current';
+    const Current = 'Current';
     /** The budget point includes the optimal suggested budget. */
-    const SUGGESTED = 'Suggested';
+    const Suggested = 'Suggested';
     /** The budget point includes the proposed budget which is estimated to yield the maximum number of clicks. */
-    const MAXIMUM = 'Maximum';
+    const Maximum = 'Maximum';
     /** The budget point includes a proposed budget other than current, maximum, or suggested. */
-    const OTHER = 'Other';
+    const Other = 'Other';
 }

@@ -17,5 +17,5 @@ namespace BingAds\CustomerManagement;
 final class ApplicationType
 {
     /** An advertiser application. */
-    const ADVERTISER = 'Advertiser';
+    const Advertiser = 'Advertiser';
 }

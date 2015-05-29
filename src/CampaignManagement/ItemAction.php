@@ -12,9 +12,9 @@ namespace BingAds\CampaignManagement;
 final class ItemAction
 {
     /** The requested action is to add the item, for example add the ProductPartition. */
-    const ADD = 'Add';
+    const Add = 'Add';
     /** The requested action is to delete the item, for example delete the ProductPartition. */
-    const DELETE = 'Delete';
+    const Delete = 'Delete';
     /** The requested action is to update the item, for example update the ProductPartition. */
-    const UPDATE = 'Update';
+    const Update = 'Update';
 }

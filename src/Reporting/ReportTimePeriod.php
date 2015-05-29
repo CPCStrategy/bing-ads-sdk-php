@@ -12,27 +12,27 @@ namespace BingAds\Reporting;
 final class ReportTimePeriod
 {
     /** A cumulative report for the current day. */
-    const TODAY = 'Today';
+    const Today = 'Today';
     /** A cumulative report for the previous day. */
-    const YESTERDAY = 'Yesterday';
+    const Yesterday = 'Yesterday';
     /** A report for the previous seven days, one row for each day. */
-    const LAST_SEVEN_DAYS = 'LastSevenDays';
+    const LastSevenDays = 'LastSevenDays';
     /** A cumulative report for the current calendar week. */
-    const THIS_WEEK = 'ThisWeek';
+    const ThisWeek = 'ThisWeek';
     /** A cumulative report for the previous calendar week. */
-    const LAST_WEEK = 'LastWeek';
+    const LastWeek = 'LastWeek';
     /** A cumulative report for the four calendar weeks prior to today. */
-    const LAST_FOUR_WEEKS = 'LastFourWeeks';
+    const LastFourWeeks = 'LastFourWeeks';
     /** A cumulative report for the current calendar month. */
-    const THIS_MONTH = 'ThisMonth';
+    const ThisMonth = 'ThisMonth';
     /** A cumulative report for the previous calendar month. */
-    const LAST_MONTH = 'LastMonth';
+    const LastMonth = 'LastMonth';
     /** A cumulative report for the previous three calendar months. */
-    const LAST_THREE_MONTHS = 'LastThreeMonths';
+    const LastThreeMonths = 'LastThreeMonths';
     /** A cumulative report for the previous six calendar months. */
-    const LAST_SIX_MONTHS = 'LastSixMonths';
+    const LastSixMonths = 'LastSixMonths';
     /** A cumulative report for the current calendar year. */
-    const THIS_YEAR = 'ThisYear';
+    const ThisYear = 'ThisYear';
     /** A cumulative report for the previous calendar year. */
-    const LAST_YEAR = 'LastYear';
+    const LastYear = 'LastYear';
 }

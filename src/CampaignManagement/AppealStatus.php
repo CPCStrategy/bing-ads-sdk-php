@@ -12,9 +12,9 @@ namespace BingAds\CampaignManagement;
 final class AppealStatus
 {
     /** The editorial rejection is appealable. */
-    const APPEALABLE = 'Appealable';
+    const Appealable = 'Appealable';
     /** The editorial rejection is appealable and an appeal has been submitted. */
-    const APPEAL_PENDING = 'AppealPending';
+    const AppealPending = 'AppealPending';
     /** The editorial rejection is not appealable. */
-    const NOT_APPEALABLE = 'NotAppealable';
+    const NotAppealable = 'NotAppealable';
 }

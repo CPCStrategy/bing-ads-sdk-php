@@ -25,7 +25,7 @@ namespace BingAds\Reporting;
 final class AdDistributionReportFilter
 {
     /** The report will contain search ads. */
-    const SEARCH = 'Search';
+    const Search = 'Search';
     /** The report will contain content ads. */
-    const CONTENT = 'Content';
+    const Content = 'Content';
 }

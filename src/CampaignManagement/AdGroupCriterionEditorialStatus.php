@@ -12,11 +12,11 @@ namespace BingAds\CampaignManagement;
 final class AdGroupCriterionEditorialStatus
 {
     /** The criterion passed editorial review. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The criterion failed editorial review. */
-    const DISAPPROVED = 'Disapproved';
+    const Disapproved = 'Disapproved';
     /** The criterion is undergoing editorial review. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
     /** The criterion passed editorial review in one or more markets, and one or more elements of the criterion is undergoing editorial review in another market. */
-    const ACTIVE_LIMITED = 'ActiveLimited';
+    const ActiveLimited = 'ActiveLimited';
 }

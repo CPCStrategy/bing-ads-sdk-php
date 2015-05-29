@@ -12,53 +12,53 @@ namespace BingAds\Reporting;
 final class ConversionPerformanceReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The time period of each report row. */
-    const TIME_PERIOD = 'TimePeriod';
+    const TimePeriod = 'TimePeriod';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The Text element of a Keyword. */
-    const KEYWORD = 'Keyword';
+    const Keyword = 'Keyword';
     /** The Id element of a Keyword. */
-    const KEYWORD_ID = 'KeywordId';
+    const KeywordId = 'KeywordId';
     /** The number of times an ad has been displayed on search results pages. */
-    const IMPRESSIONS = 'Impressions';
+    const Impressions = 'Impressions';
     /** The number of times that the ads in the account were clicked. */
-    const CLICKS = 'Clicks';
+    const Clicks = 'Clicks';
     /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-    const CTR = 'Ctr';
+    const Ctr = 'Ctr';
     /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-    const ASSISTS = 'Assists';
+    const Assists = 'Assists';
     /** The number of conversions. */
-    const CONVERSIONS = 'Conversions';
+    const Conversions = 'Conversions';
     /** The conversion rate as a percentage. */
-    const CONVERSION_RATE = 'ConversionRate';
+    const ConversionRate = 'ConversionRate';
     /** The cost per click (CPC) summed for each click. */
-    const SPEND = 'Spend';
+    const Spend = 'Spend';
     /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-    const EXTENDED_COST = 'ExtendedCost';
+    const ExtendedCost = 'ExtendedCost';
     /** The revenue optionally reported by the advertiser as a result of conversions. */
-    const REVENUE = 'Revenue';
+    const Revenue = 'Revenue';
     /** The return on ad spend (ROAS). */
-    const RETURN_ON_AD_SPEND = 'ReturnOnAdSpend';
+    const ReturnOnAdSpend = 'ReturnOnAdSpend';
     /** The cost per conversion. */
-    const COST_PER_CONVERSION = 'CostPerConversion';
+    const CostPerConversion = 'CostPerConversion';
     /** The cost per assist. */
-    const COST_PER_ASSIST = 'CostPerAssist';
+    const CostPerAssist = 'CostPerAssist';
     /** The revenue per conversion. */
-    const REVENUE_PER_CONVERSION = 'RevenuePerConversion';
+    const RevenuePerConversion = 'RevenuePerConversion';
     /** The revenue per assist. */
-    const REVENUE_PER_ASSIST = 'RevenuePerAssist';
+    const RevenuePerAssist = 'RevenuePerAssist';
     /** The DeviceName element of a DeviceOSTargetBid. */
-    const DEVICE_TYPE = 'DeviceType';
+    const DeviceType = 'DeviceType';
 }

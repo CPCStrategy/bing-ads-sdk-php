@@ -29,11 +29,11 @@ namespace BingAds\Reporting;
 final class DeviceTypeReportFilter
 {
     /** The report will include text ads displayed on computers. */
-    const COMPUTER = 'Computer';
+    const Computer = 'Computer';
     /** The report will include text ads displayed on smartphones (any high fidelity device capable of rendering full HTML). */
-    const SMART_PHONE = 'SmartPhone';
+    const SmartPhone = 'SmartPhone';
     /** The report will include mobile ads displayed on a mobile device. */
-    const NON_SMART_PHONE = 'NonSmartPhone';
+    const NonSmartPhone = 'NonSmartPhone';
     /** The report will include text ads displayed on a tablet device. */
-    const TABLET = 'Tablet';
+    const Tablet = 'Tablet';
 }

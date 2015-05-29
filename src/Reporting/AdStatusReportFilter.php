@@ -12,13 +12,13 @@ namespace BingAds\Reporting;
 final class AdStatusReportFilter
 {
     /** The same meaning as Active. */
-    const SUBMITTED = 'Submitted';
+    const Submitted = 'Submitted';
     /** The report will contain ads that have been rejected by editorial review. */
-    const REJECTED = 'Rejected';
+    const Rejected = 'Rejected';
     /** The report will contain ads that have been deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
     /** The report will contain ads that are pending editorial review. */
-    const PENDING = 'Pending';
+    const Pending = 'Pending';
     /** The report will contain ads that are active. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
 }

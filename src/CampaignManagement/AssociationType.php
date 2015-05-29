@@ -17,7 +17,7 @@ namespace BingAds\CampaignManagement;
 final class AssociationType
 {
     /** Specifies ad extension associations with campaigns. */
-    const CAMPAIGN = 'Campaign';
+    const Campaign = 'Campaign';
     /** Specifies ad extension associations with ad groups. */
-    const AD_GROUP = 'AdGroup';
+    const AdGroup = 'AdGroup';
 }

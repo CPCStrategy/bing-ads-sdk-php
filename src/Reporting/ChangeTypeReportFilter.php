@@ -12,9 +12,9 @@ namespace BingAds\Reporting;
 final class ChangeTypeReportFilter
 {
     /** The report will include data for entities that have been added. */
-    const ADDED = 'Added';
+    const Added = 'Added';
     /** The report will include data for entities that have been deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
     /** The report will include data for elements of entities whose values have been updated. */
-    const CHANGED = 'Changed';
+    const Changed = 'Changed';
 }

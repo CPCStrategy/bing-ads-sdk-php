@@ -12,9 +12,9 @@ namespace BingAds\Reporting;
 final class ReportRequestStatusType
 {
     /** An error occurred while generating the report. */
-    const ERROR = 'Error';
+    const Error = 'Error';
     /** The report was successfully completed. */
-    const SUCCESS = 'Success';
+    const Success = 'Success';
     /** The report is not yet complete. */
-    const PENDING = 'Pending';
+    const Pending = 'Pending';
 }

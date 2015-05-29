@@ -12,13 +12,13 @@ namespace BingAds\CampaignManagement;
 final class AgeRange
 {
     /** Users from the ages of 18 through 24 years. */
-    const EIGHTEEN_TO_TWENTY_FIVE = 'EighteenToTwentyFive';
+    const EighteenToTwentyFive = 'EighteenToTwentyFive';
     /** Users from the ages of 25 through 34 years. */
-    const TWENTY_FIVE_TO_THIRTY_FIVE = 'TwentyFiveToThirtyFive';
+    const TwentyFiveToThirtyFive = 'TwentyFiveToThirtyFive';
     /** Users from the ages of 35 through 49 years. */
-    const THIRTY_FIVE_TO_FIFTY = 'ThirtyFiveToFifty';
+    const ThirtyFiveToFifty = 'ThirtyFiveToFifty';
     /** Users from the ages of 50 through 64 years. */
-    const FIFTY_TO_SIXTY_FIVE = 'FiftyToSixtyFive';
+    const FiftyToSixtyFive = 'FiftyToSixtyFive';
     /** Users 65 years of age and older. */
-    const SIXTY_FIVE_AND_ABOVE = 'SixtyFiveAndAbove';
+    const SixtyFiveAndAbove = 'SixtyFiveAndAbove';
 }

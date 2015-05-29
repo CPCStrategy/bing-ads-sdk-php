@@ -12,15 +12,15 @@ namespace BingAds\Reporting;
 final class AdGroupStatusReportFilter
 {
     /** The same meaning as Active. */
-    const SUBMITTED = 'Submitted';
+    const Submitted = 'Submitted';
     /** The report will contain ad groups that have been deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
     /** The report will contain ad groups that have expired. */
-    const EXPIRED = 'Expired';
+    const Expired = 'Expired';
     /** The report will contain ad groups that are in a draft state. */
-    const DRAFT = 'Draft';
+    const Draft = 'Draft';
     /** The report will contain ad groups that are paused. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** The report will contain ad groups that are active. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
 }

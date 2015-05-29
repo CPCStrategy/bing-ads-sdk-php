@@ -4,9 +4,9 @@ namespace BingAds\AdIntelligence;
 
 final class Scale
 {
-    const MINIMAL = 'Minimal';
-    const LOW = 'Low';
-    const MEDIUM = 'Medium';
-    const HIGH = 'High';
-    const VERY_HIGH = 'VeryHigh';
+    const Minimal = 'Minimal';
+    const Low = 'Low';
+    const Medium = 'Medium';
+    const High = 'High';
+    const VeryHigh = 'VeryHigh';
 }

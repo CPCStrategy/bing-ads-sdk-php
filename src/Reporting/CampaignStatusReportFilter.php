@@ -13,15 +13,15 @@ namespace BingAds\Reporting;
 final class CampaignStatusReportFilter
 {
     /** The same meaning as Active. */
-    const SUBMITTED = 'Submitted';
+    const Submitted = 'Submitted';
     /** The report will contain campaigns that have been canceled. */
-    const CANCELLED = 'Cancelled';
+    const Cancelled = 'Cancelled';
     /** The report will contain campaigns that have been deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
     /** The report will contain campaigns that are paused. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** The report will contain campaigns that are paused due to budget restrictions. */
-    const BUDGET_PAUSED = 'BudgetPaused';
+    const BudgetPaused = 'BudgetPaused';
     /** The report will contain campaigns that are active. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
 }

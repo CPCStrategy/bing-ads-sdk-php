@@ -12,33 +12,33 @@ namespace BingAds\Reporting;
 final class CallDetailReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The start time of the call. */
-    const START_TIME = 'StartTime';
+    const StartTime = 'StartTime';
     /** The end time of the call. */
-    const END_TIME = 'EndTime';
+    const EndTime = 'EndTime';
     /** The duration of each forwarded call that originated from a call ad extension. */
-    const DURATION = 'Duration';
+    const Duration = 'Duration';
     /** The status of the call. */
-    const CALL_STATUS = 'CallStatus';
+    const CallStatus = 'CallStatus';
     /** The total cost for completed calls to your tracked number. */
-    const PHONE_SPEND = 'PhoneSpend';
+    const PhoneSpend = 'PhoneSpend';
     /** The name of the call type. */
-    const CALL_TYPE_NAME = 'CallTypeName';
+    const CallTypeName = 'CallTypeName';
     /** The area code where the user was physically located when they clicked the ad. */
-    const AREA_CODE = 'AreaCode';
+    const AreaCode = 'AreaCode';
     /** The city used to deliver the ad. */
-    const CITY = 'City';
+    const City = 'City';
     /** The state used to deliver the ad. */
-    const STATE = 'State';
+    const State = 'State';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
 }

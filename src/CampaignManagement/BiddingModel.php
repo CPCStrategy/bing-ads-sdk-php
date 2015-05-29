@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class BiddingModel
 {
     /** The ad group bidding is keyword-based. */
-    const KEYWORD = 'Keyword';
+    const Keyword = 'Keyword';
     /** The ad group bidding is website-placement-based. */
-    const SITE_PLACEMENT = 'SitePlacement';
+    const SitePlacement = 'SitePlacement';
 }

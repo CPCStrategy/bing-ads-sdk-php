@@ -12,31 +12,31 @@ namespace BingAds\CustomerManagement;
 final class ClientLinkStatus
 {
     /** The ClientLink object has been added via the AddClientLinks service operation. */
-    const LINK_PENDING = 'LinkPending';
+    const LinkPending = 'LinkPending';
     /** The link request has been canceled by the agency. */
-    const LINK_CANCELED = 'LinkCanceled';
+    const LinkCanceled = 'LinkCanceled';
     /** The link is inactive due to expiry. */
-    const LINK_EXPIRED = 'LinkExpired';
+    const LinkExpired = 'LinkExpired';
     /** The invited client should use this value to accept the link invitation. */
-    const LINK_ACCEPTED = 'LinkAccepted';
+    const LinkAccepted = 'LinkAccepted';
     /** The link request has been declined by the invited client. */
-    const LINK_DECLINED = 'LinkDeclined';
+    const LinkDeclined = 'LinkDeclined';
     /** The link process is in progress and either waiting for the billing transition to complete or the specified client link start date has not yet arrived. */
-    const LINK_IN_PROGRESS = 'LinkInProgress';
+    const LinkInProgress = 'LinkInProgress';
     /** The link is established and the managing customer can access the client account. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The link process failed to complete successfully. */
-    const LINK_FAILED = 'LinkFailed';
+    const LinkFailed = 'LinkFailed';
     /** The agency should use this value to request an unlink. */
-    const UNLINK_REQUESTED = 'UnlinkRequested';
+    const UnlinkRequested = 'UnlinkRequested';
     /** A request to terminate the link has been sent. */
-    const UNLINK_PENDING = 'UnlinkPending';
+    const UnlinkPending = 'UnlinkPending';
     /** Reserved for future use. */
-    const UNLINK_CANCELED = 'UnlinkCanceled';
+    const UnlinkCanceled = 'UnlinkCanceled';
     /** The unlink process is in progress and waiting for the billing transition to complete. */
-    const UNLINK_IN_PROGRESS = 'UnlinkInProgress';
+    const UnlinkInProgress = 'UnlinkInProgress';
     /** The unlink process has completed and the managing customer can no longer access the client account. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
     /** The unlink process failed to complete successfully, for example because the billing transition could not be completed. */
-    const UNLINK_FAILED = 'UnlinkFailed';
+    const UnlinkFailed = 'UnlinkFailed';
 }

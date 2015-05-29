@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class NetworkType
 {
     /** Display ads on owned and operated networks. */
-    const OWNED_AND_OPERATED = 'OwnedAndOperated';
+    const OwnedAndOperated = 'OwnedAndOperated';
     /** Display ads on syndicated search networks. */
-    const SYNDICATED_SEARCH = 'SyndicatedSearch';
+    const SyndicatedSearch = 'SyndicatedSearch';
 }

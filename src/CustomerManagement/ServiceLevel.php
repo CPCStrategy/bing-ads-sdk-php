@@ -12,13 +12,13 @@ namespace BingAds\CustomerManagement;
 final class ServiceLevel
 {
     /** For internal use only. */
-    const SELF_SERVE = 'SelfServe';
+    const SelfServe = 'SelfServe';
     /** For internal use only. */
-    const SELF_SERVE_TRUSTED = 'SelfServeTrusted';
+    const SelfServeTrusted = 'SelfServeTrusted';
     /** For internal use only. */
-    const PREMIUM = 'Premium';
+    const Premium = 'Premium';
     /** For internal use only. */
-    const INTERNAL = 'Internal';
+    const Internal = 'Internal';
     /** For internal use only. */
-    const SELECT = 'Select';
+    const Select = 'Select';
 }

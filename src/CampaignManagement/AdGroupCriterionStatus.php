@@ -12,9 +12,9 @@ namespace BingAds\CampaignManagement;
 final class AdGroupCriterionStatus
 {
     /** Apply the criterion to the ad group. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** Do not apply the criterion to the ad group. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** The criterion was deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
 }

@@ -12,15 +12,15 @@ namespace BingAds\CustomerManagement;
 final class CustomerFinancialStatus
 {
     /** Not used. */
-    const PROPOSALS_ONLY = 'ProposalsOnly';
+    const ProposalsOnly = 'ProposalsOnly';
     /** The customer is undergoing a credit check as part of the customer sign-up process. */
-    const PENDING_CREDIT_CHECK = 'PendingCreditCheck';
+    const PendingCreditCheck = 'PendingCreditCheck';
     /** The customer is in good standing. */
-    const CLEAR_FINANCIAL_STATUS = 'ClearFinancialStatus';
+    const ClearFinancialStatus = 'ClearFinancialStatus';
     /** The customer is considered to be a credit risk. */
-    const SOLD_TO_ONLY = 'SoldToOnly';
+    const SoldToOnly = 'SoldToOnly';
     /** One of the customer's accounts is past due. */
-    const CREDIT_HOLD = 'CreditHold';
+    const CreditHold = 'CreditHold';
     /** Not used. */
-    const CREDIT_WARNING = 'CreditWarning';
+    const CreditWarning = 'CreditWarning';
 }

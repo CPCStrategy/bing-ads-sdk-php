@@ -12,11 +12,11 @@ namespace BingAds\CampaignManagement;
 final class SitePlacementStatus
 {
     /** The website placement bid is active. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The website placement bid is paused. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** The website placement bid is deleted. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
     /** The website placement bid is inactive */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
 }

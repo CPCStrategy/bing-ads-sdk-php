@@ -13,11 +13,11 @@ namespace BingAds\CampaignManagement;
 final class AdEditorialStatus
 {
     /** The ad passed editorial review. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The ad failed editorial review. */
-    const DISAPPROVED = 'Disapproved';
+    const Disapproved = 'Disapproved';
     /** One or more elements of the ad is undergoing editorial review. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
     /** The ad passed editorial review in one or more markets, and one or more elements of the ad is undergoing editorial review in another market. */
-    const ACTIVE_LIMITED = 'ActiveLimited';
+    const ActiveLimited = 'ActiveLimited';
 }

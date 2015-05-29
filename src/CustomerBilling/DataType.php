@@ -14,7 +14,7 @@ namespace BingAds\CustomerBilling;
 final class DataType
 {
     /** Use XML format. */
-    const XML = 'Xml';
+    const Xml = 'Xml';
     /** Use PDF format. */
-    const PDF = 'Pdf';
+    const Pdf = 'Pdf';
 }

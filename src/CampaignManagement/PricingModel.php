@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class PricingModel
 {
     /** The pricing model is cost-per-click (CPC). */
-    const CPC = 'Cpc';
+    const Cpc = 'Cpc';
     /** The pricing model is cost per thousand-impressions (CPM). */
-    const CPM = 'Cpm';
+    const Cpm = 'Cpm';
 }

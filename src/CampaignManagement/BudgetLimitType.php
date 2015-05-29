@@ -12,9 +12,9 @@ namespace BingAds\CampaignManagement;
 final class BudgetLimitType
 {
     /** A monthly budget that is spent until it is depleted. */
-    const MONTHLY_BUDGET_SPEND_UNTIL_DEPLETED = 'MonthlyBudgetSpendUntilDepleted';
+    const MonthlyBudgetSpendUntilDepleted = 'MonthlyBudgetSpendUntilDepleted';
     /** A daily budget that is spent until it is depleted. */
-    const DAILY_BUDGET_ACCELERATED = 'DailyBudgetAccelerated';
+    const DailyBudgetAccelerated = 'DailyBudgetAccelerated';
     /** A daily budget that is spread throughout the day. */
-    const DAILY_BUDGET_STANDARD = 'DailyBudgetStandard';
+    const DailyBudgetStandard = 'DailyBudgetStandard';
 }

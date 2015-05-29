@@ -12,135 +12,135 @@ namespace BingAds\Reporting;
 final class AdGroupPerformanceReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The time period of each report row. */
-    const TIME_PERIOD = 'TimePeriod';
+    const TimePeriod = 'TimePeriod';
     /** The current delivery status. */
-    const STATUS = 'Status';
+    const Status = 'Status';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The CurrencyType element of an Account. */
-    const CURRENCY_CODE = 'CurrencyCode';
+    const CurrencyCode = 'CurrencyCode';
     /** The AdDistribution element of an AdGroup. */
-    const AD_DISTRIBUTION = 'AdDistribution';
+    const AdDistribution = 'AdDistribution';
     /** The number of times an ad has been displayed on search results pages. */
-    const IMPRESSIONS = 'Impressions';
+    const Impressions = 'Impressions';
     /** The number of times that the ads in the account were clicked. */
-    const CLICKS = 'Clicks';
+    const Clicks = 'Clicks';
     /** The click-through rate (CTR) is the number of times an ad was clicked, divided by the number of times the ad was shown (impressions). */
-    const CTR = 'Ctr';
+    const Ctr = 'Ctr';
     /** The average cost per click (CPC). */
-    const AVERAGE_CPC = 'AverageCpc';
+    const AverageCpc = 'AverageCpc';
     /** The cost per click (CPC) summed for each click. */
-    const SPEND = 'Spend';
+    const Spend = 'Spend';
     /** The average position of the ad on a webpage. */
-    const AVERAGE_POSITION = 'AveragePosition';
+    const AveragePosition = 'AveragePosition';
     /** The number of conversions. */
-    const CONVERSIONS = 'Conversions';
+    const Conversions = 'Conversions';
     /** The conversion rate as a percentage. */
-    const CONVERSION_RATE = 'ConversionRate';
+    const ConversionRate = 'ConversionRate';
     /** The cost per conversion. */
-    const COST_PER_CONVERSION = 'CostPerConversion';
+    const CostPerConversion = 'CostPerConversion';
     /** The average of the cost-per-thousand impressions of the ads. */
-    const AVERAGE_CPM = 'AverageCpm';
+    const AverageCpm = 'AverageCpm';
     /** The PricingModel element of an AdGroup. */
-    const PRICING_MODEL = 'PricingModel';
+    const PricingModel = 'PricingModel';
     /** The DeviceName element of a DeviceOSTargetBid. */
-    const DEVICE_TYPE = 'DeviceType';
+    const DeviceType = 'DeviceType';
     /** The Language element of an AdGroup. */
-    const LANGUAGE = 'Language';
+    const Language = 'Language';
     /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
-    const DEVICE_OS = 'DeviceOS';
+    const DeviceOS = 'DeviceOS';
     /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
-    const IMPRESSION_SHARE_PERCENT = 'ImpressionSharePercent';
+    const ImpressionSharePercent = 'ImpressionSharePercent';
     /** The percentage of time your ads would have been displayed to users, but were not because of a budget shortfall. */
-    const IMPRESSION_LOST_TO_BUDGET_PERCENT = 'ImpressionLostToBudgetPercent';
+    const ImpressionLostToBudgetPercent = 'ImpressionLostToBudgetPercent';
     /** The percentage of time your ads would have been displayed to users, but were not because your ads ranked too low in the auction. */
-    const IMPRESSION_LOST_TO_RANK_PERCENT = 'ImpressionLostToRankPercent';
+    const ImpressionLostToRankPercent = 'ImpressionLostToRankPercent';
     /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
-    const QUALITY_SCORE = 'QualityScore';
+    const QualityScore = 'QualityScore';
     /** A numeric score that indicates how likely your ads will be clicked and how well your keyword competes against other keywords targeting the same traffic. */
-    const KEYWORD_RELEVANCE = 'KeywordRelevance';
+    const KeywordRelevance = 'KeywordRelevance';
     /** A numeric score that indicates how relevant your ad and landing page are to the customer's search query or other input. */
-    const LANDING_PAGE_RELEVANCE = 'LandingPageRelevance';
+    const LandingPageRelevance = 'LandingPageRelevance';
     /** A numeric score that indicates whether your landing page is likely to provide a good experience to customers who click your ad and land on your website. */
-    const LANDING_PAGE_USER_EXPERIENCE = 'LandingPageUserExperience';
+    const LandingPageUserExperience = 'LandingPageUserExperience';
     /** The historic quality score of the keyword. */
-    const HISTORIC_QUALITY_SCORE = 'HistoricQualityScore';
+    const HistoricQualityScore = 'HistoricQualityScore';
     /** The numeric score that indicates the historic relevance of your keyword to the search term. */
-    const HISTORIC_KEYWORD_RELEVANCE = 'HistoricKeywordRelevance';
+    const HistoricKeywordRelevance = 'HistoricKeywordRelevance';
     /** The numeric score that indicates the historic relevance of your ad and landing page to the search term. */
-    const HISTORIC_LANDING_PAGE_RELEVANCE = 'HistoricLandingPageRelevance';
+    const HistoricLandingPageRelevance = 'HistoricLandingPageRelevance';
     /** The numeric score that is the aggregate assessment of the historic quality of all landing pages on your site. */
-    const HISTORIC_LANDING_PAGE_USER_EXPERIENCE = 'HistoricLandingPageUserExperience';
+    const HistoricLandingPageUserExperience = 'HistoricLandingPageUserExperience';
     /** The percentage of time your ads would have been displayed to users, but were not because your bid was too low or your bid and quality score was below minimum thresholds, which prevented you from entering the auction. */
-    const IMPRESSION_LOST_TO_BID_PERCENT = 'ImpressionLostToBidPercent';
+    const ImpressionLostToBidPercent = 'ImpressionLostToBidPercent';
     /** The percentage of time your ads would have been displayed to users, but were not due to one or more of the following reasons. */
-    const IMPRESSION_LOST_TO_LANDING_PAGE_RELEVANCE_PERCENT = 'ImpressionLostToLandingPageRelevancePercent';
+    const ImpressionLostToLandingPageRelevancePercent = 'ImpressionLostToLandingPageRelevancePercent';
     /** The percentage of time your ads would have been displayed to users, but were not because your ad copy was not relevant to the user's search query. */
-    const IMPRESSION_LOST_TO_KEYWORD_RELEVANCE_PERCENT = 'ImpressionLostToKeywordRelevancePercent';
+    const ImpressionLostToKeywordRelevancePercent = 'ImpressionLostToKeywordRelevancePercent';
     /** Reserved for internal use. */
-    const BUSINESS_LISTING_ID = 'BusinessListingId';
+    const BusinessListingId = 'BusinessListingId';
     /** Reserved for internal use. */
-    const BUSINESS_LISTING_NAME = 'BusinessListingName';
+    const BusinessListingName = 'BusinessListingName';
     /** Reserved for internal use. */
-    const BUSINESS_CATEGORY_ID = 'BusinessCategoryId';
+    const BusinessCategoryId = 'BusinessCategoryId';
     /** Reserved for internal use. */
-    const BUSINESS_CATEGORY_NAME = 'BusinessCategoryName';
+    const BusinessCategoryName = 'BusinessCategoryName';
     /** The number of times your tracked number was shown on all devices. */
-    const PHONE_IMPRESSIONS = 'PhoneImpressions';
+    const PhoneImpressions = 'PhoneImpressions';
     /** The number of total calls to the tracked phone number that showed with your ad. */
-    const PHONE_CALLS = 'PhoneCalls';
+    const PhoneCalls = 'PhoneCalls';
     /** The number of calls dialed manually from any device to the tracked phone number. */
-    const MANUAL_CALLS = 'ManualCalls';
+    const ManualCalls = 'ManualCalls';
     /** The number of phone calls initiated by clicks. */
-    const CLICK_CALLS = 'ClickCalls';
+    const ClickCalls = 'ClickCalls';
     /** The phone-through rate (Ptr). */
-    const PTR = 'Ptr';
+    const Ptr = 'Ptr';
     /** The total cost for completed calls to your tracked number. */
-    const PHONE_SPEND = 'PhoneSpend';
+    const PhoneSpend = 'PhoneSpend';
     /** The average cost per phone call (CPP). */
-    const AVERAGE_CPP = 'AverageCpp';
+    const AverageCpp = 'AverageCpp';
     /** The total cost for cost for click spend and phone call spend combined. */
-    const TOTAL_COST_PHONE_AND_CLICKS = 'TotalCostPhoneAndClicks';
+    const TotalCostPhoneAndClicks = 'TotalCostPhoneAndClicks';
     /** The Network element of an AdGroup. */
-    const NETWORK = 'Network';
+    const Network = 'Network';
     /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
-    const TOP_VS_OTHER = 'TopVsOther';
+    const TopVsOther = 'TopVsOther';
     /** The MatchType element of a Keyword. */
-    const BID_MATCH_TYPE = 'BidMatchType';
+    const BidMatchType = 'BidMatchType';
     /** The match type used to deliver an ad. */
-    const DELIVERED_MATCH_TYPE = 'DeliveredMatchType';
+    const DeliveredMatchType = 'DeliveredMatchType';
     /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
-    const ASSISTS = 'Assists';
+    const Assists = 'Assists';
     /** Cost information that is optionally provided by advertisers, including non-advertising costs, taxes, and shipping. */
-    const EXTENDED_COST = 'ExtendedCost';
+    const ExtendedCost = 'ExtendedCost';
     /** The revenue optionally reported by the advertiser as a result of conversions. */
-    const REVENUE = 'Revenue';
+    const Revenue = 'Revenue';
     /** The return on ad spend (ROAS). */
-    const RETURN_ON_AD_SPEND = 'ReturnOnAdSpend';
+    const ReturnOnAdSpend = 'ReturnOnAdSpend';
     /** The cost per assist. */
-    const COST_PER_ASSIST = 'CostPerAssist';
+    const CostPerAssist = 'CostPerAssist';
     /** The revenue per conversion. */
-    const REVENUE_PER_CONVERSION = 'RevenuePerConversion';
+    const RevenuePerConversion = 'RevenuePerConversion';
     /** The revenue per assist. */
-    const REVENUE_PER_ASSIST = 'RevenuePerAssist';
+    const RevenuePerAssist = 'RevenuePerAssist';
     /** The percentage of customers to your website that only view one page (the landing page) and then leave your website. */
-    const BOUNCE_RATE = 'BounceRate';
+    const BounceRate = 'BounceRate';
     /** The total number of times customers visited your site. */
-    const TOTAL_VISITS = 'TotalVisits';
+    const TotalVisits = 'TotalVisits';
     /** The average number of pages each customer goes to while on your site. */
-    const AVERAGE_PAGES_PER_VISIT = 'AveragePagesPerVisit';
+    const AveragePagesPerVisit = 'AveragePagesPerVisit';
     /** The sum total of the time customers spent browsing your site divided by the number of customers that came to your site. */
-    const AVERAGE_DURATION_PER_VISIT = 'AverageDurationPerVisit';
+    const AverageDurationPerVisit = 'AverageDurationPerVisit';
 }

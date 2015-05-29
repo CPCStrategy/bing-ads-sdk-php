@@ -12,19 +12,19 @@ namespace BingAds\Reporting;
 final class SearchQueryReportAggregation
 {
     /** The report data will be aggregated for the entire specified report time. */
-    const SUMMARY = 'Summary';
+    const Summary = 'Summary';
     /** The report data will be aggregated for each hour. */
-    const HOURLY = 'Hourly';
+    const Hourly = 'Hourly';
     /** The report data will be aggregated for each day. */
-    const DAILY = 'Daily';
+    const Daily = 'Daily';
     /** The report data will be aggregated for each week. */
-    const WEEKLY = 'Weekly';
+    const Weekly = 'Weekly';
     /** The report data will be aggregated for each month. */
-    const MONTHLY = 'Monthly';
+    const Monthly = 'Monthly';
     /** The report data will be aggregated for each year. */
-    const YEARLY = 'Yearly';
+    const Yearly = 'Yearly';
     /** The report data will be aggregated by each of the 24 hours in a day. */
-    const HOUR_OF_DAY = 'HourOfDay';
+    const HourOfDay = 'HourOfDay';
     /** The report data will be aggregated by each of the seven days in a week. */
-    const DAY_OF_WEEK = 'DayOfWeek';
+    const DayOfWeek = 'DayOfWeek';
 }

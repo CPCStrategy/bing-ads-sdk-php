@@ -12,5 +12,5 @@ namespace BingAds\CustomerManagement;
 final class AccountType
 {
     /** An advertiser account. */
-    const ADVERTISER = 'Advertiser';
+    const Advertiser = 'Advertiser';
 }

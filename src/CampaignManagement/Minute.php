@@ -12,11 +12,11 @@ namespace BingAds\CampaignManagement;
 final class Minute
 {
     /** The starting or ending minute of the hour range is zero. */
-    const ZERO = 'Zero';
+    const Zero = 'Zero';
     /** The starting or ending minute of the hour range is fifteen. */
-    const FIFTEEN = 'Fifteen';
+    const Fifteen = 'Fifteen';
     /** The starting or ending minute of the hour range is thirty. */
-    const THIRTY = 'Thirty';
+    const Thirty = 'Thirty';
     /** The starting or ending minute of the hour range is forty-five. */
-    const FORTY_FIVE = 'FortyFive';
+    const FortyFive = 'FortyFive';
 }

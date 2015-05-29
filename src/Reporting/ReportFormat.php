@@ -12,9 +12,9 @@ namespace BingAds\Reporting;
 final class ReportFormat
 {
     /** The report format will be comma-separated values (. */
-    const CSV = 'Csv';
+    const Csv = 'Csv';
     /** The report format will be tab-separated values (. */
-    const TSV = 'Tsv';
+    const Tsv = 'Tsv';
     /** The report format will be XML (. */
-    const XML = 'Xml';
+    const Xml = 'Xml';
 }

@@ -12,11 +12,11 @@ namespace BingAds\CustomerManagement;
 final class PaymentMethodType
 {
     /** The payments are made with a credit card. */
-    const CREDIT_CARD = 'CreditCard';
+    const CreditCard = 'CreditCard';
     /** An invoice is sent to the customer requesting payment. */
-    const INVOICE = 'Invoice';
+    const Invoice = 'Invoice';
     /** The payments are made with a check. */
-    const CHECK = 'Check';
+    const Check = 'Check';
     /** The payments are made with an electronic funds transfer. */
-    const ELECTRONIC_FUNDS_TRANSFER = 'ElectronicFundsTransfer';
+    const ElectronicFundsTransfer = 'ElectronicFundsTransfer';
 }

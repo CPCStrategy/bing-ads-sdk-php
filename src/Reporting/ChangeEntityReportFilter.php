@@ -12,13 +12,13 @@ namespace BingAds\Reporting;
 final class ChangeEntityReportFilter
 {
     /** The report will include data for accounts that have been added or deleted, or that have had account elements updated. */
-    const ACCOUNT = 'Account';
+    const Account = 'Account';
     /** The report will include data for campaigns that have been added or deleted, or that have had campaign elements updated. */
-    const CAMPAIGN = 'Campaign';
+    const Campaign = 'Campaign';
     /** The report will include data for ad groups that have been added or deleted, or that have had ad group elements updated. */
-    const AD_GROUP = 'AdGroup';
+    const AdGroup = 'AdGroup';
     /** The report will include data for ads that have been added or deleted, or that have had ad elements updated. */
-    const AD = 'Ad';
+    const Ad = 'Ad';
     /** The report will include data for keywords that have been added or deleted, or that have had keyword elements updated. */
-    const KEYWORD = 'Keyword';
+    const Keyword = 'Keyword';
 }

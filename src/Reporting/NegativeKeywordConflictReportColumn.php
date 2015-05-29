@@ -12,25 +12,25 @@ namespace BingAds\Reporting;
 final class NegativeKeywordConflictReportColumn
 {
     /** The Name element of an Account. */
-    const ACCOUNT_NAME = 'AccountName';
+    const AccountName = 'AccountName';
     /** The Number element of an Account. */
-    const ACCOUNT_NUMBER = 'AccountNumber';
+    const AccountNumber = 'AccountNumber';
     /** The Id element of an Account. */
-    const ACCOUNT_ID = 'AccountId';
+    const AccountId = 'AccountId';
     /** The Name element of a Campaign. */
-    const CAMPAIGN_NAME = 'CampaignName';
+    const CampaignName = 'CampaignName';
     /** The Id element of a Campaign. */
-    const CAMPAIGN_ID = 'CampaignId';
+    const CampaignId = 'CampaignId';
     /** The Name element of an AdGroup. */
-    const AD_GROUP_NAME = 'AdGroupName';
+    const AdGroupName = 'AdGroupName';
     /** The Id element of an AdGroup. */
-    const AD_GROUP_ID = 'AdGroupId';
+    const AdGroupId = 'AdGroupId';
     /** The Text element of a Keyword. */
-    const KEYWORD = 'Keyword';
+    const Keyword = 'Keyword';
     /** The Id element of a Keyword. */
-    const KEYWORD_ID = 'KeywordId';
+    const KeywordId = 'KeywordId';
     /** The negative keyword that conflicts with the keyword at the ad group or campaign level. */
-    const NEGATIVE_KEYWORD = 'NegativeKeyword';
+    const NegativeKeyword = 'NegativeKeyword';
     /** The entity level where the keyword and negative keyword conflict occurs. */
-    const CONFLICT_LEVEL = 'ConflictLevel';
+    const ConflictLevel = 'ConflictLevel';
 }

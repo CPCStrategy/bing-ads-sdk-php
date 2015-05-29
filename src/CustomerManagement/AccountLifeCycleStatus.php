@@ -14,15 +14,15 @@ namespace BingAds\CustomerManagement;
 final class AccountLifeCycleStatus
 {
     /** The account is in a draft state. */
-    const DRAFT = 'Draft';
+    const Draft = 'Draft';
     /** The account is active, which means that the account and its campaigns can be managed and its ads served. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The account is inactive, which means that the system deleted the account. */
-    const INACTIVE = 'Inactive';
+    const Inactive = 'Inactive';
     /** For internal use only. */
-    const PAUSE = 'Pause';
+    const Pause = 'Pause';
     /** For internal use only. */
-    const PENDING = 'Pending';
+    const Pending = 'Pending';
     /** Your account has been suspended and no ads are eligible for delivery because of potentially fraudulent activity. */
-    const SUSPENDED = 'Suspended';
+    const Suspended = 'Suspended';
 }

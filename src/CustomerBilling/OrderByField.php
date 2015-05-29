@@ -12,11 +12,11 @@ namespace BingAds\CustomerBilling;
 final class OrderByField
 {
     /** The order is determined by a predicate identifier. */
-    const ID = 'Id';
+    const Id = 'Id';
     /** The order is determined by a predicate name. */
-    const NAME = 'Name';
+    const Name = 'Name';
     /** The order is determined by a predicate number. */
-    const NUMBER = 'Number';
+    const Number = 'Number';
     /** The order is determined by a predicate life cycle status. */
-    const LIFE_CYCLE_STATUS = 'LifeCycleStatus';
+    const LifeCycleStatus = 'LifeCycleStatus';
 }

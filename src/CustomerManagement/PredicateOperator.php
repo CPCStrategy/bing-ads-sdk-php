@@ -11,12 +11,12 @@ namespace BingAds\CustomerManagement;
  */
 final class PredicateOperator
 {
-    const EQUALS = 'Equals';
-    const NOT_EQUALS = 'NotEquals';
-    const CONTAINS = 'Contains';
-    const IN = 'In';
-    const GREATER_THAN_EQUALS = 'GreaterThanEquals';
-    const LESS_THAN_EQUALS = 'LessThanEquals';
-    const STARTS_WITH = 'StartsWith';
-    const NOT_CONTAINS = 'NotContains';
+    const Equals = 'Equals';
+    const NotEquals = 'NotEquals';
+    const Contains = 'Contains';
+    const In = 'In';
+    const GreaterThanEquals = 'GreaterThanEquals';
+    const LessThanEquals = 'LessThanEquals';
+    const StartsWith = 'StartsWith';
+    const NotContains = 'NotContains';
 }

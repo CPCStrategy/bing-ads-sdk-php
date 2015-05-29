@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class DistanceUnit
 {
     /** The distance of the specified geographical location is specified in kilometers. */
-    const KILOMETERS = 'Kilometers';
+    const Kilometers = 'Kilometers';
     /** The distance of the specified geographical location is specified in miles. */
-    const MILES = 'Miles';
+    const Miles = 'Miles';
 }

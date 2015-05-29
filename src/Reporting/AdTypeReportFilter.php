@@ -16,19 +16,19 @@ namespace BingAds\Reporting;
 final class AdTypeReportFilter
 {
     /** The report will include text ads. */
-    const TEXT = 'Text';
+    const Text = 'Text';
     /** The report will include mobile ads. */
-    const MOBILE = 'Mobile';
+    const Mobile = 'Mobile';
     /** Not supported. */
-    const IMAGE = 'Image';
+    const Image = 'Image';
     /** Not supported. */
-    const LOCAL = 'Local';
+    const Local = 'Local';
     /** Not supported. */
-    const RICH_MEDIA = 'RichMedia';
+    const RichMedia = 'RichMedia';
     /** The report will contain creative ads that are served by third parties. */
-    const THIRD_PARTY_CREATIVE = 'ThirdPartyCreative';
+    const ThirdPartyCreative = 'ThirdPartyCreative';
     /** The report will include rich ads. */
-    const RICH_AD = 'RichAd';
+    const RichAd = 'RichAd';
     /** The report will include product ads. */
-    const PRODUCT = 'Product';
+    const Product = 'Product';
 }

@@ -12,11 +12,11 @@ namespace BingAds\CampaignManagement;
 final class AdGroupStatus
 {
     /** The ad group is new. */
-    const DRAFT = 'Draft';
+    const Draft = 'Draft';
     /** The ad group is active, which indicates that the ad group's ads can be served. */
-    const ACTIVE = 'Active';
+    const Active = 'Active';
     /** The ad group is paused, which indicates that the ad group's ads will not serve. */
-    const PAUSED = 'Paused';
+    const Paused = 'Paused';
     /** The ad group expired. */
-    const DELETED = 'Deleted';
+    const Deleted = 'Deleted';
 }

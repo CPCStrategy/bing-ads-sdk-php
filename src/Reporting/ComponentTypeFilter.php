@@ -12,18 +12,18 @@ namespace BingAds\Reporting;
 final class ComponentTypeFilter
 {
     /** The title of the ad that contains a hyperlink to a destination URL. */
-    const BASIC = 'Basic';
+    const Basic = 'Basic';
     /** A hyperlink to a webpage inside the destination website. */
-    const DEEPLINK = 'Deeplink';
+    const Deeplink = 'Deeplink';
     /** An entry form on the ad that gathers data from the user. */
-    const FORM = 'Form';
+    const Form = 'Form';
     /** An image in the ad that contains a hyperlink to a destination URL. */
-    const IMAGE = 'Image';
+    const Image = 'Image';
     /** The icon that displays next to the display URL. */
-    const FAVORITE_ICON = 'FavoriteIcon';
+    const FavoriteIcon = 'FavoriteIcon';
     /** A video embedded in the ad that the user can click to play. */
-    const VIDEO = 'Video';
+    const Video = 'Video';
     /** A link in a pharmaceutical ad that links to additional drug information. */
-    const TITLED_LINK = 'TitledLink';
-    const UNKNOWN = 'Unknown';
+    const TitledLink = 'TitledLink';
+    const Unknown = 'Unknown';
 }

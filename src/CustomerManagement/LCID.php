@@ -13,91 +13,91 @@ namespace BingAds\CustomerManagement;
 final class LCID
 {
     /** Arabic (Saudi Arabia) */
-    const ARABIC_SAUDI_ARABIA = 'ArabicSaudiArabia';
-    const ARABIC_ALGERIA = 'ArabicAlgeria';
-    const ARABIC_BAHRAIN = 'ArabicBahrain';
-    const ARABIC_EGYPT = 'ArabicEgypt';
-    const ARABIC_IRAQ = 'ArabicIraq';
-    const ARABIC_JORDAN = 'ArabicJordan';
-    const ARABIC_KUWAIT = 'ArabicKuwait';
-    const ARABIC_LEBANON = 'ArabicLebanon';
-    const ARABIC_LIBYA = 'ArabicLibya';
-    const ARABIC_MOROCCO = 'ArabicMorocco';
-    const ARABIC_OMAN = 'ArabicOman';
-    const ARABIC_QATAR = 'ArabicQatar';
-    const ARABIC_TUNISIA = 'ArabicTunisia';
-    const ARABIC_UNITED_ARAB_EMIRATES = 'ArabicUnitedArabEmirates';
-    const ARABIC_YEMEN = 'ArabicYemen';
+    const ArabicSaudiArabia = 'ArabicSaudiArabia';
+    const ArabicAlgeria = 'ArabicAlgeria';
+    const ArabicBahrain = 'ArabicBahrain';
+    const ArabicEgypt = 'ArabicEgypt';
+    const ArabicIraq = 'ArabicIraq';
+    const ArabicJordan = 'ArabicJordan';
+    const ArabicKuwait = 'ArabicKuwait';
+    const ArabicLebanon = 'ArabicLebanon';
+    const ArabicLibya = 'ArabicLibya';
+    const ArabicMorocco = 'ArabicMorocco';
+    const ArabicOman = 'ArabicOman';
+    const ArabicQatar = 'ArabicQatar';
+    const ArabicTunisia = 'ArabicTunisia';
+    const ArabicUnitedArabEmirates = 'ArabicUnitedArabEmirates';
+    const ArabicYemen = 'ArabicYemen';
     /** Chinese (Taiwan) */
-    const CHINESE_TAIWAN = 'ChineseTaiwan';
+    const ChineseTaiwan = 'ChineseTaiwan';
     /** Danish (Denmark) */
-    const DANISH_DENMARK = 'DanishDenmark';
+    const DanishDenmark = 'DanishDenmark';
     /** German (Germany) */
-    const GERMAN_GERMANY = 'GermanGermany';
+    const GermanGermany = 'GermanGermany';
     /** English (United States) */
-    const ENGLISH_US = 'EnglishUS';
+    const EnglishUS = 'EnglishUS';
     /** Spanish (Spain) */
-    const SPANISH_SPAIN = 'SpanishSpain';
+    const SpanishSpain = 'SpanishSpain';
     /** Finnish (Finland) */
-    const FINNISH_FINLAND = 'FinnishFinland';
+    const FinnishFinland = 'FinnishFinland';
     /** French (France) */
-    const FRENCH_FRANCE = 'FrenchFrance';
+    const FrenchFrance = 'FrenchFrance';
     /** Hebrew (Israel) */
-    const HEBREW_ISRAEL = 'HebrewIsrael';
+    const HebrewIsrael = 'HebrewIsrael';
     /** Italian (Italy) */
-    const ITALIAN_ITALY = 'ItalianItaly';
+    const ItalianItaly = 'ItalianItaly';
     /** Korean (Korea) */
-    const KOREAN_KOREA = 'KoreanKorea';
+    const KoreanKorea = 'KoreanKorea';
     /** Dutch (Netherlands) */
-    const DUTCH_NETHERLANDS = 'DutchNetherlands';
+    const DutchNetherlands = 'DutchNetherlands';
     /** Norwegian (Norway) */
-    const NORWEGIAN_NORWAY = 'NorwegianNorway';
-    const PORTUGUESE_BRAZIL = 'PortugueseBrazil';
+    const NorwegianNorway = 'NorwegianNorway';
+    const PortugueseBrazil = 'PortugueseBrazil';
     /** Russian (Russia) */
-    const RUSSIAN_RUSSIA = 'RussianRussia';
+    const RussianRussia = 'RussianRussia';
     /** Swedish (Sweden) */
-    const SWEDISH_SWEDEN = 'SwedishSweden';
+    const SwedishSweden = 'SwedishSweden';
     /** English (Thailand) */
-    const ENGLISH_THAILAND = 'EnglishThailand';
+    const EnglishThailand = 'EnglishThailand';
     /** English (Indonesia) */
-    const ENGLISH_INDONESIA = 'EnglishIndonesia';
+    const EnglishIndonesia = 'EnglishIndonesia';
     /** English (Vietnam) */
-    const ENGLISH_VIETNAM = 'EnglishVietnam';
+    const EnglishVietnam = 'EnglishVietnam';
     /** German (Switzerland) */
-    const GERMAN_SWITZERLAND = 'GermanSwitzerland';
+    const GermanSwitzerland = 'GermanSwitzerland';
     /** English (United Kingdom) */
-    const ENGLISH_UK = 'EnglishUK';
+    const EnglishUK = 'EnglishUK';
     /** Spanish (Mexico) */
-    const SPANISH_MEXICO = 'SpanishMexico';
+    const SpanishMexico = 'SpanishMexico';
     /** Chinese (Hong Kong) */
-    const CHINESE_HONG_KONG = 'ChineseHongKong';
+    const ChineseHongKong = 'ChineseHongKong';
     /** German (Austria) */
-    const GERMAN_AUSTRIA = 'GermanAustria';
+    const GermanAustria = 'GermanAustria';
     /** English (Australia) */
-    const ENGLISH_AUSTRALIA = 'EnglishAustralia';
+    const EnglishAustralia = 'EnglishAustralia';
     /** French (Canada) */
-    const FRENCH_CANADA = 'FrenchCanada';
+    const FrenchCanada = 'FrenchCanada';
     /** English (Canada) */
-    const ENGLISH_CANADA = 'EnglishCanada';
+    const EnglishCanada = 'EnglishCanada';
     /** English (New Zealand) */
-    const ENGLISH_NEW_ZEALAND = 'EnglishNewZealand';
-    const ENGLISH_IRELAND = 'EnglishIreland';
+    const EnglishNewZealand = 'EnglishNewZealand';
+    const EnglishIreland = 'EnglishIreland';
     /** Spanish (Venezuela) */
-    const SPANISH_VENEZUELA = 'SpanishVenezuela';
+    const SpanishVenezuela = 'SpanishVenezuela';
     /** Spanish (Colombia) */
-    const SPANISH_COLOMBIA = 'SpanishColombia';
+    const SpanishColombia = 'SpanishColombia';
     /** Spanish (Peru) */
-    const SPANISH_PERU = 'SpanishPeru';
+    const SpanishPeru = 'SpanishPeru';
     /** Spanish (Argentina) */
-    const SPANISH_ARGENTINA = 'SpanishArgentina';
+    const SpanishArgentina = 'SpanishArgentina';
     /** English (Philippines) */
-    const ENGLISH_PHILIPPINES = 'EnglishPhilippines';
+    const EnglishPhilippines = 'EnglishPhilippines';
     /** Spanish (Chile) */
-    const SPANISH_CHILE = 'SpanishChile';
+    const SpanishChile = 'SpanishChile';
     /** English (India) */
-    const ENGLISH_INDIA = 'EnglishIndia';
+    const EnglishIndia = 'EnglishIndia';
     /** English (Malaysia) */
-    const ENGLISH_MALAYSIA = 'EnglishMalaysia';
+    const EnglishMalaysia = 'EnglishMalaysia';
     /** English (Singapore) */
-    const ENGLISH_SINGAPORE = 'EnglishSingapore';
+    const EnglishSingapore = 'EnglishSingapore';
 }

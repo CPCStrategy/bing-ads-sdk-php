@@ -12,11 +12,11 @@ namespace BingAds\Optimizer;
 final class BidOpportunityType
 {
     /** The bid opportunity may lead to increased traffic. */
-    const INCREASE_TRAFFIC = 'IncreaseTraffic';
+    const IncreaseTraffic = 'IncreaseTraffic';
     /** The bid opportunity may lead to ads shown in one of the first page positions of search results. */
-    const FIRST_PAGE = 'FirstPage';
+    const FirstPage = 'FirstPage';
     /** The bid opportunity may lead to ads shown in one of the mainline positions of search results. */
-    const MAIN_LINE = 'MainLine';
+    const MainLine = 'MainLine';
     /** The bid opportunity may lead to ads shown in the first mainline position of search results. */
-    const MAIN_LINE1 = 'MainLine1';
+    const MainLine1 = 'MainLine1';
 }

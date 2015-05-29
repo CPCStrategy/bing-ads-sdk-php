@@ -12,9 +12,9 @@ namespace BingAds\CampaignManagement;
 final class Network
 {
     /** Display ads on owned and operated networks, as well as syndicated search networks. */
-    const OWNED_AND_OPERATED_AND_SYNDICATED_SEARCH = 'OwnedAndOperatedAndSyndicatedSearch';
+    const OwnedAndOperatedAndSyndicatedSearch = 'OwnedAndOperatedAndSyndicatedSearch';
     /** Display ads on only owned and operated networks. */
-    const OWNED_AND_OPERATED_ONLY = 'OwnedAndOperatedOnly';
+    const OwnedAndOperatedOnly = 'OwnedAndOperatedOnly';
     /** Display ads on only syndicated search networks. */
-    const SYNDICATED_SEARCH_ONLY = 'SyndicatedSearchOnly';
+    const SyndicatedSearchOnly = 'SyndicatedSearchOnly';
 }

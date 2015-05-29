@@ -12,7 +12,7 @@ namespace BingAds\CampaignManagement;
 final class AdRotationType
 {
     /** Favor the best performing ads. */
-    const OPTIMIZE_FOR_CLICKS = 'OptimizeForClicks';
+    const OptimizeForClicks = 'OptimizeForClicks';
     /** Rotate ads evenly into the auction. */
-    const ROTATE_ADS_EVENLY = 'RotateAdsEvenly';
+    const RotateAdsEvenly = 'RotateAdsEvenly';
 }
