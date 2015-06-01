@@ -24,7 +24,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-develop-psr4": "2.0.x-dev"
+            "dev-develop": "2.0.x-dev"
         }
     }
 }
