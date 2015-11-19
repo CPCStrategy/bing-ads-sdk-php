@@ -9,8 +9,8 @@ Version 2 separates all classes into their own file. For the unmodified version 
 ##Library Information
 
  - Bing Ads API Version 9
- - Library Update  2/25/2015
- - Library [Home Page](http://code.msdn.microsoft.com/PHP-Classes-for-Bing-Ads-c9762281)
+ - Library Update  11/16/2015
+ - Library [Home Page](https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f)
 
 ##Installation
 ```shell
