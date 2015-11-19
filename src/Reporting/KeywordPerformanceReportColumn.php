@@ -6,45 +6,45 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the KeywordPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672087(v=msads.90).aspx KeywordPerformanceReportColumn Value Set
- *
+ * 
  * @used-by KeywordPerformanceReportRequest
  * @used-by KeywordPerformanceReportSort
  */
 final class KeywordPerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Text element of a Keyword. */
+    /** The keyword text. */
     const Keyword = 'Keyword';
-    /** The Id element of a Keyword. */
+    /** The Bing Ads assigned identifier of a keyword. */
     const KeywordId = 'KeywordId';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
-    /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The ad type. */
     const AdType = 'AdType';
-    /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+    /** The destination URL attribute of the ad, keyword, or ad group criterion. */
     const DestinationUrl = 'DestinationUrl';
     /** The maximum cost per click. */
     const CurrentMaxCpc = 'CurrentMaxCpc';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
     /** The match type used to deliver an ad. */
     const DeliveredMatchType = 'DeliveredMatchType';
-    /** The AdDistribution element of an AdGroup. */
+    /** The ad distribution attribute of an ad group. */
     const AdDistribution = 'AdDistribution';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
@@ -68,9 +68,9 @@ final class KeywordPerformanceReportColumn
     const AverageCpm = 'AverageCpm';
     /** The PricingModel element of an AdGroup. */
     const PricingModel = 'PricingModel';
-    /** The MatchType element of a Keyword. */
+    /** The keyword bid match type. */
     const BidMatchType = 'BidMatchType';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
     /** The numeric score shows you how competitive your ads are in the marketplace by measuring how relevant your keywords and landing pages are to customers' search terms. */
     const QualityScore = 'QualityScore';
@@ -80,7 +80,7 @@ final class KeywordPerformanceReportColumn
     const LandingPageRelevance = 'LandingPageRelevance';
     /** A numeric score that indicates whether your landing page is likely to provide a good experience to customers who click your ad and land on your website. */
     const LandingPageUserExperience = 'LandingPageUserExperience';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
     /** The historic quality score of the keyword. */
     const HistoricQualityScore = 'HistoricQualityScore';
@@ -102,19 +102,19 @@ final class KeywordPerformanceReportColumn
     const BusinessCategoryId = 'BusinessCategoryId';
     /** Reserved for internal use. */
     const BusinessCategoryName = 'BusinessCategoryName';
-    /** The Status element of a Campaign. */
+    /** The campaign status. */
     const CampaignStatus = 'CampaignStatus';
-    /** The AccountLifeCycleStatus element of an Account. */
+    /** The account lifecycle status. */
     const AccountStatus = 'AccountStatus';
-    /** The Status element of an AdGroup. */
+    /** The ad group status. */
     const AdGroupStatus = 'AdGroupStatus';
-    /** The Status element of a Keyword. */
+    /** The keyword status. */
     const KeywordStatus = 'KeywordStatus';
     /** The Network element of an AdGroup. */
     const Network = 'Network';
     /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
     const TopVsOther = 'TopVsOther';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
     const Assists = 'Assists';
@@ -130,12 +130,22 @@ final class KeywordPerformanceReportColumn
     const RevenuePerConversion = 'RevenuePerConversion';
     /** The revenue per assist. */
     const RevenuePerAssist = 'RevenuePerAssist';
-    /** The percentage of customers to your website that only view one page (the landing page) and then leave your website. */
+    /** The percentage of website visitors who only view one page (the landing page) and then leave your website. */
     const BounceRate = 'BounceRate';
     /** The total number of times customers visited your site. */
     const TotalVisits = 'TotalVisits';
     /** The average number of pages each customer goes to while on your site. */
     const AveragePagesPerVisit = 'AveragePagesPerVisit';
-    /** The sum total of the time customers spent browsing your site divided by the number of customers that came to your site. */
+    /** The sum total of the time customers spent browsing your site divided by the number of customers that visited your site. */
     const AverageDurationPerVisit = 'AverageDurationPerVisit';
+    /** The current TrackingUrlTemplate element of the Keyword. */
+    const TrackingTemplate = 'TrackingTemplate';
+    /** The current UrlCustomParameters element of the Keyword. */
+    const CustomParameters = 'CustomParameters';
+    /** The FinalUrls element of the Keyword. */
+    const FinalURL = 'FinalURL';
+    /** The FinalMobileUrls element of the Keyword. */
+    const FinalMobileURL = 'FinalMobileURL';
+    /** Reserved for future use. */
+    const FinalAppURL = 'FinalAppURL';
 }

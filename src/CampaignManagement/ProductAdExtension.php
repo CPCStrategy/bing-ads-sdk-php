@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a product ad extension.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj721706(v=msads.90).aspx ProductAdExtension Data Object
- *
+ * 
  * @uses ProductConditionCollection
  */
 final class ProductAdExtension extends AdExtension

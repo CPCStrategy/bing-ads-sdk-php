@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Suggests the possible keywords for the content located at the specified URL.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn336991(v=msads.90).aspx SuggestKeywordsForUrl Request Object
- *
+ * 
  * @used-by BingAdsAdIntelligenceService::SuggestKeywordsForUrl
  */
 final class SuggestKeywordsForUrlRequest

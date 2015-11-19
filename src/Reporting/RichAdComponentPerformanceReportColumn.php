@@ -6,30 +6,30 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the RichAdComponentPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh180149(v=msads.90).aspx RichAdComponentPerformanceReportColumn Value Set
- *
+ * 
  * @used-by RichAdComponentPerformanceReportRequest
  */
 final class RichAdComponentPerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
-    /** The Title element of a MobileAd or TextAd. */
+    /** The ad title. */
     const AdTitle = 'AdTitle';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
     /** The rich ad component type. */
     const RichAdSubType = 'RichAdSubType';

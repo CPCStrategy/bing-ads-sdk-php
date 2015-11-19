@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a conversion performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg262843(v=msads.90).aspx ConversionPerformanceReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses ConversionPerformanceReportColumn
  * @uses ConversionPerformanceReportFilter

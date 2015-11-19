@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an object that associates an ad extension to a supported entity, for example ad group or campaign.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn249980(v=msads.90).aspx AdExtensionIdToEntityIdAssociation Data Object
- *
+ * 
  * @used-by DeleteAdExtensionsAssociationsRequest
  * @used-by GetAdExtensionsEditorialReasonsRequest
  * @used-by SetAdExtensionsAssociationsRequest

@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains a list of estimated clicks, cost, and impressions from 1 to 7 days for the keyword identifier given the suggested bid.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn631946(v=msads.90).aspx KeywordBidLandscape Data Object
- *
+ * 
  * @uses DayMonthAndYear
  * @uses BidLandscapePoint
  * @used-by KeywordIdBidEstimation

@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Suggests keywords that could perform better than the specified keywords.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn336990(v=msads.90).aspx SuggestKeywordsFromExistingKeywords Request Object
- *
+ * 
  * @used-by BingAdsAdIntelligenceService::SuggestKeywordsFromExistingKeywords
  */
 final class SuggestKeywordsFromExistingKeywordsRequest

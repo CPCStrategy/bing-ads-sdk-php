@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines a selection of locale values.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671785(v=msads.90).aspx LCID Value Set
- *
+ * 
  * @used-by User
  * @used-by UserInvitation
  */

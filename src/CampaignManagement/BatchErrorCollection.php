@@ -3,13 +3,15 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * Currently this feature is only available in production for pilot participants, and will be generally available for all advertisers in Q3 2014.
+ * Defines an error object that contains batch error details for the top level list index and a list of batch errors corresponding to the nested list index.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743731(v=msads.90).aspx BatchErrorCollection Data Object
- *
+ * 
  * @uses BatchError
+ * @used-by AddCampaignCriterionsResponse
  * @used-by AddNegativeKeywordsToEntitiesResponse
  * @used-by DeleteNegativeKeywordsFromEntitiesResponse
+ * @used-by UpdateCampaignCriterionsResponse
  */
 final class BatchErrorCollection
 {

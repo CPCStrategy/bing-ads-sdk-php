@@ -3,19 +3,19 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * This feature is currently in pilot and will be generally available soon.
+ * Updates one or more campaign criterions.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn913121(v=msads.90).aspx UpdateCampaignCriterions Response Object
- *
- * @uses BatchError
+ * 
+ * @uses BatchErrorCollection
  * @used-by BingAdsCampaignManagementService::UpdateCampaignCriterions
  */
 final class UpdateCampaignCriterionsResponse
 {
     /**
-     * An array of BatchError objects that contain details for any list items that were not successfully updated.
+     * An array of BatchErrorCollection objects that contain details for any conditions that were not successfully updated for the criterion.
      *
-     * @var BatchError[]
+     * @var BatchErrorCollection[]
      */
-    public $PartialErrors;
+    public $NestedPartialErrors;
 }

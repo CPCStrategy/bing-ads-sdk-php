@@ -6,16 +6,16 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the TrafficSourcesReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg262847(v=msads.90).aspx TrafficSourcesReportColumn Value Set
- *
+ * 
  * @used-by TrafficSourcesReportRequest
  */
 final class TrafficSourcesReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';

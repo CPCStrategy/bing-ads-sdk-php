@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines an object that contains a list of budget points for a campaign.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn434660(v=msads.90).aspx CampaignBudgetLandscape Data Object
- *
+ * 
  * @uses BudgetPoint
  * @used-by GetBudgetLandscapeResponse
  */

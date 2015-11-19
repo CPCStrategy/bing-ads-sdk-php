@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Gets the ad groups that exist within a specified campaign.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn277524(v=msads.90).aspx GetAdGroupsByCampaignId Request Object
- *
+ * 
  * @used-by BingAdsCampaignManagementService::GetAdGroupsByCampaignId
  */
 final class GetAdGroupsByCampaignIdRequest
@@ -17,4 +17,10 @@ final class GetAdGroupsByCampaignIdRequest
      * @var int
      */
     public $CampaignId;
+    /**
+     * Determines whether or not the service should include the NativeBidAdjustment element within each retrieved AdGroup.
+     *
+     * @var bool
+     */
+    public $IncludeNativeBidAdjustment;
 }

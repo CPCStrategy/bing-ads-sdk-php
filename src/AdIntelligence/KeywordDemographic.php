@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains the age and gender of the user who entered the search query, if known.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh921729(v=msads.90).aspx KeywordDemographic Data Object
- *
+ * 
  * @used-by KeywordDemographicResult
  */
 final class KeywordDemographic

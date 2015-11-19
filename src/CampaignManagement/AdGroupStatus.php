@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines the possible status values of an ad group.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671715(v=msads.90).aspx AdGroupStatus Value Set
- *
+ * 
  * @used-by AdGroup
  */
 final class AdGroupStatus

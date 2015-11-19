@@ -6,42 +6,42 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the SitePerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd797115(v=msads.90).aspx SitePerformanceReportColumn Value Set
- *
+ * 
  * @used-by SitePerformanceReportRequest
  */
 final class SitePerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
     /** The URL of the website that displayed the ad. */
     const Site = 'Site';
     /** The Id element of a SitePlacement. */
     const SiteId = 'SiteId';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
-    /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+    /** The destination URL attribute of the ad, keyword, or ad group criterion. */
     const DestinationUrl = 'DestinationUrl';
     /** The maximum cost per click. */
     const CurrentMaxCpc = 'CurrentMaxCpc';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
     /** The match type used to deliver an ad. */
     const DeliveredMatchType = 'DeliveredMatchType';
-    /** The AdDistribution element of an AdGroup. */
+    /** The ad distribution attribute of an ad group. */
     const AdDistribution = 'AdDistribution';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
@@ -61,14 +61,24 @@ final class SitePerformanceReportColumn
     const ConversionRate = 'ConversionRate';
     /** The cost per conversion. */
     const CostPerConversion = 'CostPerConversion';
-    /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The ad type. */
     const AdType = 'AdType';
     /** The average of the cost-per-thousand impressions of the ads. */
     const AverageCpm = 'AverageCpm';
     /** The PricingModel element of an AdGroup. */
     const PricingModel = 'PricingModel';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
+    /** The current TrackingUrlTemplate element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const TrackingTemplate = 'TrackingTemplate';
+    /** The current UrlCustomParameters element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const CustomParameters = 'CustomParameters';
+    /** The FinalUrls element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const FinalURL = 'FinalURL';
+    /** The FinalMobileUrls element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const FinalMobileURL = 'FinalMobileURL';
+    /** Reserved for future use. */
+    const FinalAppURL = 'FinalAppURL';
 }

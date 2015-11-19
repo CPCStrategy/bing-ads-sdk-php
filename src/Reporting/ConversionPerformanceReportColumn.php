@@ -6,30 +6,30 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the ConversionPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg262852(v=msads.90).aspx ConversionPerformanceReportColumn Value Set
- *
+ * 
  * @used-by ConversionPerformanceReportRequest
  */
 final class ConversionPerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Text element of a Keyword. */
+    /** The keyword text. */
     const Keyword = 'Keyword';
-    /** The Id element of a Keyword. */
+    /** The Bing Ads assigned identifier of a keyword. */
     const KeywordId = 'KeywordId';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
@@ -59,6 +59,6 @@ final class ConversionPerformanceReportColumn
     const RevenuePerConversion = 'RevenuePerConversion';
     /** The revenue per assist. */
     const RevenuePerAssist = 'RevenuePerAssist';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
 }

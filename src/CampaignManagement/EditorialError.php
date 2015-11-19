@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an error object that identifies the entity with the batch of entities that failed editorial review.
  *
  * @link http://msdn.microsoft.com/en-us/library/cc197190(v=msads.90).aspx EditorialError Data Object
- *
+ * 
  * @used-by EditorialApiFaultDetail
  */
 final class EditorialError extends BatchError

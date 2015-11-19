@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the search query performance report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/ee703961(v=msads.90).aspx SearchQueryPerformanceReportFilter Data Object
- *
+ * 
  * @uses AdStatusReportFilter
  * @uses AdTypeReportFilter
  * @uses CampaignStatusReportFilter

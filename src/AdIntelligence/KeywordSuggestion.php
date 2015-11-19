@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains a list of suggested keywords that may perform better than the specified keyword.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg712233(v=msads.90).aspx KeywordSuggestion Data Object
- *
+ * 
  * @uses KeywordAndConfidence
  * @used-by SuggestKeywordsFromExistingKeywordsResponse
  */

@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * This report request is deprecated and is not supported.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj713607(v=msads.90).aspx AdExtensionDimensionReportRequest Data Object
- *
+ * 
  * @uses AdExtensionDimensionReportColumn
  * @uses AdExtensionDimensionReportFilter
  * @uses AccountReportScope

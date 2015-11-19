@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines the types of targeting that you can use to target your ads to users.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743781(v=msads.90).aspx Target2 Data Object
- *
+ * 
  * @uses AgeTarget
  * @uses DayTimeTarget
  * @uses DeviceOSTarget

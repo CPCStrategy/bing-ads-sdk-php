@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines the possible keyword match type values.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg712238(v=msads.90).aspx MatchType Value Set
- *
+ * 
  * @used-by EstimatedBidAndTraffic
  * @used-by EstimatedPositionAndTraffic
  * @used-by KeywordAndMatchType

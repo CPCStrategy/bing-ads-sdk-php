@@ -6,44 +6,44 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the AdExtensionDetailReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn610365(v=msads.90).aspx AdExtensionDetailReportColumn Value Set
- *
+ * 
  * @used-by AdExtensionDetailReportRequest
  */
 final class AdExtensionDetailReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Title element of a MobileAd or TextAd. */
+    /** The ad title. */
     const AdTitle = 'AdTitle';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
     /** The type name that corresponds to the AdExtensionTypeId column. */
     const AdExtensionType = 'AdExtensionType';
     /** The system identifier that corresponds to the AdExtensionType column. */
     const AdExtensionTypeId = 'AdExtensionTypeId';
-    /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+    /** The Bing Ads assigned identifier of an ad extension. */
     const AdExtensionId = 'AdExtensionId';
-    /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+    /** The version attribute of an ad extension. */
     const AdExtensionVersion = 'AdExtensionVersion';
     /** The human readable ad extension property value. */
     const AdExtensionPropertyValue = 'AdExtensionPropertyValue';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The number of times that the ads in the account were clicked. */
     const Clicks = 'Clicks';
@@ -59,7 +59,7 @@ final class AdExtensionDetailReportColumn
     const Spend = 'Spend';
     /** The average cost per click (CPC). */
     const AverageCpc = 'AverageCpc';
-    /** The MatchType element of a Keyword. */
+    /** The keyword bid match type. */
     const BidMatchType = 'BidMatchType';
     /** The match type used to deliver an ad. */
     const DeliveredMatchType = 'DeliveredMatchType';

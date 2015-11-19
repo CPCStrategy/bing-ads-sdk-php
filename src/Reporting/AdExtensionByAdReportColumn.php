@@ -6,32 +6,32 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the AdExtensionByAdReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj713608(v=msads.90).aspx AdExtensionByAdReportColumn Value Set
- *
+ * 
  * @used-by AdExtensionByAdReportRequest
  */
 final class AdExtensionByAdReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Title element of a MobileAd or TextAd. */
+    /** The ad title. */
     const AdTitle = 'AdTitle';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
     /** The type name that corresponds to the AdExtensionTypeId column. */
     const AdExtensionType = 'AdExtensionType';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The ad extension item that the user clicked. */
     const ClickType = 'ClickType';
@@ -51,15 +51,15 @@ final class AdExtensionByAdReportColumn
     const ConversionRate = 'ConversionRate';
     /** The cost per click (CPC) summed for each click. */
     const Spend = 'Spend';
-    /** The Id element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+    /** The Bing Ads assigned identifier of an ad extension. */
     const AdExtensionId = 'AdExtensionId';
-    /** The Version element of either the CallAdExtension, LocationAdExtension, ProductAdExtension, or SiteLinksAdExtension, which is inherited from the AdExtension base object. */
+    /** The version attribute of an ad extension. */
     const AdExtensionVersion = 'AdExtensionVersion';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
-    /** The MatchType element of a Keyword. */
+    /** The keyword bid match type. */
     const BidMatchType = 'BidMatchType';
     /** The match type used to deliver an ad. */
     const DeliveredMatchType = 'DeliveredMatchType';

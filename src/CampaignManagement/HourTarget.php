@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a list of hour target ranges with bid adjustments.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671826(v=msads.90).aspx HourTarget Data Object
- *
+ * 
  * @uses HourTargetBid
  * @used-by Target
  */

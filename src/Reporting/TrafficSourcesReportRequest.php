@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a traffic sources report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg262853(v=msads.90).aspx TrafficSourcesReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses TrafficSourcesReportColumn
  * @uses TrafficSourcesReportFilter

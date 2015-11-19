@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a site performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd797220(v=msads.90).aspx SitePerformanceReportRequest Data Object
- *
+ * 
  * @uses ReportAggregation
  * @uses SitePerformanceReportColumn
  * @uses SitePerformanceReportFilter

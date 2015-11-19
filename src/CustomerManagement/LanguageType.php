@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines a selection of language values.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672074(v=msads.90).aspx LanguageType Value Set
- *
+ * 
  * @used-by Account
  * @used-by Customer
  */

@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the pricing model values that you can use to filter the report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn411635(v=msads.90).aspx PricingModelReportFilter Value Set
- *
+ * 
  * @used-by PublisherUsagePerformanceReportFilter
  */
 final class PricingModelReportFilter

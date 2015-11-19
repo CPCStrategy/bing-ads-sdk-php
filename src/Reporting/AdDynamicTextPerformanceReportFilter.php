@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the ad dynamic text performance report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672086(v=msads.90).aspx AdDynamicTextPerformanceReportFilter Data Object
- *
+ * 
  * @uses AdDistributionReportFilter
  * @uses AdTypeReportFilter
  * @uses DeviceTypeReportFilter

@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a keyword performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671816(v=msads.90).aspx KeywordPerformanceReportRequest Data Object
- *
+ * 
  * @uses ReportAggregation
  * @uses KeywordPerformanceReportColumn
  * @uses KeywordPerformanceReportFilter

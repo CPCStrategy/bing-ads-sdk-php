@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the AccountPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671947(v=msads.90).aspx AccountPerformanceReportColumn Value Set
- *
+ * 
  * @used-by AccountPerformanceReportRequest
  */
 final class AccountPerformanceReportColumn
@@ -57,7 +57,7 @@ final class AccountPerformanceReportColumn
     const AverageCpm = 'AverageCpm';
     /** The DeviceName element of a DeviceOSTargetBid. */
     const DeviceType = 'DeviceType';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
     const ImpressionSharePercent = 'ImpressionSharePercent';

@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the publisher usage performance report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd796865(v=msads.90).aspx PublisherUsagePerformanceReportFilter Data Object
- *
+ * 
  * @uses AdDistributionReportFilter
  * @uses PricingModelReportFilter
  * @used-by PublisherUsagePerformanceReportRequest

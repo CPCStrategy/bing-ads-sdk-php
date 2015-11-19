@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a list of postal code targets with bid adjustments.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743743(v=msads.90).aspx PostalCodeTarget Data Object
- *
+ * 
  * @uses PostalCodeTargetBid
  * @used-by LocationTarget2
  */

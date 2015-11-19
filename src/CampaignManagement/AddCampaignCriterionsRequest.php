@@ -3,10 +3,10 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * This feature is currently in pilot and will be generally available soon.
+ * Adds one or more campaign criterions that help determine whether ads in each campaign get served.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn913127(v=msads.90).aspx AddCampaignCriterions Request Object
- *
+ * 
  * @uses CampaignCriterion
  * @uses CampaignCriterionType
  * @used-by BingAdsCampaignManagementService::AddCampaignCriterions

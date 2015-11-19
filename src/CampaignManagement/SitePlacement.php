@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a website placement bid.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd797248(v=msads.90).aspx SitePlacement Data Object
- *
+ * 
  * @uses Bid
  * @uses SitePlacementStatus
  * @used-by AddSitePlacementsRequest

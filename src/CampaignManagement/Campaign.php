@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a campaign.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672054(v=msads.90).aspx Campaign Data Object
- *
+ * 
  * @uses BudgetLimitType
  * @uses KeyValuePairOfstringstring
  * @uses CampaignStatus
@@ -50,7 +50,7 @@ final class Campaign
      */
     public $Description;
     /**
-     * The following list of key and value strings are available for forward compatibility.
+     * For a list of valid key and value strings for this element, see Campaign ForwardCompatibilityMap in the section below.
      *
      * @var KeyValuePairOfstringstring[]
      */
@@ -74,6 +74,12 @@ final class Campaign
      */
     public $Name;
     /**
+     * The percent amount by which to adjust your bid for native ads above or below the base ad group or keyword bid.
+     *
+     * @var int
+     */
+    public $NativeBidAdjustment;
+    /**
      * The status of the campaign.
      *
      * @var CampaignStatus
@@ -86,10 +92,15 @@ final class Campaign
      */
     public $TimeZone;
     /**
-     * The campaign type determines whether the campaign is a Bing Shopping campaign or a Search & Content campaign.
+     * The campaign type determines whether the campaign is a Bing Shopping campaign or a Search &amp; Content campaign.
      *
      * @var CampaignType
      */
     public $CampaignType;
+    /**
+     * The setting will vary by campaign type.
+     *
+     * @var Setting[]
+     */
     public $Settings;
 }

@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * This feature is not supported in sandbox.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn632184(v=msads.90).aspx ClientLinkStatus Value Set
- *
+ * 
  * @used-by ClientLink
  */
 final class ClientLinkStatus

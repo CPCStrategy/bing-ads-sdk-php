@@ -6,28 +6,28 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the BudgetSummaryReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671925(v=msads.90).aspx BudgetSummaryReportColumn Value Set
- *
+ * 
  * @used-by BudgetSummaryReportRequest
  */
 final class BudgetSummaryReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
     /** The date for the downloaded report records. */
     const Date = 'Date';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
-    /** The budgeted amount of money to spend per month. */
+    /** The average amount of campaign budget spent during a calendar month. */
     const MonthlyBudget = 'MonthlyBudget';
-    /** Your budgeted amount of money to spend per day. */
+    /** The average amount of campaign budget spent per day. */
     const DailySpend = 'DailySpend';
     /** The amount of money spent to date for the month. */
     const MonthToDateSpend = 'MonthToDateSpend';

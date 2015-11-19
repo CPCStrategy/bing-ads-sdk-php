@@ -6,31 +6,41 @@ namespace BingAds\Reporting;
  * Defines the attributes columns that you can include in the NegativeKeywordConflictReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh560535(v=msads.90).aspx NegativeKeywordConflictReportColumn Value Set
- *
+ * 
  * @used-by NegativeKeywordConflictReportRequest
  */
 final class NegativeKeywordConflictReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Text element of a Keyword. */
+    /** The keyword text. */
     const Keyword = 'Keyword';
-    /** The Id element of a Keyword. */
+    /** The Bing Ads assigned identifier of a keyword. */
     const KeywordId = 'KeywordId';
     /** The negative keyword that conflicts with the keyword at the ad group or campaign level. */
     const NegativeKeyword = 'NegativeKeyword';
     /** The entity level where the keyword and negative keyword conflict occurs. */
     const ConflictLevel = 'ConflictLevel';
+    /** The keyword bid match type. */
+    const BidMatchType = 'BidMatchType';
+    /** The NegativeKeywordListId element of the NegativeKeywordList Data Object. */
+    const NegativeKeywordListId = 'NegativeKeywordListId';
+    /** The Name element of a NegativeKeywordList. */
+    const NegativeKeywordList = 'NegativeKeywordList';
+    /** The Id element of a NegativeKeyword. */
+    const NegativeKeywordId = 'NegativeKeywordId';
+    /** The type of match to compare the negative keyword and the user's search term. */
+    const NegativeKeywordMatchType = 'NegativeKeywordMatchType';
 }
