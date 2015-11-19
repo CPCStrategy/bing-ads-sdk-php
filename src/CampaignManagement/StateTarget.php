@@ -5,11 +5,10 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines a list of state targets with bid adjustments.
  *
- * @link http://msdn.microsoft.com/en-us/library/dd796793(v=msads.90).aspx StateTarget Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dd796793(v=msads.100).aspx StateTarget Data Object
  * 
  * @uses StateTargetBid
  * @used-by LocationTarget
- * @used-by LocationTarget2
  */
 final class StateTarget
 {

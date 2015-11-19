@@ -4,7 +4,7 @@ namespace BingAds\CampaignManagement;
 
 final class CampaignManagementServiceSettings
 {
-    const ServiceNamespace = 'https://bingads.microsoft.com/CampaignManagement/v9';
-    const ProductionEndpoint = 'https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/v9/CampaignManagementService.svc';
-    const SandboxEndpoint = 'https://api.sandbox.bingads.microsoft.com/Api/Advertiser/CampaignManagement/v9/CampaignManagementService.svc';
+    const ServiceNamespace = 'https://bingads.microsoft.com/CampaignManagement/v10';
+    const ProductionEndpoint = 'https://campaign.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/CampaignManagementService.svc';
+    const SandboxEndpoint = 'https://campaign.api.sandbox.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/CampaignManagementService.svc';
 }

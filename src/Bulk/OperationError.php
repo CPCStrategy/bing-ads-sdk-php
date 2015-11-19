@@ -5,11 +5,11 @@ namespace BingAds\Bulk;
 /**
  * Defines an error object that contains the details that explain why the service operation failed.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn169098(v=msads.90).aspx OperationError Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn169098(v=msads.100).aspx OperationError Data Object
  * 
  * @used-by ApiFaultDetail
- * @used-by GetDetailedBulkDownloadStatusResponse
- * @used-by GetDetailedBulkUploadStatusResponse
+ * @used-by GetBulkDownloadStatusResponse
+ * @used-by GetBulkUploadStatusResponse
  */
 final class OperationError
 {

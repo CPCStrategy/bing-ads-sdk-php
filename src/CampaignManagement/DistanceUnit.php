@@ -3,16 +3,16 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * Currently this feature is only available for pilot participants, and will be generally available for all advertisers in Q3 2014.
+ * Defines the possible distance units of a geographical location.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn743740(v=msads.90).aspx DistanceUnit Value Set
+ * @link http://msdn.microsoft.com/en-us/library/dn743740(v=msads.100).aspx DistanceUnit Value Set
  * 
- * @used-by RadiusTargetBid2
+ * @used-by RadiusTargetBid
  */
 final class DistanceUnit
 {
-    /** The distance of the specified geographical location is specified in kilometers. */
-    const Kilometers = 'Kilometers';
     /** The distance of the specified geographical location is specified in miles. */
     const Miles = 'Miles';
+    /** The distance of the specified geographical location is specified in kilometers. */
+    const Kilometers = 'Kilometers';
 }

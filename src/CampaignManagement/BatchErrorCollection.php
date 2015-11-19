@@ -5,12 +5,15 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines an error object that contains batch error details for the top level list index and a list of batch errors corresponding to the nested list index.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn743731(v=msads.90).aspx BatchErrorCollection Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn743731(v=msads.100).aspx BatchErrorCollection Data Object
  * 
  * @uses BatchError
+ * @uses KeyValuePairOfstringstring
+ * @used-by AddAdGroupCriterionsResponse
  * @used-by AddCampaignCriterionsResponse
  * @used-by AddNegativeKeywordsToEntitiesResponse
  * @used-by DeleteNegativeKeywordsFromEntitiesResponse
+ * @used-by UpdateAdGroupCriterionsResponse
  * @used-by UpdateCampaignCriterionsResponse
  */
 final class BatchErrorCollection
@@ -40,6 +43,18 @@ final class BatchErrorCollection
      */
     public $ErrorCode;
     /**
+     * Reserved for future use.
+     *
+     * @var string
+     */
+    public $FieldPath;
+    /**
+     * The list of key and value strings for forward compatibility.
+     *
+     * @var KeyValuePairOfstringstring[]
+     */
+    public $ForwardCompatibilityMap;
+    /**
      * The zero-based top level list index in the request message that failed.
      *
      * @var int
@@ -51,4 +66,10 @@ final class BatchErrorCollection
      * @var string
      */
     public $Message;
+    /**
+     * Reserved for internal use.
+     *
+     * @var string
+     */
+    public $Type;
 }

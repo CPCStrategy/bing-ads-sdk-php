@@ -3,9 +3,9 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * Adds one or more campaign criterions that help filter product catalog items for a Bing Merchant Center store.
+ * This service operation is reserved for future use.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn277499(v=msads.90).aspx AddAdGroupCriterions Request Object
+ * @link http://msdn.microsoft.com/en-us/library/dn277499(v=msads.100).aspx AddAdGroupCriterions Request Object
  * 
  * @uses AdGroupCriterion
  * @uses CriterionType
@@ -13,22 +13,7 @@ namespace BingAds\CampaignManagement;
  */
 final class AddAdGroupCriterionsRequest
 {
-    /**
-     * The identifier of the account to add the criterions to.
-     *
-     * @var int
-     */
     public $AccountId;
-    /**
-     * A list of criterions that determine whether ads in the ad group are served.
-     *
-     * @var AdGroupCriterion[]
-     */
     public $AdGroupCriterions;
-    /**
-     * The type of ad group criterion to add, for example Product.
-     *
-     * @var CriterionType
-     */
     public $CriterionType;
 }

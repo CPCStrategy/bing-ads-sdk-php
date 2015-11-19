@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Represents a date.
  *
- * @link http://msdn.microsoft.com/en-us/library/bb671903(v=msads.90).aspx Date Data Object
+ * @link http://msdn.microsoft.com/en-us/library/bb671903(v=msads.100).aspx Date Data Object
  * 
  * @used-by AdGroup
  */

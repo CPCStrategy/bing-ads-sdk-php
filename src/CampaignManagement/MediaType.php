@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines media type information for a website.
  *
- * @link http://msdn.microsoft.com/en-us/library/dd797128(v=msads.90).aspx MediaType Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dd797128(v=msads.100).aspx MediaType Data Object
  * 
  * @uses Dimension
  * @used-by PlacementDetail

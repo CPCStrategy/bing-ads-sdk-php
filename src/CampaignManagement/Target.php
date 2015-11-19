@@ -5,14 +5,13 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the types of targeting that you can use to target your ads to users.
  *
- * @link http://msdn.microsoft.com/en-us/library/bb671789(v=msads.90).aspx Target Data Object
+ * @link http://msdn.microsoft.com/en-us/library/bb671789(v=msads.100).aspx Target Data Object
  * 
  * @uses AgeTarget
- * @uses DayTarget
+ * @uses DayTimeTarget
  * @uses DeviceOSTarget
  * @uses KeyValuePairOfstringstring
  * @uses GenderTarget
- * @uses HourTarget
  * @uses LocationTarget
  * @used-by AddTargetsToLibraryRequest
  * @used-by GetTargetsByAdGroupIdsResponse
@@ -29,16 +28,11 @@ final class Target
      */
     public $Age;
     /**
-     * Targets ads to run on specific days of the week.
+     * Targets ads to run on specific days and hours of the week.
      *
-     * @var DayTarget
+     * @var DayTimeTarget
      */
-    public $Day;
-    /**
-     * Targets ads to serve on specific devices.
-     *
-     * @var DeviceOSTarget
-     */
+    public $DayTime;
     public $DeviceOS;
     /**
      * The list of key and value strings for forward compatibility.
@@ -52,12 +46,6 @@ final class Target
      * @var GenderTarget
      */
     public $Gender;
-    /**
-     * Targets ads to run at specific times of the day.
-     *
-     * @var HourTarget
-     */
-    public $Hour;
     /**
      * A system-generated identifier that identifies this target object.
      *

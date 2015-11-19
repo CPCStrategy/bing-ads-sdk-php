@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the entity type or types associated with an ad extension.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn249973(v=msads.90).aspx AssociationType Value Set
+ * @link http://msdn.microsoft.com/en-us/library/dn249973(v=msads.100).aspx AssociationType Value Set
  * 
  * @used-by AdExtensionAssociation
  * @used-by DeleteAdExtensionsAssociationsRequest
@@ -20,4 +20,6 @@ final class AssociationType
     const Campaign = 'Campaign';
     /** Specifies ad extension associations with ad groups. */
     const AdGroup = 'AdGroup';
+    /** Reserved for future use. */
+    const Account = 'Account';
 }

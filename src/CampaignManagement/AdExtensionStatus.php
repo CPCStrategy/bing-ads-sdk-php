@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the possible status values of an ad extension.
  *
- * @link http://msdn.microsoft.com/en-us/library/jj134386(v=msads.90).aspx AdExtensionStatus Value Set
+ * @link http://msdn.microsoft.com/en-us/library/jj134386(v=msads.100).aspx AdExtensionStatus Value Set
  * 
  * @used-by AdExtension
  */

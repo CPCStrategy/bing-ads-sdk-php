@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines a specific gender target with bid adjustment.
  *
- * @link http://msdn.microsoft.com/en-us/library/bb671554(v=msads.90).aspx GenderTargetBid Data Object
+ * @link http://msdn.microsoft.com/en-us/library/bb671554(v=msads.100).aspx GenderTargetBid Data Object
  * 
  * @uses GenderType
  * @used-by GenderTarget

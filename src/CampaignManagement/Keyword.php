@@ -5,13 +5,15 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines a keyword.
  *
- * @link http://msdn.microsoft.com/en-us/library/bb671833(v=msads.90).aspx Keyword Data Object
+ * @link http://msdn.microsoft.com/en-us/library/bb671833(v=msads.100).aspx Keyword Data Object
  * 
  * @uses Bid
  * @uses KeywordEditorialStatus
+ * @uses AppUrl
  * @uses KeyValuePairOfstringstring
  * @uses MatchType
  * @uses KeywordStatus
+ * @uses CustomParameters
  * @used-by AddKeywordsRequest
  * @used-by GetKeywordsByAdGroupIdResponse
  * @used-by GetKeywordsByEditorialStatusResponse
@@ -38,6 +40,24 @@ final class Keyword
      * @var KeywordEditorialStatus
      */
     public $EditorialStatus;
+    /**
+     * Reserved for future use.
+     *
+     * @var AppUrl[]
+     */
+    public $FinalAppUrls;
+    /**
+     * The mobile landing page URL.
+     *
+     * @var string[]
+     */
+    public $FinalMobileUrls;
+    /**
+     * The landing page URL.
+     *
+     * @var string[]
+     */
+    public $FinalUrls;
     /**
      * The list of key and value strings for forward compatibility.
      *
@@ -86,4 +106,16 @@ final class Keyword
      * @var string
      */
     public $Text;
+    /**
+     * The tracking template to use as a default for all FinalUrls and FinalMobileUrls.
+     *
+     * @var string
+     */
+    public $TrackingUrlTemplate;
+    /**
+     * Your custom collection of key and value parameters for URL tracking.
+     *
+     * @var CustomParameters
+     */
+    public $UrlCustomParameters;
 }

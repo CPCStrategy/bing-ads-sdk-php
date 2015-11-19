@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the base object of media.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn195580(v=msads.90).aspx Media Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn195580(v=msads.100).aspx Media Data Object
  * 
  * @used-by AddMediaRequest
  * @used-by GetMediaByIdsResponse

@@ -5,8 +5,10 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines a site link to include in an ad.
  *
- * @link http://msdn.microsoft.com/en-us/library/jj134381(v=msads.90).aspx SiteLink Data Object
+ * @link http://msdn.microsoft.com/en-us/library/jj134381(v=msads.100).aspx SiteLink Data Object
  * 
+ * @uses AppUrl
+ * @uses CustomParameters
  * @used-by SiteLinksAdExtension
  */
 final class SiteLink
@@ -41,4 +43,34 @@ final class SiteLink
      * @var string
      */
     public $DisplayText;
+    /**
+     * Reserved for future use.
+     *
+     * @var AppUrl[]
+     */
+    public $FinalAppUrls;
+    /**
+     * The mobile landing page URL.
+     *
+     * @var string[]
+     */
+    public $FinalMobileUrls;
+    /**
+     * The landing page URL.
+     *
+     * @var string[]
+     */
+    public $FinalUrls;
+    /**
+     * The tracking template to use as a default for all FinalUrls and FinalMobileUrls.
+     *
+     * @var string
+     */
+    public $TrackingUrlTemplate;
+    /**
+     * Your custom collection of key and value parameters for URL tracking.
+     *
+     * @var CustomParameters
+     */
+    public $UrlCustomParameters;
 }

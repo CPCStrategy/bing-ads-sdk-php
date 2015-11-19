@@ -5,7 +5,10 @@ namespace BingAds\CampaignManagement;
 /**
  * Currently this feature is only available for pilot participants.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn766199(v=msads.90).aspx ImageAdExtension Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn766199(v=msads.100).aspx ImageAdExtension Data Object
+ * 
+ * @uses AppUrl
+ * @uses CustomParameters
  */
 final class ImageAdExtension extends AdExtension
 {
@@ -28,15 +31,39 @@ final class ImageAdExtension extends AdExtension
      */
     public $DestinationUrl;
     /**
-     * The identifier of the image to include in the ad.
+     * Reserved for future use.
      *
-     * @var int
+     * @var AppUrl[]
      */
-    public $ImageMediaId;
+    public $FinalAppUrls;
+    /**
+     * Reserved for future use.
+     *
+     * @var string[]
+     */
+    public $FinalMobileUrls;
+    /**
+     * Reserved for future use.
+     *
+     * @var string[]
+     */
+    public $FinalUrls;
     /**
      * The identifiers of the images to include in the ad.
      *
      * @var int[]
      */
     public $ImageMediaIds;
+    /**
+     * Reserved for future use.
+     *
+     * @var string
+     */
+    public $TrackingUrlTemplate;
+    /**
+     * Reserved for future use.
+     *
+     * @var CustomParameters
+     */
+    public $UrlCustomParameters;
 }

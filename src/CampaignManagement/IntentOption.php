@@ -5,9 +5,9 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the possible intent options for location targeting, for example to target people in, searching for, or viewing pages about your targeted location.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn743742(v=msads.90).aspx IntentOption Value Set
+ * @link http://msdn.microsoft.com/en-us/library/dn743742(v=msads.100).aspx IntentOption Value Set
  * 
- * @used-by LocationTarget2
+ * @used-by LocationTarget
  */
 final class IntentOption
 {

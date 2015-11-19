@@ -4,7 +4,7 @@ namespace BingAds\Bulk;
 
 final class BulkServiceSettings
 {
-    const ServiceNamespace = 'https://bingads.microsoft.com/CampaignManagement/v9';
-    const ProductionEndpoint = 'https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/v9/BulkService.svc';
-    const SandboxEndpoint = 'https://api.sandbox.bingads.microsoft.com/Api/Advertiser/CampaignManagement/v9/BulkService.svc';
+    const ServiceNamespace = 'https://bingads.microsoft.com/CampaignManagement/v10';
+    const ProductionEndpoint = 'https://bulk.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/BulkService.svc';
+    const SandboxEndpoint = 'https://bulk.api.sandbox.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/BulkService.svc';
 }

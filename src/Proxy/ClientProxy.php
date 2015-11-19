@@ -1,11 +1,11 @@
 <?php
-
 namespace BingAds\Proxy;
-
 use DOMDocument;
 use DOMXPath;
 use SoapHeader;
 use SoapClient;
+
+
 
 class ClientProxy
 {
@@ -26,7 +26,7 @@ class ClientProxy
     // Converts PHP string types to long types in SOAP requests.
     private function to_long_xml($longVal)
     {
-        return '<long>'.$longVal.'</long>';
+        return '<long>' . $longVal . '</long>';
     }
     public function __construct($wsdl)
     {
@@ -34,30 +34,28 @@ class ClientProxy
     }
     public static function ConstructWithCredentials($wsdl, $username, $password, $token, $authenticationToken)
     {
-        $thisClient = new self($wsdl);
+        $thisClient = new ClientProxy($wsdl);
         $thisClient->authenticationToken = $authenticationToken;
         $thisClient->username = $username;
         $thisClient->password = $password;
         $thisClient->developerToken = $token;
         $thisClient->service = $thisClient->GetProxy($wsdl);
-
         return $thisClient;
     }
     public static function ConstructWithAccountId($wsdl, $username, $password, $token, $accountId, $authenticationToken)
     {
-        $thisClient = new self($wsdl);
+        $thisClient = new ClientProxy($wsdl);
         $thisClient->authenticationToken = $authenticationToken;
         $thisClient->username = $username;
         $thisClient->password = $password;
         $thisClient->developerToken = $token;
         $thisClient->accountId = $accountId;
         $thisClient->service = $thisClient->GetProxy($wsdl);
-
         return $thisClient;
     }
     public static function ConstructWithAccountAndCustomerId($wsdl, $username, $password, $token, $accountId, $customerId, $authenticationToken)
     {
-        $thisClient = new self($wsdl);
+        $thisClient = new ClientProxy($wsdl);
         $thisClient->authenticationToken = $authenticationToken;
         $thisClient->username = $username;
         $thisClient->password = $password;
@@ -65,7 +63,6 @@ class ClientProxy
         $thisClient->accountId = $accountId;
         $thisClient->customerId = $customerId;
         $thisClient->service = $thisClient->GetProxy($wsdl);
-
         return $thisClient;
     }
     public function GetAccountId()
@@ -101,7 +98,6 @@ class ClientProxy
         foreach ($attrs as $attr) {
             $namespace = $attr->value;
         }
-
         return $namespace;
     }
     private function GetProxy($wsdl)
@@ -119,10 +115,9 @@ class ClientProxy
         // By default, PHP does not return single item arrays as an array type.
         // To force PHP to always return an array for an array type in the
         // response, specify the SOAP_SINGLE_ELEMENT_ARRAYS feature.
-        $options = array('trace' => true, 'exceptions' => true, 'features' => SOAP_SINGLE_ELEMENT_ARRAYS, 'typemap' => array(array('type_ns' => 'http://www.w3.org/2001/XMLSchema', 'type_name' => 'xs:long', 'to_xml' => 'to_long_xml', 'from_xml' => 'from_long_xml')));
+        $options = array('trace' => TRUE, 'exceptions' => TRUE, 'features' => SOAP_SINGLE_ELEMENT_ARRAYS, 'typemap' => array(array('type_ns' => 'http://www.w3.org/2001/XMLSchema', 'type_name' => 'xs:long', 'to_xml' => 'to_long_xml', 'from_xml' => 'from_long_xml')));
         $proxy = @new SOAPClient($this->wsdlUrl, $options);
         $proxy->__setSoapHeaders($headers);
-
         return $proxy;
     }
 }

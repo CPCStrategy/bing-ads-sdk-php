@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines an ad group.
  *
- * @link http://msdn.microsoft.com/en-us/library/bb671956(v=msads.90).aspx AdGroup Data Object
+ * @link http://msdn.microsoft.com/en-us/library/bb671956(v=msads.100).aspx AdGroup Data Object
  * 
  * @uses AdDistribution
  * @uses AdRotation
@@ -15,7 +15,9 @@ namespace BingAds\CampaignManagement;
  * @uses KeyValuePairOfstringstring
  * @uses Network
  * @uses PricingModel
+ * @uses Setting
  * @uses AdGroupStatus
+ * @uses CustomParameters
  * @used-by AddAdGroupsRequest
  * @used-by GetAdGroupsByCampaignIdResponse
  * @used-by GetAdGroupsByIdsResponse
@@ -42,12 +44,6 @@ final class AdGroup
      */
     public $BiddingModel;
     /**
-     * The bid to use when the user's query and the ad group's keywords match by using a broad match comparison.
-     *
-     * @var Bid
-     */
-    public $BroadMatchBid;
-    /**
      * The bid to use when the keywords that the service extracts from the content page and the ad group's keywords match by using an exact match comparison.
      *
      * @var Bid
@@ -59,12 +55,6 @@ final class AdGroup
      * @var Date
      */
     public $EndDate;
-    /**
-     * The bid to use when the user's query and the ad group's keywords match by using an exact match comparison.
-     *
-     * @var Bid
-     */
-    public $ExactMatchBid;
     /**
      * The list of key and value strings for forward compatibility.
      *
@@ -102,17 +92,23 @@ final class AdGroup
      */
     public $Network;
     /**
-     * The bid value to use when the user's query and the ad group's keywords match by using a phrase match.
-     *
-     * @var Bid
-     */
-    public $PhraseMatchBid;
-    /**
      * You can specify a pricing model based on cost per click (CPC) or cost per 1000 impressions (CPM).
      *
      * @var PricingModel
      */
     public $PricingModel;
+    /**
+     * The default bid to use when the user's query and the ad group's keywords match by using either a broad, exact, or phrase match comparison.
+     *
+     * @var Bid
+     */
+    public $SearchBid;
+    /**
+     * Reserved for future use.
+     *
+     * @var Setting[]
+     */
+    public $Settings;
     /**
      * The date that the ads in the ad group can begin serving; otherwise, the service can begin serving the ads in the ad group the day that the ad group becomes active.
      *
@@ -125,4 +121,16 @@ final class AdGroup
      * @var AdGroupStatus
      */
     public $Status;
+    /**
+     * The tracking template to use as a default for all URLs in your ad group.
+     *
+     * @var string
+     */
+    public $TrackingUrlTemplate;
+    /**
+     * Your custom collection of key and value parameters for URL tracking.
+     *
+     * @var CustomParameters
+     */
+    public $UrlCustomParameters;
 }

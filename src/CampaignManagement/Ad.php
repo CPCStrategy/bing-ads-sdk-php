@@ -5,12 +5,14 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the base object of an ad.
  *
- * @link http://msdn.microsoft.com/en-us/library/bb671952(v=msads.90).aspx Ad Data Object
+ * @link http://msdn.microsoft.com/en-us/library/bb671952(v=msads.100).aspx Ad Data Object
  * 
  * @uses AdEditorialStatus
+ * @uses AppUrl
  * @uses KeyValuePairOfstringstring
  * @uses AdStatus
  * @uses AdType
+ * @uses CustomParameters
  * @used-by AddAdsRequest
  * @used-by GetAdsByAdGroupIdResponse
  * @used-by GetAdsByEditorialStatusResponse
@@ -32,6 +34,24 @@ class Ad
      */
     public $EditorialStatus;
     /**
+     * Reserved for future use.
+     *
+     * @var AppUrl[]
+     */
+    public $FinalAppUrls;
+    /**
+     * The mobile landing page URL.
+     *
+     * @var string[]
+     */
+    public $FinalMobileUrls;
+    /**
+     * The landing page URL.
+     *
+     * @var string[]
+     */
+    public $FinalUrls;
+    /**
      * The list of key and value strings for forward compatibility.
      *
      * @var KeyValuePairOfstringstring[]
@@ -50,9 +70,21 @@ class Ad
      */
     public $Status;
     /**
+     * The tracking template to use as a default for all FinalUrls and FinalMobileUrls.
+     *
+     * @var string
+     */
+    public $TrackingUrlTemplate;
+    /**
      * The type of the ad.
      *
      * @var AdType
      */
     public $Type;
+    /**
+     * Your custom collection of key and value parameters for URL tracking.
+     *
+     * @var CustomParameters
+     */
+    public $UrlCustomParameters;
 }

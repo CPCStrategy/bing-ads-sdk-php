@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines a specific country or region target with bid adjustment.
  *
- * @link http://msdn.microsoft.com/en-us/library/bb671882(v=msads.90).aspx CountryTargetBid Data Object
+ * @link http://msdn.microsoft.com/en-us/library/bb671882(v=msads.100).aspx CountryTargetBid Data Object
  * 
  * @used-by CountryTarget
  */

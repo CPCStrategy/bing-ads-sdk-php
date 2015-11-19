@@ -5,7 +5,7 @@ namespace BingAds\Bulk;
 /**
  * Defines the date range values for the requested performance data in a bulk download.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn249977(v=msads.90).aspx ReportTimePeriod Value Set
+ * @link http://msdn.microsoft.com/en-us/library/dn249977(v=msads.100).aspx ReportTimePeriod Value Set
  * 
  * @used-by PerformanceStatsDateRange
  */

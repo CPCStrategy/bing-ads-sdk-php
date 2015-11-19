@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the size and type of media that the publisher website supports for ad placements.
  *
- * @link http://msdn.microsoft.com/en-us/library/dd796936(v=msads.90).aspx PlacementDetail Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dd796936(v=msads.100).aspx PlacementDetail Data Object
  * 
  * @uses ImpressionsPerDayRange
  * @uses MediaType

@@ -5,7 +5,10 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines an app ad extension that can be included in a text ad.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn817898(v=msads.90).aspx AppAdExtension Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn817898(v=msads.100).aspx AppAdExtension Data Object
+ * 
+ * @uses AppUrl
+ * @uses CustomParameters
  */
 final class AppAdExtension extends AdExtension
 {
@@ -39,4 +42,34 @@ final class AppAdExtension extends AdExtension
      * @var string
      */
     public $DisplayText;
+    /**
+     * Reserved for future use.
+     *
+     * @var AppUrl[]
+     */
+    public $FinalAppUrls;
+    /**
+     * Reserved for future use.
+     *
+     * @var string[]
+     */
+    public $FinalMobileUrls;
+    /**
+     * Reserved for future use.
+     *
+     * @var string[]
+     */
+    public $FinalUrls;
+    /**
+     * Reserved for future use.
+     *
+     * @var string
+     */
+    public $TrackingUrlTemplate;
+    /**
+     * Reserved for future use.
+     *
+     * @var CustomParameters
+     */
+    public $UrlCustomParameters;
 }

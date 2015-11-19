@@ -3,9 +3,9 @@
 namespace BingAds\Bulk;
 
 /**
- * This operation is deprecated, and you should use GetDetailedBulkUploadStatus instead.
+ * Gets the status and completion progress of a bulk upload request.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn249979(v=msads.90).aspx GetBulkUploadStatus Request Object
+ * @link http://msdn.microsoft.com/en-us/library/dn249979(v=msads.100).aspx GetBulkUploadStatus Request Object
  * 
  * @used-by BingAdsBulkService::GetBulkUploadStatus
  */

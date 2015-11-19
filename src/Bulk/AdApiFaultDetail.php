@@ -5,7 +5,7 @@ namespace BingAds\Bulk;
 /**
  * Defines a fault object that operations return when generic errors occur, such as an authentication error.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn169095(v=msads.90).aspx AdApiFaultDetail Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn169095(v=msads.100).aspx AdApiFaultDetail Data Object
  * 
  * @uses AdApiError
  */

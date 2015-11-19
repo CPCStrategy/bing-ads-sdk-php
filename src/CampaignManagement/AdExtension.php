@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the base object of an ad extension.
  *
- * @link http://msdn.microsoft.com/en-us/library/hh527708(v=msads.90).aspx AdExtension Data Object
+ * @link http://msdn.microsoft.com/en-us/library/hh527708(v=msads.100).aspx AdExtension Data Object
  * 
  * @uses KeyValuePairOfstringstring
  * @uses AdExtensionStatus

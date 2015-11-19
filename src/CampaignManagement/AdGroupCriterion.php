@@ -5,13 +5,12 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the base class of an ad group criterion.
  *
- * @link http://msdn.microsoft.com/en-us/library/jj738614(v=msads.90).aspx AdGroupCriterion Data Object
+ * @link http://msdn.microsoft.com/en-us/library/jj738614(v=msads.100).aspx AdGroupCriterion Data Object
  * 
  * @uses Criterion
  * @uses AdGroupCriterionStatus
  * @used-by AdGroupCriterionAction
  * @used-by AddAdGroupCriterionsRequest
- * @used-by GetAdGroupCriterionsByAdGroupIdResponse
  * @used-by GetAdGroupCriterionsByIdsResponse
  * @used-by UpdateAdGroupCriterionsRequest
  */

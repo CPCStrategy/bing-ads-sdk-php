@@ -5,7 +5,7 @@ namespace BingAds\Bulk;
 /**
  * Defines an error object that identifies the item within the batch of items in the request message that caused the operation to fail, and describes the reason for the failure.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn169096(v=msads.90).aspx BatchError Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn169096(v=msads.100).aspx BatchError Data Object
  * 
  * @uses KeyValuePairOfstringstring
  * @used-by ApiFaultDetail
@@ -30,6 +30,12 @@ class BatchError
      * @var string
      */
     public $ErrorCode;
+    /**
+     * Reserved for future use.
+     *
+     * @var string
+     */
+    public $FieldPath;
     /**
      * The list of key and value strings for forward compatibility.
      *

@@ -5,8 +5,9 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines a specific geographical radius target with bid adjustment.
  *
- * @link http://msdn.microsoft.com/en-us/library/dd796863(v=msads.90).aspx RadiusTargetBid Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dd796863(v=msads.100).aspx RadiusTargetBid Data Object
  * 
+ * @uses DistanceUnit
  * @used-by RadiusTarget
  */
 final class RadiusTargetBid
@@ -48,9 +49,15 @@ final class RadiusTargetBid
      */
     public $Name;
     /**
-     * The radius, in miles, that specifies the area surrounding the geographical location to target.
+     * The radius that specifies the area surrounding the geographical location to target.
      *
-     * @var int
+     * @var float
      */
     public $Radius;
+    /**
+     * The unit of measurement for the specified radius, for example kilometers or miles.
+     *
+     * @var DistanceUnit
+     */
+    public $RadiusUnit;
 }

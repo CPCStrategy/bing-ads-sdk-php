@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines information about a target in your library.
  *
- * @link http://msdn.microsoft.com/en-us/library/dd796878(v=msads.90).aspx TargetInfo Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dd796878(v=msads.100).aspx TargetInfo Data Object
  * 
  * @used-by GetTargetsInfoFromLibraryResponse
  */

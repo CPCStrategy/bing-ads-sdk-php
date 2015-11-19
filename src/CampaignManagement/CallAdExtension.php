@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines an object that specifies a click-to-call phone number to include in a text ad.
  *
- * @link http://msdn.microsoft.com/en-us/library/jj721598(v=msads.90).aspx CallAdExtension Data Object
+ * @link http://msdn.microsoft.com/en-us/library/jj721598(v=msads.100).aspx CallAdExtension Data Object
  */
 final class CallAdExtension extends AdExtension
 {

@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the base class of a shared list item.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn743738(v=msads.90).aspx SharedListItem Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn743738(v=msads.100).aspx SharedListItem Data Object
  * 
  * @uses KeyValuePairOfstringstring
  * @used-by AddListItemsToSharedListRequest

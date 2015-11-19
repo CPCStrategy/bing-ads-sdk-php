@@ -5,7 +5,7 @@ namespace BingAds\Bulk;
 /**
  * Defines the entities that may be downloaded in bulk.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn249982(v=msads.90).aspx BulkDownloadEntity Value Set
+ * @link http://msdn.microsoft.com/en-us/library/dn249982(v=msads.100).aspx BulkDownloadEntity Value Set
  * 
  * @used-by DownloadCampaignsByAccountIdsRequest
  * @used-by DownloadCampaignsByCampaignIdsRequest
@@ -34,14 +34,10 @@ final class BulkDownloadEntity
     const AdGroupNegativeSites = 'AdGroupNegativeSites';
     /** Include a record in the download that represents the association relationship between a campaign and a sitelink ad extension. */
     const CampaignSiteLinksAdExtensions = 'CampaignSiteLinksAdExtensions';
-    /** Include a record in the download that represents the association relationship between a campaign and a product ad extension. */
-    const CampaignProductAdExtensions = 'CampaignProductAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and a location ad extension. */
     const CampaignLocationAdExtensions = 'CampaignLocationAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and a call ad extension. */
     const CampaignCallAdExtensions = 'CampaignCallAdExtensions';
-    /** Include an ad group's product targets in the download data. */
-    const AdGroupProductTargets = 'AdGroupProductTargets';
     /** Include a record in the download that represents the association relationship between an ad group and a sitelink ad extension. */
     const AdGroupSiteLinksAdExtensions = 'AdGroupSiteLinksAdExtensions';
     /** Include location ad extension library items in the download data. */
@@ -50,8 +46,6 @@ final class BulkDownloadEntity
     const CallAdExtensions = 'CallAdExtensions';
     /** Include site links ad extension library items in the download data. */
     const SiteLinksAdExtensions = 'SiteLinksAdExtensions';
-    /** Include product ad extension library items in the download data. */
-    const ProductAdExtensions = 'ProductAdExtensions';
     /** Include negative keyword list library items in the download data. */
     const NegativeKeywordLists = 'NegativeKeywordLists';
     /** Include the negative keywords of a negative keyword list in the download data. */

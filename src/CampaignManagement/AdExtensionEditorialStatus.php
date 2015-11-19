@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the editorial review status values of an ad extension.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn249989(v=msads.90).aspx AdExtensionEditorialStatus Value Set
+ * @link http://msdn.microsoft.com/en-us/library/dn249989(v=msads.100).aspx AdExtensionEditorialStatus Value Set
  * 
  * @used-by AdExtensionAssociation
  */

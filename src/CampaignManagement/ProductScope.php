@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines a campaign level product scope with list of conditions that help determine whether a product from the Bing Merchant Center store gets served as a product ad.
  *
- * @link http://msdn.microsoft.com/en-us/library/dn913124(v=msads.90).aspx ProductScope Data Object
+ * @link http://msdn.microsoft.com/en-us/library/dn913124(v=msads.100).aspx ProductScope Data Object
  * 
  * @uses ProductCondition
  */

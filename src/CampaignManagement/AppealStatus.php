@@ -5,7 +5,7 @@ namespace BingAds\CampaignManagement;
 /**
  * Defines the values that you use to determine whether an editorial rejection is appealable.
  *
- * @link http://msdn.microsoft.com/en-us/library/jj631643(v=msads.90).aspx AppealStatus Value Set
+ * @link http://msdn.microsoft.com/en-us/library/jj631643(v=msads.100).aspx AppealStatus Value Set
  * 
  * @used-by EditorialReasonCollection
  */
