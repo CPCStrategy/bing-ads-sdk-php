@@ -1,41 +1,29 @@
 <?php
 
-// Copyright 2015 Microsoft Corporation
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//    http://www.apache.org/licenses/LICENSE-2.0
-
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-// Include the Bing Ads namespaced class file available
+// Include the BingAds\v10 namespaced class file available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
 include '../vendor/autoload.php';
 
 // Specify the BingAds\CampaignManagement objects that will be used.
-use BingAds\CampaignManagement\AddCampaignsRequest;
-use BingAds\CampaignManagement\DeleteCampaignsRequest;
-use BingAds\CampaignManagement\AddAdGroupsRequest;
-use BingAds\CampaignManagement\AddKeywordsRequest;
-use BingAds\CampaignManagement\AddAdsRequest;
-use BingAds\CampaignManagement\Campaign;
-use BingAds\CampaignManagement\AdGroup;
-use BingAds\CampaignManagement\Keyword;
-use BingAds\CampaignManagement\Ad;
-use BingAds\CampaignManagement\TextAd;
-use BingAds\CampaignManagement\Bid;
-use BingAds\CampaignManagement\MatchType;
-use BingAds\CampaignManagement\BudgetLimitType;
-use BingAds\CampaignManagement\AdDistribution;
-use BingAds\CampaignManagement\BiddingModel;
-use BingAds\CampaignManagement\PricingModel;
-use BingAds\CampaignManagement\Date;
+use BingAds\v10\CampaignManagement\AddCampaignsRequest;
+use BingAds\v10\CampaignManagement\DeleteCampaignsRequest;
+use BingAds\v10\CampaignManagement\AddAdGroupsRequest;
+use BingAds\v10\CampaignManagement\AddKeywordsRequest;
+use BingAds\v10\CampaignManagement\AddAdsRequest;
+use BingAds\v10\CampaignManagement\Campaign;
+use BingAds\v10\CampaignManagement\AdGroup;
+use BingAds\v10\CampaignManagement\Keyword;
+use BingAds\v10\CampaignManagement\Ad;
+use BingAds\v10\CampaignManagement\TextAd;
+use BingAds\v10\CampaignManagement\Bid;
+use BingAds\v10\CampaignManagement\MatchType;
+use BingAds\v10\CampaignManagement\BudgetLimitType;
+use BingAds\v10\CampaignManagement\AdDistribution;
+use BingAds\v10\CampaignManagement\BiddingModel;
+use BingAds\v10\CampaignManagement\PricingModel;
+use BingAds\v10\CampaignManagement\Date;
+use BingAds\v10\CampaignManagement\CustomParameters;
+use BingAds\v10\CampaignManagement\CustomParameter;
 
 // Specify the BingAds\Proxy objects that will be used.
 use BingAds\Proxy\ClientProxy;
@@ -55,7 +43,7 @@ $AccountId = <AccountIdGoesHere>;
 
 // Campaign Management WSDL
 
-$wsdl = "https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V9/CampaignManagementService.svc?singleWsdl";
+$wsdl = "https://campaign.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/CampaignManagementService.svc?singleWsdl";
 
 try
 {
@@ -72,6 +60,10 @@ try
     $campaign->MonthlyBudget = 1000.00;
     $campaign->TimeZone = "PacificTimeUSCanadaTijuana";
     $campaign->DaylightSaving = true;
+
+    // Used with FinalUrls shown in the ads that we will add below.
+    $campaign->TrackingUrlTemplate =
+       "http://tracker.example.com/?season={_season}&promocode={_promocode}&u={lpurl}";
 
     $campaigns[] = $campaign;
 
@@ -91,11 +83,15 @@ try
     $adGroup->PricingModel = PricingModel::Cpc;
     $adGroup->StartDate = null;
     $adGroup->EndDate = $endDate;
-    $adGroup->ExactMatchBid = new Bid();
-    $adGroup->ExactMatchBid->Amount = 0.09;
-    $adGroup->PhraseMatchBid = new Bid();
-    $adGroup->PhraseMatchBid->Amount = 0.07;
+    $adGroup->SearchBid = new Bid();
+    $adGroup->SearchBid->Amount = 0.07;
     $adGroup->Language = "English";
+
+    // You could use a tracking template which would override the campaign level
+    // tracking template. Tracking templates defined for lower level entities
+    // override those set for higher level entities.
+    // In this example we are using the campaign level tracking template.
+    $adGroup->TrackingUrlTemplate = null;
 
     $adGroups[] = $adGroup;
 
@@ -130,34 +126,67 @@ try
     $keyword->Text = "Brand-A Gloves";
     $keywords[] = $keyword;
 
+    // In this example only the first 3 ads should succeed.
+    // The Title of the fourth ad is empty and not valid,
+    // and the fifth ad is a duplicate of the second ad.
 
-    // In this example only the second ad should succeed. The Title of the first ad is empty and not valid,
-    // and the third ad is a duplicate of the second ad.
+    $ads = array();
 
-    $textAd = new TextAd();
-    $textAd->DestinationUrl = "http://www.alpineskihouse.com/winterglovesale";
-    $textAd->DisplayUrl = "AlipineSkiHouse.com";
-    $textAd->Text = "Huge Savings on heated gloves.";
-    $textAd->Title = "";
-    $encodedTextAd = new SoapVar($textAd, SOAP_ENC_OBJECT, 'TextAd', $proxy->GetNamespace());
-    $ads[] = $encodedTextAd;
+    for ($i = 0; $i < 5; $i++)
+    {
+        $textAd = new TextAd();
+        $textAd->Text = "Huge Savings on women's shoes.";
+        $textAd->DisplayUrl = "Contoso.com";
 
-    $textAd = new TextAd();
-    $textAd->DestinationUrl = "http://www.alpineskihouse.com/winterglovesale";
-    $textAd->DisplayUrl = "AlipineSkiHouse.com";
-    $textAd->Text = "Huge Savings on heated gloves.";
-    $textAd->Title = "Winter Glove Sale";
-    $encodedTextAd = new SoapVar($textAd, SOAP_ENC_OBJECT, 'TextAd', $proxy->GetNamespace());
-    $ads[] = $encodedTextAd;
+        // Destination URLs are deprecated and will be sunset in March 2016.
+        // If you are currently using the Destination URL, you must upgrade to Final URLs.
+        // Here is an example of a DestinationUrl you might have used previously.
+        // $textAd->DestinationUrl = "http://www.contoso.com/womenshoesale/?season=spring&promocode=PROMO123";
 
-    $textAd = new TextAd();
-    $textAd->DestinationUrl = "http://www.alpineskihouse.com/winterglovesale";
-    $textAd->DisplayUrl = "AlipineSkiHouse.com";
-    $textAd->Text = "Huge Savings on heated gloves.";
-    $textAd->Title = "Winter Glove Sale";
-    $encodedTextAd = new SoapVar($textAd, SOAP_ENC_OBJECT, 'TextAd', $proxy->GetNamespace());
-    $ads[] = $encodedTextAd;
+        // To migrate from DestinationUrl to FinalUrls for existing ads, you can set DestinationUrl
+        // to an empty string when updating the ad. If you are removing DestinationUrl,
+        // then FinalUrls is required.
+        // $textAd->DestinationUrl = "";
 
+        // With FinalUrls you can separate the tracking template, custom parameters, and
+        // landing page URLs.
+
+        $textAd->FinalUrls = array();
+        $textAd->FinalUrls[] = "http://www.contoso.com/womenshoesale";
+
+        // Final Mobile URLs can also be used if you want to direct the user to a different page
+        // for mobile devices.
+        $textAd->FinalMobileUrls = array();
+        $textAd->FinalMobileUrls[] = "http://mobile.contoso.com/womenshoesale";
+
+        // You could use a tracking template which would override the campaign level
+        // tracking template. Tracking templates defined for lower level entities
+        // override those set for higher level entities.
+        // In this example we are using the campaign level tracking template.
+        $textAd->TrackingUrlTemplate = null;
+
+        // Set custom parameters that are specific to this ad,
+        // and can be used by the ad, ad group, campaign, or account level tracking template.
+        // In this example we are using the campaign level tracking template.
+        $textAd->UrlCustomParameters = new CustomParameters();
+        $textAd->UrlCustomParameters->Parameters = array();
+        $customParameter1 = new CustomParameter();
+        $customParameter1->Key = "promoCode";
+        $customParameter1->Value = "PROMO" . ($i+1);
+        $textAd->UrlCustomParameters->Parameters[] = $customParameter1;
+        $customParameter2 = new CustomParameter();
+        $customParameter2->Key = "season";
+        $customParameter2->Value = "summer";
+        $textAd->UrlCustomParameters->Parameters[] = $customParameter2;
+
+        $ads[] = new SoapVar($textAd, SOAP_ENC_OBJECT, 'TextAd', $proxy->GetNamespace());
+    }
+
+    $ads[0]->enc_value->Title = "Women's Shoe Sale";
+    $ads[1]->enc_value->Title = "Women's Super Shoe Sale";
+    $ads[2]->enc_value->Title = "Women's Red Shoe Sale";
+    $ads[3]->enc_value->Title = "";
+    $ads[4]->enc_value->Title = "Women's Super Shoe Sale";
 
     // Add the campaign, ad group, keywords, and ads
 
@@ -491,10 +520,6 @@ function PrintAdResults($ads, $adIds, $partialErrors)
         {
             $attributeValues[] = "Title:" . $ads[$index]->enc_value->Title;
         }
-        else if($ads[$index]->enc_stype === "MobileAd")
-        {
-            $attributeValues[] = "Title:" . $ads[$index]->enc_value->Title;
-        }
         else if($ads[$index]->enc_stype === "ProductAd")
         {
             $attributeValues[] = "PromotionalText:" . $ads[$index]->enc_value->PromotionalText;
@@ -513,6 +538,29 @@ function PrintAdResults($ads, $adIds, $partialErrors)
                 $index,
                 $attributeValues[$index],
                 $adIds[$index] );
+
+            print "DestinationUrl: " . $ads[$index]->enc_value->DestinationUrl . "\n";
+            print("FinalMobileUrls: \n");
+            foreach ($ads[$index]->enc_value->FinalMobileUrls as $finalMobileUrl)
+            {
+                print("\t" . $finalMobileUrl . "\n");
+            }
+            print("FinalUrls: \n");
+            foreach ($ads[$index]->enc_value->FinalUrls as $finalUrl)
+            {
+                print("\t" . $finalUrl . "\n");
+            }
+            print("TrackingUrlTemplate: " . $ads[$index]->enc_value->TrackingUrlTemplate . "\n");
+            print("UrlCustomParameters: \n");
+            if ($ads[$index]->enc_value->UrlCustomParameters != null && $ads[$index]->enc_value->UrlCustomParameters->Parameters != null)
+            {
+                foreach ($ads[$index]->enc_value->UrlCustomParameters->Parameters as $customParameter)
+                {
+                    print("\tKey: " . $customParameter->Key . "\n");
+                    print("\tValue: " . $customParameter->Value . "\n");
+                }
+            }
+            print "\n";
         }
     }
 

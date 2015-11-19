@@ -1,50 +1,38 @@
 <?php
 
-// Copyright 2015 Microsoft Corporation
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//    http://www.apache.org/licenses/LICENSE-2.0
-
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-// Include the Bing Ads namespaced class files available
+// Include the BingAds\v10 namespaced class files available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
 include '../vendor/autoload.php';
 
 // Specify the BingAds\CampaignManagement objects that will be used.
-use BingAds\CampaignManagement\AddCampaignsRequest;
-use BingAds\CampaignManagement\Campaign;
-use BingAds\CampaignManagement\BudgetLimitType;
-use BingAds\CampaignManagement\AddAdExtensionsRequest;
-use BingAds\CampaignManagement\AdExtension;
-use BingAds\CampaignManagement\AppAdExtension;
-use BingAds\CampaignManagement\CallAdExtension;
-use BingAds\CampaignManagement\LocationAdExtension;
-use BingAds\CampaignManagement\SiteLinksAdExtension;
-use BingAds\CampaignManagement\AdExtensionAssociation;
-use BingAds\CampaignManagement\AdExtensionAssociationCollection;
-use BingAds\CampaignManagement\AdExtensionEditorialReason;
-use BingAds\CampaignManagement\AdExtensionEditorialReasonCollection;
-use BingAds\CampaignManagement\AdExtensionEditorialStatus;
-use BingAds\CampaignManagement\AdExtensionIdentity;
-use BingAds\CampaignManagement\AdExtensionIdToEntityIdAssociation;
-use BingAds\CampaignManagement\AdExtensionStatus;
-use BingAds\CampaignManagement\AdExtensionsTypeFilter;
-use BingAds\CampaignManagement\DeleteAdExtensionsRequest;
-use BingAds\CampaignManagement\DeleteAdExtensionsAssociationsRequest;
-use BingAds\CampaignManagement\GetAdExtensionsByIdsRequest;
-use BingAds\CampaignManagement\GetAdExtensionsEditorialReasonsRequest;
-use BingAds\CampaignManagement\SetAdExtensionsAssociationsRequest;
-use BingAds\CampaignManagement\Address;
-use BingAds\CampaignManagement\SiteLink;
-use BingAds\CampaignManagement\AssociationType;
+use BingAds\v10\CampaignManagement\AddCampaignsRequest;
+use BingAds\v10\CampaignManagement\Campaign;
+use BingAds\v10\CampaignManagement\BudgetLimitType;
+use BingAds\v10\CampaignManagement\AddAdExtensionsRequest;
+use BingAds\v10\CampaignManagement\AdExtension;
+use BingAds\v10\CampaignManagement\AppAdExtension;
+use BingAds\v10\CampaignManagement\CallAdExtension;
+use BingAds\v10\CampaignManagement\LocationAdExtension;
+use BingAds\v10\CampaignManagement\SiteLinksAdExtension;
+use BingAds\v10\CampaignManagement\AdExtensionAssociation;
+use BingAds\v10\CampaignManagement\AdExtensionAssociationCollection;
+use BingAds\v10\CampaignManagement\AdExtensionEditorialReason;
+use BingAds\v10\CampaignManagement\AdExtensionEditorialReasonCollection;
+use BingAds\v10\CampaignManagement\AdExtensionEditorialStatus;
+use BingAds\v10\CampaignManagement\AdExtensionIdentity;
+use BingAds\v10\CampaignManagement\AdExtensionIdToEntityIdAssociation;
+use BingAds\v10\CampaignManagement\AdExtensionStatus;
+use BingAds\v10\CampaignManagement\AdExtensionsTypeFilter;
+use BingAds\v10\CampaignManagement\DeleteAdExtensionsRequest;
+use BingAds\v10\CampaignManagement\DeleteAdExtensionsAssociationsRequest;
+use BingAds\v10\CampaignManagement\GetAdExtensionsByIdsRequest;
+use BingAds\v10\CampaignManagement\GetAdExtensionsEditorialReasonsRequest;
+use BingAds\v10\CampaignManagement\SetAdExtensionsAssociationsRequest;
+use BingAds\v10\CampaignManagement\Address;
+use BingAds\v10\CampaignManagement\SiteLink;
+use BingAds\v10\CampaignManagement\AssociationType;
+use BingAds\v10\CampaignManagement\CustomParameters;
+use BingAds\v10\CampaignManagement\CustomParameter;
 
 
 // Specify the BingAds\Proxy objects that will be used.
@@ -63,9 +51,10 @@ $DeveloperToken = "<DeveloperTokenGoesHere>";
 $CustomerId = <CustomerIdGoesHere>;
 $AccountId = <AccountIdGoesHere>;
 
+
 // Campaign Management WSDL
 
-$wsdl = "https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V9/CampaignManagementService.svc?singleWsdl";
+$wsdl = "https://campaign.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/CampaignManagementService.svc?singleWsdl";
 
 $ids = null;
 
@@ -86,6 +75,10 @@ try
     $campaign->TimeZone = "PacificTimeUSCanadaTijuana";
     $campaign->DaylightSaving = true;
 
+    // Used with FinalUrls shown in the sitelinks that we will add below.
+    $campaign->TrackingUrlTemplate =
+        "http://tracker.example.com/?season={_season}&promocode={_promocode}&u={lpurl}";
+
     $campaigns[] = $campaign;
 
     $campaignIds = AddCampaigns($proxy, $AccountId, $campaigns);
@@ -101,7 +94,6 @@ try
     $extension->AppStoreId="AppStoreIdGoesHere";
     $extension->DisplayText= "Contoso";
     $extension->DestinationUrl="DestinationUrlGoesHere";
-
 
     $encodedExtension = new SoapVar($extension, SOAP_ENC_OBJECT, 'AppAdExtension', $proxy->GetNamespace());
     $adExtensions[] = $encodedExtension;
@@ -121,13 +113,13 @@ try
     $extension = new LocationAdExtension();
     $extension->PhoneNumber = "206-555-0100";
     $extension->CompanyName = "Alpine Ski House";
-    $extension->IconMediaId = null;  // Used default map icon
+    $extension->IconMediaId = null;  // Using the default map icon
     $extension->ImageMediaId = null;
     $extension->Address = new Address;
     $extension->Address->StreetAddress = "1234 Washington Place";
     $extension->Address->StreetAddress2 = "Suite 1210";
     $extension->Address->CityName = "Woodinville";
-    $extension->Address->ProvinceName = "WA"; // Can contain the state name or code (i.e. WA)
+    $extension->Address->ProvinceName = "WA"; // Can contain the state name or code (e.g. WA)
     $extension->Address->CountryCode = "US";
     $extension->Address->PostalCode = "98608";
 
@@ -139,9 +131,52 @@ try
     $extension = new SiteLinksAdExtension();
     $extension->SiteLinks = array();
 
-    $extension->SiteLinks[0] = new SiteLink();
-    $extension->SiteLinks[0]->DestinationUrl = "AplineSkiHouse.com/WinterGloveSale";
-    $extension->SiteLinks[0]->DisplayText = "Winter Glove Sale";
+    for ($i = 0; $i < 2; $i++)
+    {
+        $extension->SiteLinks[$i] = new SiteLink();
+        $extension->SiteLinks[$i]->DisplayText = "Women's Shoe Sale " . ($i+1);
+
+        // Destination URLs are deprecated and will be sunset in March 2016.
+        // If you are currently using the Destination URL, you must upgrade to Final URLs.
+        // Here is an example of a DestinationUrl you might have used previously.
+        // $extension->SiteLinks[$i]->DestinationUrl = "http://www.contoso.com/womenshoesale/?season=spring&promocode=PROMO123";
+
+        // To migrate from DestinationUrl to FinalUrls for existing sitelinks, you can set DestinationUrl
+        // to an empty string when updating the sitelink. If you are removing DestinationUrl,
+        // then FinalUrls is required.
+        // $extension->SiteLinks[$i]->DestinationUrl = "";
+
+        // With FinalUrls you can separate the tracking template, custom parameters, and
+        // landing page URLs.
+
+        $extension->SiteLinks[$i]->FinalUrls = array();
+        $extension->SiteLinks[$i]->FinalUrls[] = "http://www.contoso.com/womenshoesale";
+
+        // Final Mobile URLs can also be used if you want to direct the user to a different page
+        // for mobile devices.
+        $extension->SiteLinks[$i]->FinalMobileUrls = array();
+        $extension->SiteLinks[$i]->FinalMobileUrls[] = "http://mobile.contoso.com/womenshoesale";
+
+        // You could use a tracking template which would override the campaign level
+        // tracking template. Tracking templates defined for lower level entities
+        // override those set for higher level entities.
+        // In this example we are using the campaign level tracking template.
+        $extension->SiteLinks[$i]->TrackingUrlTemplate = null;
+
+        // Set custom parameters that are specific to this sitelink,
+        // and can be used by the sitelink, ad group, campaign, or account level tracking template.
+        // In this example we are using the campaign level tracking template.
+        $extension->SiteLinks[$i]->UrlCustomParameters = new CustomParameters();
+        $extension->SiteLinks[$i]->UrlCustomParameters->Parameters = array();
+        $customParameter1 = new CustomParameter();
+        $customParameter1->Key = "promoCode";
+        $customParameter1->Value = "PROMO" . ($i+1);
+        $extension->SiteLinks[$i]->UrlCustomParameters->Parameters[] = $customParameter1;
+        $customParameter2 = new CustomParameter();
+        $customParameter2->Key = "season";
+        $customParameter2->Value = "summer";
+        $extension->SiteLinks[$i]->UrlCustomParameters->Parameters[] = $customParameter2;
+    }
 
     $encodedExtension = new SoapVar($extension, SOAP_ENC_OBJECT, 'SiteLinksAdExtension', $proxy->GetNamespace());
     $adExtensions[] = $encodedExtension;
@@ -263,8 +298,28 @@ try
     		{
     			foreach ($extension->SiteLinks->SiteLink as $siteLink)
     			{
-    				print("Display URL: " . $siteLink->DisplayText . "\n");
-    				print("Destination URL: " . $siteLink->DestinationUrl . "\n");
+    				print("DisplayText: " . $siteLink->DisplayText . "\n");
+    				print("DestinationUrl: " . $siteLink->DestinationUrl . "\n");
+                                print("FinalMobileUrls: \n");
+                                foreach ($siteLink->FinalMobileUrls->string as $finalMobileUrl)
+    			        {
+                                	print("\t" . $finalMobileUrl . "\n");
+                                }
+                                print("FinalUrls: \n");
+                                foreach ($siteLink->FinalUrls->string as $finalUrl)
+    			        {
+                                	print("\t" . $finalUrl . "\n");
+                                }
+                                print("TrackingUrlTemplate: " . $siteLink->TrackingUrlTemplate . "\n");
+                                print("UrlCustomParameters: \n");
+                                if ($siteLink->UrlCustomParameters != null && $siteLink->UrlCustomParameters->Parameters != null)
+                                {
+                                	foreach ($siteLink->UrlCustomParameters->Parameters->CustomParameter as $customParameter)
+    			        	{
+                                		print("\tKey: " . $customParameter->Key . "\n");
+                                        	print("\tValue: " . $customParameter->Value . "\n");
+                                	}
+                                }
     				print("\n");
     			}
     		}

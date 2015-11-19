@@ -1,50 +1,36 @@
 <?php
 
-// Copyright 2015 Microsoft Corporation
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//    http://www.apache.org/licenses/LICENSE-2.0
-
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-// Include the Bing Ads namespaced class file available
+// Include the BingAds\v10 namespaced class file available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
-include '../vendor/autoload.php'; 
+include '../vendor/autoload.php';
 
 // Specify the BingAds\CampaignManagement objects that will be used.
-use BingAds\CampaignManagement\AddNegativeKeywordsToEntitiesRequest;
-use BingAds\CampaignManagement\DeleteNegativeKeywordsFromEntitiesRequest;
-use BingAds\CampaignManagement\GetNegativeKeywordsByEntityIdsRequest;
-use BingAds\CampaignManagement\AddSharedEntityRequest;
-use BingAds\CampaignManagement\GetSharedEntitiesByAccountIdRequest;
-use BingAds\CampaignManagement\UpdateSharedEntitiesRequest;
-use BingAds\CampaignManagement\DeleteSharedEntitiesRequest;
-use BingAds\CampaignManagement\AddListItemsToSharedListRequest;
-use BingAds\CampaignManagement\GetListItemsBySharedListRequest;
-use BingAds\CampaignManagement\DeleteListItemsFromSharedListRequest;
-use BingAds\CampaignManagement\SetSharedEntityAssociationsRequest;
-use BingAds\CampaignManagement\GetSharedEntityAssociationsByEntityIdsRequest;
-use BingAds\CampaignManagement\GetSharedEntityAssociationsBySharedEntityIdsRequest;
-use BingAds\CampaignManagement\DeleteSharedEntityAssociationsRequest;
-use BingAds\CampaignManagement\AddCampaignsRequest;
-use BingAds\CampaignManagement\DeleteCampaignsRequest;
-use BingAds\CampaignManagement\Campaign;
-use BingAds\CampaignManagement\EntityNegativeKeyword;
-use BingAds\CampaignManagement\SharedEntityAssociation;
-use BingAds\CampaignManagement\SharedEntity;
-use BingAds\CampaignManagement\SharedList;
-use BingAds\CampaignManagement\SharedListItem;
-use BingAds\CampaignManagement\NegativeKeyword;
-use BingAds\CampaignManagement\NegativeKeywordList;
-use BingAds\CampaignManagement\BudgetLimitType;
-use BingAds\CampaignManagement\MatchType;
+use BingAds\v10\CampaignManagement\AddNegativeKeywordsToEntitiesRequest;
+use BingAds\v10\CampaignManagement\DeleteNegativeKeywordsFromEntitiesRequest;
+use BingAds\v10\CampaignManagement\GetNegativeKeywordsByEntityIdsRequest;
+use BingAds\v10\CampaignManagement\AddSharedEntityRequest;
+use BingAds\v10\CampaignManagement\GetSharedEntitiesByAccountIdRequest;
+use BingAds\v10\CampaignManagement\UpdateSharedEntitiesRequest;
+use BingAds\v10\CampaignManagement\DeleteSharedEntitiesRequest;
+use BingAds\v10\CampaignManagement\AddListItemsToSharedListRequest;
+use BingAds\v10\CampaignManagement\GetListItemsBySharedListRequest;
+use BingAds\v10\CampaignManagement\DeleteListItemsFromSharedListRequest;
+use BingAds\v10\CampaignManagement\SetSharedEntityAssociationsRequest;
+use BingAds\v10\CampaignManagement\GetSharedEntityAssociationsByEntityIdsRequest;
+use BingAds\v10\CampaignManagement\GetSharedEntityAssociationsBySharedEntityIdsRequest;
+use BingAds\v10\CampaignManagement\DeleteSharedEntityAssociationsRequest;
+use BingAds\v10\CampaignManagement\AddCampaignsRequest;
+use BingAds\v10\CampaignManagement\DeleteCampaignsRequest;
+use BingAds\v10\CampaignManagement\Campaign;
+use BingAds\v10\CampaignManagement\EntityNegativeKeyword;
+use BingAds\v10\CampaignManagement\SharedEntityAssociation;
+use BingAds\v10\CampaignManagement\SharedEntity;
+use BingAds\v10\CampaignManagement\SharedList;
+use BingAds\v10\CampaignManagement\SharedListItem;
+use BingAds\v10\CampaignManagement\NegativeKeyword;
+use BingAds\v10\CampaignManagement\NegativeKeywordList;
+use BingAds\v10\CampaignManagement\BudgetLimitType;
+use BingAds\v10\CampaignManagement\MatchType;
 
 // Specify the BingAds\Proxy objects that will be used.
 use BingAds\Proxy\ClientProxy;
@@ -62,9 +48,10 @@ $DeveloperToken = "<DeveloperTokenGoesHere>";
 $CustomerId = <CustomerIdGoesHere>;
 $AccountId = <AccountIdGoesHere>;
 
+
 // Campaign Management WSDL
 
-$wsdl = "https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V9/CampaignManagementService.svc?singleWsdl";
+$wsdl = "https://campaign.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/CampaignManagementService.svc?singleWsdl";
 
 try
 {

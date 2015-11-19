@@ -1,39 +1,23 @@
 <?php
 
-// Copyright 2015 Microsoft Corporation
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//    http://www.apache.org/licenses/LICENSE-2.0
-
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-
-// Include the Bing Ads namespaced class files available
+// Include the BingAds\v10 namespaced class files available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
 include '../vendor/autoload.php';
 
 // Specify the BingAds\Bulk objects that will be used.
-use BingAds\Bulk\DownloadCampaignsByAccountIdsRequest;
-use BingAds\Bulk\BulkDownloadEntity;
-use BingAds\Bulk\DataScope;
-use BingAds\Bulk\CampaignScope;
-use BingAds\Bulk\GetDetailedBulkDownloadStatusRequest;
-use BingAds\Bulk\DownloadStatus;
-use BingAds\Bulk\DownloadFileType;
-use BingAds\Bulk\PerformanceStatsDateRange;
-use BingAds\Bulk\CustomDateRangeEnd;
-use BingAds\Bulk\CustomDateRangeStart;
-use BingAds\Bulk\Date;
-use BingAds\Bulk\GetBulkUploadUrlRequest;
-use BingAds\Bulk\ResponseMode;
-use BingAds\Bulk\GetDetailedBulkUploadStatusRequest;
+use BingAds\v10\Bulk\DownloadCampaignsByAccountIdsRequest;
+use BingAds\v10\Bulk\BulkDownloadEntity;
+use BingAds\v10\Bulk\DataScope;
+use BingAds\v10\Bulk\CampaignScope;
+use BingAds\v10\Bulk\GetBulkDownloadStatusRequest;
+use BingAds\v10\Bulk\DownloadFileType;
+use BingAds\v10\Bulk\PerformanceStatsDateRange;
+use BingAds\v10\Bulk\CustomDateRangeEnd;
+use BingAds\v10\Bulk\CustomDateRangeStart;
+use BingAds\v10\Bulk\Date;
+use BingAds\v10\Bulk\GetBulkUploadUrlRequest;
+use BingAds\v10\Bulk\ResponseMode;
+use BingAds\v10\Bulk\GetBulkUploadStatusRequest;
 
 // Specify the BingAds\Proxy objects that will be used.
 use BingAds\Proxy\ClientProxy;
@@ -50,12 +34,10 @@ $Password = "<PasswordGoesHere>";
 $DeveloperToken = "<DeveloperTokenGoesHere>";
 $CustomerId = <CustomerIdGoesHere>;
 $AccountId = <AccountIdGoesHere>;
-$CampaignIds = array ( <CommaDelimitedCampaignIdsGoHere> );
-
 
 // Bulk WSDL
 
-$wsdl = "https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V9/BulkService.svc?singleWsdl";
+$wsdl = "https://bulk.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/BulkService.svc?singleWsdl";
 
 
 // The full path to the bulk file.
@@ -94,8 +76,6 @@ try
 
     // Use the bulk service to download a bulk file.
 
-    // The campaigns must all belong to the same account.
-
     $accounts = array();
     $accounts[] = $AccountId;
 
@@ -110,7 +90,7 @@ try
         BulkDownloadEntity::CampaignProductScopes
     	);
 
-    $formatVersion = "3.0";
+    $formatVersion = "4.0";
 
     $lastSyncTimeInUTC = GetLastSyncTime($ExtractedFilePath);
 
@@ -120,13 +100,13 @@ try
     /*
     $performanceStatsDateRange = new PerformanceStatsDateRange();
     $performanceStatsDateRange->CustomDateRangeEnd = new Date();
-    $performanceStatsDateRange->CustomDateRangeEnd->Day = 15;
-    $performanceStatsDateRange->CustomDateRangeEnd->Month = 9;
-    $performanceStatsDateRange->CustomDateRangeEnd->Year = 2014;
+    $performanceStatsDateRange->CustomDateRangeEnd->Day = 31;
+    $performanceStatsDateRange->CustomDateRangeEnd->Month = 7;
+    $performanceStatsDateRange->CustomDateRangeEnd->Year = 2015;
     $performanceStatsDateRange->CustomDateRangeStart = new Date();
-    $performanceStatsDateRange->CustomDateRangeStart->Day = 15;
-    $performanceStatsDateRange->CustomDateRangeStart->Month = 9;
-    $performanceStatsDateRange->CustomDateRangeStart->Year = 2014;
+    $performanceStatsDateRange->CustomDateRangeStart->Day = 1;
+    $performanceStatsDateRange->CustomDateRangeStart->Month = 7;
+    $performanceStatsDateRange->CustomDateRangeStart->Year = 2015;
     */
 
     // GetDownloadRequestId helper method calls the corresponding Bing Ads service operation
@@ -161,7 +141,7 @@ try
     		sleep($waitTime);
 
     		// GetDownloadRequestStatus helper method calls the corresponding Bing Ads service operation
-            // to get the download status.
+                // to get the download status.
 
     		$downloadRequestStatus = GetDownloadRequestStatus(
     			$proxy,
@@ -241,7 +221,7 @@ try
     	// GetUploadRequestStatus helper method calls the corresponding Bing Ads service operation
     	// to get the upload status.
     	$uploadRequestStatus = GetUploadRequestStatus($proxy, $uploadRequestId);
-        print $uploadRequestStatus . "\n";
+
     	if (($uploadRequestStatus != null) && (($uploadRequestStatus == "Completed")
     		|| ($uploadRequestStatus == "CompletedWithErrors")))
     	{
@@ -393,26 +373,26 @@ function GetDownloadRequestId($proxy, $accounts, $dataScope, $downloadFileType,
 }
 
 
-// GetDownloadRequestStatus helper method calls the GetDetailedBulkDownloadStatus service operation
+// GetDownloadRequestStatus helper method calls the GetBulkDownloadStatus service operation
 // to get the download request status.
 
 function GetDownloadRequestStatus($proxy, $requestId)
 {
-    $request = new GetDetailedBulkDownloadStatusRequest();
+    $request = new GetBulkDownloadStatusRequest();
     $request->RequestId = $requestId;
 
-    return $proxy->GetService()->GetDetailedBulkDownloadStatus($request)->RequestStatus;
+    return $proxy->GetService()->GetBulkDownloadStatus($request)->RequestStatus;
 }
 
-// GetDownloadUrl helper method calls the GetDetailedBulkDownloadStatus service operation
+// GetDownloadUrl helper method calls the GetBulkDownloadStatus service operation
 // to get the download Url.
 
 function GetDownloadUrl($proxy, $requestId)
 {
-	$request = new GetDetailedBulkDownloadStatusRequest();
+	$request = new GetBulkDownloadStatusRequest();
 	$request->RequestId = $requestId;
 
-	return $proxy->GetService()->GetDetailedBulkDownloadStatus($request)->ResultFileUrl;
+	return $proxy->GetService()->GetBulkDownloadStatus($request)->ResultFileUrl;
 }
 
 // GetBulkUploadUrl helper method calls the GetBulkUploadUrl service operation
@@ -427,26 +407,26 @@ function GetBulkUploadUrl($proxy, $accountId, $responseMode)
 	return $proxy->GetService()->GetBulkUploadUrl($request);
 }
 
-// GetUploadRequestStatus helper method calls the GetDetailedBulkUploadStatus service operation
+// GetUploadRequestStatus helper method calls the GetBulkUploadStatus service operation
 // to get the upload request status.
 
 function GetUploadRequestStatus($proxy, $requestId)
 {
-	$request = new GetDetailedBulkUploadStatusRequest();
+	$request = new GetBulkUploadStatusRequest();
 	$request->RequestId = $requestId;
 
-	return $proxy->GetService()->GetDetailedBulkUploadStatus($request)->RequestStatus;
+	return $proxy->GetService()->GetBulkUploadStatus($request)->RequestStatus;
 }
 
-// GetUploadResultFileUrl helper method calls the GetDetailedBulkUploadStatus service operation
+// GetUploadResultFileUrl helper method calls the GetBulkUploadStatus service operation
 // to get the upload result file Url.
 
 function GetUploadResultFileUrl($proxy, $requestId)
 {
-	$request = new GetDetailedBulkUploadStatusRequest();
+	$request = new GetBulkUploadStatusRequest();
 	$request->RequestId = $requestId;
 
-	return $proxy->GetService()->GetDetailedBulkUploadStatus($request)->ResultFileUrl;
+	return $proxy->GetService()->GetBulkUploadStatus($request)->ResultFileUrl;
 }
 
 // Using the URL returned by the GetBulkUploadUrl operation,
@@ -481,13 +461,13 @@ function UploadFile($UserName, $Password, $DeveloperToken, $CustomerId, $Custome
     }
     else
     {
-        print "Upload Result: " . $result . "\n";
+        print $result . "\n";
     }
 
     curl_close($ch);
 }
 
-// Using the URL that the GetDetailedBulkDownloadStatus operation returned,
+// Using the URL that the GetBulkDownloadStatus operation returned,
 // send an HTTP request to get the download data and write it to the specified
 // ZIP file.
 

@@ -1,45 +1,45 @@
 <?php
 
-// Include the Bing Ads namespaced class files available
+// Include the BingAds\v10 namespaced class files available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
 include '../vendor/autoload.php';
 
 // Specify the BingAds\CampaignManagement objects that will be used.
-use BingAds\CampaignManagement\AddCampaignsRequest;
-use BingAds\CampaignManagement\Campaign;
-use BingAds\CampaignManagement\BudgetLimitType;
-use BingAds\CampaignManagement\GetBMCStoresByCustomerIdRequest;
-use BingAds\CampaignManagement\BMCStore;
-use BingAds\CampaignManagement\ShoppingSetting;
-use BingAds\CampaignManagement\BingAds\CampaignManagement;
-use BingAds\CampaignManagement\CampaignType;
-use BingAds\CampaignManagement\DeleteCampaignsRequest;
-use BingAds\CampaignManagement\AddAdGroupsRequest;
-use BingAds\CampaignManagement\AdGroup;
-use BingAds\CampaignManagement\Date;
-use BingAds\CampaignManagement\AdDistribution;
-use BingAds\CampaignManagement\BiddingModel;
-use BingAds\CampaignManagement\PricingModel;
-use BingAds\CampaignManagement\UpdateAdGroupsRequest;
-use BingAds\CampaignManagement\GetAdGroupsByIdsRequest;
-use BingAds\CampaignManagement\ProductAd;
-use BingAds\CampaignManagement\AddAdsRequest;
-use BingAds\CampaignManagement\CampaignCriterionType;
-use BingAds\CampaignManagement\ProductScope;
-use BingAds\CampaignManagement\AddCampaignCriterionsRequest;
-use BingAds\CampaignManagement\CampaignCriterion;
-use BingAds\CampaignManagement\ProductCondition;
-use BingAds\CampaignManagement\ProductPartitionType;
-use BingAds\CampaignManagement\CriterionType;
-use BingAds\CampaignManagement\BiddableAdGroupCriterion;
-use BingAds\CampaignManagement\ItemAction;
-use BingAds\CampaignManagement\AdGroupCriterionAction;
-use BingAds\CampaignManagement\ApplyProductPartitionActionsRequest;
-use BingAds\CampaignManagement\GetAdGroupCriterionsByAdGroupIdRequest;
-use BingAds\CampaignManagement\NegativeAdGroupCriterion;
-use BingAds\CampaignManagement\ProductPartition;
-use BingAds\CampaignManagement\FixedBid;
-use BingAds\CampaignManagement\Bid;
+use BingAds\v10\CampaignManagement\AddCampaignsRequest;
+use BingAds\v10\CampaignManagement\Campaign;
+use BingAds\v10\CampaignManagement\BudgetLimitType;
+use BingAds\v10\CampaignManagement\GetBMCStoresByCustomerIdRequest;
+use BingAds\v10\CampaignManagement\BMCStore;
+use BingAds\v10\CampaignManagement\ShoppingSetting;
+use BingAds\v10\CampaignManagement\BingAds\CampaignManagement;
+use BingAds\v10\CampaignManagement\CampaignType;
+use BingAds\v10\CampaignManagement\DeleteCampaignsRequest;
+use BingAds\v10\CampaignManagement\AddAdGroupsRequest;
+use BingAds\v10\CampaignManagement\AdGroup;
+use BingAds\v10\CampaignManagement\Date;
+use BingAds\v10\CampaignManagement\AdDistribution;
+use BingAds\v10\CampaignManagement\BiddingModel;
+use BingAds\v10\CampaignManagement\PricingModel;
+use BingAds\v10\CampaignManagement\UpdateAdGroupsRequest;
+use BingAds\v10\CampaignManagement\GetAdGroupsByIdsRequest;
+use BingAds\v10\CampaignManagement\ProductAd;
+use BingAds\v10\CampaignManagement\AddAdsRequest;
+use BingAds\v10\CampaignManagement\CampaignCriterionType;
+use BingAds\v10\CampaignManagement\ProductScope;
+use BingAds\v10\CampaignManagement\AddCampaignCriterionsRequest;
+use BingAds\v10\CampaignManagement\CampaignCriterion;
+use BingAds\v10\CampaignManagement\ProductCondition;
+use BingAds\v10\CampaignManagement\ProductPartitionType;
+use BingAds\v10\CampaignManagement\CriterionType;
+use BingAds\v10\CampaignManagement\BiddableAdGroupCriterion;
+use BingAds\v10\CampaignManagement\ItemAction;
+use BingAds\v10\CampaignManagement\AdGroupCriterionAction;
+use BingAds\v10\CampaignManagement\ApplyProductPartitionActionsRequest;
+use BingAds\v10\CampaignManagement\GetAdGroupCriterionsByIdsRequest;
+use BingAds\v10\CampaignManagement\NegativeAdGroupCriterion;
+use BingAds\v10\CampaignManagement\ProductPartition;
+use BingAds\v10\CampaignManagement\FixedBid;
+use BingAds\v10\CampaignManagement\Bid;
 
 
 // Specify the BingAds\Proxy objects that will be used.
@@ -64,7 +64,7 @@ $ReferenceId = -1;
 
 // Campaign Management WSDL
 
-$wsdl = "https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V9/CampaignManagementService.svc?singleWsdl";
+$wsdl = "https://campaign.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/CampaignManagementService.svc?singleWsdl";
 
 $ids = null;
 
@@ -352,6 +352,7 @@ function AddAndUpdateAdGroupCriterion($proxy, $accountId, &$actions, $adGroupId)
 			$proxy,
 			$accountId,
 			$adGroupId,
+                        null,
 			CriterionType::ProductPartition);
 
 	printf("Printing the ad group's product partition; contains only the tree root node\n\n");
@@ -378,6 +379,7 @@ function AddAndUpdateAdGroupCriterion($proxy, $accountId, &$actions, $adGroupId)
 			$proxy,
 			$accountId,
 			$adGroupId,
+                        null,
 			CriterionType::ProductPartition);
 
 	printf("Updated the bid for the tree root node\n\n");
@@ -395,6 +397,7 @@ function AddBranchAndLeafCriterion($proxy, $accountId, &$actions, $adGroupId)
 			$proxy,
 			$accountId,
 			$adGroupId,
+                        null,
 			CriterionType::ProductPartition);
 
 	$existingRoot = GetRootNode($adGroupCriterions);
@@ -543,6 +546,7 @@ function AddBranchAndLeafCriterion($proxy, $accountId, &$actions, $adGroupId)
 			$proxy,
 			$accountId,
 			$adGroupId,
+                        null,
 			CriterionType::ProductPartition);
 
 	printf("The product partition group tree now has 9 nodes\n\n");
@@ -631,6 +635,7 @@ function UpdateBranchAndLeafCriterion($proxy, &$actions, $accountId, $adGroupId,
 			$proxy,
 			$accountId,
 			$adGroupId,
+                        null,
 			CriterionType::ProductPartition);
 
 	printf("\nThe product partition group tree now has 12 nodes\n");
@@ -736,14 +741,16 @@ function GetAdGroupCriterions(
 		$proxy,
 		$accountId,
 		$adGroupId,
+                $adGroupCriterionIds,
 		$criterionType)
 {
-	$request = new GetAdGroupCriterionsByAdGroupIdRequest();
+	$request = new GetAdGroupCriterionsByIdsRequest();
 	$request->AccountId = $accountId;
 	$request->AdGroupId = $adGroupId;
-	$request->CriterionTypeFilter = $criterionType;
+        $request->AdGroupCriterionIds = $adGroupCriterionIds;
+	$request->CriterionType = $criterionType;
 
-	return $proxy->GetService()->GetAdGroupCriterionsByAdGroupId($request)->AdGroupCriterions;
+	return $proxy->GetService()->GetAdGroupCriterionsByIds($request)->AdGroupCriterions;
 }
 
 

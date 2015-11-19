@@ -16,3 +16,16 @@
   7. CustomerManagementClasses.php
   8. ReportingClasses.php  
 - Example files have been modified to include the composer autoloader 
+
+## Version 3.0.0
+- Update classes with Bing Ads SDK for PHP API v10
+- Each class has been placed in it's own file using https://github.com/onema/classyfile
+- The following files have been placed under the `examples` directory:
+ 1.  AdExtensions.php
+ 1.  BudgetOpportunities.php
+ 1.  BulkDownloadUpload.php
+ 1.  KeywordsAds.php
+ 1.  NegativeKeywords.php
+ 1.  ShoppingCampaigns.php
+ 1.  Targets.php
+

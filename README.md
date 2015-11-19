@@ -6,15 +6,17 @@ This contains the PHP classes for version 9 of the Bing Ads web services. Classe
 
 Version 2 separates all classes into their own file. For the unmodified version of the SDK use branch `1.x`.
 
+Version 3 uses the API version 10
+
 ##Library Information
 
- - Bing Ads API Version 9
+ - Bing Ads API Version 10
  - Library Update  11/16/2015
  - Library [Home Page](https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f)
 
 ##Installation
 ```shell
-php composer.phar require cpcstrategy/bing-ads-sdk-php:~2.0
+php composer.phar require cpcstrategy/bing-ads-sdk-php:~3.0
 ```
 
 ##Usage

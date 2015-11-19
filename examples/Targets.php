@@ -1,87 +1,62 @@
 <?php
 
-// Copyright 2015 Microsoft Corporation
-
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-
-//    http://www.apache.org/licenses/LICENSE-2.0
-
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-// Include the Bing Ads namespaced class file available
+// Include the BingAds\v10 namespaced class file available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
-include '../vendor/autoload.php'; 
+include '../vendor/autoload.php';
 
 // Specify the BingAds\CampaignManagement objects that will be used.
-use BingAds\CampaignManagement\AddCampaignsRequest;
-use BingAds\CampaignManagement\DeleteCampaignsRequest;
-use BingAds\CampaignManagement\AddAdGroupsRequest;
-use BingAds\CampaignManagement\AddTargetsToLibraryRequest;
-use BingAds\CampaignManagement\AddTargetsToLibrary2Request;
-use BingAds\CampaignManagement\GetTargetsByIdsRequest;
-use BingAds\CampaignManagement\GetTargetsByIds2Request;
-use BingAds\CampaignManagement\UpdateTargetsInLibrary2Request;
-use BingAds\CampaignManagement\GetTargetsInfoFromLibraryRequest;
-use BingAds\CampaignManagement\DeleteTargetFromAdGroupRequest;
-use BingAds\CampaignManagement\DeleteTargetFromCampaignRequest;
-use BingAds\CampaignManagement\DeleteTargetsFromLibraryRequest;
-use BingAds\CampaignManagement\SetTargetToAdGroupRequest;
-use BingAds\CampaignManagement\SetTargetToCampaignRequest;
-use BingAds\CampaignManagement\Campaign;
-use BingAds\CampaignManagement\AdGroup;
-use BingAds\CampaignManagement\AdGroupStatus;
-use BingAds\CampaignManagement\Target;
-use BingAds\CampaignManagement\Target2;
-use BingAds\CampaignManagement\AgeTarget;
-use BingAds\CampaignManagement\AgeTargetBid;
-use BingAds\CampaignManagement\DayTarget;
-use BingAds\CampaignManagement\DayTargetBid;
-use BingAds\CampaignManagement\DayTimeTarget;
-use BingAds\CampaignManagement\DayTimeTargetBid;
-use BingAds\CampaignManagement\DeviceOSTarget;
-use BingAds\CampaignManagement\DeviceOSTargetBid;
-use BingAds\CampaignManagement\GenderTarget;
-use BingAds\CampaignManagement\GenderTargetBid;
-use BingAds\CampaignManagement\HourTarget;
-use BingAds\CampaignManagement\HourTargetBid;
-use BingAds\CampaignManagement\LocationTarget;
-use BingAds\CampaignManagement\LocationTargetBid;
-use BingAds\CampaignManagement\LocationTarget2;
-use BingAds\CampaignManagement\LocationTargetBid2;
-use BingAds\CampaignManagement\CityTarget;
-use BingAds\CampaignManagement\CityTargetBid;
-use BingAds\CampaignManagement\CountryTarget;
-use BingAds\CampaignManagement\CountryTargetBid;
-use BingAds\CampaignManagement\MetroAreaTarget;
-use BingAds\CampaignManagement\MetroAreaTargetBid;
-use BingAds\CampaignManagement\PostalCodeTarget;
-use BingAds\CampaignManagement\PostalCodeTargetBid;
-use BingAds\CampaignManagement\RadiusTarget;
-use BingAds\CampaignManagement\RadiusTargetBid;
-use BingAds\CampaignManagement\RadiusTarget2;
-use BingAds\CampaignManagement\RadiusTargetBid2;
-use BingAds\CampaignManagement\StateTarget;
-use BingAds\CampaignManagement\StateTargetBid;
-use BingAds\CampaignManagement\TargetInfo;
-use BingAds\CampaignManagement\Bid;
-use BingAds\CampaignManagement\BudgetLimitType;
-use BingAds\CampaignManagement\AdDistribution;
-use BingAds\CampaignManagement\BiddingModel;
-use BingAds\CampaignManagement\PricingModel;
-use BingAds\CampaignManagement\Date;
-use BingAds\CampaignManagement\Day;
-use BingAds\CampaignManagement\Minute;
-use BingAds\CampaignManagement\HourRange;
-use BingAds\CampaignManagement\AgeRange;
-use BingAds\CampaignManagement\GenderType;
-use BingAds\CampaignManagement\DistanceUnit;
-use BingAds\CampaignManagement\IntentOption;
+use BingAds\v10\CampaignManagement\AddCampaignsRequest;
+use BingAds\v10\CampaignManagement\DeleteCampaignsRequest;
+use BingAds\v10\CampaignManagement\AddAdGroupsRequest;
+use BingAds\v10\CampaignManagement\AddTargetsToLibraryRequest;
+use BingAds\v10\CampaignManagement\GetTargetsByIdsRequest;
+use BingAds\v10\CampaignManagement\UpdateTargetsInLibraryRequest;
+use BingAds\v10\CampaignManagement\GetTargetsInfoFromLibraryRequest;
+use BingAds\v10\CampaignManagement\DeleteTargetFromAdGroupRequest;
+use BingAds\v10\CampaignManagement\DeleteTargetFromCampaignRequest;
+use BingAds\v10\CampaignManagement\DeleteTargetsFromLibraryRequest;
+use BingAds\v10\CampaignManagement\SetTargetToAdGroupRequest;
+use BingAds\v10\CampaignManagement\SetTargetToCampaignRequest;
+use BingAds\v10\CampaignManagement\Campaign;
+use BingAds\v10\CampaignManagement\AdGroup;
+use BingAds\v10\CampaignManagement\AdGroupStatus;
+use BingAds\v10\CampaignManagement\Target;
+use BingAds\v10\CampaignManagement\AgeTarget;
+use BingAds\v10\CampaignManagement\AgeTargetBid;
+use BingAds\v10\CampaignManagement\DayTimeTarget;
+use BingAds\v10\CampaignManagement\DayTimeTargetBid;
+use BingAds\v10\CampaignManagement\DeviceOSTarget;
+use BingAds\v10\CampaignManagement\DeviceOSTargetBid;
+use BingAds\v10\CampaignManagement\GenderTarget;
+use BingAds\v10\CampaignManagement\GenderTargetBid;
+use BingAds\v10\CampaignManagement\LocationTarget;
+use BingAds\v10\CampaignManagement\LocationTargetBid;
+use BingAds\v10\CampaignManagement\CityTarget;
+use BingAds\v10\CampaignManagement\CityTargetBid;
+use BingAds\v10\CampaignManagement\CountryTarget;
+use BingAds\v10\CampaignManagement\CountryTargetBid;
+use BingAds\v10\CampaignManagement\MetroAreaTarget;
+use BingAds\v10\CampaignManagement\MetroAreaTargetBid;
+use BingAds\v10\CampaignManagement\PostalCodeTarget;
+use BingAds\v10\CampaignManagement\PostalCodeTargetBid;
+use BingAds\v10\CampaignManagement\RadiusTarget;
+use BingAds\v10\CampaignManagement\RadiusTargetBid;
+use BingAds\v10\CampaignManagement\StateTarget;
+use BingAds\v10\CampaignManagement\StateTargetBid;
+use BingAds\v10\CampaignManagement\TargetInfo;
+use BingAds\v10\CampaignManagement\Bid;
+use BingAds\v10\CampaignManagement\BudgetLimitType;
+use BingAds\v10\CampaignManagement\AdDistribution;
+use BingAds\v10\CampaignManagement\BiddingModel;
+use BingAds\v10\CampaignManagement\PricingModel;
+use BingAds\v10\CampaignManagement\Date;
+use BingAds\v10\CampaignManagement\Day;
+use BingAds\v10\CampaignManagement\Minute;
+use BingAds\v10\CampaignManagement\HourRange;
+use BingAds\v10\CampaignManagement\AgeRange;
+use BingAds\v10\CampaignManagement\GenderType;
+use BingAds\v10\CampaignManagement\DistanceUnit;
+use BingAds\v10\CampaignManagement\IntentOption;
 
 // Specify the BingAds\Proxy objects that will be used.
 use BingAds\Proxy\ClientProxy;
@@ -99,9 +74,10 @@ $DeveloperToken = "<DeveloperTokenGoesHere>";
 $CustomerId = <CustomerIdGoesHere>;
 $AccountId = <AccountIdGoesHere>;
 
+
 // Campaign Management WSDL
 
-$wsdl = "https://api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V9/CampaignManagementService.svc?singleWsdl";
+$wsdl = "https://campaign.api.bingads.microsoft.com/Api/Advertiser/CampaignManagement/V10/CampaignManagementService.svc?singleWsdl";
 
 try
 {
@@ -137,12 +113,8 @@ try
     $adGroup->PricingModel = PricingModel::Cpc;
     $adGroup->StartDate = null;
     $adGroup->EndDate = $endDate;
-    $adGroup->BroadMatchBid = new Bid();
-    $adGroup->BroadMatchBid->Amount = 0.10;
-    $adGroup->ExactMatchBid = new Bid();
-    $adGroup->ExactMatchBid->Amount = 0.09;
-    $adGroup->PhraseMatchBid = new Bid();
-    $adGroup->PhraseMatchBid->Amount = 0.07;
+    $adGroup->SearchBid = new Bid();
+    $adGroup->SearchBid->Amount = 0.10;
     $adGroup->Language = "English";
     $adGroup->Status = AdGroupStatus::Paused;
 
@@ -158,29 +130,33 @@ try
     PrintCampaignIdentifiers($campaignIds);
     PrintAdGroupIdentifiers($adGroupIds);
 
-    // Bing Ads API Version 9 supports both Target and Target2 objects. You should use Target2.
-    // This sample compares Target and Target2, and demonstrates the impact of updating the
-    // DayTimeTarget, IntentOption, and RadiusTarget2 nested in a Target2 object.
+    // Bing Ads API Version 9 supports both Target and Target objects. You should use Target.
+    // This sample compares Target and Target, and demonstrates the impact of updating the
+    // DayTimeTarget, IntentOption, and RadiusTarget nested in a Target object.
 
     $campaignTarget = new Target();
     $campaignTarget->Name = "My Campaign Target";
 
-    $campaignDayTarget = new DayTarget();
-    $campaignDayTargetBid = new DayTargetBid();
-    $campaignDayTargetBid->BidAdjustment = 10;
-    $campaignDayTargetBid->Day = Day::Friday;
-    $campaignDayTarget->Bids = array($campaignDayTargetBid);
-    $campaignTarget->Day = $campaignDayTarget;
+    $campaignDayTimeTarget = new DayTimeTarget();
+    $campaignDayTimeTargetBid = new DayTimeTargetBid();
+    $campaignDayTimeTargetBid->BidAdjustment = 10;
+    $campaignDayTimeTargetBid->Day = Day::Monday;
+    $campaignDayTimeTargetBid->FromHour = 1;
+    $campaignDayTimeTargetBid->ToHour = 12;
+    $campaignDayTimeTargetBid->FromMinute = Minute::Zero;
+    $campaignDayTimeTargetBid->ToMinute = Minute::FortyFive;
+    $campaignDayTimeTarget->Bids = array($campaignDayTimeTargetBid);
+    $campaignTarget->DayTime = $campaignDayTimeTarget;
 
-    $campaignHourTarget = new HourTarget();
-    $campaignHourTargetBid = new HourTargetBid();
-    $campaignHourTargetBid->BidAdjustment = 10;
-    $campaignHourTargetBid->Hour = HourRange::ElevenAMToTwoPM;
-    $campaignHourTarget->Bids = array($campaignHourTargetBid);
-    $campaignTarget->Hour = $campaignHourTarget;
+    $campaignDeviceOSTarget = new DeviceOSTarget();
+    $campaignDeviceOSTargetBid = new DeviceOSTargetBid();
+    $campaignDeviceOSTargetBid->BidAdjustment = 10;
+    $campaignDeviceOSTargetBid->DeviceName = "Tablets";
+    $campaignDeviceOSTarget->Bids = array($campaignDeviceOSTargetBid);
+    $campaignTarget->DeviceOS = $campaignDeviceOSTarget;
 
     $campaignLocationTarget = new LocationTarget();
-    $campaignLocationTarget->HasPhysicalIntent = true;
+    $campaignLocationTarget->IntentOption = IntentOption::PeopleSearchingForOrViewingPages;
 
     $campaignRadiusTarget = new RadiusTarget();
     $campaignRadiusTargetBid = new RadiusTargetBid();
@@ -188,6 +164,7 @@ try
     $campaignRadiusTargetBid->LatitudeDegrees = 47.755367;
     $campaignRadiusTargetBid->LongitudeDegrees = -122.091827;
     $campaignRadiusTargetBid->Radius = 5;
+    $campaignRadiusTargetBid->RadiusUnit = DistanceUnit::Miles;
     $campaignRadiusTargetBid->IsExcluded = false;
     $campaignRadiusTarget->Bids = array($campaignRadiusTargetBid);
     $campaignLocationTarget->RadiusTarget = $campaignRadiusTarget;
@@ -196,12 +173,16 @@ try
     $adGroupTarget = new Target();
     $adGroupTarget->Name = "My Ad Group Target";
 
-    $adGroupHourTarget = new HourTarget();
-    $adGroupHourTargetBid = new HourTargetBid();
-    $adGroupHourTargetBid->BidAdjustment = 10;
-    $adGroupHourTargetBid->Hour = HourRange::SixPMToElevenPM;
-    $adGroupHourTarget->Bids = array($adGroupHourTargetBid);
-    $adGroupTarget->Hour = $adGroupHourTarget;
+    $adGroupDayTimeTarget = new DayTimeTarget();
+    $adGroupDayTimeTargetBid = new DayTimeTargetBid();
+    $adGroupDayTimeTargetBid->BidAdjustment = 10;
+    $adGroupDayTimeTargetBid->Day = Day::Friday;
+    $adGroupDayTimeTargetBid->FromHour = 1;
+    $adGroupDayTimeTargetBid->ToHour = 12;
+    $adGroupDayTimeTargetBid->FromMinute = Minute::Zero;
+    $adGroupDayTimeTargetBid->ToMinute = Minute::FortyFive;
+    $adGroupDayTimeTarget->Bids = array($adGroupDayTimeTargetBid);
+    $adGroupTarget->DayTime = $adGroupDayTimeTarget;
 
     // Each customer has a target library that can be used to set up targeting for any campaign
     // or ad group within the specified customer.
@@ -212,15 +193,10 @@ try
     SetTargetToCampaign($proxy, $campaignIds[0], $campaignTargetId);
     printf("Associated CampaignId %s with TargetId %s.\n\n", $campaignIds[0], $campaignTargetId);
 
-    // Get and print the Target with the legacy GetTargetsByIds operation
+    // Get and print the Target with the GetTargetsByIds operation
     print "Get Campaign Target: \n\n";
     $targets = GetTargetsByIds($proxy, array($campaignTargetId));
     PrintTarget($targets->Target[0]);
-
-    // Get and print the Target2 with the new GetTargetsByIds2 operation
-    print "Get Campaign Target2: \n\n";
-    $targets2 = GetTargetsByIds2($proxy, array($campaignTargetId));
-    PrintTarget2($targets2->Target2[0]);
 
     // Add a target to the library and associate it with the ad group.
     $adGroupTargetId = AddTargetsToLibrary($proxy, array($adGroupTarget))->long[0];
@@ -228,30 +204,25 @@ try
     SetTargetToAdGroup($proxy, $adGroupIds[0], $adGroupTargetId);
     printf("Associated AdGroupId %s with TargetId %s.\n\n", $adGroupIds[0], $adGroupTargetId);
 
-    // Get and print the Target with the legacy GetTargetsByIds operation
+    // Get and print the Target with the GetTargetsByIds operation
     print "Get AdGroup Target: \n\n";
     $targets = GetTargetsByIds($proxy, array($adGroupTargetId));
     PrintTarget($targets->Target[0]);
 
-    // Get and print the Target2 with the new GetTargetsByIds2 operation
-    print "Get AdGroup Target2: \n\n";
-    $targets2 = GetTargetsByIds2($proxy, array($adGroupTargetId));
-    PrintTarget2($targets2->Target2[0]);
-
-    // Update the ad group's target as a Target2 object with additional target types.
-    // Existing target types such as DayTime, Location, and Radius must be specified
+    // Update the ad group's Target object with additional target types.
+    // Existing target types such as DayTime must be specified
     // or they will not be included in the updated target.
 
-    $target2 = new Target2();
-    $target2->Id = $adGroupTargetId;
-    $target2->Name = "My Target2";
+    $target = new Target();
+    $target->Id = $adGroupTargetId;
+    $target->Name = "My Target";
 
     $ageTarget = new AgeTarget();
     $ageTargetBid = new AgeTargetBid();
     $ageTargetBid->BidAdjustment = 10;
     $ageTargetBid->Age = AgeRange::EighteenToTwentyFive;
     $ageTarget->Bids = array($ageTargetBid);
-    $target2->Age = $ageTarget;
+    $target->Age = $ageTarget;
 
     $dayTimeTarget = new DayTimeTarget();
     $dayTimeTargetBid = new DayTimeTargetBid();
@@ -262,23 +233,23 @@ try
     $dayTimeTargetBid->FromMinute = Minute::Zero;
     $dayTimeTargetBid->ToMinute = Minute::FortyFive;
     $dayTimeTarget->Bids = array($dayTimeTargetBid);
-    $target2->DayTime = $dayTimeTarget;
+    $target->DayTime = $dayTimeTarget;
 
     $deviceOSTarget = new DeviceOSTarget();
     $deviceOSTargetBid = new DeviceOSTargetBid();
-    $deviceOSTargetBid->BidAdjustment = 20;
+    $deviceOSTargetBid->BidAdjustment = 10;
     $deviceOSTargetBid->DeviceName = "Tablets";
     $deviceOSTarget->Bids = array($deviceOSTargetBid);
-    $target2->DeviceOS = $deviceOSTarget;
+    $target->DeviceOS = $deviceOSTarget;
 
     $genderTarget = new GenderTarget();
     $genderTargetBid = new GenderTargetBid();
     $genderTargetBid->BidAdjustment = 10;
     $genderTargetBid->Gender = GenderType::Female;
     $genderTarget->Bids = array($genderTargetBid);
-    $target2->Gender = $genderTarget;
+    $target->Gender = $genderTarget;
 
-    $locationTarget = new LocationTarget2();
+    $locationTarget = new LocationTarget();
     $locationTarget->IntentOption = IntentOption::PeopleSearchingForOrViewingPages;
 
     $countryTarget = new CountryTarget();
@@ -297,43 +268,31 @@ try
     $postalCodeTarget->Bids = array($postalCodeTargetBid);
     $locationTarget->PostalCodeTarget = $postalCodeTarget;
 
-    $radiusTarget = new RadiusTarget2();
-    $radiusTargetBid = new RadiusTargetBid2();
+    $radiusTarget = new RadiusTarget();
+    $radiusTargetBid = new RadiusTargetBid();
     $radiusTargetBid->BidAdjustment = 50;
     $radiusTargetBid->LatitudeDegrees = 47.755367;
     $radiusTargetBid->LongitudeDegrees = -122.091827;
     $radiusTargetBid->Radius = 11;
-    $radiusTargetBid->RadiusUnit = DistanceUnit::Kilometers;
+    $radiusTargetBid->RadiusUnit = DistanceUnit::Miles;
     $radiusTargetBid->IsExcluded = false;
     $radiusTarget->Bids = array($radiusTargetBid);
     $locationTarget->RadiusTarget = $radiusTarget;
-    $target2->Location = $locationTarget;
+    $target->Location = $locationTarget;
 
-    // Update the same identified target as a Target2 object.
-    // Going forward when getting the specified target Id, the Day and Hour elements of the legacy
-    // Target object will be nil, since the target is being updated with a DayTime target.
-    UpdateTargetsInLibrary2($proxy, array($target2));
-    print "Updated the ad group level target as a Target2 object.\n\n";
+    // Update the Target object associated with the ad group.
+    UpdateTargetsInLibrary($proxy, array($target));
+    print "Updated the ad group level target as a Target object.\n\n";
 
-    // Get and print the Target with the legacy GetTargetsByIds operation
+    // Get and print the Target with the GetTargetsByIds operation
     print "Get Campaign Target: \n\n";
     $targets = GetTargetsByIds($proxy, array($campaignTargetId));
     PrintTarget($targets->Target[0]);
 
-    // Get and print the Target2 with the new GetTargetsByIds2 operation
-    print "Get Campaign Target2: \n\n";
-    $targets2 = GetTargetsByIds2($proxy, array($campaignTargetId));
-    PrintTarget2($targets2->Target2[0]);
-
-    // Get and print the Target with the legacy GetTargetsByIds operation
+    // Get and print the Target with the GetTargetsByIds operation
     print "Get AdGroup Target: \n\n";
     $targets = GetTargetsByIds($proxy, array($adGroupTargetId));
     PrintTarget($targets->Target[0]);
-
-    // Get and print the Target2 with the new GetTargetsByIds2 operation
-    print "Get AdGroup Target2: \n\n";
-    $targets2 = GetTargetsByIds2($proxy, array($adGroupTargetId));
-    PrintTarget2($targets2->Target2[0]);
 
     // Get all new and existing targets in the customer library, whether or not they are
     // associated with campaigns or ad groups.
@@ -563,20 +522,8 @@ function GetTargetsByIds($proxy, $targetIds)
 {
     $request = new GetTargetsByIdsRequest();
     $request->TargetIds = $targetIds;
-    $request->LocationTargetVersion = "Latest";
 
     return $proxy->GetService()->GetTargetsByIds($request)->Targets;
-}
-
-// Gets the list of Target2 objects given the specified target identifiers.
-
-function GetTargetsByIds2($proxy, $targetIds)
-{
-    $request = new GetTargetsByIds2Request();
-    $request->TargetIds = $targetIds;
-    $request->LocationTargetVersion = "Latest";
-
-    return $proxy->GetService()->GetTargetsByIds2($request)->Targets;
 }
 
 // Adds the specified Target object to the customer library.
@@ -590,26 +537,15 @@ function AddTargetsToLibrary($proxy, $targets)
     return $proxy->GetService()->AddTargetsToLibrary($request)->TargetIds;
 }
 
-// Adds the specified Target2 object to the customer library.
+// Updates the specified Target object within the customer library.
 // The operation requires exactly one Target in a list.
 
-function AddTargetsToLibrary2($proxy, $targets)
+function UpdateTargetsInLibrary($proxy, $targets)
 {
-    $request = new AddTargetsToLibrary2Request();
+    $request = new UpdateTargetsInLibraryRequest();
     $request->Targets = $targets;
 
-    return $proxy->GetService()->AddTargetsToLibrary2($request)->TargetIds;
-}
-
-// Updates the specified Target2 object within the customer library.
-// The operation requires exactly one Target2 in a list.
-
-function UpdateTargetsInLibrary2($proxy, $targets)
-{
-    $request = new UpdateTargetsInLibrary2Request();
-    $request->Targets = $targets;
-
-    $proxy->GetService()->UpdateTargetsInLibrary2($request);
+    $proxy->GetService()->UpdateTargetsInLibrary($request);
 }
 
 // Deletes the specified target from the customer library.
@@ -704,123 +640,6 @@ function PrintTarget($target)
             printf("\tAge: %s\n\n", $bid->Age);
         }
     }
-    if (!is_null($target->Day))
-    {
-        print "DayTarget:\n";
-        foreach ($target->Day->Bids->DayTargetBid as $bid)
-        {
-            printf("\tBidAdjustment: %d\n", $bid->BidAdjustment);
-            printf("\tDay: %s\n\n", $bid->Day);
-        }
-    }
-    if (!is_null($target->DeviceOS))
-    {
-        print "DeviceOSTarget:\n";
-        foreach ($target->DeviceOS->Bids->DeviceOSTargetBid as $bid)
-        {
-            printf("\tBidAdjustment: %d\n", $bid->BidAdjustment);
-            printf("\tDeviceName: %s\n", $bid->DeviceName);
-            print "\n";
-        }
-    }
-    if (!is_null($target->Gender))
-    {
-        print "GenderTarget:\n";
-        foreach ($target->Gender->Bids->GenderTargetBid as $bid)
-        {
-            printf("\tBidAdjustment: %d\n", $bid->BidAdjustment);
-            printf("\tGender: %s\n\n", $bid->Gender);
-        }
-    }
-    if (!is_null($target->Hour))
-    {
-        print "HourTarget:\n";
-        foreach ($target->Hour->Bids->HourTargetBid as $bid)
-        {
-            printf("\tBidAdjustment: %d\n", $bid->BidAdjustment);
-            printf("\tHour: %s\n\n", $bid->Hour);
-        }
-    }
-    if (!is_null($target->Location))
-    {
-        print "LocationTarget:\n";
-        printf("\tHasPhysicalIntent: %s\n\n", (true == $target->Location->HasPhysicalIntent) ? "true" : "false");
-        if (!is_null($target->Location->CityTarget))
-        {
-            print "\tCityTarget:\n";
-            foreach ($target->Location->CityTarget->Bids->CityTargetBid as $bid)
-            {
-                printf("\t\tBidAdjustment: %s\n", $bid->BidAdjustment);
-                printf("\t\tCity: %s\n\n", $bid->City);
-            }
-        }
-        if (!is_null($target->Location->CountryTarget))
-        {
-            print "\tCountryTarget:\n";
-            foreach ($target->Location->CountryTarget->Bids->CountryTargetBid as $bid)
-            {
-                printf("\t\tBidAdjustment: %d\n", $bid->BidAdjustment);
-                printf("\t\tCountryAndRegion: %s\n", $bid->CountryAndRegion);
-                printf("\t\tIsExcluded: %s\n\n", $bid->IsExcluded ? "True" : "False");
-            }
-        }
-        if (!is_null($target->Location->MetroAreaTarget))
-        {
-            print "\tMetroAreaTarget:\n";
-            foreach ($target->Location->MetroAreaTarget->Bids->MetroAreaTargetBid as $bid)
-            {
-                printf("\t\tBidAdjustment: %d\n", $bid->BidAdjustment);
-                printf("\t\tMetroArea: %s\n", $bid->MetroArea);
-                printf("\t\tIsExcluded: %s\n\n", $bid->IsExcluded ? "True" : "False");
-            }
-        }
-        if (!is_null($target->Location->RadiusTarget))
-        {
-            print "\tRadiusTarget:\n";
-            foreach ($target->Location->RadiusTarget->Bids->RadiusTargetBid as $bid)
-            {
-                printf("\t\tBidAdjustment: %d\n", $bid->BidAdjustment);
-                printf("\t\tLatitudeDegrees: %f\n", $bid->LatitudeDegrees);
-                printf("\t\tLongitudeDegrees: %f\n", $bid->LongitudeDegrees);
-                printf("\t\tRadius: %d Miles\n\n", $bid->Radius);
-            }
-        }
-        if (!is_null($target->Location->StateTarget))
-        {
-            print "\tStateTarget:\n";
-            foreach ($target->Location->StateTarget->Bids->StateTargetBid as $bid)
-            {
-                printf("\t\tBidAdjustment: %d\n", $bid->BidAdjustment);
-                printf("\t\tState: %s\n", $bid->State);
-                printf("\t\tIsExcluded: %s\n\n", $bid->IsExcluded ? "True" : "False");
-            }
-        }
-    }
-
-    print "\n";
-}
-
-// Prints the specified Target2 object.
-
-function PrintTarget2($target)
-{
-    if(count((array)$target) == 0)
-    {
-        return;
-    }
-
-    printf("Target Id: %d\n", $target->Id);
-    printf("Target Name: %s\n\n", $target->Name);
-
-    if (!is_null($target->Age))
-    {
-        print "AgeTarget:\n";
-        foreach ($target->Age->Bids->AgeTargetBid as $bid)
-        {
-            printf("\tBidAdjustment: %d\n", $bid->BidAdjustment);
-            printf("\tAge: %s\n\n", $bid->Age);
-        }
-    }
     if (!is_null($target->DayTime))
     {
         print "DayTimeTarget:\n";
@@ -855,7 +674,7 @@ function PrintTarget2($target)
     }
     if (!is_null($target->Location))
     {
-        print "LocationTarget2:\n";
+        print "LocationTarget:\n";
         printf("\tIntentOption: %s\n\n", $target->Location->IntentOption);
         if (!is_null($target->Location->CityTarget))
         {
@@ -898,8 +717,8 @@ function PrintTarget2($target)
         }
         if (!is_null($target->Location->RadiusTarget))
         {
-            print "\tRadiusTarget2:\n";
-            foreach ($target->Location->RadiusTarget->Bids->RadiusTargetBid2 as $bid)
+            print "\tRadiusTarget:\n";
+            foreach ($target->Location->RadiusTarget->Bids->RadiusTargetBid as $bid)
             {
                 printf("\t\tBidAdjustment: %d\n", $bid->BidAdjustment);
                 printf("\t\tLatitudeDegrees: %f\n", $bid->LatitudeDegrees);
