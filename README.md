@@ -11,7 +11,7 @@ Version 3 uses the API version 10
 ##Library Information
 
  - Bing Ads API Version 10
- - Library Update  11/16/2015
+ - Library Update  12/15/2015
  - Library [Home Page](https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f)
 
 ##Installation
