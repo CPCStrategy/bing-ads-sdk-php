@@ -18,7 +18,7 @@
 - Example files have been modified to include the composer autoloader 
 
 ## Version 3.0.0
-- Update classes with Bing Ads SDK for PHP API v10
+- Update classes with Bing Ads SDK for PHP API v10 `12-15-2015`
 - Each class has been placed in it's own file using https://github.com/onema/classyfile
 - The following files have been placed under the `examples` directory:
  1. AdExtensions.php
