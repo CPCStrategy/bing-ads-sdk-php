@@ -21,11 +21,12 @@
 - Update classes with Bing Ads SDK for PHP API v10
 - Each class has been placed in it's own file using https://github.com/onema/classyfile
 - The following files have been placed under the `examples` directory:
- 1.  AdExtensions.php
- 1.  BudgetOpportunities.php
- 1.  BulkDownloadUpload.php
- 1.  KeywordsAds.php
- 1.  NegativeKeywords.php
- 1.  ShoppingCampaigns.php
- 1.  Targets.php
+ 1. AdExtensions.php
+ 1. BudgetOpportunities.php
+ 1. BulkDownloadUpload.php
+ 1. KeywordsAds.php
+ 1. NegativeKeywords.php
+ 1. ShoppingCampaigns.php
+ 1. Targets.php
+ 1. GeographicalLocations
 

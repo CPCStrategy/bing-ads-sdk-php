@@ -23,6 +23,9 @@ php composer.phar require cpcstrategy/bing-ads-sdk-php:~3.0
 
 See the [PHP Examples for Bing Ads](http://msdn.microsoft.com/en-US/library/jj966370.aspx) 
 
+###Original source code
+https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f
+
 ###Getting Started With the Bing Ads API
 http://msdn.microsoft.com/en-us/library/bing-ads-getting-started.aspx
 

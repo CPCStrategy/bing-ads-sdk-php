@@ -2,7 +2,8 @@
 
 // Include the BingAds\v10 namespaced class files available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
-include '../vendor/autoload.php';
+include 'bingads\v10\CampaignManagementClasses.php';
+include 'bingads\ClientProxy.php';
 
 // Specify the BingAds\CampaignManagement objects that will be used.
 use BingAds\v10\CampaignManagement\AddCampaignsRequest;
@@ -55,8 +56,8 @@ ini_set("soap.wsdl_cache_ttl", "0");
 $UserName = "<UserNameGoesHere>";
 $Password = "<PasswordGoesHere>";
 $DeveloperToken = "<DeveloperTokenGoesHere>";
-$CustomerId = <CustomerIdGoesHere>;
-$AccountId = <AccountIdGoesHere>;
+$CustomerId = "<CustomerIdGoesHere>";
+$AccountId = "<AccountIdGoesHere>";
 
 $PartitionActions = array(); // AdGroupCriterionAction array
 $ReferenceId = -1;

@@ -2,7 +2,8 @@
 
 // Include the BingAds\v10 namespaced class files available
 // for download at http://go.microsoft.com/fwlink/?LinkId=322147
-include '../vendor/autoload.php';
+include 'bingads\v10\BulkClasses.php';
+include 'bingads\ClientProxy.php';
 
 // Specify the BingAds\Bulk objects that will be used.
 use BingAds\v10\Bulk\DownloadCampaignsByAccountIdsRequest;
@@ -32,8 +33,8 @@ ini_set("soap.wsdl_cache_ttl", "0");
 $UserName = "<UserNameGoesHere>";
 $Password = "<PasswordGoesHere>";
 $DeveloperToken = "<DeveloperTokenGoesHere>";
-$CustomerId = <CustomerIdGoesHere>;
-$AccountId = <AccountIdGoesHere>;
+$CustomerId = "<CustomerIdGoesHere>";
+$AccountId = "<AccountIdGoesHere>";
 
 // Bulk WSDL
 
@@ -451,7 +452,10 @@ function UploadFile($UserName, $Password, $DeveloperToken, $CustomerId, $Custome
 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, array("file" => "@$filePath"));
+
+    // PHP 5.5+
+    $file = curl_file_create($filePath, "application/zip", "payload.zip");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, array("payload" => $file));
 
     $result = curl_exec($ch);
 
