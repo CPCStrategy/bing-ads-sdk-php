@@ -4,6 +4,8 @@ bing-ads-sdk-php
 Composer friendly version of the Bing Ads SDK for PHP. API Version 9. 
 This contains the PHP classes for version 9 of the Bing Ads web services. Classes for the request/response messages, data objects, and value set that each service defines in its WSDL are contained in this repository.
 
+Version 2 separates all classes into their own file. For the unmodified version of the SDK use branch `1.x`.
+
 ##Library Information
 
  - Bing Ads API Version 9
@@ -12,7 +14,7 @@ This contains the PHP classes for version 9 of the Bing Ads web services. Classe
 
 ##Installation
 ```shell
-php composer.phar require cpcstrategy/bing-ads-sdk-php:~1.1
+php composer.phar require cpcstrategy/bing-ads-sdk-php:~2.0
 ```
 
 ##Usage
