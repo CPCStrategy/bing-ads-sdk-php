@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1AE70879656240D353B07D345ADABB04" xmlns="http://www.w3.org/1999/xhtml" />
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=14E12FBA75D408888932008A1DC55284" xmlns="http://www.w3.org/1999/xhtml" />
 <link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
-<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:FooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4011E3BC67229AD60CF6140717B1CABE" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=1EF58BB40B669B6648C985D72AE79201" xmlns="http://www.w3.org/1999/xhtml" />
 <link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>PHP Classes for Bing Ads API Version 9</title>
+        <title>Bing Ads API in PHP</title>
         <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
         <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
         <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
@@ -26,20 +26,20 @@
     </head>
 <body>
     <div id="offlineDescription">
-        <h1>PHP Classes for Bing Ads API Version 9</h1>
+        <h1>Bing Ads API in PHP</h1>
         <br/>
         <div id="projectInfo">
             <div class="section">
                     <div class="itemBarLong tagsContainer">
                         <label for="Technologies">Technologies</label>
                         <div id="Technologies">
-                            Java, Bing Ads API
+                            PHP, Bing Ads API
                         </div>
                     </div>
                     <div class="itemBarLong tagsContainer">
                         <label for="Topics">Topics</label>
                         <div id="Topics">
-                            Bing Ads API, Bing Ads PHP Classes
+                            Web Services
                         </div>
                     </div>
                 <div class="itemBarLong">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="itemBar">
                     <label for="LastUpdated">Updated</label>
-                    <div id="LastUpdated">2/25/2015</div>
+                    <div id="LastUpdated">12/15/2015</div>
                 </div>
                 <div class="itemBarLong">
                     <label for="License">License</label>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="itemBar">
                     <div class="viewonlinecont">
-                        <a data-link="online" href="https://code.msdn.microsoft.com/PHP-Classes-for-Bing-Ads-c9762281">View this sample online</a>
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f">View this sample online</a>
                     </div>
                 </div>
             </div>
@@ -165,124 +165,58 @@
 <div id="longDesc">
     
 <h1>Introduction</h1>
-<div>&nbsp;</div>
-<div style="font-size:7.5pt; font-family:Verdana; margin:0in"><span style="color:#686868; font-style:italic">This download contains the PHP classes for version&nbsp;9 of the Bing Ads web services. For your convenience, we&rsquo;ve created classes for the request/response
- messages, data objects, and value set that each service defines in its </span><span style="font-style:italic"><a href="http://msdn.microsoft.com/en-us/library/dd796925(v=msads.90).aspx">WSDL</a></span><span style="color:#686868; font-style:italic">.</span></div>
-<div><span style="font-size:20px; font-weight:bold">Description</span></div>
-<div>&nbsp;</div>
-<div style="color:#686868; margin:0in"><span style="font-size:7.5pt; font-family:Verdana; font-style:italic">Don't want to create the classes yourself? No worries. Just download the PHP files that contain the class and include them in your application.&nbsp;</span><span style="font-size:10pt; font-family:'Segoe UI'; font-style:italic">&nbsp;&nbsp;&nbsp;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">&nbsp;</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">For example, after downloading the PHP file that contains the reporting classes, you can use the following snippet to include the reporting classes in your application.</div>
-<div><span style="color:#557f5f; font-size:x-small"><span style="color:#557f5f; font-size:x-small">
-<div></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">&nbsp;</div>
-</span>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">&nbsp;</div>
-</span>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>include
-</strong></span></span><span style="color:#0000c0; font-size:x-small"><span style="color:#0000c0; font-size:x-small">'bingads\ReportingClasses.php'</span></span><span style="font-size:x-small">;</span></div>
-</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>include
-</strong></span></span><span style="color:#0000c0; font-size:x-small"><span style="color:#0000c0; font-size:x-small">'bingads\ClientProxy.php'</span></span><span style="font-size:x-small">;</span></div>
-<div><span style="font-size:x-small">
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">&nbsp;</div>
-</span><span style="color:#557f5f; font-size:x-small"><span style="color:#557f5f; font-size:x-small">
-<div>// Specify the BingAds\Reporting objects that will be used.</div>
-</span>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"></div>
-</span>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\SubmitGenerateReportRequest;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\KeywordPerformanceReportRequest;</span></div>
-</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\ReportFormat;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\ReportAggregation;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\AccountThroughAdGroupReportScope;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\CampaignReportScope;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\ReportTime;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\ReportTimePeriod;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\KeywordPerformanceReportFilter;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\DeviceTypeReportFilter;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\KeywordPerformanceReportColumn;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\PollGenerateReportRequest;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\ReportRequestStatusType;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\KeywordPerformanceReportSort;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Reporting\SortOrder;</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in"></div>
-<div><span style="color:#557f5f; font-size:x-small"><span style="color:#557f5f; font-size:x-small">
-<div>// Specify the BingAds\Proxy object that will be used.</div>
-</span></span>
-<div><span style="color:#7f0055; font-size:x-small"><span style="color:#7f0055; font-size:x-small"><strong>use
-</strong></span></span><span style="font-size:x-small">BingAds\Proxy\ClientProxy;</span></div>
-</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">&nbsp;</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">&nbsp;</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">The following shows how you can instantiate the report object and set some of its properties.</div>
-<div class="scriptcode">
-<div class="pluginEditHolder" pluginCommand="mceScriptCode">
-<div class="title"><span>PHP</span></div>
-<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
-<span class="hidden">php</span>
-<pre class="hidden">$report = new AccountPerformanceReportRequest();
-$report-&gt;Format = ReportFormat::Xml;
-$report-&gt;ReportName = 'My Account Performance Report';
-$report-&gt;ReturnOnlyCompleteData = false;
-$report-&gt;Aggregation = ReportAggregation::Yearly;&nbsp;
-</pre>
-<div class="preview">
-<pre class="php"><span class="php__keyword">$</span><span class="php__variable">report</span>&nbsp;=&nbsp;<span class="php__keyword">new</span>&nbsp;AccountPerformanceReportRequest();&nbsp;
-<span class="php__keyword">$</span><span class="php__variable">report</span>-&gt;Format&nbsp;=&nbsp;ReportFormat::Xml;&nbsp;
-<span class="php__keyword">$</span><span class="php__variable">report</span>-&gt;ReportName&nbsp;=&nbsp;<span class="php__string1">'My&nbsp;Account&nbsp;Performance&nbsp;Report'</span>;&nbsp;
-<span class="php__keyword">$</span><span class="php__variable">report</span>-&gt;ReturnOnlyCompleteData&nbsp;=&nbsp;<span class="php__value">false</span>;&nbsp;
-<span class="php__keyword">$</span><span class="php__variable">report</span>-&gt;Aggregation&nbsp;=&nbsp;ReportAggregation::Yearly;&nbsp;&nbsp;
-</pre>
-</div>
-</div>
-</div>
-<div class="endscriptcode">&nbsp;</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; color:#686868; margin:0in">&nbsp;</div>
+<p>To get started developing Bing Ads applications with PHP, you need to <a href="https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f/https://msdn.microsoft.com/en-US/library/0176d1b0-5dbd-420e-967e-fd7dcb8af6b4(MSADS.100).aspx#requirements">
+set up the development environment</a> configured for web services. You can start with the provided examples which include proxies to the Bing Ads SOAP web services. You can also browse the
+<a href="https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f/https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f/https://msdn.microsoft.com/en-US/library/bing-ads-php-code-examples.aspx">
+PHP Examples for Bing Ads</a> on MSDN. The examples provided&nbsp;in this download package&nbsp;and the examples within
+<a href="https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f/https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f/https://msdn.microsoft.com/en-US/library/bing-ads-php-code-examples.aspx">
+PHP Examples for Bing Ads</a> depend on the <a href="https://code.msdn.microsoft.com/Bing-Ads-API-Version-9-in-fb27761f/https://msdn.microsoft.com/en-US/library/bing-ads-overview-getting-started-php-with-web-services.aspx#clientproxies">
+example client proxies</a>. When you download the examples you will also get the example proxy files.</p>
+<p><em><strong>Note</strong></em>: The proxy class files are provided as examples and subject to change. You are not required to use the provided proxies, and could write or generate your own with a custom tool.
+<br>
+<br>
+<em>This download includes the following PHP sample files for Bing Ads web services.
+<br>
+&nbsp;</em></p>
+<p style="padding-left:30px"><em>&bull;AdExtensions (Campaign Management service)</em></p>
+<p style="padding-left:30px"><em>&bull;BulkDownloadUpload (Bulk service)&nbsp;</em></p>
+<p style="padding-left:30px"><em>&bull;BudgetOpportunities (Ad Insightservice)</em><strong>&nbsp;</strong><em>&nbsp;</em></p>
+<p style="padding-left:30px"><em>&bull;KeywordsAds (Campaign Management service)</em></p>
+<p style="padding-left:30px"><em>&bull;ManageClient (Customer Management service)</em></p>
+<p style="padding-left:30px"><em>&bull;NegativeKeywords (Campaign Management service)</em></p>
+<p style="padding-left:30px"><em>&bull;ReportRequests (Reporting service)</em></p>
+<p style="padding-left:30px"><em>&bull;</em><em>SearchByUser (Customer</em><em>&nbsp;Management service)</em></p>
+<p style="padding-left:30px"><em>&bull;Targets (Campaign Management service)</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>The samples require that you update some of the following elements, and then build a project.<br>
+</em></p>
+<p style="padding-left:30px"><em>&bull;$UserName <br>
+&bull;$Password <br>
+&bull;$DeveloperToken <br>
+&bull;$CustomerId <br>
+&bull;$AccountId <br>
+&bull;$CampaignId <br>
+&bull;$CampaignIds <br>
+</em></p>
 <h1><span>Source Code Files</span></h1>
-<div>&nbsp;</div>
-<div style="font-size:10pt; font-family:'Segoe UI'; margin:0in"><span style="color:#686868">AdIntelligenceClasses.php - Contains the classes for the
-</span>Ad Intelligence<span style="color:#686868">&nbsp;service.</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; margin:0in"><span style="color:#686868">BulkClasses.php - Contains the classes for the
-</span>Bulk<span style="color:#686868"> service.</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; margin:0in"><span style="color:#686868">CampaignManagementClasses.php - Contains the classes for the
-</span>Campaign Management<span style="color:#686868"> service.<br>
-ClientProxy.php - Contains the proxy class to set the service headers and make a service call.
-</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; margin:0in"><span style="color:#686868"><span style="color:#686868">CustomerBillingClasses.php - Contains the classes for the
-</span><span style="color:#000000">Customer Billing </span><span style="color:#686868">service.</span><br>
-</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; margin:0in"><span style="color:#686868"><span style="color:#686868">CustomerManagementClasses.php - Contains the classes for the
-</span><span style="color:#000000">Customer Management</span><span style="color:#686868"> service.</span><br>
-</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; margin:0in"><span style="color:#686868">OptimizerClasses.php - Contains the classes for the
-</span>Optimizer<span style="color:#686868">&nbsp;service.</span></div>
-<div style="font-size:10pt; font-family:'Segoe UI'; margin:0in"><span style="color:#686868">ReportingClasses.php - Contians classes for the
-</span>Reporting<span style="color:#686868">&nbsp;service.</span></div>
-<div><em>&nbsp;</em>&nbsp;</div>
-<div><em>&nbsp;</em>&nbsp;</div>
-<div class="mcePaste" id="_mcePaste" style="overflow:hidden; height:1px; left:-10000px; top:0px; width:1px">
+<ul>
+<li><em>AdExtensions.php - </em><em>Demonstrates&nbsp;</em>how to add, get, and delete extensions for an account&rsquo;s ad extension library, set, get, and delete the extension associations with a campaign, and determine why an extension failed editorial review
+ using the following Campaign Management service operations. </li><li><em>BulkDownloadUpload.php - Demonstrates how to download and upload the entities of one or more campaigns in the background.</em>
+</li><li><em>BudgetOpportunities.php - Demonstrates how to get the budgetopportunities for the specified account.</em>
+</li><li><em>KeywordsAds.php -&nbsp;</em><em>Demonstrates&nbsp;</em>how to add ads and keywords to a new ad group, and handle partial errors when some ads or keywords are not successfully created.
+</li><li><em><em>GetEstimatedBid.php - Demonstrates how to get the minimum suggested bid value of one or more keywords that could result in an ad appearing in the targeted position in the search results.</em></em>
+</li><li><em>ManageClient</em><em>.php - Demonstrates how to use agency credentials to invite a client, and use client credentials to accept the invitation. Run this sample multiple times to update and observe the status change, for example from LinkPending to LinkAccepted
+ to Active. </em></li><li><em>NegativeKeywords.php - Demonstrates how to associate negative keywords and negative keyword lists with a campaign.</em>
+</li><li><em>ReportRequests.php - Demonstrates how to request and retrieve a keyword performance report.
+</em></li><li><em><em>SearchByUser.php - Demonstrates how to search for customers that can be managed by the current authenticated user.</em></em>
+</li><li><em>Targets.php - Demonstrates how to associate&nbsp;targets with a campaign and ad group.
+</em></li></ul>
+<h1>More Information</h1>
+<p><em>For information about updates to Bing Ads web services, see Release Notes here on MSDN:<br>
+<a href="http://msdn.microsoft.com/en-US/library/bing-ads-overview-release-notes.aspx ">http://msdn.microsoft.com/en-US/library/bing-ads-overview-release-notes.aspx
+</a></em></p>
+<div id="_mcePaste" class="mcePaste" style="left:-10000px; top:0px; width:1px; height:1px; overflow:hidden">
 </div>
-<div>&nbsp;</div>
-<div><em>For information&nbsp;about updates to Bing Ads Version 9 web services, see Release Notes here on MSDN:<br>
-<a href="http://msdn.microsoft.com/en-US/library/bing-ads-overview-release-notes(v=msads.90).aspx">http://msdn.microsoft.com/en-US/library/bing-ads-overview-release-notes(v=msads.90).aspx</a></em></div>
 
 </div>
 
