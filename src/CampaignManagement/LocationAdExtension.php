@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an ad extension that specifies a business' address and phone number to include in a text ad.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj721600(v=msads.90).aspx LocationAdExtension Data Object
- *
+ * 
  * @uses Address
  * @uses BusinessGeoCodeStatus
  * @uses GeoPoint

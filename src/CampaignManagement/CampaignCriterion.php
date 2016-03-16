@@ -3,10 +3,10 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * This feature is currently in pilot and will be generally available soon.
+ * Defines the base class of a campaign criterion.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn913126(v=msads.90).aspx CampaignCriterion Data Object
- *
+ * 
  * @uses Criterion
  * @uses KeyValuePairOfstringstring
  * @used-by AddCampaignCriterionsRequest

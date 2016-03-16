@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Deletes one or more campaigns in a specified account.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn236314(v=msads.90).aspx DeleteCampaigns Request Object
- *
+ * 
  * @used-by BingAdsCampaignManagementService::DeleteCampaigns
  */
 final class DeleteCampaignsRequest
@@ -20,7 +20,7 @@ final class DeleteCampaignsRequest
     /**
      * A maximum of 100 campaign identifiers to delete.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $CampaignIds;
 }

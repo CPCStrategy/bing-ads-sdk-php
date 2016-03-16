@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines the possible time zones for the customer management service.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn451293(v=msads.90).aspx TimeZoneType Value Set
- *
+ * 
  * @used-by Account
  */
 final class TimeZoneType

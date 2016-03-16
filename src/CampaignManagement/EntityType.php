@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines the possible types of entities.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj622172(v=msads.90).aspx EntityType Value Set
- *
+ * 
  * @used-by AppealEditorialRejectionsRequest
  * @used-by GetEditorialReasonsByIdsRequest
  */

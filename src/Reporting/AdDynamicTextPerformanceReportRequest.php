@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines an ad dynamic text performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671950(v=msads.90).aspx AdDynamicTextPerformanceReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses AdDynamicTextPerformanceReportColumn
  * @uses AdDynamicTextPerformanceReportFilter

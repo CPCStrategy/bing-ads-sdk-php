@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a keyword.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671833(v=msads.90).aspx Keyword Data Object
- *
+ * 
  * @uses Bid
  * @uses KeywordEditorialStatus
  * @uses KeyValuePairOfstringstring

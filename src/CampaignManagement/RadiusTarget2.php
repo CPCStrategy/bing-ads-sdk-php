@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a list of geographical radius targets with bid adjustments.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743744(v=msads.90).aspx RadiusTarget2 Data Object
- *
+ * 
  * @uses RadiusTargetBid2
  * @used-by LocationTarget2
  */

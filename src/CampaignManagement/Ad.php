@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines the base object of an ad.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671952(v=msads.90).aspx Ad Data Object
- *
+ * 
  * @uses AdEditorialStatus
  * @uses KeyValuePairOfstringstring
  * @uses AdStatus

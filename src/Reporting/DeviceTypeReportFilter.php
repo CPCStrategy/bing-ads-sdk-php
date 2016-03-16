@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the device type values that you can use to filter the report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg262850(v=msads.90).aspx DeviceTypeReportFilter Value Set
- *
+ * 
  * @used-by AccountPerformanceReportFilter
  * @used-by AdDynamicTextPerformanceReportFilter
  * @used-by AdExtensionByAdReportFilter
@@ -19,11 +19,14 @@ namespace BingAds\Reporting;
  * @used-by CampaignPerformanceReportFilter
  * @used-by ConversionPerformanceReportFilter
  * @used-by DestinationUrlPerformanceReportFilter
+ * @used-by GoalsAndFunnelsReportFilter
  * @used-by KeywordPerformanceReportFilter
  * @used-by ProductDimensionPerformanceReportFilter
  * @used-by ProductOfferPerformanceReportFilter
  * @used-by ProductPartitionPerformanceReportFilter
+ * @used-by ProductPartitionUnitPerformanceReportFilter
  * @used-by ProductTargetPerformanceReportFilter
+ * @used-by ShareOfVoiceReportFilter
  * @used-by SitePerformanceReportFilter
  */
 final class DeviceTypeReportFilter

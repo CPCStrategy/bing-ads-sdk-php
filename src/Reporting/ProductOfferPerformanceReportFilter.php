@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the product offer performance report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743718(v=msads.90).aspx ProductOfferPerformanceReportFilter Data Object
- *
+ * 
  * @uses DeviceTypeReportFilter
  * @used-by ProductOfferPerformanceReportRequest
  */

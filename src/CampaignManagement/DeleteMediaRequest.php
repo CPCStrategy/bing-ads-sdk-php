@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Deletes the specified media from an account's media library.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn766193(v=msads.90).aspx DeleteMedia Request Object
- *
+ * 
  * @used-by BingAdsCampaignManagementService::DeleteMedia
  */
 final class DeleteMediaRequest
@@ -20,7 +20,7 @@ final class DeleteMediaRequest
     /**
      * A maximum of 100 media identifiers to delete from the account's media library.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $MediaIds;
 }

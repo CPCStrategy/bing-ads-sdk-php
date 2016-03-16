@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines the possible types of campaign budgets.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh418067(v=msads.90).aspx BudgetLimitType Value Set
- *
+ * 
  * @used-by BudgetOpportunity
  */
 final class BudgetLimitType

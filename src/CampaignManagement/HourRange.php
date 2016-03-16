@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines the time ranges that you can specify for time of the day targeting.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672093(v=msads.90).aspx HourRange Value Set
- *
+ * 
  * @used-by HourTargetBid
  */
 final class HourRange

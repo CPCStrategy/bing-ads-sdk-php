@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a specific device target with bid adjustment.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn249988(v=msads.90).aspx DeviceOSTargetBid Data Object
- *
+ * 
  * @used-by DeviceOSTarget
  */
 final class DeviceOSTargetBid

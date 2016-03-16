@@ -3,7 +3,7 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * Currently this feature is only available for pilot participants.
+ * Defines an app ad extension that can be included in a text ad.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn817898(v=msads.90).aspx AppAdExtension Data Object
  */

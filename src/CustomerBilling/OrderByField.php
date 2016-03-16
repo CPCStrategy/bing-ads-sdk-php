@@ -6,7 +6,7 @@ namespace BingAds\CustomerBilling;
  * Defines the field order of insertion orders returned using SearchInsertionOrders.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743750(v=msads.90).aspx OrderByField Value Set
- *
+ * 
  * @used-by OrderBy
  */
 final class OrderByField

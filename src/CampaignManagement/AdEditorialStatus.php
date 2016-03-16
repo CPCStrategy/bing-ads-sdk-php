@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines the editorial review status values of an ad.
  *
  * @link http://msdn.microsoft.com/en-us/library/cc565084(v=msads.90).aspx AdEditorialStatus Value Set
- *
+ * 
  * @used-by Ad
  * @used-by GetAdsByEditorialStatusRequest
  */

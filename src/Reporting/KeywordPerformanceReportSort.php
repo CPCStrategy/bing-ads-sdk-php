@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a keyword performance report column and corresponding sort order.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn342799(v=msads.90).aspx KeywordPerformanceReportSort Data Object
- *
+ * 
  * @uses KeywordPerformanceReportColumn
  * @uses SortOrder
  * @used-by KeywordPerformanceReportRequest

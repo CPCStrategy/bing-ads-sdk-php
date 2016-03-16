@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines the contact information for a user.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671639(v=msads.90).aspx ContactInfo Data Object
- *
+ * 
  * @uses Address
  * @uses EmailFormat
  * @used-by User

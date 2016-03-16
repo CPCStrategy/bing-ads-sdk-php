@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines the possible positions where you can target an ad to appear in the search results or on a content-based webpage.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg986819(v=msads.90).aspx TargetAdPosition Value Set
- *
+ * 
  * @used-by GetEstimatedBidByKeywordIdsRequest
  * @used-by GetEstimatedBidByKeywordsRequest
  */

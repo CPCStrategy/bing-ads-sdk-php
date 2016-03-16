@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a geo location performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743772(v=msads.90).aspx GeoLocationPerformanceReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses GeoLocationPerformanceReportColumn
  * @uses GeoLocationPerformanceReportFilter

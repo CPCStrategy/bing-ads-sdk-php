@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines an object that contains search query statistics of including broad match type keyword bids.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn766187(v=msads.90).aspx BroadMatchSearchQueryKPI Data Object
- *
+ * 
  * @used-by BroadMatchKeywordOpportunity
  * @used-by BroadMatchSearchQuery
  */

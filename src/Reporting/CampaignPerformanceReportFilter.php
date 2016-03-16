@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the campaign performance report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671808(v=msads.90).aspx CampaignPerformanceReportFilter Data Object
- *
+ * 
  * @uses AdDistributionReportFilter
  * @uses DeviceOSReportFilter
  * @uses DeviceTypeReportFilter

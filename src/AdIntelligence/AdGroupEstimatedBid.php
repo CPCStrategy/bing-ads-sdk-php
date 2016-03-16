@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains estimates of clicks, average cost per click (CPC), impressions, click-through rate (CTR), and total cost for the specified ad group given the suggested bid.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn144841(v=msads.90).aspx AdGroupEstimatedBid Data Object
- *
+ * 
  * @uses Currency
  * @used-by GetEstimatedBidByKeywordsResponse
  */

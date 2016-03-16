@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an error object that contains the details that explain why the service operation failed.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn169088(v=msads.90).aspx OperationError Data Object
- *
+ * 
  * @used-by ApiFaultDetail
  */
 final class OperationError

@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a sub geography, specifically a state or province to target, and the percentage used to adjust the base bid.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd796942(v=msads.90).aspx StateTargetBid Data Object
- *
+ * 
  * @used-by StateTarget
  */
 final class StateTargetBid

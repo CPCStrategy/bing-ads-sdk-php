@@ -6,34 +6,34 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the DestinationUrlPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671820(v=msads.90).aspx DestinationUrlPerformanceReportColumn Value Set
- *
+ * 
  * @used-by DestinationUrlPerformanceReportRequest
  */
 final class DestinationUrlPerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
-    /** The AdDistribution element of an AdGroup. */
+    /** The ad distribution attribute of an ad group. */
     const AdDistribution = 'AdDistribution';
-    /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+    /** The destination URL attribute of the ad, keyword, or ad group criterion. */
     const DestinationUrl = 'DestinationUrl';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
@@ -57,11 +57,11 @@ final class DestinationUrlPerformanceReportColumn
     const AverageCpm = 'AverageCpm';
     /** The PricingModel element of an AdGroup. */
     const PricingModel = 'PricingModel';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
-    /** The MatchType element of a Keyword. */
+    /** The keyword bid match type. */
     const BidMatchType = 'BidMatchType';
     /** The match type used to deliver an ad. */
     const DeliveredMatchType = 'DeliveredMatchType';
@@ -69,7 +69,7 @@ final class DestinationUrlPerformanceReportColumn
     const Network = 'Network';
     /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
     const TopVsOther = 'TopVsOther';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
     const Assists = 'Assists';
@@ -85,4 +85,14 @@ final class DestinationUrlPerformanceReportColumn
     const RevenuePerConversion = 'RevenuePerConversion';
     /** The revenue per assist. */
     const RevenuePerAssist = 'RevenuePerAssist';
+    /** The current TrackingUrlTemplate element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const TrackingTemplate = 'TrackingTemplate';
+    /** The current UrlCustomParameters element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const CustomParameters = 'CustomParameters';
+    /** The FinalUrls element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const FinalURL = 'FinalURL';
+    /** The FinalMobileUrls element of the Ad, Keyword, or BiddableAdGroupCriterion. */
+    const FinalMobileURL = 'FinalMobileURL';
+    /** Reserved for future use. */
+    const FinalAppURL = 'FinalAppURL';
 }

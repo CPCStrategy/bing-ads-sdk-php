@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an ad group.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671956(v=msads.90).aspx AdGroup Data Object
- *
+ * 
  * @uses AdDistribution
  * @uses AdRotation
  * @uses BiddingModel
@@ -89,6 +89,12 @@ final class AdGroup
      * @var string
      */
     public $Name;
+    /**
+     * The percent amount by which to adjust your bid for native ads above or below the base ad group or keyword bid.
+     *
+     * @var int
+     */
+    public $NativeBidAdjustment;
     /**
      * The search networks where you want your ads to display.
      *

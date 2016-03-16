@@ -3,10 +3,10 @@
 namespace BingAds\CampaignManagement;
 
 /**
- * This feature is currently in pilot and will be generally available soon.
+ * Gets the specified campaign criterions.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn913135(v=msads.90).aspx GetCampaignCriterionsByIds Request Object
- *
+ * 
  * @uses CampaignCriterionType
  * @used-by BingAdsCampaignManagementService::GetCampaignCriterionsByIds
  */
@@ -15,7 +15,7 @@ final class GetCampaignCriterionsByIdsRequest
     /**
      * A list of unique identifiers that identify the campaign criterions to get.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $CampaignCriterionIds;
     /**

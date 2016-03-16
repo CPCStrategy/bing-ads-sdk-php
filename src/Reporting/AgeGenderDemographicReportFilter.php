@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the gender demographic report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671580(v=msads.90).aspx AgeGenderDemographicReportFilter Data Object
- *
+ * 
  * @uses AdDistributionReportFilter
  * @used-by AgeGenderDemographicReportRequest
  */

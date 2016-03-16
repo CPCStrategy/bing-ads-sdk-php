@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines the possible roles of a user.
  *
  * @link http://msdn.microsoft.com/en-us/library/ee704157(v=msads.90).aspx UserRole Value Set
- *
+ * 
  * @used-by UserInvitation
  */
 final class UserRole

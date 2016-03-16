@@ -8,36 +8,36 @@ use DateTime;
  * Defines the attribute columns that you can include in the SearchCampaignChangeHistoryReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh912353(v=msads.90).aspx SearchCampaignChangeHistoryReportColumn Value Set
- *
+ * 
  * @used-by SearchCampaignChangeHistoryReportRequest
  */
 final class SearchCampaignChangeHistoryReportColumn
 {
     /** The date and time of the change. */
     const DateTime = 'DateTime';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
     /** The username of the user that made the change to settings within the account. */
     const ChangedBy = 'ChangedBy';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Title element of a MobileAd or TextAd. */
+    /** The ad title. */
     const AdTitle = 'AdTitle';
-    /** The Text element of a MobileAd or TextAd. */
+    /** The text attribute of a text ad. */
     const AdDescription = 'AdDescription';
-    /** The DisplayUrl element of a MobileAd or TextAd. */
+    /** The ad display URL. */
     const DisplayUrl = 'DisplayUrl';
-    /** The Text element of a Keyword. */
+    /** The keyword text. */
     const Keyword = 'Keyword';
     /** The value that identifies the entity that changed. */
     const ItemChanged = 'ItemChanged';

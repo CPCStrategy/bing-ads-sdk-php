@@ -6,32 +6,32 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the ProductOfferPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743720(v=msads.90).aspx ProductOfferPerformanceReportColumn Value Set
- *
+ * 
  * @used-by ProductOfferPerformanceReportRequest
  */
 final class ProductOfferPerformanceReportColumn
 {
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
-    /** The Status element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The ad status. */
     const AdStatus = 'AdStatus';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
     /** The report will include a column that contains the unique identifier provided by a merchant for each product offer. */
     const MerchantProductId = 'MerchantProductId';

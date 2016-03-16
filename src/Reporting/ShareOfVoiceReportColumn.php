@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the ShareOfVoicePerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj592910(v=msads.90).aspx ShareOfVoiceReportColumn Value Set
- *
+ * 
  * @used-by ShareOfVoiceReportRequest
  */
 final class ShareOfVoiceReportColumn
@@ -81,4 +81,8 @@ final class ShareOfVoiceReportColumn
     /** The AdDistribution element of an AdGroup. */
     const AdDistribution = 'AdDistribution';
     const ClickSharePercent = 'ClickSharePercent';
+    /** The DeviceName element of a DeviceOSTargetBid. */
+    const DeviceType = 'DeviceType';
+    /** The Network element of an AdGroup. */
+    const Network = 'Network';
 }

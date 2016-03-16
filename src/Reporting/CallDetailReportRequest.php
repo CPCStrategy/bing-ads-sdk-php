@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a call detail report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn195845(v=msads.90).aspx CallDetailReportRequest Data Object
- *
+ * 
  * @uses ReportAggregation
  * @uses CallDetailReportColumn
  * @uses AccountThroughAdGroupReportScope

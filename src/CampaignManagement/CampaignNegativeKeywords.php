@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an object that contains the campaign's list of negative keywords.
  *
  * @link http://msdn.microsoft.com/en-us/library/ee703967(v=msads.90).aspx CampaignNegativeKeywords Data Object
- *
+ * 
  * @used-by GetNegativeKeywordsByCampaignIdsResponse
  * @used-by SetNegativeKeywordsToCampaignsRequest
  */

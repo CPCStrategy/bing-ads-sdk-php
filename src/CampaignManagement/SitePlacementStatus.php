@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines the status of a website placement bid.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd797148(v=msads.90).aspx SitePlacementStatus Value Set
- *
+ * 
  * @used-by SitePlacement
  */
 final class SitePlacementStatus

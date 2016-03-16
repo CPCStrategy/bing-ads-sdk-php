@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines the name of a user.
  *
  * @link http://msdn.microsoft.com/en-us/library/ff728429(v=msads.90).aspx PersonName Data Object
- *
+ * 
  * @used-by User
  */
 final class PersonName

@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the keyword performance report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672082(v=msads.90).aspx KeywordPerformanceReportFilter Data Object
- *
+ * 
  * @uses AdDistributionReportFilter
  * @uses AdTypeReportFilter
  * @uses BidMatchTypeReportFilter
@@ -49,7 +49,7 @@ final class KeywordPerformanceReportFilter
     /**
      * A numeric score that indicates how likely your ads will be clicked and how well your keyword competes against other keywords targeting the same traffic.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $KeywordRelevance;
     /**
@@ -61,13 +61,13 @@ final class KeywordPerformanceReportFilter
     /**
      * A numeric score that indicates whether your landing page is likely to provide a good experience to customers who click your ad and land on your website.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $LandingPageRelevance;
     /**
      * A numeric score that indicates whether your landing page is likely to provide a good experience to customers who click your ad and land on your website.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $LandingPageUserExperience;
     /**
@@ -79,7 +79,7 @@ final class KeywordPerformanceReportFilter
     /**
      * The report will include data for only keywords with the specified quality scores.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $QualityScore;
 }

@@ -33,4 +33,10 @@ final class ImageAdExtension extends AdExtension
      * @var int
      */
     public $ImageMediaId;
+    /**
+     * The identifiers of the images to include in the ad.
+     *
+     * @var int[]
+     */
+    public $ImageMediaIds;
 }

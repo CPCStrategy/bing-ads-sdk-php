@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines an object that contains the marketplace impact statistics of including broad match type keyword bids.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn766186(v=msads.90).aspx BroadMatchKeywordOpportunity Data Object
- *
+ * 
  * @uses BroadMatchSearchQueryKPI
  */
 final class BroadMatchKeywordOpportunity extends KeywordOpportunity

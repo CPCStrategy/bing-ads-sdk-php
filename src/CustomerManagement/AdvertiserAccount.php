@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines an advertiser account.
  *
  * @link http://msdn.microsoft.com/en-us/library/ee704163(v=msads.90).aspx AdvertiserAccount Data Object
- *
+ * 
  * @uses TaxType
  */
 final class AdvertiserAccount extends Account

@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a specific day of the week and time range to target with bid adjustment.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743741(v=msads.90).aspx DayTimeTargetBid Data Object
- *
+ * 
  * @uses Day
  * @uses Minute
  * @used-by DayTimeTarget

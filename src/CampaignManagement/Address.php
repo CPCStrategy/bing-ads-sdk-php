@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a postal address.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj721596(v=msads.90).aspx Address Data Object
- *
+ * 
  * @used-by LocationAdExtension
  */
 final class Address

@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the bid match type values that you can use to filter the report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/ff728812(v=msads.90).aspx BidMatchTypeReportFilter Value Set
- *
+ * 
  * @used-by KeywordPerformanceReportFilter
  * @used-by ShareOfVoiceReportFilter
  */

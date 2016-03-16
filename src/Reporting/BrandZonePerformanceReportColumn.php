@@ -27,6 +27,8 @@ final class BrandZonePerformanceReportColumn
     const AdGroupStatus = 'AdGroupStatus';
     const KeywordStatus = 'KeywordStatus';
     const DisplayPosition = 'DisplayPosition';
+    const AssetId = 'AssetId';
+    const ComponentName = 'ComponentName';
     const Network = 'Network';
     const PricingModel = 'PricingModel';
     const DeviceOS = 'DeviceOS';

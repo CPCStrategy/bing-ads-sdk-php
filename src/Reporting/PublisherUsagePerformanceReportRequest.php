@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a publisher usage performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd797229(v=msads.90).aspx PublisherUsagePerformanceReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses PublisherUsagePerformanceReportColumn
  * @uses PublisherUsagePerformanceReportFilter

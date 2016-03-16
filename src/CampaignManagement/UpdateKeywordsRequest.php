@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Updates the keywords within a specified ad group.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn236295(v=msads.90).aspx UpdateKeywords Request Object
- *
+ * 
  * @uses Keyword
  * @used-by BingAdsCampaignManagementService::UpdateKeywords
  */

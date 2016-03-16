@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines the possible values of a campaign budget point.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn434661(v=msads.90).aspx BudgetPointType Value Set
- *
+ * 
  * @used-by BudgetPoint
  */
 final class BudgetPointType

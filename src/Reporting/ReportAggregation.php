@@ -6,12 +6,13 @@ namespace BingAds\Reporting;
  * Defines the aggregation values that you can use for a report.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672067(v=msads.90).aspx ReportAggregation Value Set
- *
+ * 
  * @used-by AccountPerformanceReportRequest
  * @used-by AdExtensionByAdReportRequest
  * @used-by AdExtensionByKeywordReportRequest
  * @used-by AdExtensionDetailReportRequest
  * @used-by AdGroupPerformanceReportRequest
+ * @used-by AudiencePerformanceReportRequest
  * @used-by BrandZonePerformanceReportRequest
  * @used-by CallDetailReportRequest
  * @used-by CampaignPerformanceReportRequest
@@ -19,6 +20,7 @@ namespace BingAds\Reporting;
  * @used-by ProductDimensionPerformanceReportRequest
  * @used-by ProductOfferPerformanceReportRequest
  * @used-by ProductPartitionPerformanceReportRequest
+ * @used-by ProductPartitionUnitPerformanceReportRequest
  * @used-by ProductTargetPerformanceReportRequest
  * @used-by SitePerformanceReportRequest
  */

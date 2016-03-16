@@ -6,7 +6,7 @@ namespace BingAds\CustomerBilling;
  * Defines an order for the list of insertion orders returned using SearchInsertionOrders.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743752(v=msads.90).aspx OrderBy Data Object
- *
+ * 
  * @uses OrderByField
  * @uses SortOrder
  * @used-by SearchInsertionOrdersRequest

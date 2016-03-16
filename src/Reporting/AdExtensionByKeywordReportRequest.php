@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines an ad extension by keyword report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj713605(v=msads.90).aspx AdExtensionByKeywordReportRequest Data Object
- *
+ * 
  * @uses ReportAggregation
  * @uses AdExtensionByKeywordReportColumn
  * @uses AdExtensionByKeywordReportFilter

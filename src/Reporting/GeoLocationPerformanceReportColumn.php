@@ -6,26 +6,26 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the GeoLocationPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743762(v=msads.90).aspx GeoLocationPerformanceReportColumn Value Set
- *
+ * 
  * @used-by GeoLocationPerformanceReportRequest
  */
 final class GeoLocationPerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
     /** The country used to deliver the ad. */
     const Country = 'Country';
@@ -35,9 +35,9 @@ final class GeoLocationPerformanceReportColumn
     const MetroArea = 'MetroArea';
     /** The city used to deliver the ad. */
     const City = 'City';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
-    /** The AdDistribution element of an AdGroup. */
+    /** The ad distribution attribute of an ad group. */
     const AdDistribution = 'AdDistribution';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
@@ -57,9 +57,9 @@ final class GeoLocationPerformanceReportColumn
     const ProximityTargetLocation = 'ProximityTargetLocation';
     /** The Radius element of a RadiusTargetBid. */
     const Radius = 'Radius';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
-    /** The MatchType element of a Keyword. */
+    /** The keyword bid match type. */
     const BidMatchType = 'BidMatchType';
     /** The match type used to deliver an ad. */
     const DeliveredMatchType = 'DeliveredMatchType';
@@ -67,9 +67,9 @@ final class GeoLocationPerformanceReportColumn
     const Network = 'Network';
     /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
     const TopVsOther = 'TopVsOther';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
     const Assists = 'Assists';
