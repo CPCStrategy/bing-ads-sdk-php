@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the base object for all report requests.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671813(v=msads.90).aspx ReportRequest Data Object
- *
+ * 
  * @uses ReportFormat
  * @uses ReportLanguage
  * @used-by SubmitGenerateReportRequest

@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Retrieves placement information for the specified URLs.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn277530(v=msads.90).aspx GetPlacementDetailsForUrls Response Object
- *
+ * 
  * @uses PlacementDetail
  * @used-by BingAdsCampaignManagementService::GetPlacementDetailsForUrls
  */

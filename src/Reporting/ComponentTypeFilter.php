@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the possible components of a rich ad that you can use to filter the report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh180146(v=msads.90).aspx ComponentTypeFilter Value Set
- *
+ * 
  * @used-by RichAdComponentPerformanceReportFilter
  */
 final class ComponentTypeFilter

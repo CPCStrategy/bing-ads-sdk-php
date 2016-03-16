@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines a selection of currency values.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671938(v=msads.90).aspx CurrencyType Value Set
- *
+ * 
  * @used-by Account
  */
 final class CurrencyType

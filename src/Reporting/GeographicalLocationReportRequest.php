@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * The GeographicalLocationReportRequest and corresponding programming elements are deprecated, and instead you should use the GeoLocationPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn393955(v=msads.90).aspx GeographicalLocationReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses GeographicalLocationReportColumn
  * @uses GeographicalLocationReportFilter

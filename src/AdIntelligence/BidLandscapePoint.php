@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains estimates of clicks, cost, and impressions given the suggested bid.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn631947(v=msads.90).aspx BidLandscapePoint Data Object
- *
+ * 
  * @uses Currency
  * @used-by AdGroupBidLandscape
  * @used-by KeywordBidLandscape

@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines an object that contains a budget amount and an estimate of daily impressions, clicks, and cost for this budget amount averaged over the last 15 days.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn434659(v=msads.90).aspx BudgetPoint Data Object
- *
+ * 
  * @uses BudgetLandscapePoint
  * @uses BudgetPointType
  * @used-by CampaignBudgetLandscape

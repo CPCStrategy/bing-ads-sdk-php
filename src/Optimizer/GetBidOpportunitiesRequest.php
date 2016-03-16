@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Gets the keyword bid opportunities of the specified ad group.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn376337(v=msads.90).aspx GetBidOpportunities Request Object
- *
+ * 
  * @uses BidOpportunityType
  * @used-by BingAdsOptimizerService::GetBidOpportunities
  */

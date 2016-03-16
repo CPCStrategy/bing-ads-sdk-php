@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Gets the shared entities such as negative keyword lists from the account's library.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743728(v=msads.90).aspx GetSharedEntitiesByAccountId Request Object
- *
+ * 
  * @used-by BingAdsCampaignManagementService::GetSharedEntitiesByAccountId
  */
 final class GetSharedEntitiesByAccountIdRequest

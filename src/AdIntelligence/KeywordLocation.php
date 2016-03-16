@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains the location and the percentage of time that a user in the specified location entered a search query with the specified keyword.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh921736(v=msads.90).aspx KeywordLocation Data Object
- *
+ * 
  * @used-by KeywordLocationResult
  */
 final class KeywordLocation

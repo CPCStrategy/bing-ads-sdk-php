@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines a selection of currency values.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg712234(v=msads.90).aspx Currency Value Set
- *
+ * 
  * @used-by AdGroupEstimatedBid
  * @used-by BidLandscapePoint
  * @used-by EstimatedBidAndTraffic

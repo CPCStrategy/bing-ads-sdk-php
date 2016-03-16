@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines an account identification object that contains information that identifies an account.
  *
  * @link http://msdn.microsoft.com/en-us/library/ff728414(v=msads.90).aspx AccountInfo Data Object
- *
+ * 
  * @uses AccountLifeCycleStatus
  * @used-by FindAccountsResponse
  * @used-by GetAccountsInfoResponse

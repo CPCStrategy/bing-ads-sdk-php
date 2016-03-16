@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a share of voice (SOV) report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj592909(v=msads.90).aspx ShareOfVoiceReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses ShareOfVoiceReportColumn
  * @uses ShareOfVoiceReportFilter

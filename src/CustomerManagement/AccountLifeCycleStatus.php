@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines the possible status values of an account.
  *
  * @link http://msdn.microsoft.com/en-us/library/ff728394(v=msads.90).aspx AccountLifeCycleStatus Value Set
- *
+ * 
  * @used-by Account
  * @used-by AccountInfo
  * @used-by AccountInfoWithCustomerData

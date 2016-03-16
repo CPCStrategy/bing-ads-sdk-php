@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a media representation base class that includes a media download Url.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn766194(v=msads.90).aspx MediaRepresentation Data Object
- *
+ * 
  * @used-by MediaMetaData
  */
 class MediaRepresentation

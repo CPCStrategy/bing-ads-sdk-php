@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines an object that contains the suggested budget with estimated clicks and impressions opportunities.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh418054(v=msads.90).aspx BudgetOpportunity Data Object
- *
+ * 
  * @uses BudgetLimitType
  * @used-by GetBudgetOpportunitiesResponse
  */

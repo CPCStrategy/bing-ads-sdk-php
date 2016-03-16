@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a search query performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/ee703962(v=msads.90).aspx SearchQueryPerformanceReportRequest Data Object
- *
+ * 
  * @uses SearchQueryReportAggregation
  * @uses SearchQueryPerformanceReportColumn
  * @uses SearchQueryPerformanceReportFilter

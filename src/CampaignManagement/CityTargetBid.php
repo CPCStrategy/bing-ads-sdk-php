@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a specific city target with bid adjustment.
  *
  * @link http://msdn.microsoft.com/en-us/library/dd796932(v=msads.90).aspx CityTargetBid Data Object
- *
+ * 
  * @used-by CityTarget
  */
 final class CityTargetBid

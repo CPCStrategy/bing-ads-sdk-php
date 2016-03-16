@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the geographical location performance report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743754(v=msads.90).aspx GeoLocationPerformanceReportFilter Data Object
- *
+ * 
  * @uses AdDistributionReportFilter
  * @used-by GeoLocationPerformanceReportRequest
  */

@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines a paging object for the list of entities returned using one of the search operations, for example SearchAccounts, SearchClientLinks, or SearchCustomers.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn452059(v=msads.90).aspx Paging Data Object
- *
+ * 
  * @used-by SearchAccountsRequest
  * @used-by SearchClientLinksRequest
  * @used-by SearchCustomersRequest

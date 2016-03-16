@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines an object that contains the suggested bid with estimated clicks and impressions opportunities.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh802384(v=msads.90).aspx BidOpportunity Data Object
- *
+ * 
  * @used-by GetBidOpportunitiesResponse
  */
 final class BidOpportunity extends Opportunity

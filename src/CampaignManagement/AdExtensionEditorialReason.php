@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an object that you can use to determine the component of an ad extension that failed editorial review, and the reason for the failure.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj134398(v=msads.90).aspx AdExtensionEditorialReason Data Object
- *
+ * 
  * @used-by AdExtensionEditorialReasonCollection
  */
 final class AdExtensionEditorialReason

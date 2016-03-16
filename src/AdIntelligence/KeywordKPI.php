@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines a key performance index object for a keyword.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg986837(v=msads.90).aspx KeywordKPI Data Object
- *
+ * 
  * @uses MatchType
  * @uses AdPosition
  * @used-by KeywordHistoricalPerformance

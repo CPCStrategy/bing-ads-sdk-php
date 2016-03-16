@@ -6,28 +6,28 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the AgeGenderDemographicReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671786(v=msads.90).aspx AgeGenderDemographicReportColumn Value Set
- *
+ * 
  * @used-by AgeGenderDemographicReportRequest
  */
 final class AgeGenderDemographicReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The AdDistribution element of an AdGroup. */
+    /** The ad distribution attribute of an ad group. */
     const AdDistribution = 'AdDistribution';
     /** The age group of the audience who might have viewed the ad, if known. */
     const AgeGroup = 'AgeGroup';
@@ -39,6 +39,6 @@ final class AgeGenderDemographicReportColumn
     const EstimatedClickPercent = 'EstimatedClickPercent';
     /** The estimated click-through rate (Ctr) as a percentage. */
     const EstimatedCtr = 'EstimatedCtr';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
 }

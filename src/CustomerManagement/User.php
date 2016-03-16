@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines a user.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671824(v=msads.90).aspx User Data Object
- *
+ * 
  * @uses ContactInfo
  * @uses ApplicationType
  * @uses LCID

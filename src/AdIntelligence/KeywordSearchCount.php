@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains the number of times the keyword was included in a search query on the specified device type.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg712245(v=msads.90).aspx KeywordSearchCount Data Object
- *
+ * 
  * @uses HistoricalSearchCountPeriodic
  * @used-by GetHistoricalSearchCountResponse
  */

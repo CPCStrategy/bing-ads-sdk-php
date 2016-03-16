@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Adds list items such as negative keywords to the corresponding list.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743721(v=msads.90).aspx AddListItemsToSharedList Request Object
- *
+ * 
  * @uses SharedListItem
  * @uses SharedList
  * @used-by BingAdsCampaignManagementService::AddListItemsToSharedList

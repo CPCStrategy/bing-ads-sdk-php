@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines the possible industry segments in which a customer operates.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671992(v=msads.90).aspx Industry Value Set
- *
+ * 
  * @used-by Customer
  */
 final class Industry

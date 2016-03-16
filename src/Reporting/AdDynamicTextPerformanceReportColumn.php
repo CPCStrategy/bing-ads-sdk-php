@@ -6,31 +6,31 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the AdDynamicTextPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671878(v=msads.90).aspx AdDynamicTextPerformanceReportColumn Value Set
- *
+ * 
  * @used-by AdDynamicTextPerformanceReportRequest
  */
 final class AdDynamicTextPerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Text element of a Keyword. */
+    /** The keyword text. */
     const Keyword = 'Keyword';
     const AdId = 'AdId';
-    /** The Title element of a MobileAd or TextAd. */
+    /** The ad title. */
     const AdTitle = 'AdTitle';
-    /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The ad type. */
     const AdType = 'AdType';
-    /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+    /** The destination URL attribute of the ad, keyword, or ad group criterion. */
     const DestinationUrl = 'DestinationUrl';
     /** The Param1 element of a Keyword or BiddableAdGroupCriterion. */
     const Param1 = 'Param1';
@@ -38,9 +38,9 @@ final class AdDynamicTextPerformanceReportColumn
     const Param2 = 'Param2';
     /** The Param3 element of a Keyword or BiddableAdGroupCriterion. */
     const Param3 = 'Param3';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
-    /** The AdDistribution element of an AdGroup. */
+    /** The ad distribution attribute of an ad group. */
     const AdDistribution = 'AdDistribution';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
@@ -64,8 +64,8 @@ final class AdDynamicTextPerformanceReportColumn
     const AverageCpm = 'AverageCpm';
     /** The PricingModel element of an AdGroup. */
     const PricingModel = 'PricingModel';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
 }

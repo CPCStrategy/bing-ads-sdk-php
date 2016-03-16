@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines the possible positions of an ad in the search results or on a content-based webpage.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg712236(v=msads.90).aspx AdPosition Value Set
- *
+ * 
  * @used-by KeywordKPI
  * @used-by GetHistoricalKeywordPerformanceRequest
  */

@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the set of accounts, campaigns, and ad groups to include in the report.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671547(v=msads.90).aspx AccountThroughAdGroupReportScope Data Object
- *
+ * 
  * @uses AdGroupReportScope
  * @uses CampaignReportScope
  * @used-by AdDynamicTextPerformanceReportRequest
@@ -16,6 +16,7 @@ namespace BingAds\Reporting;
  * @used-by AdGroupPerformanceReportRequest
  * @used-by AdPerformanceReportRequest
  * @used-by AgeGenderDemographicReportRequest
+ * @used-by AudiencePerformanceReportRequest
  * @used-by BrandZonePerformanceReportRequest
  * @used-by CallDetailReportRequest
  * @used-by ConversionPerformanceReportRequest
@@ -28,6 +29,7 @@ namespace BingAds\Reporting;
  * @used-by ProductDimensionPerformanceReportRequest
  * @used-by ProductOfferPerformanceReportRequest
  * @used-by ProductPartitionPerformanceReportRequest
+ * @used-by ProductPartitionUnitPerformanceReportRequest
  * @used-by ProductTargetPerformanceReportRequest
  * @used-by PublisherUsagePerformanceReportRequest
  * @used-by RichAdComponentPerformanceReportRequest
@@ -42,7 +44,7 @@ final class AccountThroughAdGroupReportScope
     /**
      * An array of account identifiers that identifies the account data to include in the report.
      *
-     * @var integer[]
+     * @var int[]
      */
     public $AccountIds;
     /**

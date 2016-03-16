@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a negative keyword with match type.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743739(v=msads.90).aspx NegativeKeyword Data Object
- *
+ * 
  * @uses MatchType
  * @used-by EntityNegativeKeyword
  */

@@ -3,46 +3,54 @@
 namespace BingAds\Reporting;
 
 /**
- * This feature is currently in pilot and will be generally available soon.
+ * Defines the attributes and performance statistics columns that you can include in the ProductDimensionPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn913140(v=msads.90).aspx ProductDimensionPerformanceReportColumn Value Set
- *
+ * 
  * @used-by ProductDimensionPerformanceReportRequest
  */
 final class ProductDimensionPerformanceReportColumn
 {
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The campaign status. */
+    const CampaignStatus = 'CampaignStatus';
+    /** The account lifecycle status. */
+    const AccountStatus = 'AccountStatus';
+    /** The ad group status. */
+    const AdGroupStatus = 'AdGroupStatus';
+    /** The Network element of an AdGroup. */
+    const Network = 'Network';
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
-    /** The Status element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
-    const AdStatus = 'AdStatus';
-    /** The Name element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
+    const CampaignId = 'CampaignId';
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The CurrencyType element of an Account. */
+    /** The account currency type. */
     const CurrencyCode = 'CurrencyCode';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
     /** The report will include a column that contains the unique identifier provided by a merchant for each product offer. */
     const MerchantProductId = 'MerchantProductId';
-    /** The report will include a column that contains the merchant or store name that offers the product. */
-    const SellerName = 'SellerName';
     /** The product item name. */
     const Title = 'Title';
     /** The condition of a product item. */
     const Condition = 'Condition';
     /** The product item's manufacturer, brand, or publisher. */
     const Brand = 'Brand';
+    /** The different price for products in your catalog. */
+    const Price = 'Price';
     /** The value of the Custom_label_0 field in your Bing Merchant Center catalog. */
     const CustomLabel0 = 'CustomLabel0';
     /** The value of the Custom_label_1 field in your Bing Merchant Center catalog. */
@@ -83,6 +91,12 @@ final class ProductDimensionPerformanceReportColumn
     const AverageCpc = 'AverageCpc';
     /** The cost per click (CPC) summed for each click. */
     const Spend = 'Spend';
-    /** The average of the cost-per-thousand impressions of the ads. */
-    const AverageCpm = 'AverageCpm';
+    /** The number of conversions. */
+    const Conversions = 'Conversions';
+    /** The conversion rate as a percentage. */
+    const ConversionRate = 'ConversionRate';
+    /** The revenue optionally reported by the advertiser as a result of conversions. */
+    const Revenue = 'Revenue';
+    /** The revenue per conversion. */
+    const RevenuePerConversion = 'RevenuePerConversion';
 }

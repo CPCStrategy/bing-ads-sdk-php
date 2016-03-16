@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the AdGroupPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671495(v=msads.90).aspx AdGroupPerformanceReportColumn Value Set
- *
+ * 
  * @used-by AdGroupPerformanceReportRequest
  */
 final class AdGroupPerformanceReportColumn
@@ -59,7 +59,7 @@ final class AdGroupPerformanceReportColumn
     const DeviceType = 'DeviceType';
     /** The Language element of an AdGroup. */
     const Language = 'Language';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
     const ImpressionSharePercent = 'ImpressionSharePercent';
@@ -143,4 +143,8 @@ final class AdGroupPerformanceReportColumn
     const AveragePagesPerVisit = 'AveragePagesPerVisit';
     /** The sum total of the time customers spent browsing your site divided by the number of customers that came to your site. */
     const AverageDurationPerVisit = 'AverageDurationPerVisit';
+    /** The current TrackingUrlTemplate element of the AdGroup. */
+    const TrackingTemplate = 'TrackingTemplate';
+    /** The current UrlCustomParameters element of the AdGroup. */
+    const CustomParameters = 'CustomParameters';
 }

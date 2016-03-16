@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the CampaignPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671614(v=msads.90).aspx CampaignPerformanceReportColumn Value Set
- *
+ * 
  * @used-by CampaignPerformanceReportRequest
  */
 final class CampaignPerformanceReportColumn
@@ -63,7 +63,7 @@ final class CampaignPerformanceReportColumn
     const AverageCpm = 'AverageCpm';
     /** The DeviceName element of a DeviceOSTargetBid. */
     const DeviceType = 'DeviceType';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The percentage of time your ads were displayed to users who searched by keywords that matched your keywords and targeting selections. */
     const ImpressionSharePercent = 'ImpressionSharePercent';
@@ -139,4 +139,8 @@ final class CampaignPerformanceReportColumn
     const AveragePagesPerVisit = 'AveragePagesPerVisit';
     /** The sum total of the time customers spent browsing your site divided by the number of customers that came to your site. */
     const AverageDurationPerVisit = 'AverageDurationPerVisit';
+    /** The current TrackingUrlTemplate element of the Campaign. */
+    const TrackingTemplate = 'TrackingTemplate';
+    /** The current UrlCustomParameters element of the Campaign. */
+    const CustomParameters = 'CustomParameters';
 }

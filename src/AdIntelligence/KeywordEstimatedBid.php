@@ -6,7 +6,7 @@ namespace BingAds\AdIntelligence;
  * Defines an object that contains the keyword and the estimated bid value for each match type.
  *
  * @link http://msdn.microsoft.com/en-us/library/gg986832(v=msads.90).aspx KeywordEstimatedBid Data Object
- *
+ * 
  * @uses EstimatedBidAndTraffic
  * @used-by KeywordIdEstimatedBid
  * @used-by GetEstimatedBidByKeywordsResponse

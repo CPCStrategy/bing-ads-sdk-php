@@ -6,16 +6,16 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the CallDetailReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn195843(v=msads.90).aspx CallDetailReportColumn Value Set
- *
+ * 
  * @used-by CallDetailReportRequest
  */
 final class CallDetailReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
     /** The start time of the call. */
     const StartTime = 'StartTime';
@@ -23,7 +23,7 @@ final class CallDetailReportColumn
     const EndTime = 'EndTime';
     /** The duration of each forwarded call that originated from a call ad extension. */
     const Duration = 'Duration';
-    /** The status of the call. */
+    /** The call status. */
     const CallStatus = 'CallStatus';
     /** The total cost for completed calls to your tracked number. */
     const PhoneSpend = 'PhoneSpend';
@@ -35,10 +35,10 @@ final class CallDetailReportColumn
     const City = 'City';
     /** The state used to deliver the ad. */
     const State = 'State';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
 }

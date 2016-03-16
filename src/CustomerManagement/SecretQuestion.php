@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines the possible secret questions that users can choose from to help them recall their password.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671980(v=msads.90).aspx SecretQuestion Value Set
- *
+ * 
  * @used-by User
  */
 final class SecretQuestion

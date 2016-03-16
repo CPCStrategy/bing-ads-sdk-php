@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Reserved for future use.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn743764(v=msads.90).aspx NetworkTargetBid Data Object
- *
+ * 
  * @uses NetworkType
  * @used-by NetworkTarget
  */

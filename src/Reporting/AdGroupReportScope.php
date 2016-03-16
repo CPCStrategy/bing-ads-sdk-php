@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines an ad group to include in the report.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671622(v=msads.90).aspx AdGroupReportScope Data Object
- *
+ * 
  * @used-by AccountThroughAdGroupReportScope
  */
 final class AdGroupReportScope

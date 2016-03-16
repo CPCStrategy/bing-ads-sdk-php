@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines a date range object.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn452056(v=msads.90).aspx DateRange Data Object
- *
+ * 
  * @used-by SearchCustomersRequest
  */
 final class DateRange

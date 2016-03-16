@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the delivered match type values that you can use to filter the report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671749(v=msads.90).aspx DeliveredMatchTypeReportFilter Value Set
- *
+ * 
  * @used-by BrandZonePerformanceReportFilter
  * @used-by KeywordPerformanceReportFilter
  * @used-by SearchQueryPerformanceReportFilter

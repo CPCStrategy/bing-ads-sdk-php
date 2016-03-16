@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an object that identifies an ad extension revision.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj134392(v=msads.90).aspx AdExtensionIdentity Data Object
- *
+ * 
  * @used-by AddAdExtensionsResponse
  */
 final class AdExtensionIdentity

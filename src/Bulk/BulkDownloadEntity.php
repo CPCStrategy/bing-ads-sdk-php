@@ -6,7 +6,7 @@ namespace BingAds\Bulk;
  * Defines the entities that may be downloaded in bulk.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn249982(v=msads.90).aspx BulkDownloadEntity Value Set
- *
+ * 
  * @used-by DownloadCampaignsByAccountIdsRequest
  * @used-by DownloadCampaignsByCampaignIdsRequest
  */
@@ -70,4 +70,8 @@ final class BulkDownloadEntity
     const AdGroupAppAdExtensions = 'AdGroupAppAdExtensions';
     /** Include a record in the download that represents the association relationship between a campaign and an app ad extension. */
     const CampaignAppAdExtensions = 'CampaignAppAdExtensions';
+    /** Include an ad group's product partitions in the download data. */
+    const AdGroupProductPartitions = 'AdGroupProductPartitions';
+    /** Include a campaign's product scopes in the download data. */
+    const CampaignProductScopes = 'CampaignProductScopes';
 }

@@ -6,40 +6,40 @@ namespace BingAds\Reporting;
  * Defines the attributes and performance statistics columns that you can include in the SearchQueryPerformanceReportRequest.
  *
  * @link http://msdn.microsoft.com/en-us/library/ee703958(v=msads.90).aspx SearchQueryPerformanceReportColumn Value Set
- *
+ * 
  * @used-by SearchQueryPerformanceReportRequest
  */
 final class SearchQueryPerformanceReportColumn
 {
-    /** The Name element of an Account. */
+    /** The account name. */
     const AccountName = 'AccountName';
-    /** The Number element of an Account. */
+    /** The Bing Ads assigned number of an account. */
     const AccountNumber = 'AccountNumber';
-    /** The Id element of an Account. */
+    /** The Bing Ads assigned identifier of an account. */
     const AccountId = 'AccountId';
     /** The time period of each report row. */
     const TimePeriod = 'TimePeriod';
-    /** The Name element of a Campaign. */
+    /** The campaign name. */
     const CampaignName = 'CampaignName';
-    /** The Id element of a Campaign. */
+    /** The Bing Ads assigned identifier of a campaign. */
     const CampaignId = 'CampaignId';
-    /** The Name element of an AdGroup. */
+    /** The ad group name. */
     const AdGroupName = 'AdGroupName';
-    /** The Id element of an AdGroup. */
+    /** The Bing Ads assigned identifier of an ad group. */
     const AdGroupId = 'AdGroupId';
-    /** The Id element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The Bing Ads assigned identifier of an ad. */
     const AdId = 'AdId';
-    /** The Type element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The ad type. */
     const AdType = 'AdType';
-    /** The DestinationUrl element of the TextAd, MobileAd, Keyword, or BiddableAdGroupCriterion. */
+    /** The destination URL attribute of the ad, keyword, or ad group criterion. */
     const DestinationUrl = 'DestinationUrl';
-    /** The MatchType element of a Keyword. */
+    /** The keyword bid match type. */
     const BidMatchType = 'BidMatchType';
     /** The match type used to deliver an ad. */
     const DeliveredMatchType = 'DeliveredMatchType';
-    /** The Status element of a Campaign. */
+    /** The campaign status. */
     const CampaignStatus = 'CampaignStatus';
-    /** The Status element of a MobileAd, ProductAd, or TextAd, which is inherited from the Ad base object. */
+    /** The ad status. */
     const AdStatus = 'AdStatus';
     /** The number of times an ad has been displayed on search results pages. */
     const Impressions = 'Impressions';
@@ -55,11 +55,11 @@ final class SearchQueryPerformanceReportColumn
     const AveragePosition = 'AveragePosition';
     /** The search term used by your potential audience. */
     const SearchQuery = 'SearchQuery';
-    /** The Text element of a Keyword. */
+    /** The keyword text. */
     const Keyword = 'Keyword';
     /** The name of the product target. */
     const ProductTarget = 'ProductTarget';
-    /** The Id element of an AdGroupCriterion. */
+    /** The Bing Ads assigned identifier of an ad group criterion. */
     const AdGroupCriterionId = 'AdGroupCriterionId';
     /** The number of conversions. */
     const Conversions = 'Conversions';
@@ -67,17 +67,17 @@ final class SearchQueryPerformanceReportColumn
     const ConversionRate = 'ConversionRate';
     /** The cost per conversion. */
     const CostPerConversion = 'CostPerConversion';
-    /** The Language element of an AdGroup. */
+    /** The ad group language. */
     const Language = 'Language';
-    /** The Id element of a Keyword. */
+    /** The Bing Ads assigned identifier of a keyword. */
     const KeywordId = 'KeywordId';
     /** The Network element of an AdGroup. */
     const Network = 'Network';
     /** The report will include a column that indicates whether the ad impression appeared in a top position or elsewhere. */
     const TopVsOther = 'TopVsOther';
-    /** The DeviceName element of a DeviceOSTargetBid. */
+    /** The device name attribute of a device OS target bid. */
     const DeviceType = 'DeviceType';
-    /** The operating system of the device specified in the DeviceType column and corresponding to the OSNames element of a DeviceOSTargetBid. */
+    /** The operating system of the device reported in the DeviceType column. */
     const DeviceOS = 'DeviceOS';
     /** The number of conversions from other ads within the same account that were preceded by one or more clicks from this ad. */
     const Assists = 'Assists';

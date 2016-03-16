@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the rich ad types that you can use to filter the report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh180148(v=msads.90).aspx RichAdSubTypeFilter Value Set
- *
+ * 
  * @used-by RichAdComponentPerformanceReportFilter
  */
 final class RichAdSubTypeFilter

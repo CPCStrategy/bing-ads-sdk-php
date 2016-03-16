@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a metropolitan area to target and the percentage used to adjust the base bid.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb672080(v=msads.90).aspx MetroAreaTargetBid Data Object
- *
+ * 
  * @used-by MetroAreaTarget
  */
 final class MetroAreaTargetBid

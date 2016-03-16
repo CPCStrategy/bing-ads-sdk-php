@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines a site link to include in an ad.
  *
  * @link http://msdn.microsoft.com/en-us/library/jj134381(v=msads.90).aspx SiteLink Data Object
- *
+ * 
  * @used-by SiteLinksAdExtension
  */
 final class SiteLink

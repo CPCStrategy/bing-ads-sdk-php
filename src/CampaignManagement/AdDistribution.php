@@ -6,13 +6,13 @@ namespace BingAds\CampaignManagement;
  * Defines the ad distribution for the ad group.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671585(v=msads.90).aspx AdDistribution Value Set
- *
+ * 
  * @used-by AdGroup
  */
 final class AdDistribution
 {
-    /** The ad group contains search ads. */
+    /** The search network includes Bing. */
     const Search = 'Search';
-    /** The ads are displayed on Microsoft-owned websites, as well as on participating partner websites. */
+    /** The content network is the ad distribution network for Bing Ads running in Windows apps. */
     const Content = 'Content';
 }

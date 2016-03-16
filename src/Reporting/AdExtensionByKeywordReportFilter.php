@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines the criteria to use to filter the ad extension by keyword report data.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn393943(v=msads.90).aspx AdExtensionByKeywordReportFilter Data Object
- *
+ * 
  * @uses DeviceOSReportFilter
  * @uses DeviceTypeReportFilter
  * @used-by AdExtensionByKeywordReportRequest

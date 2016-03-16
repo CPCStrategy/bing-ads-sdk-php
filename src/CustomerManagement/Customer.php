@@ -6,7 +6,7 @@ namespace BingAds\CustomerManagement;
  * Defines a customer.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671875(v=msads.90).aspx Customer Data Object
- *
+ * 
  * @uses Address
  * @uses CustomerFinancialStatus
  * @uses Industry
@@ -41,7 +41,7 @@ final class Customer
      */
     public $Id;
     /**
-     * The primary business segment of the customer (for example, automotive, food, or entertainment).
+     * The primary business segment of the customer, for example, automotive, food, or entertainment.
      *
      * @var Industry
      */

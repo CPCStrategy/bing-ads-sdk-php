@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a destination URL performance report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671480(v=msads.90).aspx DestinationUrlPerformanceReportRequest Data Object
- *
+ * 
  * @uses NonHourlyReportAggregation
  * @uses DestinationUrlPerformanceReportColumn
  * @uses DestinationUrlPerformanceReportFilter

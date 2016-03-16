@@ -6,7 +6,7 @@ namespace BingAds\CampaignManagement;
  * Defines an object that can contain different types of geographical targets, for example lists of city and state targets.
  *
  * @link http://msdn.microsoft.com/en-us/library/bb671646(v=msads.90).aspx LocationTarget Data Object
- *
+ * 
  * @uses CityTarget
  * @uses CountryTarget
  * @uses MetroAreaTarget

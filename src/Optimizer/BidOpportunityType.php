@@ -6,7 +6,7 @@ namespace BingAds\Optimizer;
  * Defines the possible bid opportunity types you can request when calling GetBidOpportunities.
  *
  * @link http://msdn.microsoft.com/en-us/library/dn766183(v=msads.90).aspx BidOpportunityType Value Set
- *
+ * 
  * @used-by GetBidOpportunitiesRequest
  */
 final class BidOpportunityType

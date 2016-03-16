@@ -6,7 +6,7 @@ namespace BingAds\Reporting;
  * Defines a negative keyword conflict report request.
  *
  * @link http://msdn.microsoft.com/en-us/library/hh560534(v=msads.90).aspx NegativeKeywordConflictReportRequest Data Object
- *
+ * 
  * @uses NegativeKeywordConflictReportColumn
  * @uses AccountThroughAdGroupReportScope
  */
